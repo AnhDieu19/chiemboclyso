@@ -69,6 +69,9 @@ Thumbs.db
 # Archive (legacy/debug scripts)
 archive/
 
+# Documentation (local only)
+docs/
+
 # Generated reports & data
 *.html
 !frontend/templates/*.html
