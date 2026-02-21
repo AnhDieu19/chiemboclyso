@@ -1,0 +1,11098 @@
+[
+  {
+    "citta_id": "CIT_01",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_01",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_01",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_01",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_01",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_01",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_01",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_01",
+    "cetasika_id": "CET_08"
+  },
+  {
+    "citta_id": "CIT_01",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_01",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_01",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_01",
+    "cetasika_id": "CET_12"
+  },
+  {
+    "citta_id": "CIT_01",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_01",
+    "cetasika_id": "CET_14"
+  },
+  {
+    "citta_id": "CIT_01",
+    "cetasika_id": "CET_15"
+  },
+  {
+    "citta_id": "CIT_01",
+    "cetasika_id": "CET_16"
+  },
+  {
+    "citta_id": "CIT_01",
+    "cetasika_id": "CET_17"
+  },
+  {
+    "citta_id": "CIT_01",
+    "cetasika_id": "CET_18"
+  },
+  {
+    "citta_id": "CIT_01",
+    "cetasika_id": "CET_19"
+  },
+  {
+    "citta_id": "CIT_02",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_02",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_02",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_02",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_02",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_02",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_02",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_02",
+    "cetasika_id": "CET_08"
+  },
+  {
+    "citta_id": "CIT_02",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_02",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_02",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_02",
+    "cetasika_id": "CET_12"
+  },
+  {
+    "citta_id": "CIT_02",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_02",
+    "cetasika_id": "CET_14"
+  },
+  {
+    "citta_id": "CIT_02",
+    "cetasika_id": "CET_15"
+  },
+  {
+    "citta_id": "CIT_02",
+    "cetasika_id": "CET_16"
+  },
+  {
+    "citta_id": "CIT_02",
+    "cetasika_id": "CET_17"
+  },
+  {
+    "citta_id": "CIT_02",
+    "cetasika_id": "CET_18"
+  },
+  {
+    "citta_id": "CIT_02",
+    "cetasika_id": "CET_19"
+  },
+  {
+    "citta_id": "CIT_02",
+    "cetasika_id": "CET_25"
+  },
+  {
+    "citta_id": "CIT_02",
+    "cetasika_id": "CET_26"
+  },
+  {
+    "citta_id": "CIT_03",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_03",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_03",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_03",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_03",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_03",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_03",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_03",
+    "cetasika_id": "CET_08"
+  },
+  {
+    "citta_id": "CIT_03",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_03",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_03",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_03",
+    "cetasika_id": "CET_12"
+  },
+  {
+    "citta_id": "CIT_03",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_03",
+    "cetasika_id": "CET_14"
+  },
+  {
+    "citta_id": "CIT_03",
+    "cetasika_id": "CET_15"
+  },
+  {
+    "citta_id": "CIT_03",
+    "cetasika_id": "CET_16"
+  },
+  {
+    "citta_id": "CIT_03",
+    "cetasika_id": "CET_17"
+  },
+  {
+    "citta_id": "CIT_03",
+    "cetasika_id": "CET_18"
+  },
+  {
+    "citta_id": "CIT_03",
+    "cetasika_id": "CET_20"
+  },
+  {
+    "citta_id": "CIT_04",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_04",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_04",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_04",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_04",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_04",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_04",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_04",
+    "cetasika_id": "CET_08"
+  },
+  {
+    "citta_id": "CIT_04",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_04",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_04",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_04",
+    "cetasika_id": "CET_12"
+  },
+  {
+    "citta_id": "CIT_04",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_04",
+    "cetasika_id": "CET_14"
+  },
+  {
+    "citta_id": "CIT_04",
+    "cetasika_id": "CET_15"
+  },
+  {
+    "citta_id": "CIT_04",
+    "cetasika_id": "CET_16"
+  },
+  {
+    "citta_id": "CIT_04",
+    "cetasika_id": "CET_17"
+  },
+  {
+    "citta_id": "CIT_04",
+    "cetasika_id": "CET_18"
+  },
+  {
+    "citta_id": "CIT_04",
+    "cetasika_id": "CET_20"
+  },
+  {
+    "citta_id": "CIT_04",
+    "cetasika_id": "CET_25"
+  },
+  {
+    "citta_id": "CIT_04",
+    "cetasika_id": "CET_26"
+  },
+  {
+    "citta_id": "CIT_05",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_05",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_05",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_05",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_05",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_05",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_05",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_05",
+    "cetasika_id": "CET_08"
+  },
+  {
+    "citta_id": "CIT_05",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_05",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_05",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_05",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_05",
+    "cetasika_id": "CET_14"
+  },
+  {
+    "citta_id": "CIT_05",
+    "cetasika_id": "CET_15"
+  },
+  {
+    "citta_id": "CIT_05",
+    "cetasika_id": "CET_16"
+  },
+  {
+    "citta_id": "CIT_05",
+    "cetasika_id": "CET_17"
+  },
+  {
+    "citta_id": "CIT_05",
+    "cetasika_id": "CET_18"
+  },
+  {
+    "citta_id": "CIT_05",
+    "cetasika_id": "CET_19"
+  },
+  {
+    "citta_id": "CIT_06",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_06",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_06",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_06",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_06",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_06",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_06",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_06",
+    "cetasika_id": "CET_08"
+  },
+  {
+    "citta_id": "CIT_06",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_06",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_06",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_06",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_06",
+    "cetasika_id": "CET_14"
+  },
+  {
+    "citta_id": "CIT_06",
+    "cetasika_id": "CET_15"
+  },
+  {
+    "citta_id": "CIT_06",
+    "cetasika_id": "CET_16"
+  },
+  {
+    "citta_id": "CIT_06",
+    "cetasika_id": "CET_17"
+  },
+  {
+    "citta_id": "CIT_06",
+    "cetasika_id": "CET_18"
+  },
+  {
+    "citta_id": "CIT_06",
+    "cetasika_id": "CET_19"
+  },
+  {
+    "citta_id": "CIT_06",
+    "cetasika_id": "CET_25"
+  },
+  {
+    "citta_id": "CIT_06",
+    "cetasika_id": "CET_26"
+  },
+  {
+    "citta_id": "CIT_07",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_07",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_07",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_07",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_07",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_07",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_07",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_07",
+    "cetasika_id": "CET_08"
+  },
+  {
+    "citta_id": "CIT_07",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_07",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_07",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_07",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_07",
+    "cetasika_id": "CET_14"
+  },
+  {
+    "citta_id": "CIT_07",
+    "cetasika_id": "CET_15"
+  },
+  {
+    "citta_id": "CIT_07",
+    "cetasika_id": "CET_16"
+  },
+  {
+    "citta_id": "CIT_07",
+    "cetasika_id": "CET_17"
+  },
+  {
+    "citta_id": "CIT_07",
+    "cetasika_id": "CET_18"
+  },
+  {
+    "citta_id": "CIT_07",
+    "cetasika_id": "CET_20"
+  },
+  {
+    "citta_id": "CIT_08",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_08",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_08",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_08",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_08",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_08",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_08",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_08",
+    "cetasika_id": "CET_08"
+  },
+  {
+    "citta_id": "CIT_08",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_08",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_08",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_08",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_08",
+    "cetasika_id": "CET_14"
+  },
+  {
+    "citta_id": "CIT_08",
+    "cetasika_id": "CET_15"
+  },
+  {
+    "citta_id": "CIT_08",
+    "cetasika_id": "CET_16"
+  },
+  {
+    "citta_id": "CIT_08",
+    "cetasika_id": "CET_17"
+  },
+  {
+    "citta_id": "CIT_08",
+    "cetasika_id": "CET_18"
+  },
+  {
+    "citta_id": "CIT_08",
+    "cetasika_id": "CET_20"
+  },
+  {
+    "citta_id": "CIT_08",
+    "cetasika_id": "CET_25"
+  },
+  {
+    "citta_id": "CIT_08",
+    "cetasika_id": "CET_26"
+  },
+  {
+    "citta_id": "CIT_09",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_09",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_09",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_09",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_09",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_09",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_09",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_09",
+    "cetasika_id": "CET_08"
+  },
+  {
+    "citta_id": "CIT_09",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_09",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_09",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_09",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_09",
+    "cetasika_id": "CET_14"
+  },
+  {
+    "citta_id": "CIT_09",
+    "cetasika_id": "CET_15"
+  },
+  {
+    "citta_id": "CIT_09",
+    "cetasika_id": "CET_16"
+  },
+  {
+    "citta_id": "CIT_09",
+    "cetasika_id": "CET_17"
+  },
+  {
+    "citta_id": "CIT_09",
+    "cetasika_id": "CET_21"
+  },
+  {
+    "citta_id": "CIT_09",
+    "cetasika_id": "CET_22"
+  },
+  {
+    "citta_id": "CIT_09",
+    "cetasika_id": "CET_23"
+  },
+  {
+    "citta_id": "CIT_09",
+    "cetasika_id": "CET_24"
+  },
+  {
+    "citta_id": "CIT_10",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_10",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_10",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_10",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_10",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_10",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_10",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_10",
+    "cetasika_id": "CET_08"
+  },
+  {
+    "citta_id": "CIT_10",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_10",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_10",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_10",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_10",
+    "cetasika_id": "CET_14"
+  },
+  {
+    "citta_id": "CIT_10",
+    "cetasika_id": "CET_15"
+  },
+  {
+    "citta_id": "CIT_10",
+    "cetasika_id": "CET_16"
+  },
+  {
+    "citta_id": "CIT_10",
+    "cetasika_id": "CET_17"
+  },
+  {
+    "citta_id": "CIT_10",
+    "cetasika_id": "CET_21"
+  },
+  {
+    "citta_id": "CIT_10",
+    "cetasika_id": "CET_22"
+  },
+  {
+    "citta_id": "CIT_10",
+    "cetasika_id": "CET_23"
+  },
+  {
+    "citta_id": "CIT_10",
+    "cetasika_id": "CET_24"
+  },
+  {
+    "citta_id": "CIT_10",
+    "cetasika_id": "CET_25"
+  },
+  {
+    "citta_id": "CIT_10",
+    "cetasika_id": "CET_26"
+  },
+  {
+    "citta_id": "CIT_11",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_11",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_11",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_11",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_11",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_11",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_11",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_11",
+    "cetasika_id": "CET_08"
+  },
+  {
+    "citta_id": "CIT_11",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_11",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_11",
+    "cetasika_id": "CET_14"
+  },
+  {
+    "citta_id": "CIT_11",
+    "cetasika_id": "CET_15"
+  },
+  {
+    "citta_id": "CIT_11",
+    "cetasika_id": "CET_16"
+  },
+  {
+    "citta_id": "CIT_11",
+    "cetasika_id": "CET_17"
+  },
+  {
+    "citta_id": "CIT_11",
+    "cetasika_id": "CET_27"
+  },
+  {
+    "citta_id": "CIT_12",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_12",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_12",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_12",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_12",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_12",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_12",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_12",
+    "cetasika_id": "CET_08"
+  },
+  {
+    "citta_id": "CIT_12",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_12",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_12",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_12",
+    "cetasika_id": "CET_14"
+  },
+  {
+    "citta_id": "CIT_12",
+    "cetasika_id": "CET_15"
+  },
+  {
+    "citta_id": "CIT_12",
+    "cetasika_id": "CET_16"
+  },
+  {
+    "citta_id": "CIT_12",
+    "cetasika_id": "CET_17"
+  },
+  {
+    "citta_id": "CIT_13",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_13",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_13",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_13",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_13",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_13",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_13",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_14",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_14",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_14",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_14",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_14",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_14",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_14",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_15",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_15",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_15",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_15",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_15",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_15",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_15",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_16",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_16",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_16",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_16",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_16",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_16",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_16",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_17",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_17",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_17",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_17",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_17",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_17",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_17",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_18",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_18",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_18",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_18",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_18",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_18",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_18",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_18",
+    "cetasika_id": "CET_08"
+  },
+  {
+    "citta_id": "CIT_18",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_18",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_19",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_19",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_19",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_19",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_19",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_19",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_19",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_19",
+    "cetasika_id": "CET_08"
+  },
+  {
+    "citta_id": "CIT_19",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_19",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_19",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_20",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_20",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_20",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_20",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_20",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_20",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_20",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_21",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_21",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_21",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_21",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_21",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_21",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_21",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_22",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_22",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_22",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_22",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_22",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_22",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_22",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_23",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_23",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_23",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_23",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_23",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_23",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_23",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_24",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_24",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_24",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_24",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_24",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_24",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_24",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_25",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_25",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_25",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_25",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_25",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_25",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_25",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_25",
+    "cetasika_id": "CET_08"
+  },
+  {
+    "citta_id": "CIT_25",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_25",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_26",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_26",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_26",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_26",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_26",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_26",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_26",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_26",
+    "cetasika_id": "CET_08"
+  },
+  {
+    "citta_id": "CIT_26",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_26",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_26",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_27",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_27",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_27",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_27",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_27",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_27",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_27",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_27",
+    "cetasika_id": "CET_08"
+  },
+  {
+    "citta_id": "CIT_27",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_27",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_27",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_27",
+    "cetasika_id": "CET_12"
+  },
+  {
+    "citta_id": "CIT_28",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_28",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_28",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_28",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_28",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_28",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_28",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_28",
+    "cetasika_id": "CET_08"
+  },
+  {
+    "citta_id": "CIT_28",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_28",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_28",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_29",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_29",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_29",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_29",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_29",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_29",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_29",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_29",
+    "cetasika_id": "CET_08"
+  },
+  {
+    "citta_id": "CIT_29",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_29",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_29",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_30",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_30",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_30",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_30",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_30",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_30",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_30",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_30",
+    "cetasika_id": "CET_08"
+  },
+  {
+    "citta_id": "CIT_30",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_30",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_30",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_30",
+    "cetasika_id": "CET_12"
+  },
+  {
+    "citta_id": "CIT_31",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_31",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_31",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_31",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_31",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_31",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_31",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_31",
+    "cetasika_id": "CET_08"
+  },
+  {
+    "citta_id": "CIT_31",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_31",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_31",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_31",
+    "cetasika_id": "CET_12"
+  },
+  {
+    "citta_id": "CIT_31",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_31",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_31",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_31",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_31",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_31",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_31",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_31",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_31",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_31",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_31",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_31",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_31",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_31",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_31",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_31",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_31",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_31",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_31",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_31",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_31",
+    "cetasika_id": "CET_47"
+  },
+  {
+    "citta_id": "CIT_31",
+    "cetasika_id": "CET_48"
+  },
+  {
+    "citta_id": "CIT_31",
+    "cetasika_id": "CET_49"
+  },
+  {
+    "citta_id": "CIT_31",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_31",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_31",
+    "cetasika_id": "CET_52"
+  },
+  {
+    "citta_id": "CIT_32",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_32",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_32",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_32",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_32",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_32",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_32",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_32",
+    "cetasika_id": "CET_08"
+  },
+  {
+    "citta_id": "CIT_32",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_32",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_32",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_32",
+    "cetasika_id": "CET_12"
+  },
+  {
+    "citta_id": "CIT_32",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_32",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_32",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_32",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_32",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_32",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_32",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_32",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_32",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_32",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_32",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_32",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_32",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_32",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_32",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_32",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_32",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_32",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_32",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_32",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_32",
+    "cetasika_id": "CET_47"
+  },
+  {
+    "citta_id": "CIT_32",
+    "cetasika_id": "CET_48"
+  },
+  {
+    "citta_id": "CIT_32",
+    "cetasika_id": "CET_49"
+  },
+  {
+    "citta_id": "CIT_32",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_32",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_32",
+    "cetasika_id": "CET_52"
+  },
+  {
+    "citta_id": "CIT_33",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_33",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_33",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_33",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_33",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_33",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_33",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_33",
+    "cetasika_id": "CET_08"
+  },
+  {
+    "citta_id": "CIT_33",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_33",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_33",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_33",
+    "cetasika_id": "CET_12"
+  },
+  {
+    "citta_id": "CIT_33",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_33",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_33",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_33",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_33",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_33",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_33",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_33",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_33",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_33",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_33",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_33",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_33",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_33",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_33",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_33",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_33",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_33",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_33",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_33",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_33",
+    "cetasika_id": "CET_47"
+  },
+  {
+    "citta_id": "CIT_33",
+    "cetasika_id": "CET_48"
+  },
+  {
+    "citta_id": "CIT_33",
+    "cetasika_id": "CET_49"
+  },
+  {
+    "citta_id": "CIT_33",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_33",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_34",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_34",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_34",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_34",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_34",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_34",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_34",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_34",
+    "cetasika_id": "CET_08"
+  },
+  {
+    "citta_id": "CIT_34",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_34",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_34",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_34",
+    "cetasika_id": "CET_12"
+  },
+  {
+    "citta_id": "CIT_34",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_34",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_34",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_34",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_34",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_34",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_34",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_34",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_34",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_34",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_34",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_34",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_34",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_34",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_34",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_34",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_34",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_34",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_34",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_34",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_34",
+    "cetasika_id": "CET_47"
+  },
+  {
+    "citta_id": "CIT_34",
+    "cetasika_id": "CET_48"
+  },
+  {
+    "citta_id": "CIT_34",
+    "cetasika_id": "CET_49"
+  },
+  {
+    "citta_id": "CIT_34",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_34",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_35",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_35",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_35",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_35",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_35",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_35",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_35",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_35",
+    "cetasika_id": "CET_08"
+  },
+  {
+    "citta_id": "CIT_35",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_35",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_35",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_35",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_35",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_35",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_35",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_35",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_35",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_35",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_35",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_35",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_35",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_35",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_35",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_35",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_35",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_35",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_35",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_35",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_35",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_35",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_35",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_35",
+    "cetasika_id": "CET_47"
+  },
+  {
+    "citta_id": "CIT_35",
+    "cetasika_id": "CET_48"
+  },
+  {
+    "citta_id": "CIT_35",
+    "cetasika_id": "CET_49"
+  },
+  {
+    "citta_id": "CIT_35",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_35",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_35",
+    "cetasika_id": "CET_52"
+  },
+  {
+    "citta_id": "CIT_36",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_36",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_36",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_36",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_36",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_36",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_36",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_36",
+    "cetasika_id": "CET_08"
+  },
+  {
+    "citta_id": "CIT_36",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_36",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_36",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_36",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_36",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_36",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_36",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_36",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_36",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_36",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_36",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_36",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_36",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_36",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_36",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_36",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_36",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_36",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_36",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_36",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_36",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_36",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_36",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_36",
+    "cetasika_id": "CET_47"
+  },
+  {
+    "citta_id": "CIT_36",
+    "cetasika_id": "CET_48"
+  },
+  {
+    "citta_id": "CIT_36",
+    "cetasika_id": "CET_49"
+  },
+  {
+    "citta_id": "CIT_36",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_36",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_36",
+    "cetasika_id": "CET_52"
+  },
+  {
+    "citta_id": "CIT_37",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_37",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_37",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_37",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_37",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_37",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_37",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_37",
+    "cetasika_id": "CET_08"
+  },
+  {
+    "citta_id": "CIT_37",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_37",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_37",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_37",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_37",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_37",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_37",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_37",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_37",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_37",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_37",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_37",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_37",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_37",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_37",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_37",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_37",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_37",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_37",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_37",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_37",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_37",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_37",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_37",
+    "cetasika_id": "CET_47"
+  },
+  {
+    "citta_id": "CIT_37",
+    "cetasika_id": "CET_48"
+  },
+  {
+    "citta_id": "CIT_37",
+    "cetasika_id": "CET_49"
+  },
+  {
+    "citta_id": "CIT_37",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_37",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_38",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_38",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_38",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_38",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_38",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_38",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_38",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_38",
+    "cetasika_id": "CET_08"
+  },
+  {
+    "citta_id": "CIT_38",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_38",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_38",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_38",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_38",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_38",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_38",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_38",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_38",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_38",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_38",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_38",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_38",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_38",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_38",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_38",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_38",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_38",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_38",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_38",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_38",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_38",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_38",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_38",
+    "cetasika_id": "CET_47"
+  },
+  {
+    "citta_id": "CIT_38",
+    "cetasika_id": "CET_48"
+  },
+  {
+    "citta_id": "CIT_38",
+    "cetasika_id": "CET_49"
+  },
+  {
+    "citta_id": "CIT_38",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_38",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_39",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_39",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_39",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_39",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_39",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_39",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_39",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_39",
+    "cetasika_id": "CET_08"
+  },
+  {
+    "citta_id": "CIT_39",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_39",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_39",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_39",
+    "cetasika_id": "CET_12"
+  },
+  {
+    "citta_id": "CIT_39",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_39",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_39",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_39",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_39",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_39",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_39",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_39",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_39",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_39",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_39",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_39",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_39",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_39",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_39",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_39",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_39",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_39",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_39",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_39",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_39",
+    "cetasika_id": "CET_47"
+  },
+  {
+    "citta_id": "CIT_39",
+    "cetasika_id": "CET_48"
+  },
+  {
+    "citta_id": "CIT_39",
+    "cetasika_id": "CET_49"
+  },
+  {
+    "citta_id": "CIT_39",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_39",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_39",
+    "cetasika_id": "CET_52"
+  },
+  {
+    "citta_id": "CIT_40",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_40",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_40",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_40",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_40",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_40",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_40",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_40",
+    "cetasika_id": "CET_08"
+  },
+  {
+    "citta_id": "CIT_40",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_40",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_40",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_40",
+    "cetasika_id": "CET_12"
+  },
+  {
+    "citta_id": "CIT_40",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_40",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_40",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_40",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_40",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_40",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_40",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_40",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_40",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_40",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_40",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_40",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_40",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_40",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_40",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_40",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_40",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_40",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_40",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_40",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_40",
+    "cetasika_id": "CET_47"
+  },
+  {
+    "citta_id": "CIT_40",
+    "cetasika_id": "CET_48"
+  },
+  {
+    "citta_id": "CIT_40",
+    "cetasika_id": "CET_49"
+  },
+  {
+    "citta_id": "CIT_40",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_40",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_40",
+    "cetasika_id": "CET_52"
+  },
+  {
+    "citta_id": "CIT_41",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_41",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_41",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_41",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_41",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_41",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_41",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_41",
+    "cetasika_id": "CET_08"
+  },
+  {
+    "citta_id": "CIT_41",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_41",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_41",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_41",
+    "cetasika_id": "CET_12"
+  },
+  {
+    "citta_id": "CIT_41",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_41",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_41",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_41",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_41",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_41",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_41",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_41",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_41",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_41",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_41",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_41",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_41",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_41",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_41",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_41",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_41",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_41",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_41",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_41",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_41",
+    "cetasika_id": "CET_47"
+  },
+  {
+    "citta_id": "CIT_41",
+    "cetasika_id": "CET_48"
+  },
+  {
+    "citta_id": "CIT_41",
+    "cetasika_id": "CET_49"
+  },
+  {
+    "citta_id": "CIT_41",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_41",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_42",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_42",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_42",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_42",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_42",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_42",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_42",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_42",
+    "cetasika_id": "CET_08"
+  },
+  {
+    "citta_id": "CIT_42",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_42",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_42",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_42",
+    "cetasika_id": "CET_12"
+  },
+  {
+    "citta_id": "CIT_42",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_42",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_42",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_42",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_42",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_42",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_42",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_42",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_42",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_42",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_42",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_42",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_42",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_42",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_42",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_42",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_42",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_42",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_42",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_42",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_42",
+    "cetasika_id": "CET_47"
+  },
+  {
+    "citta_id": "CIT_42",
+    "cetasika_id": "CET_48"
+  },
+  {
+    "citta_id": "CIT_42",
+    "cetasika_id": "CET_49"
+  },
+  {
+    "citta_id": "CIT_42",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_42",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_43",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_43",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_43",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_43",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_43",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_43",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_43",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_43",
+    "cetasika_id": "CET_08"
+  },
+  {
+    "citta_id": "CIT_43",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_43",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_43",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_43",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_43",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_43",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_43",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_43",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_43",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_43",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_43",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_43",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_43",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_43",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_43",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_43",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_43",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_43",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_43",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_43",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_43",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_43",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_43",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_43",
+    "cetasika_id": "CET_47"
+  },
+  {
+    "citta_id": "CIT_43",
+    "cetasika_id": "CET_48"
+  },
+  {
+    "citta_id": "CIT_43",
+    "cetasika_id": "CET_49"
+  },
+  {
+    "citta_id": "CIT_43",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_43",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_43",
+    "cetasika_id": "CET_52"
+  },
+  {
+    "citta_id": "CIT_44",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_44",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_44",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_44",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_44",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_44",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_44",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_44",
+    "cetasika_id": "CET_08"
+  },
+  {
+    "citta_id": "CIT_44",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_44",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_44",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_44",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_44",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_44",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_44",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_44",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_44",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_44",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_44",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_44",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_44",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_44",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_44",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_44",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_44",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_44",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_44",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_44",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_44",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_44",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_44",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_44",
+    "cetasika_id": "CET_47"
+  },
+  {
+    "citta_id": "CIT_44",
+    "cetasika_id": "CET_48"
+  },
+  {
+    "citta_id": "CIT_44",
+    "cetasika_id": "CET_49"
+  },
+  {
+    "citta_id": "CIT_44",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_44",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_44",
+    "cetasika_id": "CET_52"
+  },
+  {
+    "citta_id": "CIT_45",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_45",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_45",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_45",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_45",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_45",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_45",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_45",
+    "cetasika_id": "CET_08"
+  },
+  {
+    "citta_id": "CIT_45",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_45",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_45",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_45",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_45",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_45",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_45",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_45",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_45",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_45",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_45",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_45",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_45",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_45",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_45",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_45",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_45",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_45",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_45",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_45",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_45",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_45",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_45",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_45",
+    "cetasika_id": "CET_47"
+  },
+  {
+    "citta_id": "CIT_45",
+    "cetasika_id": "CET_48"
+  },
+  {
+    "citta_id": "CIT_45",
+    "cetasika_id": "CET_49"
+  },
+  {
+    "citta_id": "CIT_45",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_45",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_46",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_46",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_46",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_46",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_46",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_46",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_46",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_46",
+    "cetasika_id": "CET_08"
+  },
+  {
+    "citta_id": "CIT_46",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_46",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_46",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_46",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_46",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_46",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_46",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_46",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_46",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_46",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_46",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_46",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_46",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_46",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_46",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_46",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_46",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_46",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_46",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_46",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_46",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_46",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_46",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_46",
+    "cetasika_id": "CET_47"
+  },
+  {
+    "citta_id": "CIT_46",
+    "cetasika_id": "CET_48"
+  },
+  {
+    "citta_id": "CIT_46",
+    "cetasika_id": "CET_49"
+  },
+  {
+    "citta_id": "CIT_46",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_46",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_47",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_47",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_47",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_47",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_47",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_47",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_47",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_47",
+    "cetasika_id": "CET_08"
+  },
+  {
+    "citta_id": "CIT_47",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_47",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_47",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_47",
+    "cetasika_id": "CET_12"
+  },
+  {
+    "citta_id": "CIT_47",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_47",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_47",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_47",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_47",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_47",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_47",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_47",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_47",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_47",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_47",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_47",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_47",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_47",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_47",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_47",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_47",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_47",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_47",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_47",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_47",
+    "cetasika_id": "CET_47"
+  },
+  {
+    "citta_id": "CIT_47",
+    "cetasika_id": "CET_48"
+  },
+  {
+    "citta_id": "CIT_47",
+    "cetasika_id": "CET_49"
+  },
+  {
+    "citta_id": "CIT_47",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_47",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_47",
+    "cetasika_id": "CET_52"
+  },
+  {
+    "citta_id": "CIT_48",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_48",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_48",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_48",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_48",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_48",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_48",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_48",
+    "cetasika_id": "CET_08"
+  },
+  {
+    "citta_id": "CIT_48",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_48",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_48",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_48",
+    "cetasika_id": "CET_12"
+  },
+  {
+    "citta_id": "CIT_48",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_48",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_48",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_48",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_48",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_48",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_48",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_48",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_48",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_48",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_48",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_48",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_48",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_48",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_48",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_48",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_48",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_48",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_48",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_48",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_48",
+    "cetasika_id": "CET_47"
+  },
+  {
+    "citta_id": "CIT_48",
+    "cetasika_id": "CET_48"
+  },
+  {
+    "citta_id": "CIT_48",
+    "cetasika_id": "CET_49"
+  },
+  {
+    "citta_id": "CIT_48",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_48",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_48",
+    "cetasika_id": "CET_52"
+  },
+  {
+    "citta_id": "CIT_49",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_49",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_49",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_49",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_49",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_49",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_49",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_49",
+    "cetasika_id": "CET_08"
+  },
+  {
+    "citta_id": "CIT_49",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_49",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_49",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_49",
+    "cetasika_id": "CET_12"
+  },
+  {
+    "citta_id": "CIT_49",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_49",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_49",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_49",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_49",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_49",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_49",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_49",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_49",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_49",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_49",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_49",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_49",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_49",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_49",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_49",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_49",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_49",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_49",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_49",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_49",
+    "cetasika_id": "CET_47"
+  },
+  {
+    "citta_id": "CIT_49",
+    "cetasika_id": "CET_48"
+  },
+  {
+    "citta_id": "CIT_49",
+    "cetasika_id": "CET_49"
+  },
+  {
+    "citta_id": "CIT_49",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_49",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_50",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_50",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_50",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_50",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_50",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_50",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_50",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_50",
+    "cetasika_id": "CET_08"
+  },
+  {
+    "citta_id": "CIT_50",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_50",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_50",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_50",
+    "cetasika_id": "CET_12"
+  },
+  {
+    "citta_id": "CIT_50",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_50",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_50",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_50",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_50",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_50",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_50",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_50",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_50",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_50",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_50",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_50",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_50",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_50",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_50",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_50",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_50",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_50",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_50",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_50",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_50",
+    "cetasika_id": "CET_47"
+  },
+  {
+    "citta_id": "CIT_50",
+    "cetasika_id": "CET_48"
+  },
+  {
+    "citta_id": "CIT_50",
+    "cetasika_id": "CET_49"
+  },
+  {
+    "citta_id": "CIT_50",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_50",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_51",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_51",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_51",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_51",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_51",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_51",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_51",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_51",
+    "cetasika_id": "CET_08"
+  },
+  {
+    "citta_id": "CIT_51",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_51",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_51",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_51",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_51",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_51",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_51",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_51",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_51",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_51",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_51",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_51",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_51",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_51",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_51",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_51",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_51",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_51",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_51",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_51",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_51",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_51",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_51",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_51",
+    "cetasika_id": "CET_47"
+  },
+  {
+    "citta_id": "CIT_51",
+    "cetasika_id": "CET_48"
+  },
+  {
+    "citta_id": "CIT_51",
+    "cetasika_id": "CET_49"
+  },
+  {
+    "citta_id": "CIT_51",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_51",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_51",
+    "cetasika_id": "CET_52"
+  },
+  {
+    "citta_id": "CIT_52",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_52",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_52",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_52",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_52",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_52",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_52",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_52",
+    "cetasika_id": "CET_08"
+  },
+  {
+    "citta_id": "CIT_52",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_52",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_52",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_52",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_52",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_52",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_52",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_52",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_52",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_52",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_52",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_52",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_52",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_52",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_52",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_52",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_52",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_52",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_52",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_52",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_52",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_52",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_52",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_52",
+    "cetasika_id": "CET_47"
+  },
+  {
+    "citta_id": "CIT_52",
+    "cetasika_id": "CET_48"
+  },
+  {
+    "citta_id": "CIT_52",
+    "cetasika_id": "CET_49"
+  },
+  {
+    "citta_id": "CIT_52",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_52",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_52",
+    "cetasika_id": "CET_52"
+  },
+  {
+    "citta_id": "CIT_53",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_53",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_53",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_53",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_53",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_53",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_53",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_53",
+    "cetasika_id": "CET_08"
+  },
+  {
+    "citta_id": "CIT_53",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_53",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_53",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_53",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_53",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_53",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_53",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_53",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_53",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_53",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_53",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_53",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_53",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_53",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_53",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_53",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_53",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_53",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_53",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_53",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_53",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_53",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_53",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_53",
+    "cetasika_id": "CET_47"
+  },
+  {
+    "citta_id": "CIT_53",
+    "cetasika_id": "CET_48"
+  },
+  {
+    "citta_id": "CIT_53",
+    "cetasika_id": "CET_49"
+  },
+  {
+    "citta_id": "CIT_53",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_53",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_54",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_54",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_54",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_54",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_54",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_54",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_54",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_54",
+    "cetasika_id": "CET_08"
+  },
+  {
+    "citta_id": "CIT_54",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_54",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_54",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_54",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_54",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_54",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_54",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_54",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_54",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_54",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_54",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_54",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_54",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_54",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_54",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_54",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_54",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_54",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_54",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_54",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_54",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_54",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_54",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_54",
+    "cetasika_id": "CET_47"
+  },
+  {
+    "citta_id": "CIT_54",
+    "cetasika_id": "CET_48"
+  },
+  {
+    "citta_id": "CIT_54",
+    "cetasika_id": "CET_49"
+  },
+  {
+    "citta_id": "CIT_54",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_54",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_55",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_55",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_55",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_55",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_55",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_55",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_55",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_55",
+    "cetasika_id": "CET_08"
+  },
+  {
+    "citta_id": "CIT_55",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_55",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_55",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_55",
+    "cetasika_id": "CET_12"
+  },
+  {
+    "citta_id": "CIT_55",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_55",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_55",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_55",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_55",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_55",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_55",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_55",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_55",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_55",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_55",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_55",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_55",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_55",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_55",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_55",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_55",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_55",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_55",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_55",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_55",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_55",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_55",
+    "cetasika_id": "CET_52"
+  },
+  {
+    "citta_id": "CIT_56",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_56",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_56",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_56",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_56",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_56",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_56",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_56",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_56",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_56",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_56",
+    "cetasika_id": "CET_12"
+  },
+  {
+    "citta_id": "CIT_56",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_56",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_56",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_56",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_56",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_56",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_56",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_56",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_56",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_56",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_56",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_56",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_56",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_56",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_56",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_56",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_56",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_56",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_56",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_56",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_56",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_56",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_56",
+    "cetasika_id": "CET_52"
+  },
+  {
+    "citta_id": "CIT_57",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_57",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_57",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_57",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_57",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_57",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_57",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_57",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_57",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_57",
+    "cetasika_id": "CET_12"
+  },
+  {
+    "citta_id": "CIT_57",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_57",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_57",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_57",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_57",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_57",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_57",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_57",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_57",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_57",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_57",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_57",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_57",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_57",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_57",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_57",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_57",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_57",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_57",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_57",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_57",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_57",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_57",
+    "cetasika_id": "CET_52"
+  },
+  {
+    "citta_id": "CIT_58",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_58",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_58",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_58",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_58",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_58",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_58",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_58",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_58",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_58",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_58",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_58",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_58",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_58",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_58",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_58",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_58",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_58",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_58",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_58",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_58",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_58",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_58",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_58",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_58",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_58",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_58",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_58",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_58",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_58",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_58",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_58",
+    "cetasika_id": "CET_52"
+  },
+  {
+    "citta_id": "CIT_59",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_59",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_59",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_59",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_59",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_59",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_59",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_59",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_59",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_59",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_59",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_59",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_59",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_59",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_59",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_59",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_59",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_59",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_59",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_59",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_59",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_59",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_59",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_59",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_59",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_59",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_59",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_59",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_59",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_59",
+    "cetasika_id": "CET_52"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_08"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_12"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_52"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_12"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_52"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_12"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_52"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_52"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_52"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_08"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_12"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_52"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_12"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_52"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_12"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_52"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_52"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_52"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_08"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_12"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_60",
+    "cetasika_id": "CET_52"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_12"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_61",
+    "cetasika_id": "CET_52"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_12"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_62",
+    "cetasika_id": "CET_52"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_63",
+    "cetasika_id": "CET_52"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_64",
+    "cetasika_id": "CET_52"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_08"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_12"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_52"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_12"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_52"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_12"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_52"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_52"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_52"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_08"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_12"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_52"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_12"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_52"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_12"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_52"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_52"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_52"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_08"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_12"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_65",
+    "cetasika_id": "CET_52"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_12"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_66",
+    "cetasika_id": "CET_52"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_12"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_67",
+    "cetasika_id": "CET_52"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_68",
+    "cetasika_id": "CET_52"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_69",
+    "cetasika_id": "CET_52"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_08"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_12"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_52"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_12"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_52"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_12"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_52"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_52"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_52"
+  },
+  {
+    "citta_id": "CIT_75",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_75",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_75",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_75",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_75",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_75",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_75",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_75",
+    "cetasika_id": "CET_08"
+  },
+  {
+    "citta_id": "CIT_75",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_75",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_75",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_75",
+    "cetasika_id": "CET_12"
+  },
+  {
+    "citta_id": "CIT_75",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_75",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_75",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_75",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_75",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_75",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_75",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_75",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_75",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_75",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_75",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_75",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_75",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_75",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_75",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_75",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_75",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_75",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_75",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_75",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_75",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_75",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_75",
+    "cetasika_id": "CET_52"
+  },
+  {
+    "citta_id": "CIT_76",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_76",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_76",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_76",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_76",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_76",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_76",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_76",
+    "cetasika_id": "CET_09"
+  },
+  {
+    "citta_id": "CIT_76",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_76",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_76",
+    "cetasika_id": "CET_12"
+  },
+  {
+    "citta_id": "CIT_76",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_76",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_76",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_76",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_76",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_76",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_76",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_76",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_76",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_76",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_76",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_76",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_76",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_76",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_76",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_76",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_76",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_76",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_76",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_76",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_76",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_76",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_76",
+    "cetasika_id": "CET_52"
+  },
+  {
+    "citta_id": "CIT_77",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_77",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_77",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_77",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_77",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_77",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_77",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_77",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_77",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_77",
+    "cetasika_id": "CET_12"
+  },
+  {
+    "citta_id": "CIT_77",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_77",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_77",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_77",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_77",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_77",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_77",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_77",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_77",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_77",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_77",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_77",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_77",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_77",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_77",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_77",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_77",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_77",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_77",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_77",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_77",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_77",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_77",
+    "cetasika_id": "CET_52"
+  },
+  {
+    "citta_id": "CIT_78",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_78",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_78",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_78",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_78",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_78",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_78",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_78",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_78",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_78",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_78",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_78",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_78",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_78",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_78",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_78",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_78",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_78",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_78",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_78",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_78",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_78",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_78",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_78",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_78",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_78",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_78",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_78",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_78",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_78",
+    "cetasika_id": "CET_50"
+  },
+  {
+    "citta_id": "CIT_78",
+    "cetasika_id": "CET_51"
+  },
+  {
+    "citta_id": "CIT_78",
+    "cetasika_id": "CET_52"
+  },
+  {
+    "citta_id": "CIT_79",
+    "cetasika_id": "CET_01"
+  },
+  {
+    "citta_id": "CIT_79",
+    "cetasika_id": "CET_02"
+  },
+  {
+    "citta_id": "CIT_79",
+    "cetasika_id": "CET_03"
+  },
+  {
+    "citta_id": "CIT_79",
+    "cetasika_id": "CET_04"
+  },
+  {
+    "citta_id": "CIT_79",
+    "cetasika_id": "CET_05"
+  },
+  {
+    "citta_id": "CIT_79",
+    "cetasika_id": "CET_06"
+  },
+  {
+    "citta_id": "CIT_79",
+    "cetasika_id": "CET_07"
+  },
+  {
+    "citta_id": "CIT_79",
+    "cetasika_id": "CET_10"
+  },
+  {
+    "citta_id": "CIT_79",
+    "cetasika_id": "CET_11"
+  },
+  {
+    "citta_id": "CIT_79",
+    "cetasika_id": "CET_13"
+  },
+  {
+    "citta_id": "CIT_79",
+    "cetasika_id": "CET_28"
+  },
+  {
+    "citta_id": "CIT_79",
+    "cetasika_id": "CET_29"
+  },
+  {
+    "citta_id": "CIT_79",
+    "cetasika_id": "CET_30"
+  },
+  {
+    "citta_id": "CIT_79",
+    "cetasika_id": "CET_31"
+  },
+  {
+    "citta_id": "CIT_79",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "citta_id": "CIT_79",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "citta_id": "CIT_79",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_79",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_79",
+    "cetasika_id": "CET_36"
+  },
+  {
+    "citta_id": "CIT_79",
+    "cetasika_id": "CET_37"
+  },
+  {
+    "citta_id": "CIT_79",
+    "cetasika_id": "CET_38"
+  },
+  {
+    "citta_id": "CIT_79",
+    "cetasika_id": "CET_39"
+  },
+  {
+    "citta_id": "CIT_79",
+    "cetasika_id": "CET_40"
+  },
+  {
+    "citta_id": "CIT_79",
+    "cetasika_id": "CET_41"
+  },
+  {
+    "citta_id": "CIT_79",
+    "cetasika_id": "CET_42"
+  },
+  {
+    "citta_id": "CIT_79",
+    "cetasika_id": "CET_43"
+  },
+  {
+    "citta_id": "CIT_79",
+    "cetasika_id": "CET_44"
+  },
+  {
+    "citta_id": "CIT_79",
+    "cetasika_id": "CET_45"
+  },
+  {
+    "citta_id": "CIT_79",
+    "cetasika_id": "CET_46"
+  },
+  {
+    "citta_id": "CIT_79",
+    "cetasika_id": "CET_52"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_70",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_71",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_72",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_73",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_74",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_75",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_75",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_76",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_76",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_77",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_77",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_78",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_78",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_79",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_79",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_80",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_80",
+    "cetasika_id": "CET_35"
+  },
+  {
+    "citta_id": "CIT_81",
+    "cetasika_id": "CET_34"
+  },
+  {
+    "citta_id": "CIT_81",
+    "cetasika_id": "CET_35"
+  }
+]

@@ -1,0 +1,83 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Pytest
+.pytest_cache/
+
+# Large data files (generated datasets)
+*.jsonl
+python/analytics/*.jsonl
+python/*.jsonl
+python/tuvi_relational_data/*.jsonl
+
+# Large CSV files
+python/beauty_stats_full.csv
+python/analytics/*.csv
+
+# Generated reports (can regenerate)
+python/beauty_report.html
+python/analytics/*_result.txt
+python/analytics/debug_output.txt
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+server.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+*.env
+
+# Archive (legacy/debug scripts)
+archive/
+
+# Generated reports & data
+*.html
+!frontend/templates/*.html
+!python/templates/*.html
+!python/graph/templates/*.html
+!acupoints_viz/index.html
+!hexagram_viz/index.html
+!vi_dieu_phap/presentation/web/templates/*.html
+
+# Agent/IDE config
+.agent/
+.claude/

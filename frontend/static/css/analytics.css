@@ -1,0 +1,67 @@
+/**
+ * analytics.css - Analytics Beauty Report Styles
+ */
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f6f9;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+h1,
+h2 {
+    color: #333;
+}
+
+.row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.col {
+    flex: 1;
+    min-width: 300px;
+}
+
+.stat-box {
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+    color: white;
+}
+
+.bg-primary {
+    background: #2196F3;
+}
+
+.bg-success {
+    background: #4CAF50;
+}
+
+.bg-danger {
+    background: #F44336;
+}
+
+.nav-btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    background: #667eea;
+    color: white;
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 20px;
+}

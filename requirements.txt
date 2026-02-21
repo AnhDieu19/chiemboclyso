@@ -1,0 +1,6 @@
+flask
+flask-cors
+requests
+pytest
+google-genai
+python-dotenv

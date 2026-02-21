@@ -1,0 +1,230 @@
+[
+  {
+    "id": "ROOT",
+    "name": "Bốn Pháp Siêu Lý (Paramattha)",
+    "type": "root",
+    "parent_id": null
+  },
+  {
+    "id": "CAT_TÂM_CITTA",
+    "name": "Tâm (Citta)",
+    "type": "category",
+    "parent_id": "ROOT"
+  },
+  {
+    "id": "CAT_SỞ_HỮU_TÂM_CETASIKA",
+    "name": "Sở Hữu Tâm (Cetasika)",
+    "type": "category",
+    "parent_id": "ROOT"
+  },
+  {
+    "id": "CAT_SẮC_PHÁP_RUPA",
+    "name": "Sắc Pháp (Rupa)",
+    "type": "category",
+    "parent_id": "ROOT"
+  },
+  {
+    "id": "CAT_NIẾT_BÀN_NIBBĀNA",
+    "name": "Niết Bàn (Nibbāna)",
+    "type": "category",
+    "parent_id": "ROOT"
+  },
+  {
+    "id": "L1_BẤT_THIỆN_AKUSALA",
+    "name": "Bất Thiện (Akusala)",
+    "type": "sub_category",
+    "parent_id": "CAT_TÂM_CITTA"
+  },
+  {
+    "id": "L2_TÂM_THAM",
+    "name": "Tâm Tham",
+    "type": "sub_category",
+    "parent_id": "L1_BẤT_THIỆN_AKUSALA"
+  },
+  {
+    "id": "L3_HỢP_TÀ",
+    "name": "Hợp Tà",
+    "type": "sub_category",
+    "parent_id": "L2_TÂM_THAM"
+  },
+  {
+    "id": "L4_KHÔNG_TRỢ",
+    "name": "Không Trợ",
+    "type": "sub_category",
+    "parent_id": "L3_HỢP_TÀ"
+  },
+  {
+    "id": "L4_CÓ_TRỢ",
+    "name": "Có Trợ",
+    "type": "sub_category",
+    "parent_id": "L3_HỢP_TÀ"
+  },
+  {
+    "id": "L3_LY_TÀ",
+    "name": "Ly Tà",
+    "type": "sub_category",
+    "parent_id": "L2_TÂM_THAM"
+  },
+  {
+    "id": "L2_TÂM_SÂN",
+    "name": "Tâm Sân",
+    "type": "sub_category",
+    "parent_id": "L1_BẤT_THIỆN_AKUSALA"
+  },
+  {
+    "id": "L3_SAN_KHÔNG_TRỢ",
+    "name": "Không Trợ",
+    "type": "sub_category",
+    "parent_id": "L2_TÂM_SÂN"
+  },
+  {
+    "id": "L3_SAN_CÓ_TRỢ",
+    "name": "Có Trợ",
+    "type": "sub_category",
+    "parent_id": "L2_TÂM_SÂN"
+  },
+  {
+    "id": "L2_TÂM_SI",
+    "name": "Tâm Si",
+    "type": "sub_category",
+    "parent_id": "L1_BẤT_THIỆN_AKUSALA"
+  },
+  {
+    "id": "L1_VÔ_NHÂN_AHETUKA",
+    "name": "Vô Nhân (Ahetuka)",
+    "type": "sub_category",
+    "parent_id": "CAT_TÂM_CITTA"
+  },
+  {
+    "id": "L2_QUẢ_BẤT_THIỆN",
+    "name": "Quả Bất Thiện",
+    "type": "sub_category",
+    "parent_id": "L1_VÔ_NHÂN_AHETUKA"
+  },
+  {
+    "id": "L2_DUY_TÁC_VÔ_NHÂN",
+    "name": "Duy Tác Vô Nhân",
+    "type": "sub_category",
+    "parent_id": "L1_VÔ_NHÂN_AHETUKA"
+  },
+  {
+    "id": "L2_QUẢ_THIỆN",
+    "name": "Quả Thiện",
+    "type": "sub_category",
+    "parent_id": "L1_VÔ_NHÂN_AHETUKA"
+  },
+  {
+    "id": "L1_DỤC_GIỚI_TỊNH_HẢO_THIỆN",
+    "name": "Dục Giới Tịnh Hảo (Thiện)",
+    "type": "sub_category",
+    "parent_id": "CAT_TÂM_CITTA"
+  },
+  {
+    "id": "L2_HỢP_TRÍ",
+    "name": "Hợp Trí",
+    "type": "sub_category",
+    "parent_id": "L1_DỤC_GIỚI_TỊNH_HẢO_THIỆN"
+  },
+  {
+    "id": "L3_VÔ_DẪN",
+    "name": "Vô Dẫn",
+    "type": "sub_category",
+    "parent_id": "L2_HỢP_TRÍ"
+  },
+  {
+    "id": "L3_HỮU_DẪN",
+    "name": "Hữu Dẫn",
+    "type": "sub_category",
+    "parent_id": "L2_HỢP_TRÍ"
+  },
+  {
+    "id": "L2_LY_TRÍ",
+    "name": "Ly Trí",
+    "type": "sub_category",
+    "parent_id": "L1_DỤC_GIỚI_TỊNH_HẢO_THIỆN"
+  },
+  {
+    "id": "L1_DỤC_GIỚI_TỊNH_HẢO_QUẢ",
+    "name": "Dục Giới Tịnh Hảo (Quả)",
+    "type": "sub_category",
+    "parent_id": "CAT_TÂM_CITTA"
+  },
+  {
+    "id": "L1_DỤC_GIỚI_TỊNH_HẢO_DUY_TÁC",
+    "name": "Dục Giới Tịnh Hảo (Duy Tác)",
+    "type": "sub_category",
+    "parent_id": "CAT_TÂM_CITTA"
+  },
+  {
+    "id": "L1_SẮC_GIỚI_RUPA",
+    "name": "Sắc Giới (Rupa)",
+    "type": "sub_category",
+    "parent_id": "CAT_TÂM_CITTA"
+  },
+  {
+    "id": "L1_VÔ_SẮC_GIỚI_ARUPA",
+    "name": "Vô Sắc Giới (Arupa)",
+    "type": "sub_category",
+    "parent_id": "CAT_TÂM_CITTA"
+  },
+  {
+    "id": "L2_Arupavacara_THIỆN",
+    "name": "Thiện",
+    "type": "sub_category",
+    "parent_id": "L1_VÔ_SẮC_GIỚI_ARUPA"
+  },
+  {
+    "id": "L1_SIÊU_THẾ_LOKUTTARA",
+    "name": "Siêu Thế (Lokuttara)",
+    "type": "sub_category",
+    "parent_id": "CAT_TÂM_CITTA"
+  },
+  {
+    "id": "L2_ĐẠO_MAGGA",
+    "name": "Đạo (Magga)",
+    "type": "sub_category",
+    "parent_id": "L1_SIÊU_THẾ_LOKUTTARA"
+  },
+  {
+    "id": "L2_QUẢ_PHALA",
+    "name": "Quả (Phala)",
+    "type": "sub_category",
+    "parent_id": "L1_SIÊU_THẾ_LOKUTTARA"
+  },
+  {
+    "id": "GRP_CET_UNIVERSALS",
+    "name": "Universals",
+    "type": "sub_category",
+    "parent_id": "CAT_SỞ_HỮU_TÂM_CETASIKA"
+  },
+  {
+    "id": "GRP_CET_OCCASIONALS",
+    "name": "Occasionals",
+    "type": "sub_category",
+    "parent_id": "CAT_SỞ_HỮU_TÂM_CETASIKA"
+  },
+  {
+    "id": "GRP_CET_UNWHOLESOME",
+    "name": "Unwholesome",
+    "type": "sub_category",
+    "parent_id": "CAT_SỞ_HỮU_TÂM_CETASIKA"
+  },
+  {
+    "id": "GRP_CET_BEAUTIFUL",
+    "name": "Beautiful",
+    "type": "sub_category",
+    "parent_id": "CAT_SỞ_HỮU_TÂM_CETASIKA"
+  },
+  {
+    "id": "GRP_RUP_SẮC_TỨ_ĐẠI",
+    "name": "Sắc Tứ Đại",
+    "type": "sub_category",
+    "parent_id": "CAT_SẮC_PHÁP_RUPA"
+  },
+  {
+    "id": "GRP_RUP_SẮC_Y_SINH",
+    "name": "Sắc Y Sinh",
+    "type": "sub_category",
+    "parent_id": "CAT_SẮC_PHÁP_RUPA"
+  }
+]

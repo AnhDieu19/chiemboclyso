@@ -1,0 +1,55 @@
+# rupa_master.py
+# Danh sách 28 Sắc Pháp (Material Qualities)
+
+RUPA_MASTER = [
+    # --- Sắc Tứ Đại (Great Elements - 4) ---
+    {"id": "RUP_01", "name": "Đất (Paṭhavī)", "name_pali": "Pathavi", "group": "Sắc Tứ Đại", "description": "Trạng thái cứng hoặc mềm (Địa đại)"},
+    {"id": "RUP_02", "name": "Nước (Āpo)", "name_pali": "Apo", "group": "Sắc Tứ Đại", "description": "Trạng thái quấn tụ hoặc chảy ra (Thủy đại)"},
+    {"id": "RUP_03", "name": "Lửa (Tejo)", "name_pali": "Tejo", "group": "Sắc Tứ Đại", "description": "Trạng thái nóng hoặc lạnh (Hỏa đại)"},
+    {"id": "RUP_04", "name": "Gió (Vāyo)", "name_pali": "Vayo", "group": "Sắc Tứ Đại", "description": "Trạng thái căng hoặc động (Phong đại)"},
+
+    # --- Sắc Y Sinh (Derived Matter - 24) ---
+    # Sắc Thần Kinh (Pasada Rupa - 5)
+    {"id": "RUP_05", "name": "Thần kinh nhãn (Cakkhupasāda)", "name_pali": "Cakkhupasada", "group": "Sắc Y Sinh", "description": "Thần kinh mắt, nơi nương gá của nhãn thức"},
+    {"id": "RUP_06", "name": "Thần kinh nhĩ (Sotapasāda)", "name_pali": "Sotapasada", "group": "Sắc Y Sinh", "description": "Thần kinh tai, nơi nương gá của nhĩ thức"},
+    {"id": "RUP_07", "name": "Thần kinh tỷ (Ghānapasāda)", "name_pali": "Ghanapasada", "group": "Sắc Y Sinh", "description": "Thần kinh mũi, nơi nương gá của tỷ thức"},
+    {"id": "RUP_08", "name": "Thần kinh thiệt (Jīvhāpasāda)", "name_pali": "Jivhapasada", "group": "Sắc Y Sinh", "description": "Thần kinh lưỡi, nơi nương gá của thiệt thức"},
+    {"id": "RUP_09", "name": "Thần kinh thân (Kāyapasāda)", "name_pali": "Kayapasada", "group": "Sắc Y Sinh", "description": "Thần kinh thân, nơi nương gá của thân thức"},
+
+    # Sắc Cảnh Giới (Gocara Rupa - 4) - (Note: Xúc là Đất, Lửa, Gió nên chỉ còn 4 cảnh)
+    {"id": "RUP_10", "name": "Cảnh sắc (Rūpārammaṇa)", "name_pali": "Ruparammana", "group": "Sắc Y Sinh", "description": "Màu sắc, hình dáng (đối tượng của nhãn thức)"},
+    {"id": "RUP_11", "name": "Cảnh thinh (Saddārammaṇa)", "name_pali": "Saddarammana", "group": "Sắc Y Sinh", "description": "Âm thanh (đối tượng của nhĩ thức)"},
+    {"id": "RUP_12", "name": "Cảnh khí (Gandhārammaṇa)", "name_pali": "Gandharammana", "group": "Sắc Y Sinh", "description": "Mùi (đối tượng của tỷ thức)"},
+    {"id": "RUP_13", "name": "Cảnh vị (Rasārammaṇa)", "name_pali": "Rasarammana", "group": "Sắc Y Sinh", "description": "Vị (đối tượng của thiệt thức)"},
+
+    # Sắc Tính (Bhāva Rupa - 2)
+    {"id": "RUP_14", "name": "Trạng thái nữ (Iṭṭhībhāva)", "name_pali": "Itthibhava", "group": "Sắc Y Sinh", "description": "Tính nữ"},
+    {"id": "RUP_15", "name": "Trạng thái nam (Purisabhāva)", "name_pali": "Purisabhava", "group": "Sắc Y Sinh", "description": "Tính nam"},
+
+    # Sắc Ý Vật (Hadaya Rupa - 1)
+    {"id": "RUP_16", "name": "Sắc tim (Hadayarūpa)", "name_pali": "Hadayarupa", "group": "Sắc Y Sinh", "description": "Nơi nương gá của ý giới và ý thức giới"},
+
+    # Sắc Mạng Quyền (Jivita Rupa - 1)
+    {"id": "RUP_17", "name": "Sắc mạng (Jīvitarūpa)", "name_pali": "Jivitarupa", "group": "Sắc Y Sinh", "description": "Bảo trì sự sống cho các sắc nghiệp"},
+
+    # Sắc Vật Thực (Ahara Rupa - 1)
+    {"id": "RUP_18", "name": "Sắc vật thực (Āhārarūpa)", "name_pali": "Ahararupa", "group": "Sắc Y Sinh", "description": "Dưỡng chất (Oja)"},
+
+    # Sắc Hư Không (Pariccheda Rupa - 1)
+    {"id": "RUP_19", "name": "Sắc hư không (Paricchedarūpa)", "name_pali": "Paricchedarupa", "group": "Sắc Y Sinh", "description": "Khoảng trống giới hạn giữa các bọn sắc"},
+
+    # Sắc Biểu Tri (Vinnatti Rupa - 2)
+    {"id": "RUP_20", "name": "Thân tiêu biểu (Āyaviññatti)", "name_pali": "Kayavinnatti", "group": "Sắc Y Sinh", "description": "Cử chỉ thân thể biểu lộ ý định (Thân biểu tri)"},
+    {"id": "RUP_21", "name": "Khẩu tiêu biểu (Vacīviññatti)", "name_pali": "Vacivinnatti", "group": "Sắc Y Sinh", "description": "Lời nói biểu lộ ý định (Khẩu biểu tri)"},
+
+    # Sắc Đặc Biệt (Vikara Rupa - 3)
+    {"id": "RUP_22", "name": "Sắc nhẹ (Lahutārūpa)", "name_pali": "Lahutarupa", "group": "Sắc Y Sinh", "description": "Sự nhẹ nhàng của sắc pháp"},
+    {"id": "RUP_23", "name": "Sắc mềm (Mudatārūpa)", "name_pali": "Mudutarupa", "group": "Sắc Y Sinh", "description": "Sự mềm mại của sắc pháp"},
+    {"id": "RUP_24", "name": "Sắc vừa làm việc (Kammaññatārūpa)", "name_pali": "Kammannatarupa", "group": "Sắc Y Sinh", "description": "Sự thích ứng, hoạt bát của sắc pháp (Sắc thích sự)"},
+
+    # Sắc Tứ Tướng (Lakkhana Rupa - 4)
+    {"id": "RUP_25", "name": "Sắc sinh (Upacayarūpa)", "name_pali": "Upacayarupa", "group": "Sắc Y Sinh", "description": "Sự sinh khởi ban đầu của sắc pháp"},
+    {"id": "RUP_26", "name": "Sắc tiến (Santatirūpa)", "name_pali": "Santatirupa", "group": "Sắc Y Sinh", "description": "Sự kế thừa, tiếp nối của dòng sắc"},
+    {"id": "RUP_27", "name": "Sắc dị/già (Jaratārūpa)", "name_pali": "Jaratarupa", "group": "Sắc Y Sinh", "description": "Sự già nua, suy tàn của sắc pháp"},
+    {"id": "RUP_28", "name": "Sắc diệt (Aniccatārūpa)", "name_pali": "Aniccatarupa", "group": "Sắc Y Sinh", "description": "Sự tan rã, diệt mất của sắc pháp (Sắc vô thường)"},
+]

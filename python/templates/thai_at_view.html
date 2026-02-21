@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thái Ất Thần Số</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .palace-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .palace-cell {
+            border: 1px solid #ddd;
+            padding: 15px;
+            min-height: 150px;
+            background: #fff;
+            position: relative;
+        }
+
+        .palace-cell.center {
+            background: #f8f9fa;
+        }
+
+        .palace-name {
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .palace-nature {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            font-size: 0.8rem;
+        }
+
+        .nature-cat {
+            color: #27ae60;
+        }
+
+        .nature-hung {
+            color: #c0392b;
+        }
+
+        .than-item {
+            display: block;
+            margin: 2px 0;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-size: 0.9rem;
+        }
+
+        .than-cat {
+            background-color: #e8f8f5;
+            color: #1e8449;
+        }
+
+        .than-hung {
+            background-color: #fdedec;
+            color: #cb4335;
+        }
+
+        .than-trung {
+            background-color: #fef9e7;
+            color: #7d6608;
+        }
+
+        .palace-cell:hover {
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            cursor: pointer;
+        }
+
+        .palace-meaning {
+            font-size: 0.75rem;
+            color: #666;
+            margin-top: 6px;
+            border-top: 1px dashed #ddd;
+            padding-top: 4px;
+        }
+
+        .detail-section {
+            max-width: 800px;
+            margin: 20px auto 0;
+        }
+
+        .detail-palace-card {
+            margin-bottom: 12px;
+            padding: 12px 16px;
+            border-left: 4px solid #ddd;
+            background: #fff;
+        }
+
+        .detail-palace-card.detail-cat { border-left-color: #27ae60; }
+        .detail-palace-card.detail-dai_cat { border-left-color: #1abc9c; }
+        .detail-palace-card.detail-hung { border-left-color: #e74c3c; }
+        .detail-palace-card.detail-dai_hung { border-left-color: #c0392b; }
+        .detail-palace-card.detail-trung { border-left-color: #f39c12; }
+        .detail-palace-card.detail-neutral { border-left-color: #bdc3c7; }
+
+        .than-detail {
+            padding: 6px 10px;
+            margin: 4px 0;
+            border-radius: 4px;
+            font-size: 0.88rem;
+        }
+
+        .field-badge {
+            display: inline-block;
+            background: #eaf2f8;
+            color: #2471a3;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.75rem;
+            margin: 2px;
+        }
+
+        .ngu-hanh-badge {
+            display: inline-block;
+            padding: 1px 7px;
+            border-radius: 8px;
+            font-size: 0.72rem;
+            font-weight: 600;
+        }
+        .hanh-Kim { background: #fdebd0; color: #b9770e; }
+        .hanh-Moc { background: #d5f5e3; color: #1e8449; }
+        .hanh-Thuy { background: #d6eaf8; color: #2874a6; }
+        .hanh-Hoa { background: #fadbd8; color: #cb4335; }
+        .hanh-Tho { background: #f9e79f; color: #7d6608; }
+    </style>
+</head>
+
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+        <div class="container">
+            <a class="navbar-brand" id="link-home" href="/">Tử Vi Đẩu Số</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link active" id="link-thai-at" href="/thai-at">Thái Ất</a></li>
+                    <li class="nav-item"><a class="nav-link" id="link-ki-mon" href="/ki-mon">Kì Môn</a></li>
+                </ul>
+                <script>
+                    if (window.location.protocol === 'file:') {
+                        document.getElementById('link-home').href = 'http://localhost:5001/';
+                        document.getElementById('link-thai-at').href = 'http://localhost:5001/thai-at';
+                        document.getElementById('link-ki-mon').href = 'http://localhost:5001/ki-mon';
+                    }
+                </script>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="card mb-4">
+            <div class="card-header bg-white">
+                <h4 class="mb-0">Thái Ất Thần Số - Lập Quẻ</h4>
+            </div>
+            <div class="card-body">
+                <form id="thaiAtForm" class="row g-3">
+                    <div class="col-md-4">
+                        <label class="form-label">Năm</label>
+                        <input type="number" class="form-control" name="year" value="2024">
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Tháng</label>
+                        <input type="number" class="form-control" name="month" value="12">
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Ngày</label>
+                        <input type="number" class="form-control" name="day" value="24" onchange="updateCanChiHour()">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">Giờ (0-23)</label>
+                        <input type="number" class="form-control" name="hour" value="10" onchange="updateCanChiHour()">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Phút</label>
+                        <input type="number" class="form-control" name="minute" value="0" onchange="updateCanChiHour()">
+                    </div>
+
+                    <div class="col-md-12 text-center mt-2">
+                        <button type="button" class="btn btn-outline-primary btn-sm mb-2" onclick="setCurrentTime()">🕒
+                            Lấy giờ hiện tại</button>
+                        <br>
+                        <span id="canChiHourLabel" class="badge bg-light text-dark border"
+                            style="font-size: 1rem; padding: 10px 20px;">--:--</span>
+                    </div>
+
+                    <div class="col-12 text-center mt-4">
+                        <button type="button" class="btn btn-primary px-5" onclick="calculateThaiAt()">Lập Quẻ</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="resultArea" style="display: none;">
+            <div class="row mb-4">
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <h5 class="text-muted">Nguyên</h5>
+                            <h3 class="text-primary" id="nguyenInfo">Giáp Tý Nguyên</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <h5 class="text-muted">Hội</h5>
+                            <h3 class="text-info" id="hoiInfo">Ngọ Hội</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <h5 class="text-muted">Kỷ</h5>
+                            <h3 class="text-success" id="kyInfo">Thượng Kỷ</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="palace-grid" id="chartGrid">
+                <!-- Grid will be generated here -->
+            </div>
+
+            <div class="card mt-4">
+                <div class="card-header">
+                    <h5>Tổng Kết</h5>
+                </div>
+                <div class="card-body">
+                    <p id="summaryText" class="lead text-center"></p>
+                    <div id="summaryDetails" class="row text-center mt-3"></div>
+                </div>
+            </div>
+
+            <div class="card mt-4">
+                <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0">Giải Nghĩa Chi Tiết</h5>
+                    <small class="text-muted">Nhấn vào cung trên lưới để xem chi tiết</small>
+                </div>
+                <div class="card-body detail-section p-0" id="detailArea">
+                </div>
+            </div>
+
+            <div class="card mt-4 mb-5">
+                <div class="card-header bg-white">
+                    <h5 class="mb-0">Thông Số Kỹ Thuật</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row" id="cucInfoArea"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Layout Lạc Thư: 4 9 2 | 3 5 7 | 8 1 6
+        const LAYOUT = [
+            [4, 9, 2],
+            [3, 5, 7],
+            [8, 1, 6]
+        ];
+
+        const API_BASE = window.location.protocol === 'file:' ? 'http://localhost:5001' : '';
+
+        async function calculateThaiAt() {
+            const formData = new FormData(document.getElementById('thaiAtForm'));
+            const data = Object.fromEntries(formData);
+
+            try {
+                const response = await fetch(API_BASE + '/api/thai-at/calculate', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+
+                const result = await response.json();
+                if (result.success) {
+                    renderChart(result.data);
+                } else {
+                    alert('Lỗi: ' + result.error);
+                }
+            } catch (e) {
+                alert('Lỗi kết nối: ' + e + '\n\nHãy đảm bảo server đang chạy tại http://localhost:5001 và truy cập trang qua địa chỉ đó.');
+            }
+        }
+
+        function renderChart(data) {
+            document.getElementById('resultArea').style.display = 'block';
+            document.getElementById('nguyenInfo').textContent = data.nguyen.name;
+            document.getElementById('hoiInfo').textContent = data.hoi.name;
+            document.getElementById('kyInfo').textContent = data.ky.name;
+
+            const summaryClass = data.summary.overall === 'cat' ? 'text-success' : (data.summary.overall === 'hung' ? 'text-danger' : 'text-warning');
+            const summaryHtml = `Tổng điểm: <strong>${data.summary.total_score}</strong> - <span class="${summaryClass}">${data.summary.overall.toUpperCase()}</span>`;
+            document.getElementById('summaryText').innerHTML = summaryHtml;
+
+            // Summary details: cát/hung palaces
+            const sumDet = document.getElementById('summaryDetails');
+            let catList = (data.summary.cat_palaces || []).map(p => `Cung ${p}`).join(', ') || 'Không';
+            let hungList = (data.summary.hung_palaces || []).map(p => `Cung ${p}`).join(', ') || 'Không';
+            sumDet.innerHTML = `
+                <div class="col-md-6"><span class="text-success">⭐ Cung Cát:</span> ${catList}</div>
+                <div class="col-md-6"><span class="text-danger">⚠️ Cung Hung:</span> ${hungList}</div>
+            `;
+
+            // Cục info
+            const cucArea = document.getElementById('cucInfoArea');
+            if (data.cuc_info) {
+                cucArea.innerHTML = `
+                    <div class="col-md-3"><small class="text-muted">Niên Cục</small><br><strong>${data.cuc_info.nien_cuc}</strong></div>
+                    <div class="col-md-3"><small class="text-muted">Nguyệt Cục</small><br><strong>${data.cuc_info.nguyet_cuc}</strong></div>
+                    <div class="col-md-3"><small class="text-muted">Nhật Cục</small><br><strong>${data.cuc_info.nhat_cuc}</strong></div>
+                    <div class="col-md-3"><small class="text-muted">Thời Cục</small><br><strong>${data.cuc_info.thoi_cuc}</strong></div>
+                `;
+            }
+
+            const grid = document.getElementById('chartGrid');
+            grid.innerHTML = '';
+
+            // Render 3x3 grid
+            for (let row = 0; row < 3; row++) {
+                for (let col = 0; col < 3; col++) {
+                    const palaceId = LAYOUT[row][col];
+                    const palaceData = data.palaces[palaceId];
+                    renderPalaceCell(grid, palaceData, palaceId);
+                }
+            }
+
+            // Render detailed interpretation
+            renderDetailArea(data);
+        }
+
+        function renderPalaceCell(container, data, id) {
+            const div = document.createElement('div');
+            div.className = `palace-cell ${id === 5 ? 'center' : ''}`;
+
+            let natureIcon = '';
+            if (data.nature.includes('cat')) natureIcon = '⭐';
+            else if (data.nature.includes('hung')) natureIcon = '⚠️';
+            else natureIcon = '⚖️';
+
+            let html = `
+                <div class="palace-name">
+                    ${data.palace_info.name} (${id})
+                </div>
+                <div class="palace-nature ${data.nature}">
+                    ${natureIcon} ${data.score}
+                </div>
+            `;
+
+            // Render Thần
+            data.thans.forEach(than => {
+                let style = 'than-trung';
+                if (than.nature === 'cat' || than.nature === 'dai_cat') style = 'than-cat';
+                else if (than.nature === 'hung' || than.nature === 'dai_hung') style = 'than-hung';
+                html += `<div class="than-item ${style}">${than.name}</div>`;
+            });
+
+            // Short meaning
+            if (data.meaning) {
+                html += `<div class="palace-meaning">${data.meaning}</div>`;
+            }
+
+            div.innerHTML = html;
+            container.appendChild(div);
+        }
+
+        function renderDetailArea(data) {
+            const area = document.getElementById('detailArea');
+            let html = '';
+            // Sort palaces: dai_cat, cat first, then trung, then hung, dai_hung
+            const order = { dai_cat: 0, cat: 1, trung: 2, neutral: 2, hung: 3, dai_hung: 4 };
+            const sortedIds = Object.keys(data.palaces).sort((a, b) => {
+                return (order[data.palaces[a].nature] || 2) - (order[data.palaces[b].nature] || 2);
+            });
+
+            for (const pid of sortedIds) {
+                const p = data.palaces[pid];
+                const natureLabel = {
+                    dai_cat: '🌟 Đại Cát', cat: '⭐ Cát', trung: '⚖️ Trung Bình',
+                    neutral: '⚖️ Trung Bình', hung: '⚠️ Hung', dai_hung: '🔥 Đại Hung'
+                }[p.nature] || p.nature;
+
+                html += `<div class="detail-palace-card detail-${p.nature}">`;
+                html += `<h6>${p.palace_info.name} (Cung ${pid}) — ${natureLabel} — Điểm: ${p.score}</h6>`;
+
+                if (p.meaning) {
+                    html += `<p class="mb-2"><em>${p.meaning}</em></p>`;
+                }
+                if (p.fields && p.fields.length) {
+                    html += `<div class="mb-2">`;
+                    p.fields.forEach(f => { html += `<span class="field-badge">${f}</span>`; });
+                    html += `</div>`;
+                }
+
+                // Thần details
+                if (p.thans && p.thans.length) {
+                    html += `<div class="than-detail-list">`;
+                    p.thans.forEach(t => {
+                        let cls = 'than-trung';
+                        if (t.nature === 'cat' || t.nature === 'dai_cat') cls = 'than-cat';
+                        else if (t.nature === 'hung' || t.nature === 'dai_hung') cls = 'than-hung';
+
+                        html += `<div class="than-detail">`;
+                        html += `<strong class="${cls}">${t.name}</strong>`;
+                        if (t.han) {
+                            const hanhCls = 'hanh-' + t.han;
+                            html += ` <span class="ngu-hanh-badge ${hanhCls}">${t.han}</span>`;
+                        }
+                        html += ` <small class="text-muted">(${t.nature}, ${t.score > 0 ? '+' : ''}${t.score})</small>`;
+                        if (t.meaning) {
+                            html += `<div class="text-muted small mt-1">${t.meaning}</div>`;
+                        }
+                        if (t.fields && t.fields.length) {
+                            html += `<div class="mt-1">`;
+                            t.fields.forEach(f => { html += `<span class="field-badge">${f}</span>`; });
+                            html += `</div>`;
+                        }
+                        html += `</div>`;
+                    });
+                    html += `</div>`;
+                }
+                html += `</div>`;
+            }
+            area.innerHTML = html;
+        }
+
+        // Auto-fill current date/time
+        document.addEventListener('DOMContentLoaded', function () {
+            setCurrentTime();
+        });
+
+        function setCurrentTime() {
+            const now = new Date();
+            document.querySelector('input[name="year"]').value = now.getFullYear();
+            document.querySelector('input[name="month"]').value = now.getMonth() + 1;
+            document.querySelector('input[name="day"]').value = now.getDate();
+            document.querySelector('input[name="hour"]').value = now.getHours();
+            document.querySelector('input[name="minute"]').value = now.getMinutes();
+            updateCanChiHour();
+        }
+
+        const CHI_NAMES = [
+            "Tý (23h-1h)", "Sửu (1h-3h)", "Dần (3h-5h)", "Mão (5h-7h)",
+            "Thìn (7h-9h)", "Tỵ (9h-11h)", "Ngọ (11h-13h)", "Mùi (13h-15h)",
+            "Thân (15h-17h)", "Dậu (17h-19h)", "Tuất (19h-21h)", "Hợi (21h-23h)"
+        ];
+
+        function updateCanChiHour() {
+            const h = parseInt(document.querySelector('input[name="hour"]').value);
+            const m = parseInt(document.querySelector('input[name="minute"]').value);
+
+            if (isNaN(h) || isNaN(m)) return;
+
+            // Logic tính Chi: (Giờ + 1) / 2 lấy phần nguyên % 12
+            const chiIndex = Math.floor((h + 1) / 2) % 12;
+            const chiName = CHI_NAMES[chiIndex];
+
+            const label = document.getElementById('canChiHourLabel');
+            label.textContent = `Giờ ${chiName} - (Thời gian thực: ${h}h${m.toString().padStart(2, '0')})`;
+
+            // Highlight nếu sát giờ giao thoa
+            if (m <= 10 || m >= 50) {
+                label.className = 'badge bg-warning text-dark border';
+                label.textContent += " [Sát giờ giao thoa]";
+            } else {
+                label.className = 'badge bg-info text-dark border';
+            }
+        }
+    </script>
+</body>
+
+</html>

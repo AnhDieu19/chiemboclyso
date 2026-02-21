@@ -1,0 +1,67 @@
+/**
+ * hexagram.css - Hexagram & Ring Styles
+ * Styles cho các thành phần đồ họa: dots, rings, labels, symbols
+ */
+
+/* Hexagram Dots */
+.yang-dot {
+    fill: #ffffff;
+    stroke: none;
+}
+
+.yin-dot {
+    fill: #121212;
+    stroke: #ffffff;
+    stroke-width: 1.5px;
+}
+
+/* Ring Sectors (Layers) */
+.ring-sector {
+    stroke: #222;
+    stroke-width: 1px;
+    transition: opacity 0.3s;
+    cursor: pointer;
+}
+
+.ring-sector:hover {
+    opacity: 0.9 !important;
+    stroke: #fff;
+    stroke-width: 2px;
+}
+
+/* Ring Labels */
+.ring-label {
+    fill: #fff;
+    font-size: 10px;
+    text-anchor: middle;
+    alignment-baseline: middle;
+    pointer-events: none;
+    text-shadow: 0 0 3px #000;
+}
+
+/* Hexagram Labels */
+.hex-label {
+    fill: #aaa;
+    font-size: 10px;
+    text-anchor: middle;
+    alignment-baseline: middle;
+    pointer-events: none;
+}
+
+/* Tứ Tượng Symbol Arcs */
+.symbol-arc {
+    opacity: 0.3;
+    transition: opacity 0.3s;
+}
+
+.symbol-arc:hover {
+    opacity: 0.8;
+}
+
+.symbol-text {
+    fill: #fff;
+    font-size: 14px;
+    text-anchor: middle;
+    font-weight: bold;
+    pointer-events: none;
+}

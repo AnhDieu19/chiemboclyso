@@ -1,0 +1,38 @@
+{
+    "Thanh Long (Đông)": [
+        {"ten": "Giác", "han": "角", "ngu_hanh": "Mộc", "y_nghia": "Sừng rồng"},
+        {"ten": "Cang",  "han": "亢", "ngu_hanh": "Kim", "y_nghia": "Cổ rồng"},
+        {"ten": "Đê",    "han": "氐", "ngu_hanh": "Thổ", "y_nghia": "Gốc rồng"},
+        {"ten": "Phòng", "han": "房", "ngu_hanh": "Nhật", "y_nghia": "Buồng rồng"},
+        {"ten": "Tâm",   "han": "心", "ngu_hanh": "Nguyệt", "y_nghia": "Tim rồng"},
+        {"ten": "Vĩ",    "han": "尾", "ngu_hanh": "Hỏa", "y_nghia": "Đuôi rồng"},
+        {"ten": "Cơ",    "han": "箕", "ngu_hanh": "Thủy", "y_nghia": "Giỏ sàng"}
+    ],
+    "Huyền Vũ (Bắc)": [
+        {"ten": "Đẩu",  "han": "斗", "ngu_hanh": "Mộc", "y_nghia": "Cán gáo"},
+        {"ten": "Ngưu", "han": "牛", "ngu_hanh": "Kim", "y_nghia": "Trâu"},
+        {"ten": "Nữ",   "han": "女", "ngu_hanh": "Thổ", "y_nghia": "Thiếu nữ"},
+        {"ten": "Hư",   "han": "虛", "ngu_hanh": "Nhật", "y_nghia": "Hư không"},
+        {"ten": "Nguy", "han": "危", "ngu_hanh": "Nguyệt", "y_nghia": "Nguy hiểm"},
+        {"ten": "Thất", "han": "室", "ngu_hanh": "Hỏa", "y_nghia": "Phòng"},
+        {"ten": "Bích", "han": "壁", "ngu_hanh": "Thủy", "y_nghia": "Tường"}
+    ],
+    "Bạch Hổ (Tây)": [
+        {"ten": "Khuê",    "han": "奎", "ngu_hanh": "Mộc", "y_nghia": "Chân hổ"},
+        {"ten": "Lâu",     "han": "婁", "ngu_hanh": "Kim", "y_nghia": "Đầu hổ"},
+        {"ten": "Vị",      "han": "胃", "ngu_hanh": "Thổ", "y_nghia": "Bụng hổ"},
+        {"ten": "Mão",     "han": "昴", "ngu_hanh": "Nhật", "y_nghia": "Cụm sao nhỏ"},
+        {"ten": "Tất",     "han": "畢", "ngu_hanh": "Nguyệt", "y_nghia": "Lưới bắt"},
+        {"ten": "Chủy",    "han": "觜", "ngu_hanh": "Hỏa", "y_nghia": "Mỏ hổ"},
+        {"ten": "Sâm",     "han": "參", "ngu_hanh": "Thủy", "y_nghia": "Ba sao"}
+    ],
+    "Chu Tước (Nam)": [
+        {"ten": "Tỉnh",   "han": "井", "ngu_hanh": "Mộc", "y_nghia": "Giếng"},
+        {"ten": "Quỷ",    "han": "鬼", "ngu_hanh": "Kim", "y_nghia": "Ma quỷ"},
+        {"ten": "Liễu",   "han": "柳", "ngu_hanh": "Thổ", "y_nghia": "Cây liễu"},
+        {"ten": "Tinh",   "han": "星", "ngu_hanh": "Nhật", "y_nghia": "Ngôi sao"},
+        {"ten": "Trương", "han": "張", "ngu_hanh": "Nguyệt", "y_nghia": "Cánh chim"},
+        {"ten": "Dực",    "han": "翼", "ngu_hanh": "Hỏa", "y_nghia": "Cánh"},
+        {"ten": "Chẩn",   "han": "軫", "ngu_hanh": "Thủy", "y_nghia": "Xe"}
+    ]
+}

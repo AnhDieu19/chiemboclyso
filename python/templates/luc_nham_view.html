@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đại Lục Nhâm - Grand Six Ren Divination</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/luc_nham.css">
+</head>
+
+<body class="bg-light">
+    <!-- ═══════════════════════════════════════════════════════════════
+         NAVBAR
+         ═══════════════════════════════════════════════════════════════ -->
+    <nav class="navbar navbar-expand-lg navbar-dark mb-4" style="background: linear-gradient(135deg, #1a237e, #0d47a1);">
+        <div class="container">
+            <a class="navbar-brand" id="link-home" href="/">Tử Vi Đẩu Số</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" id="link-thai-at" href="/thai-at">Thái Ất</a></li>
+                    <li class="nav-item"><a class="nav-link" id="link-ki-mon" href="/ki-mon">Kì Môn</a></li>
+                    <li class="nav-item"><a class="nav-link active" id="link-luc-nham" href="/luc-nham">Lục Nhâm</a></li>
+                </ul>
+                <script>
+                    if (window.location.protocol === 'file:') {
+                        document.getElementById('link-home').href = 'http://localhost:5001/';
+                        document.getElementById('link-thai-at').href = 'http://localhost:5001/thai-at';
+                        document.getElementById('link-ki-mon').href = 'http://localhost:5001/ki-mon';
+                        document.getElementById('link-luc-nham').href = 'http://localhost:5001/luc-nham';
+                    }
+                </script>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- ═══════════════════════════════════════════════════════════════
+             INPUT FORM
+             ═══════════════════════════════════════════════════════════════ -->
+        <div class="card mb-4">
+            <div class="card-header text-white" style="background: linear-gradient(135deg, #1a237e, #283593);">
+                <h4 class="mb-0">壬 Đại Lục Nhâm - Lập Bàn Thức</h4>
+                <small class="text-white-50">Grand Six Ren Divination • Thiên Viên Địa Phương</small>
+            </div>
+            <div class="card-body">
+                <form id="lucNhamForm" class="row g-3">
+                    <div class="col-md-3">
+                        <label class="form-label">Năm</label>
+                        <input type="number" class="form-control" name="year" value="2024">
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">Tháng</label>
+                        <input type="number" class="form-control" name="month" value="1" min="1" max="12">
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">Ngày</label>
+                        <input type="number" class="form-control" name="day" value="1" min="1" max="31">
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">Giờ (0-23)</label>
+                        <input type="number" class="form-control" name="hour" value="10" min="0" max="23">
+                    </div>
+
+                    <div class="col-md-12 text-center mt-2">
+                        <button type="button" class="btn btn-outline-primary btn-sm mb-2" onclick="setCurrentTime()">
+                            🕒 Lấy giờ hiện tại
+                        </button>
+                        <br>
+                        <span id="canChiLabel" class="badge bg-light text-dark border"
+                            style="font-size: 1rem; padding: 10px 20px;">--:--</span>
+                    </div>
+
+                    <div class="col-12 text-center mt-3">
+                        <button type="button" class="btn btn-primary px-5 btn-lg" onclick="calculateLucNham()">
+                            壬 Lập Bàn Lục Nhâm
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════════════
+             RESULTS
+             ═══════════════════════════════════════════════════════════════ -->
+        <div id="resultArea" style="display: none;">
+
+            <!-- Header Info -->
+            <div class="alert text-white text-center mb-4" style="background: linear-gradient(135deg, #1a237e, #283593);">
+                <h4 id="headerCanChi" class="mb-1">--</h4>
+                <small id="headerNguyetTuong" class="text-white-50">--</small>
+            </div>
+
+            <!-- ═══ LỤC NHÂM 6 TỔ HỢP ═══ -->
+            <div class="card mb-4">
+                <div class="card-header bg-white">
+                    <h5 class="mb-0">壬 Lục Nhâm - 6 Quỹ Đạo Chu Kỳ 60 Năm</h5>
+                </div>
+                <div class="card-body">
+                    <div class="luc-nham-cycle" id="lucNhamCycle"></div>
+                </div>
+            </div>
+
+            <!-- ═══ KHÓA THỂ + CHIẾN LƯỢC ═════ -->
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-header bg-white"><h5 class="mb-0">📋 Khóa Thể</h5></div>
+                        <div class="card-body text-center" id="khoaTheCard"></div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100 strategy-card">
+                        <div class="card-header bg-white"><h5 class="mb-0">🧭 Chiến Lược Hành Động</h5></div>
+                        <div class="card-body text-center" id="strategyCard"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ═══ TỨ KHÓA ═══ -->
+            <div class="card mb-4">
+                <div class="card-header bg-white">
+                    <h5 class="mb-0">四課 Tứ Khóa - Four Classes</h5>
+                    <small class="text-muted">Kiến trúc thượng tầng logic từ Can-Chi Ngày-Giờ</small>
+                </div>
+                <div class="card-body">
+                    <div class="tu-khoa-grid" id="tuKhoaGrid"></div>
+                </div>
+            </div>
+
+            <!-- ═══ TAM TRUYỀN ═══ -->
+            <div class="card mb-4">
+                <div class="card-header bg-white">
+                    <h5 class="mb-0">三傳 Tam Truyền - Three Transmissions</h5>
+                    <small class="text-muted">Dòng chảy nhân quả: Bùng phát → Chuyển hóa → Kết cục</small>
+                </div>
+                <div class="card-body">
+                    <div class="tam-truyen-flow" id="tamTruyenFlow"></div>
+                </div>
+            </div>
+
+            <!-- ═══ BÀN THỨC ═══ -->
+            <div class="card mb-4">
+                <div class="card-header bg-white">
+                    <h5 class="mb-0">盤式 Bàn Thức Thiên Viên Địa Phương</h5>
+                    <small class="text-muted">Thiên bàn (tròn, xoay) ⟶ Địa bàn (vuông, cố định) • 12 Thần Tướng</small>
+                </div>
+                <div class="card-body">
+                    <div class="ban-thuc-grid" id="banThucGrid"></div>
+                </div>
+            </div>
+
+            <!-- ═══ HƯỚNG TỐT / XẤU ═══ -->
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <div class="card border-success h-100">
+                        <div class="card-header bg-success text-white">Hướng Tốt Nhất</div>
+                        <div class="card-body">
+                            <h3 id="bestDir">--</h3>
+                            <p id="bestReason" class="mb-0"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card border-danger h-100">
+                        <div class="card-header bg-danger text-white">Hướng Xấu Nhất</div>
+                        <div class="card-body">
+                            <h3 id="worstDir">--</h3>
+                            <p id="worstReason" class="mb-0"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ═══ QUANTUM & VEDIC OVERVIEW ═══ -->
+            <div class="quantum-card mb-4" id="quantumSection">
+                <h5>⚛️ Tính Đối Xứng Toán Học & Vật Lý Lượng Tử</h5>
+                <div class="row">
+                    <div class="col-md-4 text-center">
+                        <div class="highlight-number" id="qvTotal">1,440</div>
+                        <p>Tổng Cấu Hình Bàn Thức</p>
+                        <div class="formula-box" id="qvFormula">12 × 12 × 12</div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="vedic-badge mb-2">Vedic Nuclear Physics</div>
+                        <div class="highlight-number" style="color: #ffc107;">720</div>
+                        <p>cặp hạt hạ nguyên tử</p>
+                        <small style="color: #b2bec3;">720 × 2 = 1,440 ≡ Bàn Thức</small>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="vedic-badge mb-2" style="color: #00d2ff; border-color: rgba(0,210,255,0.3); background: rgba(0,210,255,0.1);">
+                            As Above, So Below
+                        </div>
+                        <p style="font-size: 0.9rem;">
+                            Đẳng cấu (Isomorphism):<br>
+                            Vi mô ↔ Vĩ mô<br>
+                            <span style="color: #74b9ff;">上下相應</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ═══ SUPERPOSITION & COHERENCE ═══ -->
+            <div class="card mb-4 quantum-detail-card">
+                <div class="card-header quantum-header">
+                    <h5 class="mb-0">🌊 Superposition & Coherence — Chồng Chất & Kết Hợp</h5>
+                    <small>1.440 trạng thái sụp đổ thành 1 bàn thức khi "chiêm" (quan sát)</small>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="quantum-meter">
+                                <div class="meter-label">Độ Kết Hợp (Coherence)</div>
+                                <div class="meter-bar-bg">
+                                    <div class="meter-bar-fill" id="coherenceBar" style="width: 0%"></div>
+                                </div>
+                                <div class="meter-value" id="coherenceValue">—</div>
+                            </div>
+                            <div class="mt-2">
+                                <small class="text-muted">Shannon Entropy: <span id="entropyValue">—</span> / <span id="maxEntropyValue">—</span></small>
+                            </div>
+                            <p class="mt-2 quantum-interpretation" id="coherenceInterpretation"></p>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="ngu-hanh-quantum-dist" id="nguHanhQuantumDist"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ═══ ENTANGLEMENT — VƯỚNG VÍU LƯỢNG TỬ ═══ -->
+            <div class="card mb-4 quantum-detail-card">
+                <div class="card-header quantum-header">
+                    <h5 class="mb-0">🔗 Quantum Entanglement — Vướng Víu Tứ Khóa</h5>
+                    <small>Mỗi cặp Khóa = 1 cặp hạt vướng víu: thay đổi 1 ↔ ảnh hưởng toàn bộ</small>
+                </div>
+                <div class="card-body">
+                    <div class="entanglement-grid" id="entanglementGrid"></div>
+                    <div class="mt-3 text-center">
+                        <span class="badge bg-dark" style="font-size: 0.85rem;" id="avgEntanglement">—</span>
+                    </div>
+                    <p class="mt-2 quantum-interpretation text-center" id="entanglementInterpretation"></p>
+                </div>
+            </div>
+
+            <!-- ═══ DECOHERENCE TIMELINE — TAM TRUYỀN ═══ -->
+            <div class="card mb-4 quantum-detail-card">
+                <div class="card-header quantum-header">
+                    <h5 class="mb-0">💫 Decoherence Timeline — Tam Truyền Lượng Tử</h5>
+                    <small>Quá trình từ Lượng tử → Cổ điển qua 3 giai đoạn ≡ Brahma → Vishnu → Shiva</small>
+                </div>
+                <div class="card-body">
+                    <div class="decoherence-timeline" id="decoherenceTimeline"></div>
+                </div>
+            </div>
+
+            <!-- ═══ THẦN TƯỚNG = QUANTUM PARTICLES ═══ -->
+            <div class="card mb-4 quantum-detail-card">
+                <div class="card-header quantum-header">
+                    <h5 class="mb-0">⚡ 12 Thần Tướng ↔ 12 Hạt Cơ Bản ↔ 12 Adityas</h5>
+                    <small>Mỗi Thần Tướng = 1 hạt truyền lực trong Mô hình Chuẩn = 1 Thái Dương thần Vệ Đà</small>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-sm quantum-particle-table">
+                            <thead>
+                                <tr>
+                                    <th>Thần Tướng</th>
+                                    <th>Cung</th>
+                                    <th>Hành</th>
+                                    <th>Hạt Lượng Tử</th>
+                                    <th>Vệ Đà</th>
+                                    <th>Vai trò</th>
+                                </tr>
+                            </thead>
+                            <tbody id="particleTableBody"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ═══ CONCEPT MAPPING TABLE ═══ -->
+            <div class="card mb-4 quantum-detail-card">
+                <div class="card-header quantum-header">
+                    <h5 class="mb-0">📐 Bảng Đẳng Cấu: Lục Nhâm ↔ Lượng Tử ↔ Vệ Đà</h5>
+                    <small>Isomorphism Table — Mỗi khái niệm Lục Nhâm có đối xứng trong Vật lý Hiện đại và Triết học Vệ Đà</small>
+                </div>
+                <div class="card-body">
+                    <div class="concept-mapping-grid" id="conceptMappingGrid"></div>
+                </div>
+            </div>
+
+            <!-- ═══ SYMMETRY GROUP ═══ -->
+            <div class="quantum-card mb-4">
+                <h5>🔢 Nhóm Đối Xứng & Phá Vỡ Đối Xứng</h5>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="symmetry-grid" id="symmetryGrid">
+                            <div class="symmetry-item">
+                                <h6>Nhóm gốc</h6>
+                                <div class="formula-box" id="groupFormula">Z₁₂ × Z₁₂ × Z₁₂</div>
+                                <p>|G| = 1.440 phần tử</p>
+                            </div>
+                            <div class="symmetry-item">
+                                <h6>Phá vỡ khi chiêm</h6>
+                                <div class="formula-box" id="breakFormula">—</div>
+                                <p id="symmetryBreakText">—</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6" id="symmetryAnalysis">
+                    </div>
+                </div>
+            </div>
+
+            <!-- ═══ BẢNG PHÂN TÍCH CHI TIẾT ═══ -->
+            <div class="card mb-5">
+                <div class="card-header bg-white">
+                    <h5 class="mb-0">📜 Phân Tích Chi Tiết 12 Cung</h5>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>Cung</th>
+                                    <th>Hướng</th>
+                                    <th>Thiên/Địa</th>
+                                    <th>Thần Tướng</th>
+                                    <th>Ngũ Hành</th>
+                                    <th>Điểm</th>
+                                    <th>Tính Chất</th>
+                                </tr>
+                            </thead>
+                            <tbody id="detailTableBody"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/luc_nham.js"></script>
+</body>
+
+</html>

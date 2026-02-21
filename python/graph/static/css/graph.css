@@ -1,0 +1,1819 @@
+/**
+ * Tu Vi Knowledge Graph - Styles
+ * Version: 2.0
+ * Refactored: Clean, organized, well-commented
+ */
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   1. RESET & BASE
+   ═══════════════════════════════════════════════════════════════════════════ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CSS Variables - Define at top for proper cascade */
+:root {
+    --grid-rotation: 30deg;
+    /* Rotate 30deg to place Ngọ at Top (12h), Tý at Bottom (6h) */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #fff;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   2. HEADER
+   ═══════════════════════════════════════════════════════════════════════════ */
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 16px;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#header h1 {
+    font-size: 20px;
+    font-weight: 600;
+    background: linear-gradient(90deg, #FFD700, #FF6B6B);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   3. CONTROLS (Buttons & Search)
+   ═══════════════════════════════════════════════════════════════════════════ */
+#controls {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.btn {
+    padding: 5px 12px;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 500;
+    transition: all 0.25s ease;
+    white-space: nowrap;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #4ECDC4, #44A08D);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(78, 205, 196, 0.4);
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.btn-secondary.active,
+.btn-filter.active {
+    background: rgba(78, 205, 196, 0.25);
+    border-color: #4ECDC4;
+    color: #4ECDC4;
+}
+
+.btn-filter-link {
+    background: rgba(0, 0, 0, 0.3);
+    color: #aaa;
+    border: 1px dashed rgba(255, 255, 255, 0.3);
+}
+
+.btn-filter-link:hover {
+    color: #fff;
+    border-color: #fff;
+}
+
+.btn-filter-link.active {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border-color: #fff;
+    border-style: solid;
+}
+
+#search-box {
+    padding: 5px 12px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    font-size: 11px;
+    width: 140px;
+    transition: all 0.25s ease;
+}
+
+#search-box::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+#search-box:focus {
+    outline: none;
+    border-color: #4ECDC4;
+    background: rgba(0, 0, 0, 0.5);
+    width: 180px;
+}
+
+/* Dropdown Styles */
+.control-select {
+    padding: 5px 12px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    font-size: 11px;
+    font-family: inherit;
+    cursor: pointer;
+    outline: none;
+}
+
+.control-select:hover,
+.control-select:focus {
+    border-color: #4ECDC4;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.control-select option {
+    background: #1a1a2e;
+    color: white;
+}
+
+/* Checkbox Styles */
+.link-filters {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    font-size: 11px;
+    user-select: none;
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.2s;
+}
+
+.checkbox-container:hover {
+    color: white;
+}
+
+.checkbox-container input {
+    display: none;
+}
+
+.checkmark {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: inline-block;
+    position: relative;
+    transition: all 0.2s;
+}
+
+.checkbox-container input:checked~.checkmark {
+    background-color: #4ECDC4;
+    border-color: #4ECDC4;
+}
+
+.checkbox-container input:checked~.checkmark::after {
+    content: '';
+    position: absolute;
+    left: 3px;
+    top: 0px;
+    width: 3px;
+    height: 7px;
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* Custom colors for checkmarks when checked */
+.checkbox-container input:checked~.custom-sinh {
+    background-color: #27ae60;
+    border-color: #27ae60;
+}
+
+.checkbox-container input:checked~.custom-khac {
+    background-color: #e74c3c;
+    border-color: #e74c3c;
+}
+
+.checkbox-container input:checked~.custom-thuoc {
+    background-color: #888;
+    border-color: #888;
+}
+
+.checkbox-container input:checked~.custom-vong {
+    background-color: #3498db;
+    border-color: #3498db;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   4. GRAPH CANVAS
+   ═══════════════════════════════════════════════════════════════════════════ */
+#graph {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 55;
+    /* Above Grid (50) but below header (100) */
+    pointer-events: auto;
+    background: transparent;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   5. TOOLTIP
+   ═══════════════════════════════════════════════════════════════════════════ */
+#tooltip {
+    position: fixed;
+    padding: 12px 14px;
+    background: rgba(10, 10, 20, 0.95);
+    border: 1px solid #4ECDC4;
+    border-radius: 8px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+    max-width: 300px;
+    z-index: 1000;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+#tooltip h3 {
+    color: #FFD700;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+#tooltip .nature-badge {
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+#tooltip .nature-cat {
+    background: linear-gradient(135deg, #27ae60, #2ecc71);
+    color: white;
+}
+
+#tooltip .nature-hung {
+    background: linear-gradient(135deg, #c0392b, #e74c3c);
+    color: white;
+}
+
+#tooltip .nature-trung {
+    background: rgba(127, 140, 141, 0.8);
+    color: white;
+}
+
+#tooltip p {
+    color: #bbb;
+    font-size: 12px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+#tooltip .type-label {
+    color: #4ECDC4;
+    font-size: 10px;
+    margin-top: 8px;
+    padding-top: 6px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   6. LEGEND
+   ═══════════════════════════════════════════════════════════════════════════ */
+#legend {
+    position: fixed;
+    bottom: 16px;
+    left: 16px;
+    background: rgba(10, 10, 20, 0.85);
+    padding: 12px 14px;
+    border-radius: 10px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    max-height: 55vh;
+    overflow-y: auto;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
+#legend::-webkit-scrollbar {
+    width: 4px;
+}
+
+#legend::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+}
+
+#legend h4 {
+    margin-bottom: 10px;
+    color: #FFD700;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.legend-section {
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.legend-section:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.legend-section h5 {
+    color: #4ECDC4;
+    font-size: 10px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 4px 0;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.legend-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    flex-shrink: 0;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   7. STATS PANEL
+   ═══════════════════════════════════════════════════════════════════════════ */
+#stats {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    background: rgba(10, 10, 20, 0.85);
+    padding: 12px 14px;
+    border-radius: 10px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    font-size: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    min-width: 140px;
+}
+
+#stats div {
+    margin: 4px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+#stats span {
+    color: #4ECDC4;
+    font-weight: 600;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   8. SVG NODES
+   ═══════════════════════════════════════════════════════════════════════════ */
+.node {
+    cursor: pointer;
+    transition: filter 0.2s ease;
+}
+
+.node:hover {
+    filter: brightness(1.25) drop-shadow(0 0 8px rgba(255, 255, 255, 0.3));
+}
+
+.node-label {
+    fill: #fff;
+    font-size: 9px;
+    font-weight: 500;
+    pointer-events: none;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.nature-marker {
+    font-weight: 700;
+    font-size: 12px;
+    pointer-events: none;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.nature-cat-marker {
+    fill: #2ecc71;
+}
+
+.nature-hung-marker {
+    fill: #e74c3c;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   9. SVG LINKS
+   ═══════════════════════════════════════════════════════════════════════════ */
+.link {
+    stroke-opacity: 0.6;
+    fill: none;
+    transition: stroke-opacity 0.2s ease;
+}
+
+.link-sinh {
+    stroke: #27ae60;
+    stroke-width: 4;
+}
+
+.link-khac {
+    stroke: #e74c3c;
+    stroke-width: 3;
+    stroke-dasharray: 6, 3;
+}
+
+.link-thuoc {
+    stroke: #888;
+    stroke-width: 2;
+}
+
+.link-vong {
+    stroke: #3498db;
+    stroke-width: 3;
+}
+
+.link-dong_hanh {
+    stroke: #9b59b6;
+    stroke-width: 2.5;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   10. RESPONSIVE
+   ═══════════════════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+    #header {
+        padding: 8px 12px;
+    }
+
+    #header h1 {
+        font-size: 16px;
+    }
+
+    .btn {
+        padding: 4px 10px;
+        font-size: 10px;
+    }
+
+    #search-box {
+        width: 100px;
+    }
+
+    #legend {
+        max-height: 40vh;
+        max-width: 45vw;
+    }
+
+    #stats {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 480px) {
+    #header h1 {
+        font-size: 14px;
+    }
+
+    #controls {
+        gap: 4px;
+    }
+
+    .btn {
+        padding: 3px 8px;
+        font-size: 9px;
+    }
+
+    #legend,
+    #stats {
+        display: none;
+    }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   11. BIRTH FORM PANEL
+   ═══════════════════════════════════════════════════════════════════════════ */
+.birth-form-panel {
+    position: fixed;
+    top: 60px;
+    right: 16px;
+    width: 300px;
+    max-height: calc(100vh - 80px);
+    background: rgba(10, 10, 20, 0.92);
+    border-radius: 10px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    z-index: 90;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
+.birth-form-panel::-webkit-scrollbar {
+    width: 4px;
+}
+
+.birth-form-panel::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+}
+
+.birth-form-panel .panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 14px;
+    background: rgba(78, 205, 196, 0.15);
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.birth-form-panel .panel-header h4 {
+    color: #4ECDC4;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.birth-form-panel .toggle-icon {
+    color: #4ECDC4;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.birth-form-panel .panel-content {
+    display: none;
+    padding: 12px;
+}
+
+.birth-form-panel.expanded .panel-content {
+    display: block;
+}
+
+.birth-form-panel.expanded .toggle-icon {
+    transform: rotate(45deg);
+}
+
+.birth-form-panel .calendar-toggle {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 10px;
+}
+
+.birth-form-panel .calendar-toggle button {
+    flex: 1;
+    padding: 6px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0, 0, 0.3);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.birth-form-panel .calendar-toggle button.active {
+    background: rgba(78, 205, 196, 0.25);
+    border-color: #4ECDC4;
+    color: #4ECDC4;
+}
+
+.birth-form-panel .form-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.birth-form-panel .form-group {
+    flex: 1;
+}
+
+.birth-form-panel .form-group label {
+    display: block;
+    font-size: 9px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.birth-form-panel .form-group input,
+.birth-form-panel .form-group select {
+    width: 100%;
+    padding: 6px 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    font-size: 11px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.birth-form-panel .form-group input:focus,
+.birth-form-panel .form-group select:focus {
+    border-color: #4ECDC4;
+}
+
+.birth-form-panel .leap-month-row {
+    margin-bottom: 10px;
+}
+
+.birth-form-panel .leap-month-row label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+}
+
+.birth-form-panel .btn-an-sao {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(135deg, #4ECDC4, #44A08D);
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-bottom: 12px;
+}
+
+.birth-form-panel .btn-an-sao:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(78, 205, 196, 0.4);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   11b. PLAYBACK CONTROLS
+   ═══════════════════════════════════════════════════════════════════════════ */
+.playback-section {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.playback-header {
+    font-size: 11px;
+    font-weight: 600;
+    color: #FFD700;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.playback-range .form-row {
+    margin-bottom: 8px;
+}
+
+.playback-star-filter {
+    margin-bottom: 10px;
+    padding: 8px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.playback-star-filter>label {
+    display: block;
+    font-size: 9px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 6px;
+}
+
+.star-filter-checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 8px;
+}
+
+.star-filter-checkboxes label {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    font-size: 9px;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    padding: 2px 4px;
+    border-radius: 3px;
+    transition: background 0.2s;
+}
+
+.star-filter-checkboxes label:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.star-filter-checkboxes input[type="checkbox"] {
+    width: 12px;
+    height: 12px;
+    accent-color: #4ECDC4;
+}
+
+/* Individual Star Filter */
+.individual-star-filter {
+    margin-bottom: 10px;
+    padding: 8px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.individual-star-filter>label {
+    display: block;
+    font-size: 9px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 6px;
+}
+
+.star-select-container {
+    position: relative;
+}
+
+.star-select-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 10px;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 10px;
+    color: white;
+}
+
+.star-select-box:hover {
+    border-color: #4ECDC4;
+}
+
+.star-select-arrow {
+    font-size: 8px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.star-select-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(30, 30, 40, 0.98);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    margin-top: 4px;
+    z-index: 1000;
+    max-height: 250px;
+    overflow: hidden;
+}
+
+.star-select-dropdown.show {
+    display: block;
+}
+
+.star-select-actions {
+    display: flex;
+    gap: 6px;
+    padding: 6px 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.star-select-actions button {
+    flex: 1;
+    padding: 4px 8px;
+    font-size: 9px;
+    background: rgba(78, 205, 196, 0.2);
+    border: 1px solid rgba(78, 205, 196, 0.4);
+    color: #4ECDC4;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.star-select-actions button:hover {
+    background: rgba(78, 205, 196, 0.4);
+}
+
+.star-search-box {
+    padding: 6px 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.star-search-box input {
+    width: 100%;
+    padding: 5px 8px;
+    font-size: 10px;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+    color: white;
+}
+
+.star-search-box input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.star-checkbox-list {
+    max-height: 180px;
+    overflow-y: auto;
+    padding: 6px 0;
+}
+
+.star-checkbox-list label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.9);
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.star-checkbox-list label:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.star-checkbox-list label.hidden {
+    display: none;
+}
+
+.star-checkbox-list input[type="checkbox"] {
+    width: 12px;
+    height: 12px;
+    accent-color: #4ECDC4;
+}
+
+.star-checkbox-list .star-type-badge {
+    font-size: 8px;
+    padding: 1px 4px;
+    border-radius: 2px;
+    margin-left: auto;
+    opacity: 0.7;
+}
+
+.star-checkbox-list .star-type-badge.chinh-tinh {
+    background: rgba(255, 99, 132, 0.3);
+    color: #FF6384;
+}
+
+.star-checkbox-list .star-type-badge.luc-cat {
+    background: rgba(76, 175, 80, 0.3);
+    color: #4CAF50;
+}
+
+.star-checkbox-list .star-type-badge.luc-sat {
+    background: rgba(244, 67, 54, 0.3);
+    color: #F44336;
+}
+
+.star-checkbox-list .star-type-badge.tu-hoa {
+    background: rgba(255, 193, 7, 0.3);
+    color: #FFC107;
+}
+
+.star-checkbox-list .star-type-badge.tap-tinh {
+    background: rgba(156, 39, 176, 0.3);
+    color: #9C27B0;
+}
+
+.playback-mode {
+    margin-bottom: 8px;
+}
+
+.playback-mode label {
+    display: block;
+    font-size: 9px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 3px;
+}
+
+.playback-mode select {
+    padding: 5px 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    font-size: 10px;
+    border-radius: 4px;
+}
+
+/* Step input row - number + unit */
+.step-input-row {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 6px;
+}
+
+.step-amount-input {
+    width: 50px;
+    padding: 5px 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    font-size: 10px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.step-unit-select {
+    flex: 1;
+    padding: 5px 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    font-size: 10px;
+    border-radius: 4px;
+}
+
+/* Quick step buttons */
+.quick-step-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.quick-step-buttons button {
+    padding: 3px 6px;
+    font-size: 9px;
+    background: rgba(78, 205, 196, 0.15);
+    border: 1px solid rgba(78, 205, 196, 0.3);
+    color: rgba(255, 255, 255, 0.8);
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.quick-step-buttons button:hover {
+    background: rgba(78, 205, 196, 0.3);
+    border-color: #4ECDC4;
+    color: white;
+}
+
+.quick-step-buttons button.active {
+    background: rgba(78, 205, 196, 0.4);
+    border-color: #4ECDC4;
+    color: #4ECDC4;
+}
+
+.playback-speed {
+    margin-bottom: 10px;
+}
+
+.playback-speed label {
+    display: block;
+    font-size: 9px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 4px;
+}
+
+.playback-speed #speed-value {
+    color: #4ECDC4;
+    font-weight: 600;
+}
+
+.playback-speed input[type="range"] {
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+    outline: none;
+    -webkit-appearance: none;
+}
+
+.playback-speed input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 14px;
+    height: 14px;
+    background: #4ECDC4;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.playback-controls {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 10px;
+}
+
+.playback-controls .btn-play {
+    flex: 2;
+    padding: 8px 12px;
+    background: linear-gradient(135deg, #27ae60, #2ecc71);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.playback-controls .btn-play:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(39, 174, 96, 0.4);
+}
+
+.playback-controls .btn-play.playing {
+    background: linear-gradient(135deg, #e67e22, #f39c12);
+}
+
+.playback-controls .btn-play.playing .play-icon::before {
+    content: "⏸";
+}
+
+.playback-controls .btn-step {
+    flex: 1;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    color: white;
+    font-size: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.playback-controls .btn-step:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #4ECDC4;
+}
+
+.playback-controls .btn-stop {
+    flex: 1;
+    padding: 8px;
+    background: rgba(231, 76, 60, 0.3);
+    border: 1px solid rgba(231, 76, 60, 0.5);
+    border-radius: 5px;
+    color: #e74c3c;
+    font-size: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.playback-controls .btn-stop:hover {
+    background: rgba(231, 76, 60, 0.5);
+}
+
+.playback-display {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    padding: 8px;
+}
+
+.current-datetime {
+    font-size: 12px;
+    font-weight: 600;
+    color: #FFD700;
+    text-align: center;
+    margin-bottom: 6px;
+    font-family: 'Courier New', monospace;
+}
+
+.playback-progress {
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #4ECDC4, #27ae60);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   12. 12 CUNG DONUT CIRCULAR LAYOUT
+   Bàn cờ Tử Vi dạng tròn (donut) với 12 cung chia đều 30° mỗi cung
+   Góc nghiêng 27°33' (27.55°) - trục Sửu-Mùi thẳng đứng
+   ═══════════════════════════════════════════════════════════════════════════ */
+.cung-grid-container {
+    /* Container does NOT rotate - all rotation is on .cung-grid */
+    --container-rotation: 0deg;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: center center;
+    width: min(98vw, 98vh);
+    height: min(98vw, 98vh);
+    z-index: 50;
+    pointer-events: none;
+}
+
+/* Compass indicator showing N-S axis */
+.compass-indicator {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 60;
+    /* Counter-rotate the wrapper so N/S align with Screen Top/Bottom, not Grid Top/Bottom */
+    transform: rotate(calc(-1 * var(--container-rotation)));
+}
+
+.compass-indicator .compass-n {
+    /* Update content using ::after or changing HTML. Here assuming HTML has text, but CSS can override? 
+       Actually user's HTML has hardcoded "N (Mùi)". 
+       Better to hide original text and use ::after if we can't change HTML easily from here, 
+       but we should really assume we are styling the existing elements.
+       The prompt implies I can only edit files. I should edit HTML too if I want to change text cleanly.
+       For now, let's keep the style consistent and I will do a separate edit for HTML Labels if needed.
+       Wait, the standard .compass-n has text inside in HTML. 
+       "compass-n" class usually implies North.
+       If Ngọ is Top (South), then .compass-n (Top element) should be South?
+       That's confusing.
+       Let's just align the rotation first. The Text change might need HTML edit.
+    */
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ff6b6b;
+    font-size: 12px;
+    font-weight: 600;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+    content: "N (Tý)";
+    /* Update text to reflect new orientation */
+}
+
+.compass-indicator .compass-s {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ff6b6b;
+    font-size: 12px;
+    font-weight: 600;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+    content: "S (Ngọ)";
+}
+
+/* Circular donut container - La Kinh style */
+.cung-grid {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    /* Vòng ngoài */
+    background:
+        /* Vòng ring chính */
+        radial-gradient(circle,
+            transparent 0%,
+            transparent 24%,
+            rgba(78, 205, 196, 0.3) 24%,
+            rgba(78, 205, 196, 0.3) 25%,
+            rgba(15, 20, 35, 0.85) 25%,
+            rgba(15, 20, 35, 0.85) 49%,
+            rgba(78, 205, 196, 0.4) 49%,
+            rgba(78, 205, 196, 0.4) 50%,
+            rgba(10, 15, 25, 0.3) 50%,
+            transparent 51%),
+        /* 12 phần xen kẽ màu */
+        conic-gradient(from -15deg,
+            rgba(44, 62, 80, 0.7) 0deg,
+            rgba(44, 62, 80, 0.7) 30deg,
+            /* Cung Chan - Dark Blue */
+
+            rgba(52, 73, 94, 0.7) 30deg,
+            rgba(52, 73, 94, 0.7) 60deg,
+            /* Cung Le - Lighter Blue */
+
+            rgba(44, 62, 80, 0.7) 60deg,
+            rgba(44, 62, 80, 0.7) 90deg,
+            /* Cung Chan */
+
+            rgba(52, 73, 94, 0.7) 90deg,
+            rgba(52, 73, 94, 0.7) 120deg,
+            /* Cung Le */
+
+            rgba(44, 62, 80, 0.7) 120deg,
+            rgba(44, 62, 80, 0.7) 150deg,
+            /* Cung Chan */
+
+            rgba(52, 73, 94, 0.7) 150deg,
+            rgba(52, 73, 94, 0.7) 180deg,
+            /* Cung Le */
+
+            rgba(44, 62, 80, 0.7) 180deg,
+            rgba(44, 62, 80, 0.7) 210deg,
+            /* Cung Chan */
+
+            rgba(52, 73, 94, 0.7) 210deg,
+            rgba(52, 73, 94, 0.7) 240deg,
+            /* Cung Le */
+
+            rgba(44, 62, 80, 0.7) 240deg,
+            rgba(44, 62, 80, 0.7) 270deg,
+            /* Cung Chan */
+
+            rgba(52, 73, 94, 0.7) 270deg,
+            rgba(52, 73, 94, 0.7) 300deg,
+            /* Cung Le */
+
+            rgba(44, 62, 80, 0.7) 300deg,
+            rgba(44, 62, 80, 0.7) 330deg,
+            /* Cung Chan */
+
+            rgba(52, 73, 94, 0.7) 330deg,
+            rgba(52, 73, 94, 0.7) 360deg
+            /* Cung Le */
+        );
+    border: 2px solid rgba(78, 205, 196, 0.3);
+    /* Add subtle outer border */
+    border: none;
+    overflow: visible;
+
+    /* Rotate Grid: Ngọ (6) at Top */
+    /* Ngọ native pos: 330deg. Target: 360/0deg. Delta: +30deg */
+    transform: rotate(var(--grid-rotation));
+}
+
+/* 
+ * Mỗi cung-cell là một "slice" hình quạt
+ * Position: góc 0° = 12h (hướng lên - Mùi), xoay theo chiều kim đồng hồ
+ * Thứ tự: Mùi(7)->Than(8)->Dậu(9)->Tuất(10)->Hợi(11)->Tý(0)->Sửu(1)->Dần(2)->Mão(3)->Thìn(4)->Tỵ(5)->Ngọ(6)
+ */
+.cung-cell {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* Nội dung bên trong mỗi slice - chỉ chứa các sao, nằm ở vòng ngoài */
+.cung-cell-content {
+    position: absolute;
+    /* Ring nằm từ 25% đến 50% bán kính */
+    /* Đặt content gần viền ngoài ring (khoảng 5-10% từ edge) */
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90px;
+    min-height: 70px;
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    padding: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: visible;
+    pointer-events: auto;
+    box-shadow: none;
+}
+
+/* Label cung - nằm ở viền ngoài của ring */
+/* Label cung wrapper - transparent, simple container */
+.cung-cell-label {
+    position: absolute;
+    top: -5%;
+    /* Move closer to edge (was -18%) */
+    left: 50%;
+    transform: translateX(-50%);
+    /* Remove background/border from container */
+    background: transparent;
+    border: none;
+    padding: 0;
+    pointer-events: auto;
+    z-index: 5;
+
+    display: flex;
+    flex-direction: column-reverse;
+    /* Put Dynamic (Name) ABOVE Fixed (Chi)? Or Below? User image: Thân TÀI BẠCH. Usually Name is important. Let's keep Column (Fixed Top, Dynamic Bottom) based on HTML order? HTML: Fixed then Dynamic. User image shows TAI BACH on right? No, standard is Stacked. Let's try Stacked. */
+    align-items: center;
+    gap: 2px;
+}
+
+/* Fixed Info Part (Chi + Ngu Hanh) */
+.cung-fixed-info {
+    background: rgba(15, 25, 45, 0.8);
+    border: 1px solid rgba(78, 205, 196, 0.3);
+    border-radius: 4px;
+    padding: 1px 4px;
+    font-size: 9px;
+    white-space: nowrap;
+    display: flex;
+    gap: 3px;
+    align-items: center;
+    color: #4ECDC4;
+}
+
+/* Dynamic Info Part (Cung Name like MENH, TAI_BACH) */
+.cung-dynamic-info {
+    background: rgba(15, 25, 45, 0.95);
+    border: 1px solid rgba(78, 205, 196, 0.5);
+    border-radius: 6px;
+    padding: 3px 6px;
+    min-width: 50px;
+    text-align: center;
+    display: block;
+    min-height: 18px;
+}
+
+/* Label Highlighting - Target the Dynamic Info box */
+/* Note: JS adds .is-menh to .cung-cell-label wrapper, so we target child */
+.cung-cell-label.is-menh .cung-dynamic-info {
+    border: 2px solid #FFD700;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+}
+
+.cung-cell-label.is-than .cung-dynamic-info {
+    border: 2px solid #9b59b6;
+    box-shadow: 0 0 10px rgba(155, 89, 182, 0.4);
+}
+
+.cung-cell-label.is-tai .cung-dynamic-info {
+    border: 2px solid #2ecc71;
+    box-shadow: 0 0 10px rgba(46, 204, 113, 0.4);
+}
+
+/* Vị trí xoay cho từng cung - mỗi cung cách nhau 30° */
+/* Thứ tự theo chiều kim đồng hồ từ 12h: Mùi->Than->Dậu->Tuất->Hợi->Tý->Sửu->Dần->Mão->Thìn->Tỵ->Ngọ */
+.cung-cell[data-position="7"] {
+    transform: rotate(0deg);
+}
+
+/* Mùi - 12h */
+.cung-cell[data-position="8"] {
+    transform: rotate(30deg);
+}
+
+/* Thân - 1h */
+.cung-cell[data-position="9"] {
+    transform: rotate(60deg);
+}
+
+/* Dậu - 2h */
+.cung-cell[data-position="10"] {
+    transform: rotate(90deg);
+}
+
+/* Tuất - 3h */
+.cung-cell[data-position="11"] {
+    transform: rotate(120deg);
+}
+
+/* Hợi - 4h */
+.cung-cell[data-position="0"] {
+    transform: rotate(150deg);
+}
+
+/* Tý - 5h */
+.cung-cell[data-position="1"] {
+    transform: rotate(180deg);
+}
+
+/* Sửu - 6h */
+.cung-cell[data-position="2"] {
+    transform: rotate(210deg);
+}
+
+/* Dần - 7h */
+.cung-cell[data-position="3"] {
+    transform: rotate(240deg);
+}
+
+/* Mão - 8h */
+.cung-cell[data-position="4"] {
+    transform: rotate(270deg);
+}
+
+/* Thìn - 9h */
+.cung-cell[data-position="5"] {
+    transform: rotate(300deg);
+}
+
+/* Tỵ - 10h */
+.cung-cell[data-position="6"] {
+    transform: rotate(330deg);
+}
+
+/* Ngọ - 11h */
+
+/* Counter-rotate content và label để text luôn thẳng đứng dễ đọc */
+/* Với --grid-rotation: 30deg, và cell position inherits rotation from both cell + container */
+/* Để text Horizontal trên màn hình: rotate back by -(CELL_ANGLE + GRID_ROTATION) */
+/* Nhưng vì CELL_ANGLE đã là absolute rotate của cell relative to container */
+/* và container xoay thêm GRID_ROTATION */
+/* Total visual rotation of cell = CELL_ANGLE + GRID_ROTATION */
+/* Counter: -1 * (CELL_ANGLE + GRID_ROTATION) */
+
+/* Mùi - Position 7 - Cell rotate 0deg */
+.cung-cell[data-position="7"] .cung-cell-content,
+.cung-cell[data-position="7"] .cung-cell-label {
+    transform: translateX(-50%) rotate(calc(-1 * (0deg + var(--grid-rotation))));
+}
+
+/* Thân - Position 8 - Cell rotate 30deg */
+.cung-cell[data-position="8"] .cung-cell-content,
+.cung-cell[data-position="8"] .cung-cell-label {
+    transform: translateX(-50%) rotate(calc(-1 * (30deg + var(--grid-rotation))));
+}
+
+/* Dậu - Position 9 - Cell rotate 60deg */
+.cung-cell[data-position="9"] .cung-cell-content,
+.cung-cell[data-position="9"] .cung-cell-label {
+    transform: translateX(-50%) rotate(calc(-1 * (60deg + var(--grid-rotation))));
+}
+
+/* Tuất - Position 10 - Cell rotate 90deg */
+.cung-cell[data-position="10"] .cung-cell-content,
+.cung-cell[data-position="10"] .cung-cell-label {
+    transform: translateX(-50%) rotate(calc(-1 * (90deg + var(--grid-rotation))));
+}
+
+/* Hợi - Position 11 - Cell rotate 120deg */
+.cung-cell[data-position="11"] .cung-cell-content,
+.cung-cell[data-position="11"] .cung-cell-label {
+    transform: translateX(-50%) rotate(calc(-1 * (120deg + var(--grid-rotation))));
+}
+
+/* Tý - Position 0 - Cell rotate 150deg */
+.cung-cell[data-position="0"] .cung-cell-content,
+.cung-cell[data-position="0"] .cung-cell-label {
+    transform: translateX(-50%) rotate(calc(-1 * (150deg + var(--grid-rotation))));
+}
+
+/* Sửu - Position 1 - Cell rotate 180deg */
+.cung-cell[data-position="1"] .cung-cell-content,
+.cung-cell[data-position="1"] .cung-cell-label {
+    transform: translateX(-50%) rotate(calc(-1 * (180deg + var(--grid-rotation))));
+}
+
+/* Dần - Position 2 - Cell rotate 210deg */
+.cung-cell[data-position="2"] .cung-cell-content,
+.cung-cell[data-position="2"] .cung-cell-label {
+    transform: translateX(-50%) rotate(calc(-1 * (210deg + var(--grid-rotation))));
+}
+
+/* Mão - Position 3 - Cell rotate 240deg */
+.cung-cell[data-position="3"] .cung-cell-content,
+.cung-cell[data-position="3"] .cung-cell-label {
+    transform: translateX(-50%) rotate(calc(-1 * (240deg + var(--grid-rotation))));
+}
+
+/* Thìn - Position 4 - Cell rotate 270deg */
+.cung-cell[data-position="4"] .cung-cell-content,
+.cung-cell[data-position="4"] .cung-cell-label {
+    transform: translateX(-50%) rotate(calc(-1 * (270deg + var(--grid-rotation))));
+}
+
+/* Tỵ - Position 5 - Cell rotate 300deg */
+.cung-cell[data-position="5"] .cung-cell-content,
+.cung-cell[data-position="5"] .cung-cell-label {
+    transform: translateX(-50%) rotate(calc(-1 * (300deg + var(--grid-rotation))));
+}
+
+/* Ngọ - Position 6 - Cell rotate 330deg */
+.cung-cell[data-position="6"] .cung-cell-content,
+.cung-cell[data-position="6"] .cung-cell-label {
+    transform: translateX(-50%) rotate(calc(-1 * (330deg + var(--grid-rotation))));
+}
+
+/* Highlight Mệnh/Thân trên label */
+.cung-cell-label.is-menh {
+    border: 2px solid #FFD700;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+}
+
+.cung-cell-label.is-than {
+    border: 2px solid #9b59b6;
+    box-shadow: 0 0 10px rgba(155, 89, 182, 0.4);
+}
+
+/* Đường chia giữa các cung - container */
+.cung-dividers {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Đường phân kim - từ vòng trong (25%) ra vòng ngoài (50%) */
+.cung-dividers .divider {
+    position: absolute;
+    /* Bắt đầu từ tâm, chiều dài = 50% của container (từ 0% đến 50% bán kính) */
+    width: 2px;
+    /* height = 25% của container parent (50vmin - 25vmin = 25vmin) */
+    /* Nhưng vì parent có kích thước 0, cần dùng calc với vmin */
+    height: calc(25 * min(1vw, 1vh));
+    background: rgba(78, 205, 196, 0.8);
+    /* Brighter divider */
+    transform-origin: bottom center;
+    /* Di chuyển lên trên để đường bắt đầu từ vòng trong */
+    /* bottom của divider nằm ở vòng trong (25% bán kính) */
+    transform: translateX(-50%) translateY(-100%) rotate(var(--angle));
+    bottom: calc(-25 * min(1vw, 1vh));
+    left: 0;
+    box-shadow: 0 0 5px rgba(78, 205, 196, 0.6);
+    /* Stronger glow */
+}
+
+/* Đường chia trục Sửu-Mùi (Bắc-Nam) - màu đỏ nổi bật */
+.cung-dividers .divider[style*="15deg"],
+.cung-dividers .divider[style*="195deg"] {
+    background: rgba(255, 100, 100, 0.8);
+    width: 3px;
+    box-shadow: 0 0 6px rgba(255, 100, 100, 0.5);
+}
+
+/* Đường chia trục Tý-Ngọ - màu vàng */
+.cung-dividers .divider[style*="165deg"],
+.cung-dividers .divider[style*="345deg"] {
+    background: rgba(255, 215, 0, 0.7);
+    width: 2px;
+    box-shadow: 0 0 4px rgba(255, 215, 0, 0.4);
+}
+
+/* Vòng trong (Thiên Trì) */
+.cung-grid::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 42%;
+    height: 42%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: radial-gradient(circle,
+            rgba(10, 15, 30, 0.98) 0%,
+            rgba(10, 15, 30, 0.98) 48%,
+            rgba(78, 205, 196, 0.4) 48%,
+            rgba(78, 205, 196, 0.4) 50%,
+            transparent 50%);
+    border: none;
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* Style cho cell content khi hover - áp dụng cho .cung-cell-content */
+.cung-cell-content:hover {
+    background: rgba(30, 30, 50, 0.95);
+    border-color: rgba(78, 205, 196, 0.6);
+}
+
+.cung-cell-content.is-menh {
+    border: 2px solid #FFD700;
+    box-shadow: 0 0 12px rgba(255, 215, 0, 0.3);
+}
+
+.cung-cell-content.is-than {
+    border: 2px solid #9b59b6;
+    box-shadow: 0 0 12px rgba(155, 89, 182, 0.3);
+}
+
+.cung-cell-content.is-tai {
+    border: 2px solid #2ecc71;
+    /* Green for Wealth/Tai */
+    box-shadow: 0 0 12px rgba(46, 204, 113, 0.4);
+}
+
+/* Old .cung-cell-label.is-tai rule removed/replaced by above block */
+
+/* Font adjustments */
+.cung-dynamic-info .cung-name {
+    font-size: 10px;
+    font-weight: 700;
+    color: #FFD700;
+    text-transform: uppercase;
+}
+
+.cung-fixed-info .cung-chi {
+    font-size: 11px;
+    font-weight: 700;
+    color: #00BCD4;
+}
+
+/* Highlight trục Sửu-Mùi (Bắc-Nam) */
+.cung-cell[data-position="1"] .cung-cell-content,
+/* Sửu - Nam (6h) */
+.cung-cell[data-position="7"] .cung-cell-content {
+    /* Mùi - Bắc (12h) */
+    border-color: rgba(255, 100, 100, 0.7);
+}
+
+/* Highlight trục Tý-Ngọ */
+.cung-cell[data-position="0"] .cung-cell-content,
+/* Tý */
+.cung-cell[data-position="6"] .cung-cell-content {
+    /* Ngọ */
+    border-color: rgba(100, 200, 255, 0.5);
+}
+
+.cung-cell-content .cung-header,
+.cung-cell-label .cung-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+.cung-cell-content .cung-chi,
+.cung-cell-label .cung-chi {
+    font-size: 11px;
+    font-weight: 700;
+    color: #00BCD4;
+}
+
+.cung-cell-content .cung-name,
+.cung-cell-label .cung-name {
+    font-size: 9px;
+    color: #FFD700;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.cung-cell-content .cung-ngu-hanh,
+.cung-cell-label .cung-ngu-hanh {
+    font-size: 8px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.cung-cell-content .cung-stars {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    align-content: flex-start;
+    pointer-events: none;
+    /* Stars are rendered by SVG, not HTML */
+}
+
+.cung-cell-content .star-node {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: transform 0.15s;
+}
+
+.cung-cell-content .star-node:hover {
+    transform: scale(1.4);
+    z-index: 10;
+}
+
+.cung-cell-content .star-label {
+    font-size: 7px;
+    color: rgba(255, 255, 255, 0.8);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+/* Center Info Panel - Thiên Trì (tâm La Kinh) */
+/* Note: This element is now OUTSIDE .cung-grid in HTML, so no counter-rotation needed */
+.cung-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* No rotation needed - element is outside the rotating grid */
+    transform: translate(-50%, -50%);
+    width: 18%;
+    height: 18%;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(15, 20, 40, 0.98) 0%, rgba(10, 15, 30, 0.98) 100%);
+    border: 2px solid rgba(78, 205, 196, 0.6);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    pointer-events: auto;
+    z-index: 10;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.7), inset 0 0 20px rgba(78, 205, 196, 0.1);
+}
+
+.cung-center .center-title {
+    font-size: 12px;
+    font-weight: 600;
+    color: #FFD700;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.cung-center .center-content {
+    font-size: 9px;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    line-height: 1.5;
+}
+
+.cung-center .center-content .info-row {
+    margin: 3px 0;
+}
+
+.cung-center .center-content .info-label {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.cung-center .center-content .info-value {
+    color: #4ECDC4;
+    font-weight: 500;
+}
+
+/* Ngu Hanh indicator */
+.cung-cell-content .cung-ngu-hanh {
+    font-size: 8px;
+    padding: 1px 3px;
+    border-radius: 3px;
+    font-weight: 500;
+}
+
+.cung-cell-content .cung-ngu-hanh.kim {
+    color: #FFD700;
+}
+
+.cung-cell-content .cung-ngu-hanh.moc {
+    color: #4CAF50;
+}
+
+.cung-cell-content .cung-ngu-hanh.thuy {
+    color: #2196F3;
+}
+
+.cung-cell-content .cung-ngu-hanh.hoa {
+    color: #FF5722;
+}
+
+.cung-cell-content .cung-ngu-hanh.tho {
+    color: #795548;
+}

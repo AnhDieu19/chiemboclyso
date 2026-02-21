@@ -1,0 +1,226 @@
+{
+    "Tả Phụ": {
+        "nature": "Cát",
+        "effect": "Cánh tay trái đắc lực. Đi cùng Sát tinh thì hung ác, đi cùng Tử Phủ Vũ Tướng thì rất tốt, chủ về ý chí, nghị lực, khéo tay.",
+        "in_palace": {
+            "Nô Bộc": "Ra ngoài có nhiều vây cánh, ngoại giao rộng, dễ được người mến chuộng. Có nhiều trợ lý đắc lực."
+        }
+    },
+    "Hữu Bật": {
+        "nature": "Cát",
+        "effect": "Cánh tay phải đắc lực. Phò tá, giúp đỡ. Quan hệ rộng, có nhiều bạn bè.",
+        "in_palace": {
+            "Tử Tức": "Gia tăng số lượng con cái, đông con, dễ có con nuôi, con dị bào."
+        }
+    },
+    "Văn Xương": {
+        "nature": "Cát",
+        "origin": "Khởi tại cung Tuất",
+        "effect": "Năng khiếu trời phú, văn chương, học hành, thông tuệ.",
+        "in_palace": {
+            "Tật Ách": "Chủ về bệnh lụy tình, phong tình, giảm thọ."
+        }
+    },
+    "Văn Khúc": {
+        "nature": "Cát",
+        "origin": "Khởi tại cung Thìn",
+        "effect": "Sự rèn luyện bản thân, tài hoa nghệ sĩ, khéo léo.",
+        "in_palace": {
+            "Tật Ách": "Chủ về bệnh lụy tình, phong tình, giảm thọ."
+        }
+    },
+    "Ân Quang": {
+        "nature": "Cát",
+        "origin": "Sinh ra từ Xương - Khúc",
+        "effect": "Giá trị đạo hạnh, giác ngộ, thiện lương, thủy chung."
+    },
+    "Thiên Quý": {
+        "nature": "Cát",
+        "origin": "Sinh ra từ Xương - Khúc",
+        "effect": "Giá trị đạo hạnh, giác ngộ, thiện lương, thủy chung."
+    },
+    "Thiên Khôi": {
+        "nature": "Cát - Thiên Ất Quý Nhân",
+        "effect": "Người quân tử, nhân cách lớn, học vấn đỉnh cao. Thường là con trưởng hoặc người gánh vác trách nhiệm.",
+        "in_palace": {
+            "Phụ Mẫu": "Cha mẹ thường là con trưởng, có kiến thức, học thức."
+        }
+    },
+    "Thiên Việt": {
+        "nature": "Cát - Thiên Ất Quý Nhân",
+        "effect": "Người quân tử, nhân cách lớn. Được quý nhân phù trợ.",
+        "in_palace": {
+            "Tật Ách": "Có thầy giỏi thuốc hay, gặp nạn được cứu giải."
+        }
+    },
+    "Kinh Dương": {
+        "nature": "Sát",
+        "effect": "Cứng rắn, dễ xung đột, gặp tai nạn, bất hòa",
+        "detailed": "Đắc địa tại các cung Thổ (Thìn Tuất Sửu Mùi). Do Thổ sinh Kim nên hai sao này tại đây mang lại sự may mắn.",
+        "in_palace": {
+            "Điền Trạch": "Sự nghiệp, đất đai, nhà cửa, dù có tạo dựng sớm cũng phải thay đổi, sau mới yên ổn. Lúc nào cũng lo toan về nơi ăn chốn ở hoặc hay sửa sang, bù đắp vật dụng trong nhà. Nhà dễ gần đền, chùa, nhà nặng tính tâm linh"
+        }
+    },
+    "Đà La": {
+        "nature": "Sát",
+        "effect": "Trì trệ, chậm trễ, hay lo âu, khó tiến",
+        "detailed": "Đắc địa tại các cung Thổ (Thìn Tuất Sửu Mùi). Do Thổ sinh Kim nên hai sao này tại đây mang lại sự may mắn.",
+        "in_palace": {
+            "Phụ Mẫu": "Cha mẹ hay ốm đau, ông bà dễ bất hòa, giảm thọ. Cha mẹ dễ có mục tật trên người. Cha mẹ là người nóng tính, không hợp con cái. Cha mẹ dễ bị hình thương, mổ xẻ trên người"
+        }
+    },
+    "Hỏa Tinh": {
+        "nature": "Sát",
+        "effect": "Nóng nảy, vội vàng, dễ mất mát, tai họa bất ngờ",
+        "in_palace": {
+            "Quan Lộc": "Trong công việc dễ chịu nhiều áp lực khiến đầu óc phải căng thẳng, dễ mất kiểm soát dẫn đến xích mích, cãi cọ, gây lộn"
+        }
+    },
+    "Linh Tinh": {
+        "nature": "Sát",
+        "effect": "Bất ổn, hay thay đổi, cô độc, không yên",
+        "detailed": "Linh Tinh nhập cung Mệnh là Người có nét mặt thường hay buồn sầu, ủ rũ, lông tóc xù lên, tóc se ngả vàng, mặt mày nhìn buồn, luôn mang tâm trạng lo lắng, buồn phiền. Là Người keo kiệt, cô đơn. Đấu tranh tư tưởng, suy nghĩ nhiều, đôi khi là sự liều lĩnh, táo bạo không suy nghĩ, tính tình vụng dại. Dễ bị hình thương, thương tích. Ở cung Mệnh làm suy nghĩ rất là tù túng, hay suy nghĩ mọi thứ nghiêm trọng hơn. Ốm đau hay bị sốt cao."
+    },
+    "Địa Không": {
+        "nature": "Sát",
+        "effect": "Hao tài, mất mát, bất an, trống rỗng",
+        "in_palace": {
+            "Tài Bạch": "Rủi ro trong việc kiếm tiền. Kiếm được rất nhiều mà cũng dễ mất đi"
+        }
+    },
+    "Địa Kiếp": {
+        "nature": "Sát",
+        "effect": "Tổn thất, biến cố, tai họa, kiếp nạn",
+        "in_palace": {
+            "Phúc Đức": "Khuyên nên làm nhiều việc thiện, biết nhường nhịn sẻ chia thì cuộc sống nó tự an bình"
+        }
+    },
+    "Lộc Tồn": {
+        "nature": "Đại Cát",
+        "effect": "Giàu có, no đủ, tài lộc dồi dào, không lo ăn mặc",
+        "in_palace": {
+            "Phúc Đức": "Về mặt nghĩa tượng thể hiện sự giàu có, khá giả của nhiều người trong dòng họ. Họ hàng có nhiều người ly tông tổ nghiệp, thành đạt ở nơi phương xa. Tính thổ mang sự bao bọc, khí phúc tài, chủ về phát phước lộc, phước danh con cháu thuận hòa đông đúc, mồ mả được tụ quần. Thể hiện sự khá giả, giàu có của gia đình nhà vợ hoặc chồng. Thường được thừa hưởng đất đai của tổ nghiệp, điền thửa của tổ tiên"
+        }
+    },
+    "Thiên Mã": {
+        "nature": "Cát",
+        "effect": "Di chuyển nhiều, năng động, phát triển, thay đổi",
+        "in_palace": {
+            "Tài Bạch": "Hay bôn ba mà tạo dựng được của tiền, có năng lực kiếm tiền tốt, làm đủ mọi ngành nghề để ra tiền. Đồng tiền ra vào liên tục, không ngừng đầu tư, tạo lãi, lãi mẹ đẻ lãi con"
+        }
+    },
+    "Hồng Loan": {
+        "nature": "Đào Hoa",
+        "effect": "Có duyên, gặp người tâm đầu ý hợp, hôn nhân",
+        "in_palace": {
+            "Nô Bộc": "Thể hiện duyên lành, nhiều bạn bè, nhiều tầng lớp và nhiều mối quan hệ. Tính thủy tạo nên sức hút với người khác giới. Dễ nảy sinh tình cảm với người khác giới bên ngoài. Ngay từ trẻ có nhiều người theo đuổi, nhiều sự ưu ái, môi trường sống thường nhiều người khác giới. Là người có duyên, có sức hút, có tài ăn nói. Khi làm việc lớn thường được người giúp, bạn giúp mọi người trợ lực cùng hỗ trợ"
+        }
+    },
+    "Thiên Hỹ": {
+        "nature": "Cát",
+        "effect": "Vui vẻ, có tin vui, sung sướng, hỷ sự",
+        "in_palace": {
+            "Huynh Đệ": "Anh chị em vui vẻ, thuận hòa, dễ có người có tiếng trong ngành nghệ thuật, giải trí"
+        }
+    },
+    "Thiên Diêu": {
+        "nature": "Hung/Cát",
+        "origin": "Khởi tại cung Sửu",
+        "effect": "Sao mang tính chất năng khiếu, học vấn (khi đi cùng bộ sao tốt)."
+    },
+    "Hoa Cái": {
+        "nature": "Cát",
+        "origin": "Nhập về Tứ Mộ (Thìn Tuất Sửu Mùi)",
+        "effect": "Mang tính chất sang trọng, học thuật."
+    },
+    "Thái Tuế": {
+        "nature": "Sát/Bại Tinh",
+        "effect": "Lý trí, bảo thủ, thích lãnh đạo, nói năng sắc bén, lý luận giỏi. Ít tham của người nhưng khi đã tham thì bất chấp; thường cô độc.",
+        "in_palace": {
+            "Mệnh": "Người tự lập, có trách nhiệm cao, không muốn phụ thuộc nhưng gánh nặng gia đình rất lớn.",
+            "Phụ Mẫu": "Cha mẹ hà khắc, nghiêm khắc; dễ xảy ra tranh chấp, cãi vã với con cái.",
+            "Phúc Đức": "Họ hàng dễ phân bè phái, tranh chấp; đương số dễ bị dòng họ quay lưng hoặc phải muộn lập gia đình.",
+            "Nô Bộc": "Bạn bè có người trung thành nhưng cũng lắm kẻ thù oán; không nên dồn người khác vào đường cùng vì họ sẽ báo thù rất cực đoan.",
+            "Thiên Di": "Ra ngoài hay cãi vã, thị phi; thường muộn vợ/chồng và có xu hướng đi xa rồi lại phải quay về.",
+            "Tật Ách": "Cẩn thận dính dáng đến pháp luật, tù đầy (đặc biệt khi gặp Thiên Hình, Hóa Kỵ).",
+            "Tài Bạch": "Kiếm tiền vất vả thông qua đấu tranh; tính cách chặt chẽ trong chi tiêu.",
+            "Tử Tức": "Ít con hoặc muộn con; con cái giỏi giang nhưng hay bướng bỉnh, cãi lời cha mẹ."
+        }
+    },
+    "Bạch Hổ": {
+        "nature": "Sát/Bại Tinh",
+        "effect": "Ngang ngược, lầm lì, máu lạnh, hám quyền lực và có sức chiến đấu mãnh liệt. Dễ gặp cảnh cô đơn, muộn vợ/chồng; liên quan đến các bệnh về máu huyết."
+    },
+    "Quan Phù": {
+        "nature": "Sát/Bại Tinh",
+        "effect": "Thích phô trương, hay oán hận, thù dai và thích kiện tụng. Nếu gặp thêm sát tinh thường nói dối, 'nói dối như Cuội'."
+    },
+    "Thiên Giải": {
+        "nature": "Cát - Sao Giải",
+        "effect": "Giải trừ tai họa, mang lại may mắn. Một trong Tam Giải."
+    },
+    "Địa Giải": {
+        "nature": "Cát - Sao Giải",
+        "effect": "Giải trừ tai họa, đất đai yên ổn. Một trong Tam Giải."
+    },
+    "Giải Thần": {
+        "nature": "Cát - Sao Giải",
+        "effect": "Chủ về sự chính nhân quân tử, mặt mũi đẹp đẽ, hanh thông trong hôn nhân, con cái. Giải trừ tai ách mạnh mẽ."
+    },
+    "Thiên Đức": {
+        "nature": "Cát - Tứ Đức",
+        "effect": "Trừ hung, mang lại sự bình an, đức độ."
+    },
+    "Phúc Đức": {
+        "nature": "Cát - Tứ Đức",
+        "effect": "Phúc lộc, trừ tai, nhân hậu."
+    },
+    "Nguyệt Đức": {
+        "nature": "Cát - Tứ Đức",
+        "effect": "Giúp đỡ, che chở, hóa giải hung hiểm."
+    },
+    "Long Đức": {
+        "nature": "Cát - Tứ Đức",
+        "effect": "Đức độ, may mắn, gặp dữ hóa lành."
+    },
+    "Hóa Khoa": {
+        "nature": "Cát - Tam Hóa",
+        "effect": "Chủ trí tuệ, danh tiếng, giải ách trừ tai mạnh mẽ, thi cử đỗ đạt."
+    },
+    "Hóa Quyền": {
+        "nature": "Cát - Tam Hóa",
+        "effect": "Chủ uy quyền, dẫn dắt, địa vị, thăng tiến."
+    },
+    "Hóa Lộc": {
+        "nature": "Cát - Tam Hóa",
+        "effect": "Chủ tài lộc, sự khôn khéo, may mắn về tiền bạc."
+    },
+    "Thiên Không": {
+        "nature": "Sát/Giải",
+        "effect": "Sắc sủa, nhưng hay hư ảo.",
+        "in_palace": {
+            "Tật Ách": "Đánh tan và chôn vùi bệnh tật. Bệnh tật tiêu tan."
+        }
+    },
+    "Phi Liêm": {
+        "nature": "Sát/Giải",
+        "effect": "Nhanh nhẹn, bay nhảy.",
+        "in_palace": {
+            "Tật Ách": "Đánh tan bệnh tật, làm bệnh qua nhanh."
+        }
+    },
+    "Đại Hao": {
+        "nature": "Bại Tinh",
+        "effect": "Hao tán, thay đổi.",
+        "in_palace": {
+            "Tật Ách": "Làm 'hao' bớt bệnh tật đi. Giảm nhẹ tai ách."
+        }
+    },
+    "Tiểu Hao": {
+        "nature": "Bại Tinh",
+        "effect": "Hao tán nhỏ.",
+        "in_palace": {
+            "Tật Ách": "Làm 'hao' bớt bệnh tật."
+        }
+    }
+}

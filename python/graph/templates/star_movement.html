@@ -1,0 +1,1913 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Vi Star Movement - Quy Luật Di Chuyển Sao</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: #fff;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 15px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        header h1 { font-size: 1.8em; text-shadow: 2px 2px 4px rgba(0,0,0,.5); }
+        header .subtitle { font-size: 1em; opacity: .85; margin-top: 4px; }
+
+        /* ── Controls ────────────────────────────── */
+        .panel {
+            background: rgba(255,255,255,.08);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 15px 20px;
+            margin-bottom: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,.25);
+        }
+
+        .form-inline {
+            display: flex;
+            gap: 12px;
+            align-items: flex-end;
+            flex-wrap: wrap;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            min-width: 80px;
+        }
+        .form-group label { font-size: .82em; margin-bottom: 3px; opacity: .85; }
+        .form-group input, .form-group select {
+            padding: 7px 10px;
+            border: none;
+            border-radius: 6px;
+            background: rgba(255,255,255,.15);
+            color: #fff;
+            font-size: .92em;
+        }
+        .form-group input:focus, .form-group select:focus {
+            outline: 2px solid rgba(102,126,234,.6);
+        }
+
+        .calendar-toggle { display: flex; gap: 4px; }
+        .calendar-toggle button {
+            padding: 7px 14px;
+            border: 2px solid rgba(255,255,255,.2);
+            border-radius: 6px;
+            background: transparent;
+            color: #fff;
+            cursor: pointer;
+            font-size: .88em;
+            transition: all .25s;
+        }
+        .calendar-toggle button.active {
+            background: rgba(255,255,255,.22);
+            border-color: #fff;
+        }
+
+        .btn-analyze {
+            padding: 7px 22px;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #fff;
+            font-size: .95em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform .2s;
+            box-shadow: 0 3px 12px rgba(0,0,0,.3);
+        }
+        .btn-analyze:hover { transform: translateY(-2px); }
+
+        /* ── View Toggle ─────────────────────────── */
+        .view-toggle {
+            display: none;
+            gap: 6px;
+            margin-bottom: 12px;
+        }
+        .view-toggle button {
+            flex: 1;
+            padding: 8px;
+            border: 2px solid rgba(255,255,255,.2);
+            border-radius: 8px;
+            background: transparent;
+            color: #fff;
+            cursor: pointer;
+            font-size: .9em;
+            transition: all .25s;
+        }
+        .view-toggle button.active {
+            background: rgba(102,126,234,.35);
+            border-color: #667eea;
+        }
+
+        /* ── Timeline ────────────────────────────── */
+        .timeline-panel { display: none; }
+        .timeline-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .timeline-controls button {
+            padding: 6px 14px;
+            border: none;
+            border-radius: 6px;
+            background: rgba(255,255,255,.15);
+            color: #fff;
+            cursor: pointer;
+            font-size: .88em;
+            transition: background .2s;
+        }
+        .timeline-controls button:hover { background: rgba(255,255,255,.25); }
+
+        .timeline-slider {
+            flex: 1;
+            min-width: 120px;
+            height: 6px;
+            -webkit-appearance: none;
+            appearance: none;
+            background: rgba(255,255,255,.2);
+            border-radius: 5px;
+            outline: none;
+        }
+        .timeline-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 18px; height: 18px;
+            border-radius: 50%;
+            background: #667eea;
+            cursor: pointer;
+        }
+
+        .hour-indicator {
+            font-size: 1.05em;
+            font-weight: bold;
+            min-width: 130px;
+            text-align: center;
+            padding: 4px 10px;
+            background: rgba(255,255,255,.1);
+            border-radius: 6px;
+        }
+
+        /* ── Grid View (Traditional Tử Vi Layout) ── */
+        .grid-view { display: none; position: relative; }
+
+        .cung-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, auto);
+            gap: 0;
+            max-width: 1100px;
+            margin: 0 auto;
+            border: 2px solid #444;
+            background: #fff;
+            box-shadow: 0 4px 24px rgba(0,0,0,.25);
+        }
+
+        .cung-cell {
+            background: #fffef8;
+            border: 1px solid #999;
+            padding: 0;
+            min-height: 140px;
+            transition: background .3s;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        .cung-cell:hover {
+            background: #fffff0;
+        }
+        .cung-cell.is-menh {
+            border: 2px solid #c62828;
+        }
+        .cung-cell.is-menh .cung-name { color: #c62828; }
+        .cung-cell.is-than {
+            border: 2px solid #1565c0;
+        }
+        .cung-cell.is-than .cung-name { color: #1565c0; }
+
+        /* ── Header: chi | PALACE NAME | pos ── */
+        .cung-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2px 5px;
+            border-bottom: 1px solid #bbb;
+            background: #f5f5f0;
+            min-height: 20px;
+        }
+        .cung-chi {
+            font-size: .72em;
+            color: #388e3c;
+            min-width: 24px;
+        }
+        .cung-name {
+            font-size: .82em;
+            font-weight: bold;
+            color: #333;
+            text-transform: uppercase;
+            letter-spacing: .5px;
+            flex: 1;
+            text-align: center;
+        }
+        .cung-pos {
+            font-size: .68em;
+            color: #999;
+            min-width: 16px;
+            text-align: right;
+        }
+
+        /* ── Main Star (Chính Tinh) — large centered ── */
+        .cung-main-star {
+            text-align: center;
+            padding: 3px 4px 2px;
+            min-height: 18px;
+            border-bottom: 1px solid #ddd;
+        }
+        .cung-main-star:empty { display: none; }
+        .cung-main-star .main-star-name {
+            font-size: .92em;
+            font-weight: bold;
+            color: #222;
+            line-height: 1.3;
+        }
+
+        /* ── Two-column star body (Good | Bad) ── */
+        .cung-stars {
+            display: flex;
+            flex-direction: row;
+            gap: 0;
+            flex: 1;
+            min-height: 0;
+            overflow: hidden;
+        }
+
+        .stars-col {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            padding: 2px 4px;
+            max-height: 180px;
+            overflow-y: auto;
+            min-width: 0;
+        }
+        .stars-col-good {
+            border-right: 1px dashed #ccc;
+        }
+        .stars-col:empty { display: none; }
+        .stars-col-good:empty + .stars-col-bad {
+            border-left: none;
+        }
+
+        .star-item {
+            font-size: .74em;
+            padding: 0 1px;
+            background: transparent;
+            transition: background .3s;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            line-height: 1.45;
+        }
+        .star-item.highlight {
+            background: rgba(255, 235, 59, .35);
+            animation: pulse .8s ease-in-out 2;
+        }
+        @keyframes pulse {
+            50% { transform: scale(1.02); opacity: .85; }
+        }
+
+        /* Good stars = GREEN */
+        .star-good { color: #2e7d32; }
+        /* Bad stars = RED */
+        .star-bad  { color: #c62828; }
+        /* Lưu Niên stars = italic + slightly different shade */
+        .star-luu  { font-style: italic; opacity: 0.85; }
+        .star-luu.star-good { color: #1b5e20; }
+        .star-luu.star-bad  { color: #b71c1c; }
+
+        /* Element colors (used in D3 graph only) */
+        .star-kim  { color: #f1c40f; }
+        .star-moc  { color: #2ecc71; }
+        .star-thuy { color: #95a5a6; }
+        .star-hoa  { color: #e74c3c; }
+        .star-tho  { color: #e67e22; }
+
+        /* Grid scrollbar (light theme) */
+        .stars-col::-webkit-scrollbar { width: 3px; }
+        .stars-col::-webkit-scrollbar-track { background: transparent; }
+        .stars-col::-webkit-scrollbar-thumb { background: #ccc; border-radius: 2px; }
+
+        /* ── Footer: Trường Sinh + Tiểu Hạn ── */
+        .cung-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2px 5px;
+            border-top: 1px solid #bbb;
+            background: #f5f5f0;
+            min-height: 18px;
+            margin-top: auto;
+        }
+        .cung-footer:empty { display: none; }
+        .cung-truong-sinh {
+            font-size: .72em;
+            font-weight: bold;
+            color: #444;
+        }
+        .cung-tieu-han {
+            font-size: .68em;
+            font-weight: bold;
+            color: #fff;
+            background: #c62828;
+            padding: 1px 6px;
+            border-radius: 3px;
+        }
+        .cung-tieu-han:empty { display: none; }
+
+        /* Center cell */
+        .cung-center {
+            grid-column: 2 / 4;
+            grid-row: 2 / 4;
+            background: #fafaf2;
+            border: 2px solid #444;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .center-title {
+            font-size: 1.1em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #c62828;
+        }
+        .center-content {
+            line-height: 1.7;
+            font-size: .9em;
+            color: #333;
+        }
+
+        /* ── D3 Graph View ───────────────────────── */
+        .graph-view {
+            display: none;
+            position: relative;
+            background: rgba(0,0,0,.2);
+            border-radius: 12px;
+            overflow: hidden;
+            height: 600px;
+        }
+        #star-graph { width: 100%; height: 100%; }
+
+        .legend {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: rgba(0,0,0,.75);
+            backdrop-filter: blur(8px);
+            padding: 12px;
+            border-radius: 8px;
+            font-size: .82em;
+            z-index: 10;
+        }
+        .legend h4 { margin-bottom: 8px; color: #fbbf24; }
+        .legend-item { display: flex; align-items: center; gap: 6px; margin-bottom: 4px; }
+        .legend-dot { width: 12px; height: 12px; border-radius: 50%; border: 1px solid rgba(255,255,255,.5); }
+
+        /* ── Analysis Section ────────────────────── */
+        .analysis-section { display: none; }
+        .analysis-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .analysis-card {
+            background: rgba(255,255,255,.08);
+            border-radius: 10px;
+            padding: 15px;
+        }
+        .analysis-card h3 { margin-bottom: 10px; color: #fbbf24; font-size: 1em; }
+
+        .star-list { display: flex; flex-wrap: wrap; gap: 6px; }
+        .star-badge {
+            padding: 4px 10px;
+            border-radius: 16px;
+            background: rgba(255,255,255,.15);
+            font-size: .85em;
+        }
+        .star-badge.moving { background: rgba(251,191,36,.25); border: 1px solid #fbbf24; }
+        .star-badge.fixed  { background: rgba(59,130,246,.25); border: 1px solid #3b82f6; }
+
+        /* ── Loading ─────────────────────────────── */
+        .loading-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,.6);
+            z-index: 999;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .spinner {
+            width: 48px; height: 48px;
+            border: 4px solid rgba(255,255,255,.25);
+            border-top-color: #fff;
+            border-radius: 50%;
+            animation: spin .8s linear infinite;
+            margin-bottom: 15px;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        /* ── Tooltip ─────────────────────────────── */
+        .tooltip {
+            position: fixed;
+            background: rgba(0,0,0,.92);
+            color: #fff;
+            padding: 8px 12px;
+            border-radius: 6px;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity .2s;
+            z-index: 1000;
+            max-width: 280px;
+            font-size: .85em;
+            box-shadow: 0 4px 15px rgba(0,0,0,.5);
+        }
+        .tooltip.show { opacity: 1; }
+
+        /* ── View Container (wrapper for overlay) ── */
+        .view-container {
+            position: relative;
+        }
+
+        /* ── Star Filter Panel (overlay inside view) ── */
+        .filter-panel {
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            z-index: 50;
+            width: 360px;
+            max-height: calc(100% - 16px);
+            overflow-y: auto;
+            background: rgba(15, 20, 40, .92);
+            backdrop-filter: blur(12px);
+            border: 1.5px solid rgba(102,126,234,.35);
+            border-radius: 10px;
+            box-shadow: 0 8px 32px rgba(0,0,0,.45);
+            transition: all .35s cubic-bezier(.4,0,.2,1);
+            transform-origin: top left;
+        }
+        .filter-panel.collapsed {
+            width: auto;
+            max-height: none;
+            overflow: visible;
+            background: transparent;
+            border: none;
+            box-shadow: none;
+            backdrop-filter: none;
+        }
+        .filter-panel.collapsed .filter-body {
+            display: none;
+        }
+
+        .filter-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 12px;
+            cursor: pointer;
+            user-select: none;
+            border-radius: 10px;
+            transition: background .2s;
+        }
+        .filter-header:hover {
+            background: rgba(255,255,255,.08);
+        }
+        .filter-header-title {
+            font-size: .88em;
+            font-weight: 600;
+            color: #fbbf24;
+            flex: 1;
+        }
+        .filter-header-badge {
+            font-size: .72em;
+            padding: 2px 8px;
+            border-radius: 10px;
+            background: rgba(102,126,234,.35);
+            color: #a5b4fc;
+        }
+        .filter-header-arrow {
+            font-size: .75em;
+            transition: transform .3s;
+            opacity: .6;
+        }
+        .filter-panel.collapsed .filter-header-arrow {
+            transform: rotate(-90deg);
+        }
+        .filter-panel.collapsed .filter-header {
+            background: rgba(15, 20, 40, .88);
+            backdrop-filter: blur(10px);
+            border: 1.5px solid rgba(102,126,234,.3);
+            box-shadow: 0 4px 16px rgba(0,0,0,.35);
+        }
+
+        .filter-body {
+            padding: 0 12px 12px;
+        }
+
+        .filter-section {
+            margin-bottom: 10px;
+        }
+        .filter-section h4 {
+            font-size: .82em;
+            color: #fbbf24;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .filter-groups {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        .filter-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 5px 10px;
+            border-radius: 16px;
+            background: rgba(255,255,255,.12);
+            font-size: .82em;
+            cursor: pointer;
+            transition: all .25s;
+            user-select: none;
+            border: 1.5px solid transparent;
+        }
+        .filter-chip:hover {
+            background: rgba(255,255,255,.2);
+        }
+        .filter-chip.active {
+            background: rgba(102,126,234,.3);
+            border-color: rgba(102,126,234,.6);
+        }
+        .filter-chip input[type="checkbox"] {
+            accent-color: #667eea;
+            width: 14px;
+            height: 14px;
+            margin: 0;
+        }
+        .filter-chip .chip-count {
+            font-size: .75em;
+            opacity: .65;
+            margin-left: 2px;
+        }
+
+        /* Individual star search */
+        .star-search-box {
+            width: 100%;
+            padding: 7px 10px;
+            border: none;
+            border-radius: 6px;
+            background: rgba(255,255,255,.12);
+            color: #fff;
+            font-size: .88em;
+            margin-bottom: 8px;
+        }
+        .star-search-box::placeholder { color: rgba(255,255,255,.4); }
+        .star-search-box:focus { outline: 2px solid rgba(102,126,234,.5); }
+
+        .star-checklist {
+            max-height: 220px;
+            overflow-y: auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+        }
+        .star-check-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: .78em;
+            cursor: pointer;
+            background: rgba(255,255,255,.06);
+            transition: background .2s;
+            white-space: nowrap;
+        }
+        .star-check-item:hover { background: rgba(255,255,255,.14); }
+        .star-check-item.hidden { display: none; }
+        .star-check-item input { accent-color: #667eea; width: 13px; height: 13px; margin: 0; }
+        .star-check-item.dimmed { opacity: .35; }
+
+        /* Filter quick actions */
+        .filter-actions {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 8px;
+            flex-wrap: wrap;
+        }
+        .filter-actions button {
+            padding: 4px 10px;
+            border: 1px solid rgba(255,255,255,.2);
+            border-radius: 5px;
+            background: transparent;
+            color: #fff;
+            font-size: .78em;
+            cursor: pointer;
+            transition: background .2s;
+        }
+        .filter-actions button:hover { background: rgba(255,255,255,.15); }
+
+        .filter-summary {
+            font-size: .78em;
+            opacity: .65;
+            padding: 0 12px 4px;
+        }
+
+        /* ── Scrollbar ───────────────────────────── */
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-track { background: rgba(255,255,255,.05); }
+        ::-webkit-scrollbar-thumb { background: rgba(255,255,255,.2); border-radius: 3px; }
+
+        /* ── Responsive ──────────────────────────── */
+        @media (max-width: 768px) {
+            .cung-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 4px;
+            }
+            .cung-cell { min-height: 100px; }
+            .star-item { font-size: .66em; }
+            .stars-col { padding: 1px 3px; }
+            .cung-main-star .main-star-name { font-size: .8em; }
+            .cung-chi { font-size: .66em; }
+            .cung-name { font-size: .72em; }
+            .graph-view { height: 400px; }
+            .filter-panel { width: 280px; }
+            .filter-panel .star-checklist { max-height: 140px; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>🌟 Tu Vi Star Movement 🌟</h1>
+            <p class="subtitle">Phân Tích Quy Luật Di Chuyển Các Sao Qua 12 Canh Giờ</p>
+        </header>
+
+        <!-- Control Panel -->
+        <div class="panel">
+            <div class="form-inline">
+                <div class="form-group calendar-toggle">
+                    <button id="btnSolar" class="active" onclick="setCalendarMode('solar')">Dương Lịch</button>
+                    <button id="btnLunar" onclick="setCalendarMode('lunar')">Âm Lịch</button>
+                </div>
+                <div class="form-group">
+                    <label>Ngày</label>
+                    <input type="number" id="day" min="1" max="31" value="28">
+                </div>
+                <div class="form-group">
+                    <label>Tháng</label>
+                    <input type="number" id="month" min="1" max="12" value="3">
+                </div>
+                <div class="form-group">
+                    <label>Năm</label>
+                    <input type="number" id="year" min="1900" max="2100" value="1994">
+                </div>
+                <div class="form-group">
+                    <label>Giới Tính</label>
+                    <select id="gender">
+                        <option value="nam">Nam</option>
+                        <option value="nu">Nữ</option>
+                    </select>
+                </div>
+                <div class="form-group" id="leap-month-group" style="display:none">
+                    <label><input type="checkbox" id="leap-month"> Tháng Nhuận</label>
+                </div>
+                <div class="form-group">
+                    <label>Năm Xem</label>
+                    <input type="number" id="viewing-year" min="1900" max="2100" value="2025" title="Năm xem để tính sao Lưu Niên">
+                </div>
+                <button class="btn-analyze" onclick="analyzeStarMovement()">🔍 Phân Tích</button>
+            </div>
+        </div>
+
+        <!-- View Toggle -->
+        <div class="view-toggle" id="view-toggle">
+            <button id="btnGrid" class="active" onclick="setView('grid')">🏯 La Bàn (Grid)</button>
+            <button id="btnGraph" onclick="setView('graph')">🔮 Đồ Thị D3</button>
+        </div>
+
+        <!-- Timeline -->
+        <div class="panel timeline-panel" id="timeline-panel">
+            <div class="timeline-controls">
+                <button onclick="playAnimation()">▶️ Play</button>
+                <button onclick="pauseAnimation()">⏸️ Pause</button>
+                <button onclick="resetAnimation()">🔄 Reset</button>
+                <input type="range" class="timeline-slider" id="timeline-slider" min="0" max="11" value="0"
+                    oninput="gotoHour(+this.value)">
+                <div class="hour-indicator" id="hour-indicator">Tý (23-01h)</div>
+                <button onclick="setSpeed(2000)">Chậm</button>
+                <button onclick="setSpeed(1000)">Vừa</button>
+                <button onclick="setSpeed(500)">Nhanh</button>
+            </div>
+        </div>
+
+        <!-- View Container (holds views + filter overlay) -->
+        <div class="view-container" id="view-container">
+
+            <!-- Star Filter Overlay (collapsible) -->
+            <div class="filter-panel collapsed" id="filter-panel">
+                <div class="filter-header" onclick="toggleFilterPanel()">
+                    <span>🔍</span>
+                    <span class="filter-header-title">Bộ Lọc Sao</span>
+                    <span class="filter-header-badge" id="filter-summary"></span>
+                    <span class="filter-header-arrow">▼</span>
+                </div>
+                <div class="filter-body">
+                    <!-- Group Filter -->
+                    <div class="filter-section">
+                        <h4>📂 Nhóm Sao</h4>
+                        <div class="filter-groups" id="filter-groups">
+                            <label class="filter-chip active" data-group="chinh_tinh_tuvi">
+                                <input type="checkbox" checked onchange="onGroupFilterChange()"> Tử Vi
+                                <span class="chip-count">(6)</span>
+                            </label>
+                            <label class="filter-chip active" data-group="chinh_tinh_phu">
+                                <input type="checkbox" checked onchange="onGroupFilterChange()"> Thiên Phủ
+                                <span class="chip-count">(8)</span>
+                            </label>
+                            <label class="filter-chip active" data-group="luc_cat">
+                                <input type="checkbox" checked onchange="onGroupFilterChange()"> Lục Cát
+                                <span class="chip-count">(6)</span>
+                            </label>
+                            <label class="filter-chip active" data-group="luc_sat">
+                                <input type="checkbox" checked onchange="onGroupFilterChange()"> Lục Sát
+                                <span class="chip-count">(6)</span>
+                            </label>
+                            <label class="filter-chip active" data-group="tu_hoa">
+                                <input type="checkbox" checked onchange="onGroupFilterChange()"> Tứ Hóa
+                                <span class="chip-count">(4)</span>
+                            </label>
+                            <label class="filter-chip active" data-group="tap_tinh">
+                                <input type="checkbox" checked onchange="onGroupFilterChange()"> Tạp Tinh
+                                <span class="chip-count"></span>
+                            </label>
+                            <label class="filter-chip active" data-group="vong_thai_tue">
+                                <input type="checkbox" checked onchange="onGroupFilterChange()"> Thái Tuế
+                                <span class="chip-count">(12)</span>
+                            </label>
+                            <label class="filter-chip active" data-group="vong_truong_sinh">
+                                <input type="checkbox" checked onchange="onGroupFilterChange()"> Trường Sinh
+                                <span class="chip-count">(12)</span>
+                            </label>
+                            <label class="filter-chip active" data-group="vong_bac_si">
+                                <input type="checkbox" checked onchange="onGroupFilterChange()"> Bác Sĩ
+                                <span class="chip-count">(12)</span>
+                            </label>
+                            <label class="filter-chip active" data-group="luu_nien">
+                                <input type="checkbox" checked onchange="onGroupFilterChange()"> Lưu Niên
+                                <span class="chip-count">(21)</span>
+                            </label>
+                        </div>
+                    </div>
+                    <!-- Individual Star Filter -->
+                    <div class="filter-section">
+                        <h4>⭐ Lọc Từng Sao</h4>
+                        <input type="text" class="star-search-box" id="star-search" placeholder="Tìm tên sao..." oninput="filterStarSearch()">
+                        <div class="filter-actions">
+                            <button onclick="selectAllStarsFilter()">✅ Tất cả</button>
+                            <button onclick="deselectAllStarsFilter()">❌ Bỏ hết</button>
+                            <button onclick="selectMovingOnly()">🔄 Di chuyển</button>
+                            <button onclick="selectFixedOnly()">📍 Cố định</button>
+                        </div>
+                        <div class="star-checklist" id="star-checklist">
+                            <span style="opacity:.5;font-size:.82em">Bấm "Phân Tích" trước</span>
+                        </div>
+                    </div>
+                    <div class="filter-summary" id="filter-summary-text"></div>
+                </div>
+            </div>
+
+            <!-- Grid View -->
+            <div class="grid-view" id="grid-view">
+                <div class="cung-grid" id="cung-grid">
+                <!-- Row 1: Tỵ(5) Ngọ(6) Mùi(7) Thân(8) -->
+                <div class="cung-cell" data-pos="5">
+                    <div class="cung-header"><span class="cung-chi">Tỵ</span><span class="cung-name"></span><span class="cung-pos">5</span></div>
+                    <div class="cung-main-star"></div>
+                    <div class="cung-stars"><div class="stars-col stars-col-good"></div><div class="stars-col stars-col-bad"></div></div>
+                    <div class="cung-footer"><span class="cung-truong-sinh"></span><span class="cung-tieu-han"></span></div>
+                </div>
+                <div class="cung-cell" data-pos="6">
+                    <div class="cung-header"><span class="cung-chi">Ngọ</span><span class="cung-name"></span><span class="cung-pos">6</span></div>
+                    <div class="cung-main-star"></div>
+                    <div class="cung-stars"><div class="stars-col stars-col-good"></div><div class="stars-col stars-col-bad"></div></div>
+                    <div class="cung-footer"><span class="cung-truong-sinh"></span><span class="cung-tieu-han"></span></div>
+                </div>
+                <div class="cung-cell" data-pos="7">
+                    <div class="cung-header"><span class="cung-chi">Mùi</span><span class="cung-name"></span><span class="cung-pos">7</span></div>
+                    <div class="cung-main-star"></div>
+                    <div class="cung-stars"><div class="stars-col stars-col-good"></div><div class="stars-col stars-col-bad"></div></div>
+                    <div class="cung-footer"><span class="cung-truong-sinh"></span><span class="cung-tieu-han"></span></div>
+                </div>
+                <div class="cung-cell" data-pos="8">
+                    <div class="cung-header"><span class="cung-chi">Thân</span><span class="cung-name"></span><span class="cung-pos">8</span></div>
+                    <div class="cung-main-star"></div>
+                    <div class="cung-stars"><div class="stars-col stars-col-good"></div><div class="stars-col stars-col-bad"></div></div>
+                    <div class="cung-footer"><span class="cung-truong-sinh"></span><span class="cung-tieu-han"></span></div>
+                </div>
+                <!-- Row 2: Thìn(4) [Center] Dậu(9) -->
+                <div class="cung-cell" data-pos="4">
+                    <div class="cung-header"><span class="cung-chi">Thìn</span><span class="cung-name"></span><span class="cung-pos">4</span></div>
+                    <div class="cung-main-star"></div>
+                    <div class="cung-stars"><div class="stars-col stars-col-good"></div><div class="stars-col stars-col-bad"></div></div>
+                    <div class="cung-footer"><span class="cung-truong-sinh"></span><span class="cung-tieu-han"></span></div>
+                </div>
+                <div class="cung-center" id="chart-center">
+                    <div class="center-title">Thông Tin Lá Số</div>
+                    <div class="center-content" id="chart-summary">Nhập thông tin và bấm Phân Tích</div>
+                </div>
+                <div class="cung-cell" data-pos="9">
+                    <div class="cung-header"><span class="cung-chi">Dậu</span><span class="cung-name"></span><span class="cung-pos">9</span></div>
+                    <div class="cung-main-star"></div>
+                    <div class="cung-stars"><div class="stars-col stars-col-good"></div><div class="stars-col stars-col-bad"></div></div>
+                    <div class="cung-footer"><span class="cung-truong-sinh"></span><span class="cung-tieu-han"></span></div>
+                </div>
+                <!-- Row 3: Mão(3) [Center continued] Tuất(10) -->
+                <div class="cung-cell" data-pos="3">
+                    <div class="cung-header"><span class="cung-chi">Mão</span><span class="cung-name"></span><span class="cung-pos">3</span></div>
+                    <div class="cung-main-star"></div>
+                    <div class="cung-stars"><div class="stars-col stars-col-good"></div><div class="stars-col stars-col-bad"></div></div>
+                    <div class="cung-footer"><span class="cung-truong-sinh"></span><span class="cung-tieu-han"></span></div>
+                </div>
+                <div class="cung-cell" data-pos="10">
+                    <div class="cung-header"><span class="cung-chi">Tuất</span><span class="cung-name"></span><span class="cung-pos">10</span></div>
+                    <div class="cung-main-star"></div>
+                    <div class="cung-stars"><div class="stars-col stars-col-good"></div><div class="stars-col stars-col-bad"></div></div>
+                    <div class="cung-footer"><span class="cung-truong-sinh"></span><span class="cung-tieu-han"></span></div>
+                </div>
+                <!-- Row 4: Dần(2) Sửu(1) Tý(0) Hợi(11) -->
+                <div class="cung-cell" data-pos="2">
+                    <div class="cung-header"><span class="cung-chi">Dần</span><span class="cung-name"></span><span class="cung-pos">2</span></div>
+                    <div class="cung-main-star"></div>
+                    <div class="cung-stars"><div class="stars-col stars-col-good"></div><div class="stars-col stars-col-bad"></div></div>
+                    <div class="cung-footer"><span class="cung-truong-sinh"></span><span class="cung-tieu-han"></span></div>
+                </div>
+                <div class="cung-cell" data-pos="1">
+                    <div class="cung-header"><span class="cung-chi">Sửu</span><span class="cung-name"></span><span class="cung-pos">1</span></div>
+                    <div class="cung-main-star"></div>
+                    <div class="cung-stars"><div class="stars-col stars-col-good"></div><div class="stars-col stars-col-bad"></div></div>
+                    <div class="cung-footer"><span class="cung-truong-sinh"></span><span class="cung-tieu-han"></span></div>
+                </div>
+                <div class="cung-cell" data-pos="0">
+                    <div class="cung-header"><span class="cung-chi">Tý</span><span class="cung-name"></span><span class="cung-pos">0</span></div>
+                    <div class="cung-main-star"></div>
+                    <div class="cung-stars"><div class="stars-col stars-col-good"></div><div class="stars-col stars-col-bad"></div></div>
+                    <div class="cung-footer"><span class="cung-truong-sinh"></span><span class="cung-tieu-han"></span></div>
+                </div>
+                <div class="cung-cell" data-pos="11">
+                    <div class="cung-header"><span class="cung-chi">Hợi</span><span class="cung-name"></span><span class="cung-pos">11</span></div>
+                    <div class="cung-main-star"></div>
+                    <div class="cung-stars"><div class="stars-col stars-col-good"></div><div class="stars-col stars-col-bad"></div></div>
+                    <div class="cung-footer"><span class="cung-truong-sinh"></span><span class="cung-tieu-han"></span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- D3 Graph View -->
+        <div class="graph-view" id="graph-view">
+            <svg id="star-graph"></svg>
+            <div class="legend">
+                <h4>Ngũ Hành</h4>
+                <div class="legend-item"><div class="legend-dot" style="background:#f1c40f"></div><span>Kim</span></div>
+                <div class="legend-item"><div class="legend-dot" style="background:#2ecc71"></div><span>Mộc</span></div>
+                <div class="legend-item"><div class="legend-dot" style="background:#95a5a6"></div><span>Thủy</span></div>
+                <div class="legend-item"><div class="legend-dot" style="background:#e74c3c"></div><span>Hỏa</span></div>
+                <div class="legend-item"><div class="legend-dot" style="background:#e67e22"></div><span>Thổ</span></div>
+                <div class="legend-item" style="margin-top:8px"><div class="legend-dot" style="background:rgba(100,149,237,.4);border:2px solid #6495ED"></div><span>12 Cung</span></div>
+            </div>
+        </div>
+        </div>  <!-- /view-container -->
+
+        <!-- Analysis Section -->
+        <div class="analysis-section" id="analysis-section">
+            <div class="panel" style="margin-top:12px">
+                <h3 style="color:#fbbf24;margin-bottom:12px">📊 Phân Tích Quy Luật Di Chuyển</h3>
+                <div class="analysis-grid">
+                    <div class="analysis-card">
+                        <h3>🔄 Sao Di Chuyển</h3>
+                        <div class="star-list" id="moving-stars"></div>
+                    </div>
+                    <div class="analysis-card">
+                        <h3>📍 Sao Cố Định</h3>
+                        <div class="star-list" id="fixed-stars"></div>
+                    </div>
+                    <div class="analysis-card">
+                        <h3>🎯 Mệnh / Thân Cung</h3>
+                        <div id="menh-than-info"></div>
+                    </div>
+                </div>
+                <div class="analysis-card" style="margin-top:15px">
+                    <h3>🔬 Chi Tiết Pattern</h3>
+                    <div id="pattern-details" style="max-height:350px;overflow-y:auto"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tooltip (shared) -->
+    <div class="tooltip" id="tooltip"></div>
+
+    <!-- Loading overlay -->
+    <div class="loading-overlay" id="loading">
+        <div class="spinner"></div>
+        <p>Đang tính toán 12 lá số...</p>
+    </div>
+
+    <script>
+    // ════════════════════════════════════════════════
+    // GLOBAL STATE
+    // ════════════════════════════════════════════════
+    let chartsData = [];
+    let movementAnalysis = null;
+    let currentHour = 0;
+    let animInterval = null;
+    let animSpeed = 1000;
+    let calendarMode = 'solar';
+    let currentView = 'grid'; // 'grid' | 'graph'
+    let previousPositions = {};  // star_name -> previous position (for highlight)
+
+    const CHI_NAMES = ['Tý','Sửu','Dần','Mão','Thìn','Tỵ','Ngọ','Mùi','Thân','Dậu','Tuất','Hợi'];
+
+    // ════════════════════════════════════════════════
+    // STAR CLASSIFICATION & GROUPS
+    // ════════════════════════════════════════════════
+    const CHINH_TINH_TUVI = new Set(['Tử Vi','Thiên Cơ','Thái Dương','Vũ Khúc','Thiên Đồng','Liêm Trinh']);
+    const CHINH_TINH_PHU  = new Set(['Thiên Phủ','Thái Âm','Tham Lang','Cự Môn','Thiên Tướng','Thiên Lương','Thất Sát','Phá Quân']);
+    const CHINH_TINH = new Set([...CHINH_TINH_TUVI, ...CHINH_TINH_PHU]);
+    const LUC_CAT = new Set(['Văn Xương','Văn Khúc','Tả Phụ','Hữu Bật','Thiên Khôi','Thiên Việt']);
+    const LUC_SAT = new Set(['Kinh Dương','Đà La','Địa Không','Địa Kiếp','Hỏa Tinh','Linh Tinh']);
+    const TU_HOA  = new Set(['Hóa Lộc','Hóa Quyền','Hóa Khoa','Hóa Kỵ']);
+    const VONG_THAI_TUE = new Set(['Thái Tuế','Thiếu Dương','Tang Môn','Thiếu Âm','Quan Phù','Từ Phù',
+        'Tuế Phá','Long Đức','Bạch Hổ','Phúc Đức','Điếu Khách','Trực Phù']);
+    const VONG_TRUONG_SINH = new Set(['Trường Sinh','Mộc Dục','Quan Đới','Lâm Quan','Đế Vượng','Suy',
+        'Bệnh','Tử','Mộ','Tuyệt','Thai','Dưỡng']);
+    const VONG_BAC_SI = new Set(['Bác Sĩ','Lực Sĩ','Thanh Long','Tiểu Hao','Tướng Quân','Tàu Thu',
+        'Phi Liêm','Hỷ Thần','Bệnh Phù','Đại Hao','Phúc Bình','Quan Phủ']);
+
+    // Map group key -> Set
+    const STAR_GROUPS = {
+        chinh_tinh_tuvi: CHINH_TINH_TUVI,
+        chinh_tinh_phu: CHINH_TINH_PHU,
+        luc_cat: LUC_CAT,
+        luc_sat: LUC_SAT,
+        tu_hoa: TU_HOA,
+        tap_tinh: null,  // computed dynamically (everything not in other groups)
+        vong_thai_tue: VONG_THAI_TUE,
+        vong_truong_sinh: VONG_TRUONG_SINH,
+        vong_bac_si: VONG_BAC_SI
+    };
+
+    // All known named groups (for "tạp tinh" = anything NOT in these)
+    const ALL_NAMED_STARS = new Set([
+        ...CHINH_TINH, ...LUC_CAT, ...LUC_SAT, ...TU_HOA,
+        ...VONG_THAI_TUE, ...VONG_TRUONG_SINH, ...VONG_BAC_SI
+    ]);
+
+    const LUU_NIEN_STARS = new Set([
+        'Lưu Thái Tuế','Lưu Thiếu Dương','Lưu Tang Môn','Lưu Thiếu Âm',
+        'Lưu Quan Phù','Lưu Từ Phù','Lưu Tuế Phá','Lưu Long Đức',
+        'Lưu Bạch Hổ','Lưu Phúc Đức','Lưu Điếu Khách','Lưu Trực Phù',
+        'Lưu Thiên Mã','Lưu Lộc Tồn','Lưu Kinh Dương','Lưu Đà La',
+        'Lưu Thiên Khốc','Lưu Thiên Hư',
+        'Lưu Hóa Lộc','Lưu Hóa Quyền','Lưu Hóa Khoa','Lưu Hóa Kỵ'
+    ]);
+
+    function getStarGroup(name) {
+        if (LUU_NIEN_STARS.has(name)) return 'luu_nien';
+        if (CHINH_TINH_TUVI.has(name)) return 'chinh_tinh_tuvi';
+        if (CHINH_TINH_PHU.has(name))  return 'chinh_tinh_phu';
+        if (LUC_CAT.has(name))  return 'luc_cat';
+        if (LUC_SAT.has(name))  return 'luc_sat';
+        if (TU_HOA.has(name))   return 'tu_hoa';
+        if (VONG_THAI_TUE.has(name))     return 'vong_thai_tue';
+        if (VONG_TRUONG_SINH.has(name))  return 'vong_truong_sinh';
+        if (VONG_BAC_SI.has(name))       return 'vong_bac_si';
+        return 'tap_tinh';
+    }
+
+    function getStarCategory(name) {
+        if (CHINH_TINH.has(name)) return 'chinh';
+        if (LUC_CAT.has(name)) return 'cat';
+        if (LUC_SAT.has(name)) return 'sat';
+        return 'other';
+    }
+
+    // ═══════════════════════════════════════════════
+    // GOOD / BAD STAR CLASSIFICATION
+    // ═══════════════════════════════════════════════
+    const BAD_STARS = new Set([
+        // Lục Sát
+        'Kinh Dương','Đà La','Hỏa Tinh','Linh Tinh','Địa Không','Địa Kiếp',
+        // Tứ Hóa xấu
+        'Hóa Kỵ',
+        // Vòng Thái Tuế hung
+        'Thái Tuế','Tang Môn','Bạch Hổ','Điếu Khách','Quan Phù','Tuế Phá','Từ Phù','Trực Phù',
+        // Vòng Bác Sĩ hung
+        'Tiểu Hao','Đại Hao','Bệnh Phù','Phúc Bình','Phi Liêm',
+        // Vòng Trường Sinh hung
+        'Suy','Bệnh','Tử','Mộ','Tuyệt',
+        // Tạp tinh hung
+        'Thiên Hình','Thiên Riêu','Kiếp Sát','Thiên Không','Thiên Khốc','Thiên Hư',
+        'Thiên Thường','Thiên Sứ','Cô Thần','Quả Tú','Phá Toái','Lưu Hà','Âm Sát',
+        'Thiên La','Địa Võng',
+        // Lưu Niên hung (full names used in classification)
+        'Lưu Thái Tuế','Lưu Tang Môn','Lưu Bạch Hổ','Lưu Điếu Khách',
+        'Lưu Quan Phù','Lưu Tuế Phá','Lưu Từ Phù','Lưu Trực Phù',
+        'Lưu Kinh Dương','Lưu Đà La','Lưu Thiên Khốc','Lưu Thiên Hư',
+        // Lưu Niên Tứ Hóa xấu
+        'Lưu Hóa Kỵ'
+    ]);
+
+    const NEUTRAL_STARS = new Set([
+        'Hoa Cái','Mộc Dục','Thai','Thiên Diêu','Đào Hoa'
+    ]);
+
+    function isStarBad(name) {
+        return BAD_STARS.has(name);
+    }
+
+    function isStarNeutral(name) {
+        return NEUTRAL_STARS.has(name);
+    }
+
+    // Simple good/bad CSS class (matching traditional chart: green=good, red=bad)
+    function getStarDisplayClass(name) {
+        return isStarBad(name) ? 'star-bad' : 'star-good';
+    }
+
+    // Abbreviate brightness for traditional display
+    function abbreviateBrightness(name) {
+        if (!name) return '';
+        const map = {
+            'Miếu': 'M', 'Vượng': 'V', 'Đắc': 'Đ', 'Đắc Địa': 'Đ',
+            'Hãm': 'H', 'Bình Hòa': 'B', 'Bình': 'B', 'Lợi': 'L',
+            'Hãm Địa': 'H', 'Miếu Vượng': 'MV'
+        };
+        return map[name] || name.charAt(0).toUpperCase();
+    }
+
+    // ════════════════════════════════════════════════
+    // FILTER STATE
+    // ════════════════════════════════════════════════
+    let activeGroups = new Set([
+        'chinh_tinh_tuvi','chinh_tinh_phu','luc_cat','luc_sat',
+        'tu_hoa','tap_tinh','vong_thai_tue','vong_truong_sinh','vong_bac_si','luu_nien'
+    ]);
+    let hiddenStars = new Set();       // individually hidden stars
+    let allDiscoveredStars = [];       // [{name, group}] populated after analysis
+    let filterPanelVisible = false;
+
+    // ════════════════════════════════════════════════
+    // UI CONTROLS
+    // ════════════════════════════════════════════════
+    function setCalendarMode(mode) {
+        calendarMode = mode;
+        document.getElementById('btnSolar').classList.toggle('active', mode === 'solar');
+        document.getElementById('btnLunar').classList.toggle('active', mode === 'lunar');
+        document.getElementById('leap-month-group').style.display = mode === 'lunar' ? 'block' : 'none';
+    }
+
+    function setView(view) {
+        currentView = view;
+        document.getElementById('btnGrid').classList.toggle('active', view === 'grid');
+        document.getElementById('btnGraph').classList.toggle('active', view === 'graph');
+        document.getElementById('grid-view').style.display = view === 'grid' ? 'block' : 'none';
+        document.getElementById('graph-view').style.display = view === 'graph' ? 'block' : 'none';
+        if (view === 'graph' && chartsData.length) {
+            initD3Graph();
+            renderD3(currentHour);
+        }
+    }
+
+    function showLoading(show) {
+        document.getElementById('loading').style.display = show ? 'flex' : 'none';
+    }
+
+    function showResults(show) {
+        const d = show ? 'flex' : 'none';
+        const b = show ? 'block' : 'none';
+        document.getElementById('view-toggle').style.display = d;
+        document.getElementById('timeline-panel').style.display = b;
+        document.getElementById('analysis-section').style.display = b;
+        if (show) {
+            document.getElementById('grid-view').style.display = currentView === 'grid' ? 'block' : 'none';
+            document.getElementById('graph-view').style.display = currentView === 'graph' ? 'block' : 'none';
+        } else {
+            document.getElementById('grid-view').style.display = 'none';
+            document.getElementById('graph-view').style.display = 'none';
+        }
+    }
+
+    // ════════════════════════════════════════════════
+    // FETCH & ANALYZE
+    // ════════════════════════════════════════════════
+    async function analyzeStarMovement() {
+        const day   = parseInt(document.getElementById('day').value);
+        const month = parseInt(document.getElementById('month').value);
+        const year  = parseInt(document.getElementById('year').value);
+        const gender = document.getElementById('gender').value;
+        const leapMonth = calendarMode === 'lunar' ? document.getElementById('leap-month').checked : false;
+        const viewingYear = parseInt(document.getElementById('viewing-year').value) || year;
+
+        if (!day || !month || !year) {
+            alert('Vui lòng nhập đầy đủ ngày, tháng, năm!');
+            return;
+        }
+
+        showLoading(true);
+        showResults(false);
+
+        try {
+            const res = await fetch('/graph/api/star-movement', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ day, month, year, gender, calendar: calendarMode, leap_month: leapMonth, viewing_year: viewingYear })
+            });
+            const result = await res.json();
+
+            if (result.status !== 'success') {
+                alert('Lỗi: ' + (result.message || 'Unknown error'));
+                showLoading(false);
+                return;
+            }
+
+            chartsData = result.data.charts;
+            movementAnalysis = result.data.movement_analysis;
+            previousPositions = {};
+            hiddenStars.clear();
+
+            showLoading(false);
+            showResults(true);
+
+            // Build star filter checklist from discovered stars
+            buildStarChecklist();
+            updateFilterSummary();
+
+            currentHour = 0;
+            document.getElementById('timeline-slider').value = 0;
+            gotoHour(0);
+
+            if (currentView === 'graph') {
+                initD3Graph();
+                renderD3(0);
+            }
+
+            displayAnalysis();
+        } catch (err) {
+            console.error('Fetch error:', err);
+            alert('Có lỗi xảy ra khi tính toán! Xem console.');
+            showLoading(false);
+        }
+    }
+
+    // ════════════════════════════════════════════════
+    // HOUR NAVIGATION
+    // ════════════════════════════════════════════════
+    function gotoHour(idx) {
+        currentHour = idx;
+        document.getElementById('timeline-slider').value = idx;
+        const chart = chartsData[idx];
+        if (!chart) return;
+
+        document.getElementById('hour-indicator').textContent = chart.hour_name || CHI_NAMES[idx];
+
+        updateGridView(chart);
+        if (currentView === 'graph') renderD3(idx);
+        updateChartSummary(chart);
+
+        // Track positions for highlighting changes
+        const newPositions = {};
+        if (chart.positions) {
+            Object.entries(chart.positions).forEach(([pos, pd]) => {
+                (pd.stars || []).forEach(s => { newPositions[s.name] = parseInt(pos); });
+                (pd.hoa || []).forEach(h => { newPositions[h.name] = parseInt(pos); });
+                (pd.luu_nien || []).forEach(l => { newPositions[l.name] = parseInt(pos); });
+                (pd.luu_hoa || []).forEach(l => { newPositions[l.name] = parseInt(pos); });
+            });
+        }
+        previousPositions = newPositions;
+    }
+
+    function playAnimation() {
+        if (animInterval) return;
+        animInterval = setInterval(() => {
+            gotoHour((currentHour + 1) % 12);
+        }, animSpeed);
+    }
+
+    function pauseAnimation() {
+        if (animInterval) { clearInterval(animInterval); animInterval = null; }
+    }
+
+    function resetAnimation() {
+        pauseAnimation();
+        gotoHour(0);
+    }
+
+    function setSpeed(ms) {
+        animSpeed = ms;
+        if (animInterval) { pauseAnimation(); playAnimation(); }
+    }
+
+    // ════════════════════════════════════════════════
+    // GRID VIEW
+    // ════════════════════════════════════════════════
+    function updateGridView(chart) {
+        // Clear all cells
+        document.querySelectorAll('.cung-cell').forEach(cell => {
+            const goodCol = cell.querySelector('.stars-col-good');
+            const badCol  = cell.querySelector('.stars-col-bad');
+            const mainStar = cell.querySelector('.cung-main-star');
+            const tsSpan = cell.querySelector('.cung-truong-sinh');
+            const thSpan = cell.querySelector('.cung-tieu-han');
+            if (goodCol) goodCol.innerHTML = '';
+            if (badCol)  badCol.innerHTML = '';
+            if (mainStar) mainStar.innerHTML = '';
+            if (tsSpan) tsSpan.textContent = '';
+            if (thSpan) thSpan.textContent = '';
+            cell.querySelector('.cung-name').textContent = '';
+            cell.classList.remove('is-menh', 'is-than');
+        });
+
+        if (!chart.positions) return;
+
+        Object.entries(chart.positions).forEach(([pos, posData]) => {
+            const cell = document.querySelector(`.cung-cell[data-pos="${pos}"]`);
+            if (!cell) return;
+
+            // Cung name (UPPERCASE palace name)
+            const cungName = posData.cung || (chart.cung_map && chart.cung_map[pos]) || '';
+            cell.querySelector('.cung-name').textContent = cungName;
+
+            // Mệnh / Thân marking
+            if (posData.is_menh) cell.classList.add('is-menh');
+            if (posData.is_than) cell.classList.add('is-than');
+
+            // Tiểu Hạn badge
+            if (posData.tieu_han_age) {
+                const thSpan = cell.querySelector('.cung-tieu-han');
+                if (thSpan) thSpan.textContent = `TH ${posData.tieu_han_age}`;
+            }
+
+            // Filter visible stars
+            const visibleStars = (posData.stars || []).filter(s => isStarVisible(s.name));
+
+            // Separate Chính Tinh -> main star zone
+            const chinhTinh = [];
+            // Separate Trường Sinh stars -> footer
+            const truongSinhStars = [];
+            // The rest -> good/bad columns
+            const colStars = [];
+
+            visibleStars.forEach(star => {
+                if (CHINH_TINH.has(star.name)) {
+                    chinhTinh.push(star);
+                } else if (VONG_TRUONG_SINH.has(star.name)) {
+                    truongSinhStars.push(star);
+                } else {
+                    colStars.push(star);
+                }
+            });
+
+            // ── Main star area (Chính Tinh, large bold centered) ──
+            const mainStarEl = cell.querySelector('.cung-main-star');
+            chinhTinh.forEach(star => {
+                const span = document.createElement('span');
+                span.className = 'main-star-name';
+                let text = star.name;
+                if (star.brightness_name) text += ` (${abbreviateBrightness(star.brightness_name)})`;
+                span.textContent = text;
+                span.addEventListener('mouseenter', e => showTooltip(e, star));
+                span.addEventListener('mouseleave', hideTooltip);
+                mainStarEl.appendChild(span);
+                // If multiple chính tinh, add line break
+                if (chinhTinh.length > 1) mainStarEl.appendChild(document.createElement('br'));
+            });
+
+            // ── Trường Sinh -> footer ──
+            if (truongSinhStars.length > 0) {
+                const tsSpan = cell.querySelector('.cung-truong-sinh');
+                if (tsSpan) tsSpan.textContent = truongSinhStars.map(s => s.name).join(', ');
+            }
+
+            // ── Good / Bad columns ──
+            const goodCol = cell.querySelector('.stars-col-good');
+            const badCol  = cell.querySelector('.stars-col-bad');
+
+            colStars.forEach(star => {
+                const div = document.createElement('div');
+                div.className = 'star-item';
+                div.classList.add(getStarDisplayClass(star.name));
+
+                let text = star.name;
+                if (star.brightness_name) {
+                    text += ` (${abbreviateBrightness(star.brightness_name)})`;
+                }
+                div.textContent = text;
+
+                // Highlight if position changed
+                const prevPos = previousPositions[star.name];
+                if (prevPos !== undefined && prevPos !== parseInt(pos)) {
+                    div.classList.add('highlight');
+                }
+
+                div.addEventListener('mouseenter', e => showTooltip(e, star));
+                div.addEventListener('mouseleave', hideTooltip);
+
+                if (isStarBad(star.name)) {
+                    badCol.appendChild(div);
+                } else {
+                    goodCol.appendChild(div);
+                }
+            });
+
+            // ── Tứ Hóa from hoa[] field ──
+            (posData.hoa || []).forEach(hoa => {
+                if (!isStarVisible(hoa.name)) return;
+                const div = document.createElement('div');
+                div.className = 'star-item';
+                div.classList.add(getStarDisplayClass(hoa.name));
+                div.textContent = hoa.name;
+                div.title = `${hoa.name} → ${hoa.star || ''}`;
+
+                if (isStarBad(hoa.name)) {
+                    badCol.appendChild(div);
+                } else {
+                    goodCol.appendChild(div);
+                }
+            });
+
+            // ── Lưu Niên stars from luu_nien[] field ──
+            (posData.luu_nien || []).forEach(luu => {
+                if (!isStarVisible(luu.display) && !isStarVisible(luu.name)) return;
+                const div = document.createElement('div');
+                div.className = 'star-item star-luu';
+                div.classList.add(getStarDisplayClass(luu.name));
+                div.textContent = luu.display;
+                div.title = luu.name;
+
+                if (isStarBad(luu.name)) {
+                    badCol.appendChild(div);
+                } else {
+                    goodCol.appendChild(div);
+                }
+            });
+
+            // ── Lưu Niên Tứ Hóa from luu_hoa[] field ──
+            (posData.luu_hoa || []).forEach(lh => {
+                if (!isStarVisible(lh.display) && !isStarVisible(lh.name)) return;
+                const div = document.createElement('div');
+                div.className = 'star-item star-luu';
+                div.classList.add(getStarDisplayClass(lh.name));
+                div.textContent = lh.display;
+                div.title = `${lh.name} → ${lh.star || ''}`;
+
+                if (isStarBad(lh.name)) {
+                    badCol.appendChild(div);
+                } else {
+                    goodCol.appendChild(div);
+                }
+            });
+        });
+    }
+
+    function updateChartSummary(chart) {
+        const el = document.getElementById('chart-summary');
+        const cuc = chart.cuc ? (chart.cuc.name || chart.cuc) : 'N/A';
+        el.innerHTML = `
+            <div><strong>Giờ:</strong> ${chart.hour_name || ''}</div>
+            <div><strong>Mệnh:</strong> ${chart.menh_name || 'N/A'} (vị trí ${chart.menh_position ?? '?'})</div>
+            <div><strong>Thân:</strong> ${chart.than_name || 'N/A'} (vị trí ${chart.than_position ?? '?'})</div>
+            <div><strong>Cục:</strong> ${typeof cuc === 'object' ? JSON.stringify(cuc) : cuc}</div>
+            ${chart.nap_am ? `<div><strong>Nạp Âm:</strong> ${typeof chart.nap_am === 'object' ? chart.nap_am.name || JSON.stringify(chart.nap_am) : chart.nap_am}</div>` : ''}
+        `;
+    }
+
+    // ════════════════════════════════════════════════
+    // TOOLTIP
+    // ════════════════════════════════════════════════
+    const tooltipEl = document.getElementById('tooltip');
+
+    function showTooltip(event, star) {
+        const cat = getStarCategory(star.name);
+        const catLabel = cat === 'chinh' ? 'Chính Tinh' : cat === 'cat' ? 'Lục Cát' : cat === 'sat' ? 'Lục Sát' : 'Phụ Tinh';
+        let html = `<strong>${star.name}</strong>`;
+        if (star.element) html += `<br>Ngũ Hành: ${star.element}`;
+        if (star.brightness_name) html += `<br>Độ Sáng: ${star.brightness_name}`;
+        html += `<br>Loại: ${catLabel}`;
+
+        tooltipEl.innerHTML = html;
+        tooltipEl.classList.add('show');
+        tooltipEl.style.left = (event.clientX + 12) + 'px';
+        tooltipEl.style.top = (event.clientY - 12) + 'px';
+    }
+
+    function hideTooltip() {
+        tooltipEl.classList.remove('show');
+    }
+
+    // ════════════════════════════════════════════════
+    // D3 GRAPH VIEW
+    // ════════════════════════════════════════════════
+    let d3svg, d3g, d3width, d3height;
+    const CUNG_RADIUS = 220;
+    const CUNG_NODE_R = 30;
+    const STAR_R = 7;
+    let cungPositions = [];  // [{x, y, position, chi}]
+
+    function initD3Graph() {
+        const container = document.getElementById('star-graph');
+        const rect = container.getBoundingClientRect();
+        d3width = rect.width || 800;
+        d3height = rect.height || 600;
+
+        d3svg = d3.select('#star-graph')
+            .attr('width', d3width)
+            .attr('height', d3height);
+        d3svg.selectAll('*').remove();
+
+        // Zoom
+        const zoom = d3.zoom()
+            .scaleExtent([0.4, 3])
+            .on('zoom', e => d3g.attr('transform', e.transform));
+        d3svg.call(zoom);
+
+        d3g = d3svg.append('g');
+
+        const cx = d3width / 2, cy = d3height / 2;
+
+        // Compute cung positions (circle layout)
+        cungPositions = CHI_NAMES.map((chi, i) => {
+            const angle = (i * 30 + 90) * Math.PI / 180; // Ngọ(6)=top, Tý(0)=bottom
+            return {
+                position: i,
+                chi: chi,
+                x: cx + CUNG_RADIUS * Math.cos(angle),
+                y: cy + CUNG_RADIUS * Math.sin(angle)
+            };
+        });
+
+        // Draw connecting circle
+        d3g.append('circle')
+            .attr('cx', cx).attr('cy', cy).attr('r', CUNG_RADIUS)
+            .attr('fill', 'none')
+            .attr('stroke', 'rgba(255,255,255,.1)')
+            .attr('stroke-dasharray', '5,5');
+
+        // Draw cung nodes
+        const cg = d3g.selectAll('.cung-node')
+            .data(cungPositions)
+            .enter().append('g')
+            .attr('class', 'cung-node')
+            .attr('transform', d => `translate(${d.x},${d.y})`);
+
+        cg.append('circle')
+            .attr('r', CUNG_NODE_R)
+            .attr('fill', 'rgba(100,149,237,.25)')
+            .attr('stroke', '#6495ED')
+            .attr('stroke-width', 2);
+
+        cg.append('text')
+            .attr('fill', '#fff')
+            .attr('text-anchor', 'middle')
+            .attr('dy', 5)
+            .attr('font-size', 13)
+            .attr('font-weight', 'bold')
+            .text(d => d.chi);
+
+        // Cung name text (below)
+        cg.append('text')
+            .attr('class', 'cung-name-label')
+            .attr('fill', 'rgba(255,255,255,.6)')
+            .attr('text-anchor', 'middle')
+            .attr('dy', 22)
+            .attr('font-size', 10);
+    }
+
+    function renderD3(hourIndex) {
+        const chart = chartsData[hourIndex];
+        if (!chart || !d3g) return;
+
+        // Update cung names
+        const cungMap = chart.cung_map || {};
+        d3g.selectAll('.cung-name-label')
+            .data(cungPositions)
+            .text(d => {
+                const name = cungMap[String(d.position)] || cungMap[d.position] || '';
+                return name;
+            });
+
+        // Build star nodes data (filtered)
+        const stars = [];
+        if (chart.positions) {
+            Object.entries(chart.positions).forEach(([pos, pd]) => {
+                const posNum = parseInt(pos);
+                const cung = cungPositions[posNum];
+                if (!cung) return;
+
+                const filteredStars = (pd.stars || []).filter(s => isStarVisible(s.name));
+                // Also include Tứ Hóa from hoa[] field
+                const hoaStars = (pd.hoa || []).filter(h => isStarVisible(h.name)).map(h => ({
+                    name: h.name, color: '#2e7d32', element: '', brightness_name: '', css_class: ''
+                }));
+                // Include Lưu Niên stars
+                const luuStars = (pd.luu_nien || []).filter(l => isStarVisible(l.name)).map(l => ({
+                    name: l.display, color: '#6a1b9a', element: '', brightness_name: '', css_class: ''
+                }));
+                // Include Lưu Niên Tứ Hóa
+                const luuHoaStars = (pd.luu_hoa || []).filter(l => isStarVisible(l.name)).map(l => ({
+                    name: l.display, color: '#6a1b9a', element: '', brightness_name: '', css_class: ''
+                }));
+                const allStars = [...filteredStars, ...hoaStars, ...luuStars, ...luuHoaStars];
+                allStars.forEach((star, i, arr) => {
+                    // Deterministic offset: arrange stars in a small arc around cung
+                    const total = arr.length;
+                    const arcSpread = Math.min(total * 18, 160); // degrees of arc to use
+                    const startAngle = -arcSpread / 2;
+                    const step = total > 1 ? arcSpread / (total - 1) : 0;
+                    const angleDeg = startAngle + step * i;
+                    const angleRad = (angleDeg + 90 + (posNum * 30)) * Math.PI / 180;
+                    const dist = CUNG_NODE_R + 18 + (total > 8 ? (i % 2) * 14 : 0);
+
+                    stars.push({
+                        key: star.name,
+                        name: star.name,
+                        color: star.color || '#fff',
+                        element: star.element || '',
+                        brightness: star.brightness_name || '',
+                        x: cung.x + dist * Math.cos(angleRad),
+                        y: cung.y + dist * Math.sin(angleRad),
+                        cx: cung.x,
+                        cy: cung.y
+                    });
+                });
+            });
+        }
+
+        // D3 data join with key
+        const sel = d3g.selectAll('.star-node').data(stars, d => d.key);
+
+        // Exit
+        sel.exit().transition().duration(400).style('opacity', 0).remove();
+
+        // Enter
+        const enter = sel.enter().append('g')
+            .attr('class', 'star-node')
+            .style('opacity', 0)
+            .attr('transform', d => `translate(${d.cx},${d.cy})`);
+
+        enter.append('circle')
+            .attr('r', STAR_R)
+            .attr('stroke', '#fff')
+            .attr('stroke-width', 1.5);
+
+        enter.append('text')
+            .attr('fill', '#fff')
+            .attr('text-anchor', 'middle')
+            .attr('dy', -STAR_R - 3)
+            .attr('font-size', 9)
+            .attr('font-weight', 'bold')
+            .style('text-shadow', '1px 1px 3px rgba(0,0,0,.9)')
+            .style('pointer-events', 'none');
+
+        // Enter + Update (merge)
+        const merged = enter.merge(sel);
+
+        merged.transition().duration(700).ease(d3.easeCubicOut)
+            .style('opacity', 1)
+            .attr('transform', d => `translate(${d.x},${d.y})`);
+
+        merged.select('circle').attr('fill', d => d.color);
+        merged.select('text').text(d => d.name);
+
+        // Tooltip events
+        merged
+            .on('mouseenter', function(event, d) {
+                const cat = getStarCategory(d.name);
+                const catLabel = cat === 'chinh' ? 'Chính Tinh' : cat === 'cat' ? 'Lục Cát' : cat === 'sat' ? 'Lục Sát' : 'Phụ Tinh';
+                tooltipEl.innerHTML = `<strong>${d.name}</strong><br>Ngũ Hành: ${d.element}<br>Loại: ${catLabel}` + (d.brightness ? `<br>Độ Sáng: ${d.brightness}` : '');
+                tooltipEl.classList.add('show');
+                tooltipEl.style.left = (event.clientX + 12) + 'px';
+                tooltipEl.style.top = (event.clientY - 12) + 'px';
+            })
+            .on('mouseleave', hideTooltip);
+    }
+
+    // ════════════════════════════════════════════════
+    // ANALYSIS DISPLAY
+    // ════════════════════════════════════════════════
+    function displayAnalysis() {
+        if (!movementAnalysis) return;
+
+        // Moving stars
+        const movingDiv = document.getElementById('moving-stars');
+        movingDiv.innerHTML = (movementAnalysis.stars_that_move || []).map(s =>
+            `<div class="star-badge moving">${s}</div>`
+        ).join('');
+
+        // Fixed stars
+        const fixedDiv = document.getElementById('fixed-stars');
+        fixedDiv.innerHTML = (movementAnalysis.stars_that_stay || []).map(s =>
+            `<div class="star-badge fixed">${s}</div>`
+        ).join('');
+
+        // Menh / Than
+        const mtDiv = document.getElementById('menh-than-info');
+        let mtHtml = '';
+        if (movementAnalysis.menh_cung_positions) {
+            const u = [...new Set(movementAnalysis.menh_cung_positions)];
+            mtHtml += `<p><strong>Mệnh Cung:</strong> ${u.length === 1 ? `Cố định (${CHI_NAMES[u[0]]})` : `Di chuyển: ${u.map(p => CHI_NAMES[p]).join(' → ')}`}</p>`;
+        }
+        if (movementAnalysis.than_cung_positions) {
+            const u = [...new Set(movementAnalysis.than_cung_positions)];
+            mtHtml += `<p><strong>Thân Cung:</strong> ${u.length === 1 ? `Cố định (${CHI_NAMES[u[0]]})` : `Di chuyển: ${u.map(p => CHI_NAMES[p]).join(' → ')}`}</p>`;
+        }
+        mtDiv.innerHTML = mtHtml;
+
+        // Pattern details
+        const patDiv = document.getElementById('pattern-details');
+        patDiv.innerHTML = '';
+        const patterns = movementAnalysis.movement_patterns || {};
+        // Sort: moving stars first, then fixed
+        const sorted = Object.entries(patterns).sort((a, b) => {
+            if (a[1].type === 'moves' && b[1].type !== 'moves') return -1;
+            if (a[1].type !== 'moves' && b[1].type === 'moves') return 1;
+            return a[0].localeCompare(b[0]);
+        });
+
+        sorted.forEach(([star, pat]) => {
+            const div = document.createElement('div');
+            div.style.cssText = 'margin-bottom:8px;padding:8px;background:rgba(255,255,255,.05);border-radius:6px;font-size:.88em';
+            if (pat.type === 'fixed') {
+                div.innerHTML = `<strong>${star}</strong>: <span style="color:#3b82f6">Cố định</span> tại ${CHI_NAMES[pat.position] || pat.position}`;
+            } else if (pat.type === 'moves') {
+                const posNames = (pat.positions || []).map(p => CHI_NAMES[p] || p);
+                const patternLabel = formatPattern(pat.pattern);
+                div.innerHTML = `<strong>${star}</strong>: <span style="color:#fbbf24">Di chuyển</span> (${patternLabel})<br>
+                    <small>${posNames.join(' → ')}</small>`;
+            }
+            patDiv.appendChild(div);
+        });
+    }
+
+    function formatPattern(p) {
+        const labels = {
+            'sequential_forward': 'Thuận chiều +1',
+            'sequential_backward': 'Nghịch chiều -1',
+            'skip_1_forward': 'Nhảy +2',
+            'skip_1_backward': 'Nhảy -2',
+            'alternating': 'Xen kẽ',
+            'irregular': 'Bất quy tắc',
+            'insufficient_data': 'Thiếu dữ liệu'
+        };
+        if (labels[p]) return labels[p];
+        if (p && p.startsWith('regular_shift_by_')) return `Dịch ${p.split('_').pop()} cung`;
+        return p || '?';
+    }
+
+    // ════════════════════════════════════════════════
+    // STAR FILTER LOGIC
+    // ════════════════════════════════════════════════
+    function toggleFilterPanel() {
+        const panel = document.getElementById('filter-panel');
+        filterPanelVisible = !filterPanelVisible;
+        panel.classList.toggle('collapsed', !filterPanelVisible);
+    }
+
+    function isStarVisible(name) {
+        if (hiddenStars.has(name)) return false;
+        const group = getStarGroup(name);
+        return activeGroups.has(group);
+    }
+
+    function onGroupFilterChange() {
+        activeGroups.clear();
+        document.querySelectorAll('#filter-groups .filter-chip').forEach(chip => {
+            const cb = chip.querySelector('input[type="checkbox"]');
+            const group = chip.dataset.group;
+            if (cb.checked) {
+                activeGroups.add(group);
+                chip.classList.add('active');
+            } else {
+                chip.classList.remove('active');
+            }
+        });
+        syncStarChecklist();
+        applyStarFilter();
+    }
+
+    function buildStarChecklist() {
+        // Discover all unique stars from chartsData
+        const starSet = new Map();
+        chartsData.forEach(chart => {
+            if (!chart.positions) return;
+            Object.values(chart.positions).forEach(pd => {
+                (pd.stars || []).forEach(s => {
+                    if (!starSet.has(s.name)) {
+                        starSet.set(s.name, { name: s.name, group: getStarGroup(s.name) });
+                    }
+                });
+                // Also discover Tứ Hóa from hoa[]
+                (pd.hoa || []).forEach(h => {
+                    if (!starSet.has(h.name)) {
+                        starSet.set(h.name, { name: h.name, group: getStarGroup(h.name) });
+                    }
+                });
+                // Discover Lưu Niên stars
+                (pd.luu_nien || []).forEach(l => {
+                    if (!starSet.has(l.name)) {
+                        starSet.set(l.name, { name: l.name, display: l.display, group: 'luu_nien' });
+                    }
+                });
+                // Discover Lưu Niên Tứ Hóa
+                (pd.luu_hoa || []).forEach(l => {
+                    if (!starSet.has(l.name)) {
+                        starSet.set(l.name, { name: l.name, display: l.display, group: 'luu_nien' });
+                    }
+                });
+            });
+        });
+
+        // Sort: by group order, then alphabetically
+        const groupOrder = ['chinh_tinh_tuvi','chinh_tinh_phu','luc_cat','luc_sat','tu_hoa',
+            'vong_thai_tue','vong_truong_sinh','vong_bac_si','tap_tinh','luu_nien'];
+        allDiscoveredStars = [...starSet.values()].sort((a, b) => {
+            const ga = groupOrder.indexOf(a.group), gb = groupOrder.indexOf(b.group);
+            if (ga !== gb) return ga - gb;
+            return a.name.localeCompare(b.name, 'vi');
+        });
+
+        // Update tạp tinh count
+        const tapCount = allDiscoveredStars.filter(s => s.group === 'tap_tinh').length;
+        const tapChip = document.querySelector('.filter-chip[data-group="tap_tinh"] .chip-count');
+        if (tapChip) tapChip.textContent = `(${tapCount})`;
+
+        renderStarChecklist();
+    }
+
+    function renderStarChecklist() {
+        const container = document.getElementById('star-checklist');
+        container.innerHTML = '';
+        allDiscoveredStars.forEach(s => {
+            const visible = activeGroups.has(s.group);
+            const checked = !hiddenStars.has(s.name);
+            const label = document.createElement('label');
+            label.className = 'star-check-item' + (visible ? '' : ' dimmed');
+            label.dataset.star = s.name;
+            label.dataset.group = s.group;
+            label.innerHTML = `<input type="checkbox" ${checked ? 'checked' : ''} onchange="onStarCheckChange('${s.name.replace(/'/g, `\\'`)}', this.checked)"> ${s.name}`;
+            container.appendChild(label);
+        });
+    }
+
+    function syncStarChecklist() {
+        // Dim/undim star items based on group visibility
+        document.querySelectorAll('#star-checklist .star-check-item').forEach(item => {
+            const group = item.dataset.group;
+            item.classList.toggle('dimmed', !activeGroups.has(group));
+        });
+    }
+
+    function onStarCheckChange(name, checked) {
+        if (checked) {
+            hiddenStars.delete(name);
+        } else {
+            hiddenStars.add(name);
+        }
+        applyStarFilter();
+    }
+
+    function selectAllStarsFilter() {
+        hiddenStars.clear();
+        activeGroups = new Set(['chinh_tinh_tuvi','chinh_tinh_phu','luc_cat','luc_sat',
+            'tu_hoa','tap_tinh','vong_thai_tue','vong_truong_sinh','vong_bac_si','luu_nien']);
+        // Sync group checkboxes
+        document.querySelectorAll('#filter-groups .filter-chip').forEach(chip => {
+            chip.querySelector('input').checked = true;
+            chip.classList.add('active');
+        });
+        renderStarChecklist();
+        applyStarFilter();
+    }
+
+    function deselectAllStarsFilter() {
+        allDiscoveredStars.forEach(s => hiddenStars.add(s.name));
+        renderStarChecklist();
+        applyStarFilter();
+    }
+
+    function selectMovingOnly() {
+        if (!movementAnalysis) return;
+        const moving = new Set(movementAnalysis.stars_that_move || []);
+        hiddenStars.clear();
+        allDiscoveredStars.forEach(s => {
+            if (!moving.has(s.name)) hiddenStars.add(s.name);
+        });
+        // Ensure all groups are active so moving stars show regardless of group
+        selectAllGroupCheckboxes();
+        renderStarChecklist();
+        applyStarFilter();
+    }
+
+    function selectFixedOnly() {
+        if (!movementAnalysis) return;
+        const fixed = new Set(movementAnalysis.stars_that_stay || []);
+        hiddenStars.clear();
+        allDiscoveredStars.forEach(s => {
+            if (!fixed.has(s.name)) hiddenStars.add(s.name);
+        });
+        selectAllGroupCheckboxes();
+        renderStarChecklist();
+        applyStarFilter();
+    }
+
+    function selectAllGroupCheckboxes() {
+        activeGroups = new Set(['chinh_tinh_tuvi','chinh_tinh_phu','luc_cat','luc_sat',
+            'tu_hoa','tap_tinh','vong_thai_tue','vong_truong_sinh','vong_bac_si','luu_nien']);
+        document.querySelectorAll('#filter-groups .filter-chip').forEach(chip => {
+            chip.querySelector('input').checked = true;
+            chip.classList.add('active');
+        });
+    }
+
+    function filterStarSearch() {
+        const q = document.getElementById('star-search').value.toLowerCase().trim();
+        document.querySelectorAll('#star-checklist .star-check-item').forEach(item => {
+            const name = item.dataset.star.toLowerCase();
+            item.classList.toggle('hidden', q.length > 0 && !name.includes(q));
+        });
+    }
+
+    function applyStarFilter() {
+        // Re-render current view with filter applied
+        if (chartsData.length > 0) {
+            gotoHour(currentHour);
+        }
+        updateFilterSummary();
+    }
+
+    function updateFilterSummary() {
+        const total = allDiscoveredStars.length;
+        const visible = allDiscoveredStars.filter(s => isStarVisible(s.name)).length;
+        const badge = document.getElementById('filter-summary');
+        const text = document.getElementById('filter-summary-text');
+        if (total === 0) {
+            badge.textContent = '';
+            text.textContent = '';
+        } else if (visible === total) {
+            badge.textContent = `${total}`;
+            text.textContent = `Hiển thị tất cả ${total} sao`;
+        } else {
+            badge.textContent = `${visible}/${total}`;
+            text.textContent = `Hiển thị ${visible}/${total} sao`;
+        }
+    }
+
+    // ════════════════════════════════════════════════
+    // RESIZE
+    // ════════════════════════════════════════════════
+    window.addEventListener('resize', () => {
+        if (chartsData.length && currentView === 'graph') {
+            initD3Graph();
+            renderD3(currentHour);
+        }
+    });
+    </script>
+</body>
+
+</html>

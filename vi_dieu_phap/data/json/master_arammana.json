@@ -1,0 +1,26 @@
+[
+  {
+    "id": "ARA_SAC",
+    "name": "Sắc Cảnh"
+  },
+  {
+    "id": "ARA_THINH",
+    "name": "Thinh Cảnh"
+  },
+  {
+    "id": "ARA_KHI",
+    "name": "Khí Cảnh"
+  },
+  {
+    "id": "ARA_VI",
+    "name": "Vị Cảnh"
+  },
+  {
+    "id": "ARA_XUC",
+    "name": "Xúc Cảnh"
+  },
+  {
+    "id": "ARA_PHAP",
+    "name": "Pháp Cảnh"
+  }
+]

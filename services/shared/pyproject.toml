@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "tuvi-shared"
+version = "1.0.0"
+description = "Shared library for Tu Vi microservices platform"
+requires-python = ">=3.9"
+
+[tool.setuptools.packages.find]
+include = ["shared*"]

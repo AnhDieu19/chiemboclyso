@@ -1,0 +1,86 @@
+{
+    "Đế Vượng": {
+        "nature": "Đại Cát",
+        "general": "Hưng vượng, thành công đỉnh cao, vinh hiển",
+        "in_palace": {
+            "Mệnh": "Là Người có thân cao mình lớn, tính cách quyết liệt. Biểu thị đây là mẫu Người năng động, nhanh nhẹn, tháo vát không chỉ thế còn là Người rất chăm chỉ, chịu khó. Giúp gia tăng sức khỏe lẫn tuổi thọ."
+        }
+    },
+    "Mộ": {
+        "nature": "Trung",
+        "general": "Ẩn tàng, tiềm lực chưa phát, cất giữ",
+        "in_palace": {
+            "Quan Lộc": "Là người chăm chỉ làm việc, cần cù chịu khó, phù cho đường công danh. Phải trung niên mới thành công. Trong làm ăn là người kín đáo không phô trương, phù hợp với các ngành nghề liên quan đến tài chính."
+        }
+    },
+    "Trường Sinh": {
+        "nature": "Cát",
+        "general": "Phát triển tốt, khởi đầu thuận lợi, trường thọ",
+        "in_palace": {
+            "Tài Bạch": "Là người tảo tần tiết kiệm, chăm chỉ chịu khó kiếm tiền. Thể hiện mức độ sung túc, giàu có."
+        }
+    },
+    "Mộc Dục": {
+        "nature": "Trung",
+        "general": "Giai đoạn phát triển, cần che chở, đào hoa",
+        "in_palace": {
+            "Tử Tức": "Sinh đẻ khó khăn, khó bầu khó đẻ, phải can thiệp y học. Đẻ con rất xinh đẹp, sau con cái đào hoa."
+        }
+    },
+    "Quan Đới": {
+        "nature": "Cát",
+        "general": "Trưởng thành, có địa vị, được tôn trọng",
+        "in_palace": {
+            "Phu Thê": "Vợ chồng nên nhường nhịn bao dung, tha thứ để tăng hạnh phúc gia đình."
+        }
+    },
+    "Lâm Quan": {
+        "nature": "Cát",
+        "general": "Có chức vị, được đề bạt, thăng tiến",
+        "in_palace": {
+            "Huynh Đệ": "Biểu thị đông anh chị em."
+        }
+    },
+    "Suy": {
+        "nature": "Hung",
+        "general": "Bắt đầu suy giảm, cần cẩn thận",
+        "in_palace": {
+            "Phụ Mẫu": "Cha mẹ vất vả."
+        }
+    },
+    "Bệnh": {
+        "nature": "Hung",
+        "general": "Sức khỏe yếu, dễ ốm đau, trở ngại",
+        "in_palace": {
+            "Phúc Đức": "Họ hàng không giàu có khá giả, họ hàng bị nhiều người hành nghiệp, gánh nghiệp."
+        }
+    },
+    "Tử": {
+        "nature": "Hung",
+        "general": "Suy yếu, khó khăn, kết thúc chu kỳ",
+        "in_palace": {
+            "Điền Trạch": "Tích lũy được tài sản ít nhiều hay có tiền chôn của giấu."
+        }
+    },
+    "Tuyệt": {
+        "nature": "Hung",
+        "general": "Giai đoạn thấp nhất, cần phục hồi",
+        "in_palace": {
+            "Nô Bộc": "Ít được nhờ bạn bè, dù có giúp hay cho người ta cái gì cũng không được nhận lại."
+        }
+    },
+    "Thai": {
+        "nature": "Trung",
+        "general": "Mới bắt đầu, còn non nớt, thai nghén",
+        "in_palace": {
+            "Thiên Di": "Thể hiện sự lịch lãm, gọn gàng khi đi ra ngoài. Dễ bị đắm chìm trong chuyện tình yêu tình ái bên ngoài. Còn thể hiện dễ bất lợi trong chuyện tình cảm."
+        }
+    },
+    "Dưỡng": {
+        "nature": "Cát",
+        "general": "Nuôi dưỡng, phát triển dần, được chăm sóc",
+        "in_palace": {
+            "Tật Ách": "Chủ trong người có mầm bệnh, hay ốm đau hay bệnh tật khi bé thì khó nuôi."
+        }
+    }
+}

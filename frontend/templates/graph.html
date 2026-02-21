@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vi Diệu Pháp - Knowledge Graph</title>
+
+    <!-- D3.js -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/graph.css') }}">
+</head>
+
+<body>
+    <h1>Vi Diệu Pháp Knowledge Graph (Loop 2)</h1>
+
+    <div id="filter-panel">
+        <input type="text" id="search-box" placeholder="Tìm kiếm (Tên/Pali/ID)..." oninput="searchNode()"
+            style="width:100%; margin-bottom:10px; padding:5px; border-radius:4px; border:none;">
+        <strong>Filters</strong><br>
+        <div class="filter-group">
+            <input type="checkbox" id="chk-citta" checked onchange="updateFilters()"> Citta (Tâm)<br>
+            &nbsp;&nbsp;<input type="checkbox" class="chk-sub" value="Akusala" checked onchange="updateFilters()"> Bất
+            Thiện<br>
+            &nbsp;&nbsp;<input type="checkbox" class="chk-sub" value="Ahetuka" checked onchange="updateFilters()"> Vô
+            Nhân<br>
+            &nbsp;&nbsp;<input type="checkbox" class="chk-sub" value="Kusala" checked onchange="updateFilters()"> Tịnh
+            Hảo<br>
+        </div>
+        <div class="filter-group">
+            <input type="checkbox" id="chk-cetasika" checked onchange="updateFilters()"> Cetasika (Sở Hữu)<br>
+            &nbsp;&nbsp;<input type="checkbox" class="chk-sub" value="Universals" checked onchange="updateFilters()">
+            Biến Hành<br>
+            &nbsp;&nbsp;<input type="checkbox" class="chk-sub" value="Occasionals" checked onchange="updateFilters()">
+            Biệt Cảnh<br>
+            &nbsp;&nbsp;<input type="checkbox" class="chk-sub" value="Unwholesome" checked onchange="updateFilters()">
+            Bất Thiện<br>
+            &nbsp;&nbsp;<input type="checkbox" class="chk-sub" value="Beautiful" checked onchange="updateFilters()">
+            Tịnh Hảo<br>
+        </div>
+        <div class="filter-group">
+            <input type="checkbox" id="chk-rupa" checked onchange="updateFilters()"> Rupa (Sắc Pháp)<br>
+            <input type="checkbox" id="chk-nibbana" checked onchange="updateFilters()"> Nibbana (Niết Bàn)<br>
+        </div>
+        <div class="filter-group">
+            <strong>Link Type</strong><br>
+            <input type="checkbox" id="chk-link-structure" checked onchange="updateFilters()"> Structure<br>
+            <input type="checkbox" id="chk-link-association" onchange="updateFilters()"> Association<br>
+        </div>
+        <div class="filter-group">
+            <strong>Color Mode</strong><br>
+            <label><input type="radio" name="color-mode" value="structure" checked onchange="updateColors()"> Structure</label><br>
+            <label><input type="radio" name="color-mode" value="vedana" onchange="updateColors()"> Vedana</label><br>
+        </div>
+    </div>
+
+    <div id="controls">
+        <div>Nodes: <span id="node-count">0</span></div>
+        <div>Links: <span id="link-count">0</span></div>
+    </div>
+
+    <div id="graph-container"></div>
+    <div id="tooltip"></div>
+
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='js/vdp_graph.js') }}"></script>
+</body>
+
+</html>

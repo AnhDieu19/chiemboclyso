@@ -1,0 +1,103 @@
+{
+    "giap_da_la": {
+        "stars": [
+            "Đà La"
+        ],
+        "meaning": "Thiếu thời vất vả, phúc phát hậu lai",
+        "detail": "Mệnh giáp Đà La thiếu thời vất vả, nhưng phúc đức đến muộn, về sau thành công."
+    },
+    "giap_hoa_loc": {
+        "stars": [
+            "Hóa Lộc"
+        ],
+        "meaning": "An nhà phú quý, nhất cử thành danh",
+        "detail": "Mệnh giáp Hóa Lộc cuộc sống an nhàn phú quý, dễ dàng thành công nổi danh."
+    },
+    "giap_pha_quan": {
+        "stars": [
+            "Phá Quân"
+        ],
+        "meaning": "Phá hao thủy bại, chậm muộn công danh, hao tài tổn trí, hao tâm tổn lực",
+        "detail": "Mệnh giáp Phá Quân thường gặp hao tổn, công danh chậm muộn, phải tốn nhiều công sức."
+    },
+    "giap_kinh_da": {
+        "stars": [
+            "Kinh Dương",
+            "Đà La"
+        ],
+        "meaning": "Hung tinh giáp cung, đa tai đa nạn",
+        "detail": "Mệnh bị giáp bởi cả Kinh Dương và Đà La là cách hung, nhiều tai họa, khó khăn."
+    },
+    "giap_hoa_linh": {
+        "stars": [
+            "Hỏa Tinh",
+            "Linh Tinh"
+        ],
+        "meaning": "Bất an bất ổn, thất thường thất bại",
+        "detail": "Mệnh giáp Hỏa Linh cuộc sống bất ổn, hay gặp thất bại, biến động."
+    },
+    "giap_khong_kiep": {
+        "stars": [
+            "Địa Không",
+            "Địa Kiếp"
+        ],
+        "meaning": "Hao tán điền sản, công cốc uổng công",
+        "detail": "Mệnh giáp Không Kiếp dễ hao tán tài sản, công việc hay gặp trục trặc, uổng công."
+    },
+    "giap_ta_huu": {
+        "stars": [
+            "Tả Phụ",
+            "Hữu Bật"
+        ],
+        "meaning": "Quý nhân phù trì, phúc lộc song toàn",
+        "detail": "Mệnh giáp Tả Hữu được quý nhân giúp đỡ hai bên, phúc lộc đầy đủ."
+    },
+    "giap_xuong_khuc": {
+        "stars": [
+            "Văn Xương",
+            "Văn Khúc"
+        ],
+        "meaning": "Thông minh đa tài, khoa bảng công danh",
+        "detail": "Mệnh giáp Xương Khúc thông minh, tài giỏi, học hành thi cử đỗ đạt."
+    },
+    "giap_khoi_viet": {
+        "stars": [
+            "Thiên Khôi",
+            "Thiên Việt"
+        ],
+        "meaning": "Quý nhân tương trợ, cát lành may mắn",
+        "detail": "Mệnh giáp Khôi Việt có quý nhân phù trợ, gặp nhiều may mắn cát lành."
+    },
+    "giap_loc_ma": {
+        "stars": [
+            "Lộc Tồn",
+            "Thiên Mã"
+        ],
+        "meaning": "Lộc Mã giao trì, phát tài phương xa",
+        "detail": "Mệnh giáp Lộc Mã dễ phát tài khi đi xa, làm ăn phương xa thành công."
+    },
+    "giap_hong_hy": {
+        "stars": [
+            "Hồng Loan",
+            "Thiên Hỹ"
+        ],
+        "meaning": "Hỷ sự trùng lai, hôn nhân mỹ mãn",
+        "detail": "Mệnh giáp Hồng Hỷ hay gặp chuyện vui, hôn nhân hạnh phúc mỹ mãn."
+    },
+    "giap_tu_phu": {
+        "stars": [
+            "Tử Vi",
+            "Thiên Phủ"
+        ],
+        "meaning": "Đế phủ triều viên, phú quý cao sang",
+        "detail": "Mệnh giáp Tử Phủ cuộc sống cao sang phú quý, được kính trọng."
+    },
+    "giap_nhat_nguyet": {
+        "stars": [
+            "Thái Dương",
+            "Thái Âm"
+        ],
+        "meaning": "Nhật nguyệt giao huy, công danh hiển đạt",
+        "detail": "Mệnh giáp Nhật Nguyệt sáng sủa, công danh sự nghiệp rực rỡ thành công."
+    }
+}

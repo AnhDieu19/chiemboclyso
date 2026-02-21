@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /* Prevent scrollbars */
+    font-family: sans-serif;
+    background-color: #1a1a1a;
+    /* Dark background */
+    color: #ffffff;
+}
+
+#scene-container {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+}
+
+#loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    pointer-events: none;
+    transition: opacity 0.5s;
+}
+
+#loading.hidden {
+    opacity: 0;
+}

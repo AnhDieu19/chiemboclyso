@@ -1,0 +1,50 @@
+[
+  {
+    "id": "R_LOBHA",
+    "name": "Tham (Lobha)",
+    "group": "Akusala",
+    "color": "#FF4500",
+    "description": "Greed, Attachment",
+    "cetasika_id": "CET_18"
+  },
+  {
+    "id": "R_DOSA",
+    "name": "Sân (Dosa)",
+    "group": "Akusala",
+    "color": "#8B0000",
+    "description": "Hatred, Aversion",
+    "cetasika_id": "CET_21"
+  },
+  {
+    "id": "R_MOHA",
+    "name": "Si (Moha)",
+    "group": "Akusala",
+    "color": "#696969",
+    "description": "Delusion, Ignorance",
+    "cetasika_id": "CET_14"
+  },
+  {
+    "id": "R_ALOBHA",
+    "name": "Vô Tham (Alobha)",
+    "group": "Kusala",
+    "color": "#32CD32",
+    "description": "Non-greed, Generosity",
+    "cetasika_id": "CET_32"
+  },
+  {
+    "id": "R_ADOSA",
+    "name": "Vô Sân (Adosa)",
+    "group": "Kusala",
+    "color": "#00CED1",
+    "description": "Non-hatred, Loving-kindness",
+    "cetasika_id": "CET_33"
+  },
+  {
+    "id": "R_AMOHA",
+    "name": "Vô Si (Amoha)",
+    "group": "Kusala",
+    "color": "#FFD700",
+    "description": "Non-delusion, Wisdom (Panna)",
+    "cetasika_id": "CET_52"
+  }
+]

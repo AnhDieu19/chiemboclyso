@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Acupoints Visualization</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Import Map for Three.js and Addons -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/",
+                "d3": "https://cdn.jsdelivr.net/npm/d3@7/+esm"
+            }
+        }
+    </script>
+    <!-- Fallback for D3 if module import fails somehow, or just to be safe, but map is better for modules -->
+</head>
+
+<body>
+    <div id="loading">Loading Model...</div>
+    <!-- Main container for 3D Canvas -->
+    <div id="scene-container"></div>
+
+    <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>

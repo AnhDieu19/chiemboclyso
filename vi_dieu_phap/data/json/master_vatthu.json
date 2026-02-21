@@ -1,0 +1,26 @@
+[
+  {
+    "id": "VAT_MAT",
+    "name": "Nhãn Vật"
+  },
+  {
+    "id": "VAT_TAI",
+    "name": "Nhĩ Vật"
+  },
+  {
+    "id": "VAT_MUI",
+    "name": "Tỷ Vật"
+  },
+  {
+    "id": "VAT_LUOI",
+    "name": "Thiệt Vật"
+  },
+  {
+    "id": "VAT_THAN",
+    "name": "Thân Vật"
+  },
+  {
+    "id": "VAT_TIM",
+    "name": "Ý Vật (Sắc Tim)"
+  }
+]

@@ -1,0 +1,14 @@
+[
+    {
+        "id": "LU",
+        "name": "Thủ Thái Âm Phế Kinh",
+        "color": "blue",
+        "colorHex": 0x0000ff
+    },
+    {
+        "id": "LI",
+        "name": "Thủ Dương Minh Đại Trường Kinh",
+        "color": "yellow",
+        "colorHex": 0xffff00
+    }
+]

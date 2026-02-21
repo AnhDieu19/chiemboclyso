@@ -1,0 +1,153 @@
+# Docker Compose - Tu Vi Microservices Platform
+# 
+# Usage:
+#   docker-compose up                     # Chạy tất cả
+#   docker-compose up tuvi-chart tuvi-ai  # Chạy một số
+#   docker-compose up gateway             # Chạy gateway + monolith
+#
+# Môi trường:
+#   GATEWAY_MODE=proxy  → Gateway forward requests đến services
+#   GATEWAY_MODE=monolith → Gateway load trực tiếp (mặc định)
+
+version: '3.8'
+
+x-common-env: &common-env
+  SECRET_KEY: ${SECRET_KEY}
+  PYTHONUNBUFFERED: "1"
+  PYTHONIOENCODING: "utf-8"
+
+x-common-volumes: &common-volumes
+  - ./python:/app/python:ro
+  - ./services/shared:/app/services/shared:ro
+  - ./.env:/app/.env:ro
+
+services:
+  # ============================================
+  # API Gateway - Entry point
+  # ============================================
+  gateway:
+    build:
+      context: .
+      dockerfile: services/gateway/Dockerfile
+    ports:
+      - "5001:5001"
+    environment:
+      <<: *common-env
+      GATEWAY_MODE: proxy
+    volumes: *common-volumes
+    depends_on:
+      - tuvi-chart
+      - tuvi-finder
+      - tuvi-analytics
+      - tuvi-ai
+      - thai-at
+      - ki-mon
+      - graph
+      - vi-dieu-phap
+
+  # ============================================
+  # Tu Vi Chart Service
+  # ============================================
+  tuvi-chart:
+    build:
+      context: .
+      dockerfile: services/tuvi-chart/Dockerfile
+    ports:
+      - "5011:5011"
+    environment:
+      <<: *common-env
+    volumes: *common-volumes
+
+  # ============================================
+  # Tu Vi Finder Service
+  # ============================================
+  tuvi-finder:
+    build:
+      context: .
+      dockerfile: services/tuvi-finder/Dockerfile
+    ports:
+      - "5012:5012"
+    environment:
+      <<: *common-env
+    volumes: *common-volumes
+
+  # ============================================
+  # Tu Vi Analytics Service
+  # ============================================
+  tuvi-analytics:
+    build:
+      context: .
+      dockerfile: services/tuvi-analytics/Dockerfile
+    ports:
+      - "5013:5013"
+    environment:
+      <<: *common-env
+    volumes: *common-volumes
+
+  # ============================================
+  # Tu Vi AI Service
+  # ============================================
+  tuvi-ai:
+    build:
+      context: .
+      dockerfile: services/tuvi-ai/Dockerfile
+    ports:
+      - "5014:5014"
+    environment:
+      <<: *common-env
+      GEMINI_API_KEY: ${GEMINI_API_KEY}
+    volumes: *common-volumes
+
+  # ============================================
+  # Thai At Service
+  # ============================================
+  thai-at:
+    build:
+      context: .
+      dockerfile: services/thai-at/Dockerfile
+    ports:
+      - "5015:5015"
+    environment:
+      <<: *common-env
+    volumes: *common-volumes
+
+  # ============================================
+  # Ki Mon Service
+  # ============================================
+  ki-mon:
+    build:
+      context: .
+      dockerfile: services/ki-mon/Dockerfile
+    ports:
+      - "5016:5016"
+    environment:
+      <<: *common-env
+    volumes: *common-volumes
+
+  # ============================================
+  # Knowledge Graph Service
+  # ============================================
+  graph:
+    build:
+      context: .
+      dockerfile: services/graph/Dockerfile
+    ports:
+      - "5017:5017"
+    environment:
+      <<: *common-env
+    volumes: *common-volumes
+
+  # ============================================
+  # Vi Dieu Phap Service
+  # ============================================
+  vi-dieu-phap:
+    build:
+      context: .
+      dockerfile: services/vi-dieu-phap/Dockerfile
+    ports:
+      - "5018:5018"
+    environment:
+      <<: *common-env
+    volumes:
+      - ./vi_dieu_phap:/app/vi_dieu_phap:ro
+      - ./.env:/app/.env:ro

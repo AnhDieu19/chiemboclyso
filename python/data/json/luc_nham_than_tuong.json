@@ -1,0 +1,86 @@
+{
+    "Quý Nhân": {
+        "han": "貴人", "ngu_hanh": "Thổ", "am_duong": "Dương",
+        "tinh_chat": "đại_cát",
+        "y_nghia": "Quý nhân phù trợ, giải cứu, may mắn lớn",
+        "ung_dung": ["Cầu tài", "Gặp quý nhân", "Hóa giải tai ương"],
+        "dong_vat": "Rồng", "sao_chom": "Giác (角宿)"
+    },
+    "Đằng Xà": {
+        "han": "螣蛇", "ngu_hanh": "Hỏa", "am_duong": "Âm",
+        "tinh_chat": "hung",
+        "y_nghia": "Kinh sợ, ác mộng, sự lừa dối ẩn giấu",
+        "ung_dung": ["Cảnh giác gian trá", "Hỏa hoạn", "Bất an"],
+        "dong_vat": "Rắn", "sao_chom": "Dực (翼宿)"
+    },
+    "Chu Tước": {
+        "han": "朱雀", "ngu_hanh": "Hỏa", "am_duong": "Dương",
+        "tinh_chat": "hung",
+        "y_nghia": "Thị phi, tranh tụng, văn thư rắc rối",
+        "ung_dung": ["Kiện tụng", "Tin tức xấu", "Khẩu thiệt"],
+        "dong_vat": "Chim sẻ đỏ", "sao_chom": "Liễu (柳宿)"
+    },
+    "Lục Hợp": {
+        "han": "六合", "ngu_hanh": "Mộc", "am_duong": "Âm",
+        "tinh_chat": "cát",
+        "y_nghia": "Hợp tác, hòa thuận, giao duyên, môi giới",
+        "ung_dung": ["Hôn nhân", "Hợp đồng", "Đàm phán"],
+        "dong_vat": "Hươu", "sao_chom": "Phòng (房宿)"
+    },
+    "Câu Trận": {
+        "han": "勾陳", "ngu_hanh": "Thổ", "am_duong": "Dương",
+        "tinh_chat": "hung",
+        "y_nghia": "Trì trệ, trói buộc, tranh đấu, quân sự",
+        "ung_dung": ["Chiến tranh", "Tù đày", "Kiện tụng kéo dài"],
+        "dong_vat": "Trâu", "sao_chom": "Nữ (女宿)"
+    },
+    "Thanh Long": {
+        "han": "青龍", "ngu_hanh": "Mộc", "am_duong": "Dương",
+        "tinh_chat": "đại_cát",
+        "y_nghia": "Vui mừng, tài lộc, thăng tiến, sinh sôi",
+        "ung_dung": ["Tài lộc", "Thăng chức", "Thai sản"],
+        "dong_vat": "Rồng xanh", "sao_chom": "Tâm (心宿)"
+    },
+    "Thiên Không": {
+        "han": "天空", "ngu_hanh": "Thổ", "am_duong": "Dương",
+        "tinh_chat": "hung",
+        "y_nghia": "Hư không, lừa đảo, không có thực chất",
+        "ung_dung": ["Dối trá", "Thất bại không lý do", "Ảo tưởng"],
+        "dong_vat": "Chó", "sao_chom": "Ngưu (牛宿)"
+    },
+    "Bạch Hổ": {
+        "han": "白虎", "ngu_hanh": "Kim", "am_duong": "Dương",
+        "tinh_chat": "đại_hung",
+        "y_nghia": "Bạo lực, tang tóc, máu me, chém giết",
+        "ung_dung": ["Tai nạn", "Tang sự", "Phẫu thuật"],
+        "dong_vat": "Hổ trắng", "sao_chom": "Khuê (奎宿)"
+    },
+    "Thái Thường": {
+        "han": "太常", "ngu_hanh": "Thổ", "am_duong": "Âm",
+        "tinh_chat": "cát",
+        "y_nghia": "Yến tiệc, y phục, ẩm thực, nghi lễ",
+        "ung_dung": ["Lễ hội", "Mua sắm", "Ẩm thực"],
+        "dong_vat": "Phượng", "sao_chom": "Vị (胃宿)"
+    },
+    "Huyền Vũ": {
+        "han": "玄武", "ngu_hanh": "Thủy", "am_duong": "Dương",
+        "tinh_chat": "hung",
+        "y_nghia": "Trộm cắp, mất mát, bí mật, phản bội",
+        "ung_dung": ["Mất tài sản", "Ngoại tình", "Gián điệp"],
+        "dong_vat": "Rùa đen", "sao_chom": "Nguy (危宿)"
+    },
+    "Thái Âm": {
+        "han": "太陰", "ngu_hanh": "Kim", "am_duong": "Âm",
+        "tinh_chat": "cát",
+        "y_nghia": "Ẩn danh, phụ nữ giúp đỡ, bí mật tốt lành",
+        "ung_dung": ["Quý nhân nữ", "Mưu kế ngầm", "Che giấu tốt"],
+        "dong_vat": "Thỏ", "sao_chom": "Tất (畢宿)"
+    },
+    "Thiên Hậu": {
+        "han": "天后", "ngu_hanh": "Thủy", "am_duong": "Âm",
+        "tinh_chat": "cát",
+        "y_nghia": "Hôn nhân, phụ nữ quyền quý, tình duyên",
+        "ung_dung": ["Hôn nhân", "Tình cảm", "Nữ quý nhân"],
+        "dong_vat": "Chim nhạn", "sao_chom": "Thất (室宿)"
+    }
+}

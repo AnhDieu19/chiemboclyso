@@ -1,0 +1,481 @@
+{
+    "63": {
+        "id": 63,
+        "king_wen_order": 1,
+        "name": "Càn (The Creative)",
+        "han": "乾",
+        "codepoint": "䷀",
+        "binary_str": "111111",
+        "description": "Sáng tạo, khởi đầu, năng lượng thuần dương.",
+        "analysis": "Trạng thái năng lượng cực đại (Full Bit 1). Biểu thị sự đồng nhất tuyệt đối và entropy thấp. Nguồn năng lượng nguyên thủy.",
+        "detail_info": {
+            "title_vi": "Chu Dịch Thượng Kinh - Càn",
+            "symbol": "☰",
+            "transliteration": "Chu Dịch Thượng Kinh - Càn.",
+            "meaning_full": "Kinh Dịch (Quyển Thượng) - Quẻ Càn (Tượng trưng cho Trời, người cha, sự cương cường).",
+            "thoan_text": {
+                "han": "乾：元亨利貞。",
+                "pinyin": "Càn: Nguyên, Hanh, Lợi, Trinh.",
+                "meaning": "Quẻ Càn có 4 đức lớn: Khởi đầu lớn lao (Nguyên), Thông suốt (Hanh), Lợi ích/Thỏa thích (Lợi), Chính trực/Bền vững (Trinh)."
+            },
+            "lines": [
+                {
+                    "position": 1,
+                    "name": "Sơ Cửu (Hào 1)",
+                    "han": "初九：潛龍勿用。",
+                    "pinyin": "Sơ Cửu: Tiềm long vật dụng.",
+                    "meaning": "Rồng còn ẩn mình dưới nước, chưa nên hành động (Thời cơ chưa tới, tài năng cần giấu kín để tu dưỡng)."
+                },
+                {
+                    "position": 2,
+                    "name": "Cửu Nhị (Hào 2)",
+                    "han": "九二：見龍在田，利見大人。",
+                    "pinyin": "Cửu Nhị: Hiện long tại điền, lợi kiến đại nhân.",
+                    "meaning": "Rồng đã hiện lên ở ruộng, lợi về việc gặp người có đức lớn (Tài năng bắt đầu lộ diện, nên tìm minh chủ hoặc người thầy giỏi để phát triển)."
+                },
+                {
+                    "position": 3,
+                    "name": "Cửu Tam (Hào 3)",
+                    "han": "九三：君子終日乾乾，夕惕若，厲无咎。",
+                    "pinyin": "Cửu Tam: Quân tử chung nhật càn càn, tịch dịch nhược, lệ, vô cữu.",
+                    "meaning": "Người quân tử suốt ngày hăng hái tự cường, đến tối vẫn còn lo sợ thận trọng. Tuy ở tình thế nguy hiểm nhưng sẽ không mắc lỗi lầm."
+                },
+                {
+                    "position": 4,
+                    "name": "Cửu Tứ (Hào 4)",
+                    "han": "九四：或躍在淵，无咎。",
+                    "pinyin": "Cửu Tứ: Hoặc dược tại uyên, vô cữu.",
+                    "meaning": "Như rồng hoặc bay nhảy lên, hoặc còn ở vực sâu (Tiến thoái tùy thời, đang thử sức), không có lỗi."
+                },
+                {
+                    "position": 5,
+                    "name": "Cửu Ngũ (Hào 5)",
+                    "han": "九五：飛龍在天，利見大人。",
+                    "pinyin": "Cửu Ngũ: Phi long tại thiên, lợi kiến đại nhân.",
+                    "meaning": "Rồng bay trên trời, lợi về việc gặp người có đức lớn (Tài năng tỏa sáng rực rỡ, đắc địa, làm nên sự nghiệp lớn)."
+                },
+                {
+                    "position": 6,
+                    "name": "Thượng Cửu (Hào 6)",
+                    "han": "上九：亢龍有悔。",
+                    "pinyin": "Thượng Cửu: Kháng long hữu hối.",
+                    "meaning": "Rồng bay lên quá cao, sẽ có điều hối hận (Thái quá thì bất cập, lên cao tột đỉnh thì dễ bị cô độc và suy thoái, cần biết điểm dừng)."
+                },
+                {
+                    "position": 7,
+                    "name": "Dụng Cửu",
+                    "han": "用九：見群龍无首，吉。",
+                    "pinyin": "Dụng Cửu: Kiến quần long vô thủ, cát.",
+                    "meaning": "Thấy bầy rồng mà không con nào tranh làm đầu, tốt (Tượng trưng cho sự đức độ, tài giỏi nhưng khiêm nhường, hòa hợp)."
+                }
+            ]
+        }
+    },
+    "0": {
+        "id": 0,
+        "king_wen_order": 2,
+        "name": "Khôn (The Receptive)",
+        "han": "坤",
+        "codepoint": "䷁",
+        "binary_str": "000000",
+        "description": "Nhu thuận, tiếp nhận, đất mẹ.",
+        "analysis": "Trạng thái rỗng tuyệt đối (Null state). Không gian bộ nhớ sẵn sàng ghi đè."
+    },
+    "20": {
+        "id": 20,
+        "king_wen_order": 3,
+        "name": "Truân (Difficulty at the Beginning)",
+        "han": "屯",
+        "codepoint": "䷂",
+        "binary_str": "010100",
+        "description": "Gian nan lúc đầu, mầm non đội đất.",
+        "analysis": "Bit 1 ở hào 1 bị nén bởi hai bit 0. Tắc nghẽn cục bộ (local bottleneck) trong giai đoạn khởi động."
+    },
+    "10": {
+        "id": 10,
+        "king_wen_order": 4,
+        "name": "Mông (Youthful Folly)",
+        "han": "蒙",
+        "codepoint": "䷃",
+        "binary_str": "001010",
+        "description": "Mờ mịt, cần được khai sáng, giáo dục.",
+        "analysis": "Dữ liệu (bit 1) bị chặn bởi vỏ bọc (Cấn). Rào cản cứng (hard barrier) ngăn dòng thông tin."
+    },
+    "23": {
+        "id": 23,
+        "king_wen_order": 5,
+        "name": "Nhu (Waiting)",
+        "han": "需",
+        "codepoint": "䷄",
+        "binary_str": "010111",
+        "description": "Chờ đợi thời cơ, ăn uống vui vẻ.",
+        "analysis": "Wait state. Tích lũy tài nguyên (3 hào dương) trước khi vượt qua khe hiểm (hào 4)."
+    },
+    "58": {
+        "id": 58,
+        "king_wen_order": 6,
+        "name": "Tụng (Conflict)",
+        "han": "訟",
+        "codepoint": "䷅",
+        "binary_str": "111010",
+        "description": "Tranh chấp, kiện tụng, bất đồng.",
+        "analysis": "Hai luồng dữ liệu ngược chiều (Càn đi lên, Khảm đi xuống). Xung đột truy cập (access conflict)."
+    },
+    "2": {
+        "id": 2,
+        "king_wen_order": 7,
+        "name": "Sư (The Army)",
+        "han": "師",
+        "codepoint": "䷆",
+        "binary_str": "000010",
+        "description": "Quân đội, kỷ luật, người lãnh đạo.",
+        "analysis": "Mô hình tập trung quyền lực (centralized control). Một bit 1 chỉ huy toàn bộ hệ thống."
+    },
+    "16": {
+        "id": 16,
+        "king_wen_order": 8,
+        "name": "Tỷ (Holding Together)",
+        "han": "比",
+        "codepoint": "䷇",
+        "binary_str": "010000",
+        "description": "Gần gũi, thân thiết, trợ giúp.",
+        "analysis": "Mạng hình sao (star topology). Mọi nút hướng về trung tâm (hào 5)."
+    },
+    "55": {
+        "id": 55,
+        "king_wen_order": 9,
+        "name": "Tiểu Súc (Taming Power of the Small)",
+        "han": "小畜",
+        "codepoint": "䷈",
+        "binary_str": "110111",
+        "description": "Ngăn cản nhỏ, tích lũy nhỏ.",
+        "analysis": "Điểm nghẽn duy nhất (single point of failure). Một bit 0 cản trở 5 bit 1."
+    },
+    "59": {
+        "id": 59,
+        "king_wen_order": 10,
+        "name": "Lý (Treading)",
+        "han": "履",
+        "codepoint": "䷉",
+        "binary_str": "111011",
+        "description": "Bước đi, hành xử theo lễ.",
+        "analysis": "Nền tảng không ổn định (bit 0 trên cùng nội quái). Cần cân bằng tải trọng."
+    },
+    "7": {
+        "id": 7,
+        "king_wen_order": 11,
+        "name": "Thái (Peace)",
+        "han": "泰",
+        "codepoint": "䷊",
+        "binary_str": "000111",
+        "description": "Hanh thông, thái bình, giao hòa.",
+        "analysis": "Giao thoa (convection). Trao đổi thông tin lý tưởng (data exchange) giữa Âm và Dương."
+    },
+    "56": {
+        "id": 56,
+        "king_wen_order": 12,
+        "name": "Bĩ (Standstill)",
+        "han": "否",
+        "codepoint": "䷋",
+        "binary_str": "111000",
+        "description": "Bế tắc, không thông, tiểu nhân đắc chí.",
+        "analysis": "Không tương tác (No handshake). Hệ thống bị cô lập."
+    },
+    "61": {
+        "id": 61,
+        "king_wen_order": 13,
+        "name": "Đồng Nhân (Fellowship with Men)",
+        "han": "同人",
+        "codepoint": "䷌",
+        "binary_str": "111101",
+        "description": "Cùng người, hòa đồng, hợp tác.",
+        "analysis": "Đồng bộ hóa tín hiệu (signal synchronization) giữa các tầng."
+    },
+    "47": {
+        "id": 47,
+        "king_wen_order": 14,
+        "name": "Đại Hữu (Possession in Great Measure)",
+        "han": "大有",
+        "codepoint": "䷍",
+        "binary_str": "101111",
+        "description": "Sở hữu lớn, phong phú, thịnh vượng.",
+        "analysis": "Nhu đắc tôn vị. Sự mềm dẻo (bit 0) quản lý tài nguyên cứng."
+    },
+    "4": {
+        "id": 4,
+        "king_wen_order": 15,
+        "name": "Khiêm (Modesty)",
+        "han": "謙",
+        "codepoint": "䷎",
+        "binary_str": "000100",
+        "description": "Khiêm tốn, nhún nhường, núi dưới đất.",
+        "analysis": "Nén dữ liệu (data compression). Nội dung lớn (nhị phân 100) ẩn trong hình thức thấp."
+    },
+    "8": {
+        "id": 8,
+        "king_wen_order": 16,
+        "name": "Dự (Enthusiasm)",
+        "han": "豫",
+        "codepoint": "䷏",
+        "binary_str": "001000",
+        "description": "Vui vẻ, nhiệt tình, chuẩn bị.",
+        "analysis": "Xung nhịp (clock pulse). Bit 1 hào 4 kích hoạt hệ thống."
+    },
+    "25": {
+        "id": 25,
+        "king_wen_order": 17,
+        "name": "Tùy (Following)",
+        "han": "隨",
+        "codepoint": "䷐",
+        "binary_str": "011001",
+        "description": "Đi theo, thuận tòng, tùy thời.",
+        "analysis": "Bit 1 tuân theo quy luật của bit 0 dẫn đường."
+    },
+    "38": {
+        "id": 38,
+        "king_wen_order": 18,
+        "name": "Cổ (Work on what has been spoiled)",
+        "han": "蠱",
+        "codepoint": "䷑",
+        "binary_str": "100110",
+        "description": "Sửa chữa hư nát, trùng độc.",
+        "analysis": "Phân mảnh (fragmentation). Không khí tù đọng, dữ liệu cần sắp xếp lại."
+    },
+    "3": {
+        "id": 3,
+        "king_wen_order": 19,
+        "name": "Lâm (Approach)",
+        "han": "臨",
+        "chain_desc": "000011",
+        "binary_str": "000011",
+        "description": "Đến gần, lớn mạnh, cai trị.",
+        "analysis": "Hai bit 1 tiến lên từ đáy. Tăng trưởng dương tính."
+    },
+    "48": {
+        "id": 48,
+        "king_wen_order": 20,
+        "name": "Quan (Contemplation)",
+        "han": "觀",
+        "binary_str": "110000",
+        "description": "Quan sát, chiêm ngưỡng, nêu gương.",
+        "analysis": "Giám sát hệ thống (System Monitoring). Hai bit 1 ở trên quan sát 4 bit 0."
+    },
+    "41": {
+        "id": 41,
+        "king_wen_order": 21,
+        "name": "Phệ Hạp (Biting Through)",
+        "han": "噬嗑",
+        "binary_str": "101001",
+        "description": "Cắn vỡ, hình phạt, làm rõ.",
+        "analysis": "Bit 1 ở hào 4 cản trở kết nối. Cần loại bỏ 'bug' để thông mạch."
+    },
+    "37": {
+        "id": 37,
+        "king_wen_order": 22,
+        "name": "Bí (Grace)",
+        "han": "賁",
+        "binary_str": "100101",
+        "description": "Trang trí, văn vẻ, rực rỡ.",
+        "analysis": "Cấu trúc xen kẽ (101). Mã hóa giao diện (UI)."
+    },
+    "32": {
+        "id": 32,
+        "king_wen_order": 23,
+        "name": "Bác (Splitting Apart)",
+        "han": "剝",
+        "binary_str": "100000",
+        "description": "Bóc mòn, suy tàn, rơi rụng.",
+        "analysis": "Suy thoái dữ liệu (Data decay). 5 bit 0 bóc mòn 1 bit 1."
+    },
+    "1": {
+        "id": 1,
+        "king_wen_order": 24,
+        "name": "Phục (Return)",
+        "han": "復",
+        "binary_str": "000001",
+        "description": "Trở lại, phục hồi, bắt đầu lại.",
+        "analysis": "Khởi động lại (Reboot). Bit 1 quay lại ở vị trí LSB."
+    },
+    "57": {
+        "id": 57,
+        "king_wen_order": 25,
+        "name": "Vô Vọng (Innocence)",
+        "han": "无妄",
+        "binary_str": "111001",
+        "description": "Không càn bậy, ngây thơ, chân thật.",
+        "analysis": "Xung ngẫu nhiên trong hệ thống trật tự."
+    },
+    "39": {
+        "id": 39,
+        "king_wen_order": 26,
+        "name": "Đại Súc (Great Taming Power)",
+        "han": "大畜",
+        "binary_str": "100111",
+        "description": "Tích lũy lớn, nuôi dưỡng lớn.",
+        "analysis": "Khả năng lưu trữ cực lớn (Storage capacity). Cấn chứa Càn."
+    },
+    "33": {
+        "id": 33,
+        "king_wen_order": 27,
+        "name": "Di (Mouth Corners)",
+        "han": "頤",
+        "binary_str": "100001",
+        "description": "Nuôi dưỡng, ăn uống.",
+        "analysis": "Cấu trúc khung (Frame structure). Hai bit 1 bao bọc 4 bit 0."
+    },
+    "30": {
+        "id": 30,
+        "king_wen_order": 28,
+        "name": "Đại Quá (Preponderance of the Great)",
+        "han": "大過",
+        "binary_str": "011110",
+        "description": "Quá lớn, quá mức, gãy đổ.",
+        "analysis": "Quá tải trung tâm (Core overload). Nguy cơ sập hệ thống."
+    },
+    "18": {
+        "id": 18,
+        "king_wen_order": 29,
+        "name": "Khảm (The Abysmal)",
+        "han": "坎",
+        "binary_str": "010010",
+        "description": "Hiểm trở, nước, lo buồn.",
+        "analysis": "Dòng dữ liệu liên tục nhưng rủi ro. Lặp lại hiểm nguy."
+    },
+    "45": {
+        "id": 45,
+        "king_wen_order": 30,
+        "name": "Ly (The Clinging)",
+        "han": "離",
+        "binary_str": "101101",
+        "description": "Lửa, sáng suốt, bám vào.",
+        "analysis": "Mạng lưới (Network) tiêu thụ năng lượng."
+    },
+    "14": {
+        "id": 14,
+        "king_wen_order": 31,
+        "name": "Hàm (Influence)",
+        "han": "咸",
+        "binary_str": "001110",
+        "description": "Cảm ứng, trai gái yêu nhau.",
+        "analysis": "Giao thức bắt tay (Handshake). Bit 1 và 0 tương tác trực tiếp."
+    },
+    "28": {
+        "id": 28,
+        "king_wen_order": 32,
+        "name": "Hằng (Duration)",
+        "han": "恆",
+        "binary_str": "011100",
+        "description": "Bền lâu, thường hằng, ổn định.",
+        "analysis": "Ổn định động (dynamic stability)."
+    },
+    "60": {
+        "id": 60,
+        "king_wen_order": 33,
+        "name": "Độn (Retreat)",
+        "han": "遯",
+        "binary_str": "111100",
+        "description": "Lui về, ẩn dật, tránh xa.",
+        "analysis": "Nhiễu (noise) xâm lấn từ tầng thấp. Hệ thống chính phải rút lui."
+    },
+    "15": {
+        "id": 15,
+        "king_wen_order": 34,
+        "name": "Đại Tráng (Great Power)",
+        "han": "大壯",
+        "binary_str": "001111",
+        "description": "Lớn mạnh, thịnh vượng, cương quyết.",
+        "analysis": "Sức mạnh xử lý (processing power) tăng tốc đẩy lùi bit 0."
+    },
+    "40": {
+        "id": 40,
+        "king_wen_order": 35,
+        "name": "Tấn (Progress)",
+        "han": "晉",
+        "binary_str": "101000",
+        "description": "Tiến lên, hiển thị, được ban thưởng.",
+        "analysis": "Lan truyền dữ liệu không vật cản."
+    },
+    "5": {
+        "id": 5,
+        "king_wen_order": 36,
+        "name": "Minh Di (Darkening of the Light)",
+        "han": "明夷",
+        "binary_str": "000101",
+        "description": "Ánh sáng bị che lấp, gian nan.",
+        "analysis": "Mã hóa (encryption). Ánh sáng bị chôn vùi để bảo vệ cốt lõi."
+    },
+    "43": {
+        "id": 43,
+        "king_wen_order": 37,
+        "name": "Gia Nhân (The Family)",
+        "han": "家人",
+        "binary_str": "101011",
+        "description": "Người nhà, trật tự gia đình.",
+        "analysis": "Cấu trúc phân cấp nội bộ chặt chẽ (Internal hierarchy)."
+    },
+    "53": {
+        "id": 53,
+        "king_wen_order": 38,
+        "name": "Khuê (Opposition)",
+        "han": "睽",
+        "binary_str": "110101",
+        "description": "Chống đối, trái ngược, nhìn trừng trừng.",
+        "analysis": "Lệch pha (phase shift). Sự đối lập giữa các bit."
+    },
+    "31": {
+        "id": 31,
+        "king_wen_order": 43,
+        "name": "Quải (Break-through)",
+        "han": "夬",
+        "binary_str": "011111",
+        "description": "Quyết liệt, dứt khoát, khai thông.",
+        "analysis": "Tràn bộ đệm (buffer overflow). 5 bit 1 đẩy 1 bit 0 ra."
+    },
+    "62": {
+        "id": 62,
+        "king_wen_order": 44,
+        "name": "Cấu (Coming to Meet)",
+        "han": "姤",
+        "binary_str": "111110",
+        "description": "Gặp gỡ, cấu kết, nữ cường.",
+        "analysis": "Virus/Anomaly. Yếu tố lạ xâm nhập hệ thống hoàn hảo."
+    },
+    "29": {
+        "id": 29,
+        "king_wen_order": 49,
+        "name": "Cách (Revolution)",
+        "han": "革",
+        "binary_str": "011101",
+        "description": "Thay đổi, cải cách, lột xác.",
+        "analysis": "Chuyển trạng thái (phase transition) do xung đột dữ liệu."
+    },
+    "46": {
+        "id": 46,
+        "king_wen_order": 50,
+        "name": "Đỉnh (The Cauldron)",
+        "han": "鼎",
+        "binary_str": "101110",
+        "description": "Vững chãi, nung nấu, an định.",
+        "analysis": "Tính tượng hình của mã nhị phân. Cấu trúc vững chắc."
+    },
+    "21": {
+        "id": 21,
+        "king_wen_order": 63,
+        "name": "Ký Tế (After Completion)",
+        "han": "既濟",
+        "codepoint": "䷾",
+        "binary_str": "010101",
+        "description": "Đã xong, hoàn thành, dừng lại.",
+        "analysis": "Cân bằng động tối ưu (dynamic equilibrium). Entropy cực tiểu."
+    },
+    "42": {
+        "id": 42,
+        "king_wen_order": 64,
+        "name": "Vị Tế (Before Completion)",
+        "han": "未濟",
+        "codepoint": "䷿",
+        "binary_str": "101010",
+        "description": "Chưa xong, dở dang, tiếp tục.",
+        "analysis": "Nghịch đảo bit (bitwise NOT) của Ký Tế. Bất ổn cần thiết để khởi động lại vòng lặp (System Reset)."
+    }
+}

@@ -1,0 +1,187 @@
+# citta_master.py
+# Danh sách 89/121 Tâm (Citta)
+# Vòng 1: 12 Tâm Bất Thiện (Akusala Citta)
+
+CITTA_MASTER = [
+    # --- TÂM THAM (Lobha-mula Citta) - 8 ---
+    {
+        "id": "CIT_01",
+        "short_name": "Tham 1 (Hỷ-Tà-Không)",
+        "name": "Tâm Tham Thọ Hỷ Hợp Tà Không Trợ",
+        "name_pali": "Somanassasahagatam ditthigatasampayuttam asankharikam",
+        "group": "Akusala",
+        "factors": ["CET_01", "CET_02", "CET_03", "CET_04", "CET_05", "CET_06", "CET_07", "CET_08", "CET_09", "CET_10", "CET_11", "CET_12", "CET_13", "CET_14", "CET_15", "CET_16", "CET_17", "CET_18", "CET_19"],
+        "plane": "Kamavacara",
+        "description": "Thọ hỷ hợp tà không trợ (Somanassasahagatam ditthigatasampayuttam asankharikam)"
+    },
+    {
+        "id": "CIT_02",
+        "short_name": "Tham 2 (Hỷ-Tà-Có)",
+        "name": "Tâm Tham Thọ Hỷ Hợp Tà Có Trợ",
+        "name_pali": "Somanassasahagatam ditthigatasampayuttam sasankharikam",
+        "group": "Akusala",
+        "factors": ["CET_01", "CET_02", "CET_03", "CET_04", "CET_05", "CET_06", "CET_07", "CET_08", "CET_09", "CET_10", "CET_11", "CET_12", "CET_13", "CET_14", "CET_15", "CET_16", "CET_17", "CET_18", "CET_19", "CET_25", "CET_26"],
+        "plane": "Kamavacara",
+        "description": "Thọ hỷ hợp tà có trợ (Somanassasahagatam ditthigatasampayuttam sasankharikam)"
+    },
+    {
+        "id": "CIT_03",
+        "short_name": "Tham 3 (Hỷ-Ly-Không)",
+        "name": "Tâm Tham Thọ Hỷ Ly Tà Không Trợ",
+        "name_pali": "Somanassasahagatam ditthigatavippayuttam asankharikam",
+        "group": "Akusala",
+        "factors": ["CET_01", "CET_02", "CET_03", "CET_04", "CET_05", "CET_06", "CET_07", "CET_08", "CET_09", "CET_10", "CET_11", "CET_12", "CET_13", "CET_14", "CET_15", "CET_16", "CET_17", "CET_18", "CET_20"],
+        "plane": "Kamavacara",
+        "description": "Thọ hỷ ly tà không trợ (Somanassasahagatam ditthigatavippayuttam asankharikam)"
+    },
+    {
+        "id": "CIT_04",
+        "short_name": "Tham 4 (Hỷ-Ly-Có)",
+        "name": "Tâm Tham Thọ Hỷ Ly Tà Có Trợ",
+        "name_pali": "Somanassasahagatam ditthigatavippayuttam sasankharikam",
+        "group": "Akusala",
+        "factors": ["CET_01", "CET_02", "CET_03", "CET_04", "CET_05", "CET_06", "CET_07", "CET_08", "CET_09", "CET_10", "CET_11", "CET_12", "CET_13", "CET_14", "CET_15", "CET_16", "CET_17", "CET_18", "CET_20", "CET_25", "CET_26"],
+        "plane": "Kamavacara",
+        "description": "Thọ hỷ ly tà có trợ (Somanassasahagatam ditthigatavippayuttam sasankharikam)"
+    },
+    {
+        "id": "CIT_05",
+        "short_name": "Tham 5 (Xả-Tà-Không)",
+        "name": "Tâm Tham Thọ Xả Hợp Tà Không Trợ",
+        "name_pali": "Upekkhasahagatam ditthigatasampayuttam asankharikam",
+        "group": "Akusala",
+        "factors": ["CET_01", "CET_02", "CET_03", "CET_04", "CET_05", "CET_06", "CET_07", "CET_08", "CET_09", "CET_10", "CET_11", "CET_13", "CET_14", "CET_15", "CET_16", "CET_17", "CET_18", "CET_19"],
+        "plane": "Kamavacara",
+        "description": "Thọ xả hợp tà không trợ (Upekkhasahagatam ditthigatasampayuttam asankharikam)"
+    },
+    {
+        "id": "CIT_06",
+        "short_name": "Tham 6 (Xả-Tà-Có)",
+        "name": "Tâm Tham Thọ Xả Hợp Tà Có Trợ",
+        "name_pali": "Upekkhasahagatam ditthigatasampayuttam sasankharikam",
+        "group": "Akusala",
+        "factors": ["CET_01", "CET_02", "CET_03", "CET_04", "CET_05", "CET_06", "CET_07", "CET_08", "CET_09", "CET_10", "CET_11", "CET_13", "CET_14", "CET_15", "CET_16", "CET_17", "CET_18", "CET_19", "CET_25", "CET_26"],
+        "plane": "Kamavacara",
+        "description": "Thọ xả hợp tà có trợ (Upekkhasahagatam ditthigatasampayuttam sasankharikam)"
+    },
+    {
+        "id": "CIT_07",
+        "short_name": "Tham 7 (Xả-Ly-Không)",
+        "name": "Tâm Tham Thọ Xả Ly Tà Không Trợ",
+        "name_pali": "Upekkhasahagatam ditthigatavippayuttam asankharikam",
+        "group": "Akusala",
+        "factors": ["CET_01", "CET_02", "CET_03", "CET_04", "CET_05", "CET_06", "CET_07", "CET_08", "CET_09", "CET_10", "CET_11", "CET_13", "CET_14", "CET_15", "CET_16", "CET_17", "CET_18", "CET_20"],
+        "plane": "Kamavacara",
+        "description": "Thọ xả ly tà không trợ (Upekkhasahagatam ditthigatavippayuttam asankharikam)"
+    },
+    {
+        "id": "CIT_08",
+        "short_name": "Tham 8 (Xả-Ly-Có)",
+        "name": "Tâm Tham Thọ Xả Ly Tà Có Trợ",
+        "name_pali": "Upekkhasahagatam ditthigatavippayuttam sasankharikam",
+        "group": "Akusala",
+        "factors": ["CET_01", "CET_02", "CET_03", "CET_04", "CET_05", "CET_06", "CET_07", "CET_08", "CET_09", "CET_10", "CET_11", "CET_13", "CET_14", "CET_15", "CET_16", "CET_17", "CET_18", "CET_20", "CET_25", "CET_26"],
+        "plane": "Kamavacara",
+        "description": "Thọ xả ly tà có trợ (Upekkhasahagatam ditthigatavippayuttam sasankharikam)"
+    },
+    
+    # --- TÂM SÂN (Dosa-mula Citta) - 2 ---
+    {
+        "id": "CIT_09",
+        "short_name": "Sân 1 (Ưu-Phẫn-Không)",
+        "name": "Tâm Sân Thọ Ưu Hợp Phẫn Không Trợ",
+        "name_pali": "Domanassasahagatam patighasampayuttam asankharikam",
+        "group": "Akusala",
+        "factors": ["CET_01", "CET_02", "CET_03", "CET_04", "CET_05", "CET_06", "CET_07", "CET_08", "CET_09", "CET_10", "CET_11", "CET_13", "CET_14", "CET_15", "CET_16", "CET_17", "CET_21", "CET_22", "CET_23", "CET_24"],
+        "plane": "Kamavacara",
+        "description": "Thọ ưu hợp phẫn không trợ (Domanassasahagatam patighasampayuttam asankharikam)"
+    },
+    {
+        "id": "CIT_10",
+        "short_name": "Sân 2 (Ưu-Phẫn-Có)",
+        "name": "Tâm Sân Thọ Ưu Hợp Phẫn Có Trợ",
+        "name_pali": "Domanassasahagatam patighasampayuttam sasankharikam",
+        "group": "Akusala",
+        "factors": ["CET_01", "CET_02", "CET_03", "CET_04", "CET_05", "CET_06", "CET_07", "CET_08", "CET_09", "CET_10", "CET_11", "CET_13", "CET_14", "CET_15", "CET_16", "CET_17", "CET_21", "CET_22", "CET_23", "CET_24", "CET_25", "CET_26"],
+        "plane": "Kamavacara",
+        "description": "Thọ ưu hợp phẫn có trợ (Domanassasahagatam patighasampayuttam sasankharikam)"
+    },
+
+    # --- TÂM SI (Moha-mula Citta) - 2 ---
+    {
+        "id": "CIT_11",
+        "short_name": "Si 1 (Xả-Hoài Nghi)",
+        "name": "Tâm Si Thọ Xả Hợp Hoài Nghi",
+        "name_pali": "Upekkhasahagatam vicikicchasampayuttam",
+        "group": "Akusala",
+        "factors": ["CET_01", "CET_02", "CET_03", "CET_04", "CET_05", "CET_06", "CET_07", "CET_08", "CET_09", "CET_11", "CET_14", "CET_15", "CET_16", "CET_17", "CET_27"],
+        "plane": "Kamavacara",
+        "description": "Thọ xả hợp hoài nghi (Upekkhasahagatam vicikicchasampayuttam)"
+    },
+    {
+        "id": "CIT_12",
+        "short_name": "Si 2 (Xả-Phóng Dật)",
+        "name": "Tâm Si Thọ Xả Hợp Phóng Dật",
+        "name_pali": "Upekkhasahagatam uddhaccasampayuttam",
+        "group": "Akusala",
+        "factors": ["CET_01", "CET_02", "CET_03", "CET_04", "CET_05", "CET_06", "CET_07", "CET_08", "CET_09", "CET_10", "CET_11", "CET_14", "CET_15", "CET_16", "CET_17"],
+        "plane": "Kamavacara",
+        "description": "Thọ xả hợp phóng dật (Upekkhasahagatam uddhaccasampayuttam)"
+    },
+
+    # --- TÂM VÔ NHÂN (Ahetuka Citta) - 18 ---
+    # * Quả Bất Thiện (Akusala Vipaka) - 7
+    {"id": "CIT_13", "short_name": "Nhãn (QBThiện)", "name": "Nhãn Thức Thọ Xả (Quả Bất Thiện)", "name_pali": "Upekkha-sahagatam cakkhuvinnanam", "group": "Ahetuka", "factors": ["CET_01", "CET_02", "CET_03", "CET_04", "CET_05", "CET_06", "CET_07"], "plane": "Kamavacara"},
+    {"id": "CIT_14", "short_name": "Nhĩ (QBThiện)", "name": "Nhĩ Thức Thọ Xả (Quả Bất Thiện)", "name_pali": "Upekkha-sahagatam sotavinnanam", "group": "Ahetuka", "factors": ["CET_01", "CET_02", "CET_03", "CET_04", "CET_05", "CET_06", "CET_07"], "plane": "Kamavacara"},
+    {"id": "CIT_15", "short_name": "Tỷ (QBThiện)", "name": "Tỷ Thức Thọ Xả (Quả Bất Thiện)", "name_pali": "Upekkha-sahagatam ghanavinnanam", "group": "Ahetuka", "factors": ["CET_01", "CET_02", "CET_03", "CET_04", "CET_05", "CET_06", "CET_07"], "plane": "Kamavacara"},
+    {"id": "CIT_16", "short_name": "Thiệt (QBThiện)", "name": "Thiệt Thức Thọ Xả (Quả Bất Thiện)", "name_pali": "Upekkha-sahagatam jivhavinnanam", "group": "Ahetuka", "factors": ["CET_01", "CET_02", "CET_03", "CET_04", "CET_05", "CET_06", "CET_07"], "plane": "Kamavacara"},
+    {"id": "CIT_17", "short_name": "Thân (QBThiện)", "name": "Thân Thức Thọ Khổ", "name_pali": "Dukkha-sahagatam kayavinnanam", "group": "Ahetuka", "factors": ["CET_01", "CET_02", "CET_03", "CET_04", "CET_05", "CET_06", "CET_07"], "plane": "Kamavacara"},
+    {"id": "CIT_18", "short_name": "Tiếp Thu (QBThiện)", "name": "Tiếp Thu Thọ Xả (Quả Bất Thiện)", "name_pali": "Upekkha-sahagatam sampaticchana-cittam", "group": "Ahetuka", "factors": ["CET_01", "CET_02", "CET_03", "CET_04", "CET_05", "CET_06", "CET_07", "CET_08", "CET_09", "CET_10"], "plane": "Kamavacara"},
+    {"id": "CIT_19", "short_name": "Q.Sát.Xả (QBThiện)", "name": "Quan Sát Thọ Xả (Quả Bất Thiện)", "name_pali": "Upekkha-sahagatam santirana-cittam", "group": "Ahetuka", "factors": ["CET_01", "CET_02", "CET_03", "CET_04", "CET_05", "CET_06", "CET_07", "CET_08", "CET_09", "CET_10", "CET_11"], "plane": "Kamavacara"},
+
+    # * Quả Thiện (Kusala Vipaka) - 8
+    {"id": "CIT_20", "short_name": "Nhãn (QThiện)", "name": "Nhãn Thức Thọ Xả (Quả Thiện)", "name_pali": "Upekkha-sahagatam kusala-vipaka cakkhuvinnanam", "group": "Ahetuka", "factors": ["CET_01", "CET_02", "CET_03", "CET_04", "CET_05", "CET_06", "CET_07"], "plane": "Kamavacara"},
+    {"id": "CIT_21", "short_name": "Nhĩ (QThiện)", "name": "Nhĩ Thức Thọ Xả (Quả Thiện)", "name_pali": "Upekkha-sahagatam kusala-vipaka sotavinnanam", "group": "Ahetuka", "factors": ["CET_01", "CET_02", "CET_03", "CET_04", "CET_05", "CET_06", "CET_07"], "plane": "Kamavacara"},
+    {"id": "CIT_22", "short_name": "Tỷ (QThiện)", "name": "Tỷ Thức Thọ Xả (Quả Thiện)", "name_pali": "Upekkha-sahagatam kusala-vipaka ghanavinnanam", "group": "Ahetuka", "factors": ["CET_01", "CET_02", "CET_03", "CET_04", "CET_05", "CET_06", "CET_07"], "plane": "Kamavacara"},
+    {"id": "CIT_23", "short_name": "Thiệt (QThiện)", "name": "Thiệt Thức Thọ Xả (Quả Thiện)", "name_pali": "Upekkha-sahagatam kusala-vipaka jivhavinnanam", "group": "Ahetuka", "factors": ["CET_01", "CET_02", "CET_03", "CET_04", "CET_05", "CET_06", "CET_07"], "plane": "Kamavacara"},
+    {"id": "CIT_24", "short_name": "Thân (QThiện)", "name": "Thân Thức Thọ Lạc", "name_pali": "Sukha-sahagatam kusala-vipaka kayavinnanam", "group": "Ahetuka", "factors": ["CET_01", "CET_02", "CET_03", "CET_04", "CET_05", "CET_06", "CET_07"], "plane": "Kamavacara"},
+    {"id": "CIT_25", "short_name": "Tiếp Thu (QThiện)", "name": "Tiếp Thu Thọ Xả (Quả Thiện)", "name_pali": "Upekkha-sahagatam kusala-vipaka sampaticchana-cittam", "group": "Ahetuka", "factors": ["CET_01", "CET_02", "CET_03", "CET_04", "CET_05", "CET_06", "CET_07", "CET_08", "CET_09", "CET_10"], "plane": "Kamavacara"},
+    {"id": "CIT_26", "short_name": "Q.Sát.Xả (QThiện)", "name": "Quan Sát Thọ Xả (Quả Thiện)", "name_pali": "Upekkha-sahagatam kusala-vipaka santirana-cittam", "group": "Ahetuka", "factors": ["CET_01", "CET_02", "CET_03", "CET_04", "CET_05", "CET_06", "CET_07", "CET_08", "CET_09", "CET_10", "CET_11"], "plane": "Kamavacara"},
+    {"id": "CIT_27", "short_name": "Q.Sát.Hỷ (QThiện)", "name": "Quan Sát Thọ Hỷ (Quả Thiện)", "name_pali": "Somanassa-sahagatam kusala-vipaka santirana-cittam", "group": "Ahetuka", "factors": ["CET_01", "CET_02", "CET_03", "CET_04", "CET_05", "CET_06", "CET_07", "CET_08", "CET_09", "CET_10", "CET_11", "CET_12"], "plane": "Kamavacara"},
+    
+    # * Duy Tác (Kriya) - 3
+    {"id": "CIT_28", "short_name": "Khai Ngũ Môn", "name": "Khai Ngũ Môn", "name_pali": "Upekkha-sahagatam panca-dvaravajjana-cittam", "group": "Ahetuka", "factors": ["CET_01", "CET_02", "CET_03", "CET_04", "CET_05", "CET_06", "CET_07", "CET_08", "CET_09", "CET_10", "CET_11"], "plane": "Kamavacara"},
+    {"id": "CIT_29", "short_name": "Khai Ý Môn", "name": "Khai Ý Môn", "name_pali": "Upekkha-sahagatam mano-dvaravajjana-cittam", "group": "Ahetuka", "factors": ["CET_01", "CET_02", "CET_03", "CET_04", "CET_05", "CET_06", "CET_07", "CET_08", "CET_09", "CET_10", "CET_11"], "plane": "Kamavacara"},
+    {"id": "CIT_30", "short_name": "Ứng Cúng", "name": "Ứng Cúng Vi Tiếu", "name_pali": "Somanassa-sahagatam hasituppada-cittam", "group": "Ahetuka", "factors": ["CET_01", "CET_02", "CET_03", "CET_04", "CET_05", "CET_06", "CET_07", "CET_08", "CET_09", "CET_10", "CET_11", "CET_12"], "plane": "Kamavacara"},
+
+    # --- ĐẠI THIỆN (Maha Kusala) - 8 ---
+    {
+        "id": "CIT_31", "short_name": "Đ.Thiện 1", "name": "Đại Thiện Hợp Trí Thọ Hỷ Vô Dẫn", "name_pali": "Somanassa-sahagatam nana-sampayuttam asankharika-cittam", "group": "Kama-Kusala", "plane": "Kamavacara",
+        "factors": ["CET_01", "CET_02", "CET_03", "CET_04", "CET_05", "CET_06", "CET_07", "CET_08", "CET_09", "CET_10", "CET_11", "CET_12", "CET_13", "CET_28", "CET_29", "CET_30", "CET_31", "CET_32", "CET_33", "CET_34", "CET_35", "CET_36", "CET_37", "CET_38", "CET_39", "CET_40", "CET_41", "CET_42", "CET_43", "CET_44", "CET_45", "CET_46", "CET_47", "CET_48", "CET_49", "CET_50", "CET_51", "CET_52"]
+    },
+    {"id": "CIT_32", "short_name": "Đ.Thiện 2", "name": "Đại Thiện Hợp Trí Thọ Hỷ Hữu Dẫn", "name_pali": "Somanassa-sahagatam nana-sampayuttam sasankharika-cittam", "group": "Kama-Kusala", "plane": "Kamavacara", "factors": ["CET_01", "CET_02", "CET_03", "CET_04", "CET_05", "CET_06", "CET_07", "CET_08", "CET_09", "CET_10", "CET_11", "CET_12", "CET_13", "CET_28", "CET_29", "CET_30", "CET_31", "CET_32", "CET_33", "CET_34", "CET_35", "CET_36", "CET_37", "CET_38", "CET_39", "CET_40", "CET_41", "CET_42", "CET_43", "CET_44", "CET_45", "CET_46", "CET_47", "CET_48", "CET_49", "CET_50", "CET_51", "CET_52"]},
+    {"id": "CIT_33", "short_name": "Đ.Thiện 3", "name": "Đại Thiện Ly Trí Thọ Hỷ Vô Dẫn", "name_pali": "Somanassa-sahagatam nana-vippayuttam asankharika-cittam", "group": "Kama-Kusala", "plane": "Kamavacara", "factors": ["CET_01", "CET_02", "CET_03", "CET_04", "CET_05", "CET_06", "CET_07", "CET_08", "CET_09", "CET_10", "CET_11", "CET_12", "CET_13", "CET_28", "CET_29", "CET_30", "CET_31", "CET_32", "CET_33", "CET_34", "CET_35", "CET_36", "CET_37", "CET_38", "CET_39", "CET_40", "CET_41", "CET_42", "CET_43", "CET_44", "CET_45", "CET_46", "CET_47", "CET_48", "CET_49", "CET_50", "CET_51"]},
+    {"id": "CIT_34", "short_name": "Đ.Thiện 4", "name": "Đại Thiện Ly Trí Thọ Hỷ Hữu Dẫn", "name_pali": "Somanassa-sahagatam nana-vippayuttam sasankharika-cittam", "group": "Kama-Kusala", "plane": "Kamavacara", "factors": ["CET_01", "CET_02", "CET_03", "CET_04", "CET_05", "CET_06", "CET_07", "CET_08", "CET_09", "CET_10", "CET_11", "CET_12", "CET_13", "CET_28", "CET_29", "CET_30", "CET_31", "CET_32", "CET_33", "CET_34", "CET_35", "CET_36", "CET_37", "CET_38", "CET_39", "CET_40", "CET_41", "CET_42", "CET_43", "CET_44", "CET_45", "CET_46", "CET_47", "CET_48", "CET_49", "CET_50", "CET_51"]},
+    {"id": "CIT_35", "short_name": "Đ.Thiện 5", "name": "Đại Thiện Hợp Trí Thọ Xả Vô Dẫn", "name_pali": "Upekkha-sahagatam nana-sampayuttam asankharika-cittam", "group": "Kama-Kusala", "plane": "Kamavacara", "factors": ["CET_01", "CET_02", "CET_03", "CET_04", "CET_05", "CET_06", "CET_07", "CET_08", "CET_09", "CET_10", "CET_11", "CET_13", "CET_28", "CET_29", "CET_30", "CET_31", "CET_32", "CET_33", "CET_34", "CET_35", "CET_36", "CET_37", "CET_38", "CET_39", "CET_40", "CET_41", "CET_42", "CET_43", "CET_44", "CET_45", "CET_46", "CET_47", "CET_48", "CET_49", "CET_50", "CET_51", "CET_52"]},
+    {"id": "CIT_36", "short_name": "Đ.Thiện 6", "name": "Đại Thiện Hợp Trí Thọ Xả Hữu Dẫn", "name_pali": "Upekkha-sahagatam nana-sampayuttam sasankharika-cittam", "group": "Kama-Kusala", "plane": "Kamavacara", "factors": ["CET_01", "CET_02", "CET_03", "CET_04", "CET_05", "CET_06", "CET_07", "CET_08", "CET_09", "CET_10", "CET_11", "CET_13", "CET_28", "CET_29", "CET_30", "CET_31", "CET_32", "CET_33", "CET_34", "CET_35", "CET_36", "CET_37", "CET_38", "CET_39", "CET_40", "CET_41", "CET_42", "CET_43", "CET_44", "CET_45", "CET_46", "CET_47", "CET_48", "CET_49", "CET_50", "CET_51", "CET_52"]},
+    {"id": "CIT_37", "short_name": "Đ.Thiện 7", "name": "Đại Thiện Ly Trí Thọ Xả Vô Dẫn", "name_pali": "Upekkha-sahagatam nana-vippayuttam asankharika-cittam", "group": "Kama-Kusala", "plane": "Kamavacara", "factors": ["CET_01", "CET_02", "CET_03", "CET_04", "CET_05", "CET_06", "CET_07", "CET_08", "CET_09", "CET_10", "CET_11", "CET_13", "CET_28", "CET_29", "CET_30", "CET_31", "CET_32", "CET_33", "CET_34", "CET_35", "CET_36", "CET_37", "CET_38", "CET_39", "CET_40", "CET_41", "CET_42", "CET_43", "CET_44", "CET_45", "CET_46", "CET_47", "CET_48", "CET_49", "CET_50", "CET_51"]},
+    {"id": "CIT_38", "short_name": "Đ.Thiện 8", "name": "Đại Thiện Ly Trí Thọ Xả Hữu Dẫn", "name_pali": "Upekkha-sahagatam nana-vippayuttam sasankharika-cittam", "group": "Kama-Kusala", "plane": "Kamavacara", "factors": ["CET_01", "CET_02", "CET_03", "CET_04", "CET_05", "CET_06", "CET_07", "CET_08", "CET_09", "CET_10", "CET_11", "CET_13", "CET_28", "CET_29", "CET_30", "CET_31", "CET_32", "CET_33", "CET_34", "CET_35", "CET_36", "CET_37", "CET_38", "CET_39", "CET_40", "CET_41", "CET_42", "CET_43", "CET_44", "CET_45", "CET_46", "CET_47", "CET_48", "CET_49", "CET_50", "CET_51"]},
+
+    # --- SẮC GIỚI THIỆN (Rupavacara Kusala) - 5 ---
+    # Sơ Thiền (1st Jhana): 35 factors
+    {"id": "CIT_55", "short_name": "Sơ Thiền", "name": "Sơ Thiền Sắc Giới", "name_pali": "Vitakka-vicara-piti-sukkkha-ekaggata-sahitam pathama-jjhana-kusala-cittam", "group": "Rupa-Kusala", "plane": "Rupavacara", "factors": ["CET_01", "CET_02", "CET_03", "CET_04", "CET_05", "CET_06", "CET_07", "CET_08", "CET_09", "CET_10", "CET_11", "CET_12", "CET_13", "CET_28", "CET_29", "CET_30", "CET_31", "CET_32", "CET_33", "CET_34", "CET_35", "CET_36", "CET_37", "CET_38", "CET_39", "CET_40", "CET_41", "CET_42", "CET_43", "CET_44", "CET_45", "CET_46", "CET_50", "CET_51", "CET_52"]},
+    
+    # Nhị Thiền (2nd Jhana): Drop Vitakka (08) -> 34
+    {"id": "CIT_56", "short_name": "Nhị Thiền", "name": "Nhị Thiền Sắc Giới", "name_pali": "Vicara-piti-sukkkha-ekaggata-sahitam dutiya-jjhana-kusala-cittam", "group": "Rupa-Kusala", "plane": "Rupavacara", "factors": ["CET_01", "CET_02", "CET_03", "CET_04", "CET_05", "CET_06", "CET_07", "CET_09", "CET_10", "CET_11", "CET_12", "CET_13", "CET_28", "CET_29", "CET_30", "CET_31", "CET_32", "CET_33", "CET_34", "CET_35", "CET_36", "CET_37", "CET_38", "CET_39", "CET_40", "CET_41", "CET_42", "CET_43", "CET_44", "CET_45", "CET_46", "CET_50", "CET_51", "CET_52"]},
+
+    # Tam Thiền (3rd Jhana): Drop Vicara (09) -> 33
+    {"id": "CIT_57", "short_name": "Tam Thiền", "name": "Tam Thiền Sắc Giới", "name_pali": "Piti-sukkkha-ekaggata-sahitam tatiya-jjhana-kusala-cittam", "group": "Rupa-Kusala", "plane": "Rupavacara", "factors": ["CET_01", "CET_02", "CET_03", "CET_04", "CET_05", "CET_06", "CET_07", "CET_10", "CET_11", "CET_12", "CET_13", "CET_28", "CET_29", "CET_30", "CET_31", "CET_32", "CET_33", "CET_34", "CET_35", "CET_36", "CET_37", "CET_38", "CET_39", "CET_40", "CET_41", "CET_42", "CET_43", "CET_44", "CET_45", "CET_46", "CET_50", "CET_51", "CET_52"]},
+
+    # Tứ Thiền (4th Jhana): Drop Piti (12) -> 32
+    {"id": "CIT_58", "short_name": "Tứ Thiền", "name": "Tứ Thiền Sắc Giới", "name_pali": "Sukkkha-ekaggata-sahitam catuttha-jjhana-kusala-cittam", "group": "Rupa-Kusala", "plane": "Rupavacara", "factors": ["CET_01", "CET_02", "CET_03", "CET_04", "CET_05", "CET_06", "CET_07", "CET_10", "CET_11", "CET_13", "CET_28", "CET_29", "CET_30", "CET_31", "CET_32", "CET_33", "CET_34", "CET_35", "CET_36", "CET_37", "CET_38", "CET_39", "CET_40", "CET_41", "CET_42", "CET_43", "CET_44", "CET_45", "CET_46", "CET_50", "CET_51", "CET_52"]},
+
+    # Ngũ Thiền (5th Jhana): Sukha (Happiness) replaced by Upekkha (Equanimity).
+    {"id": "CIT_59", "short_name": "Ngũ Thiền", "name": "Ngũ Thiền Sắc Giới", "name_pali": "Upekkha-ekaggata-sahitam pancama-jjhana-kusala-cittam", "group": "Rupa-Kusala", "plane": "Rupavacara", "factors": ["CET_01", "CET_02", "CET_03", "CET_04", "CET_05", "CET_06", "CET_07", "CET_10", "CET_11", "CET_13", "CET_28", "CET_29", "CET_30", "CET_31", "CET_32", "CET_33", "CET_34", "CET_35", "CET_36", "CET_37", "CET_38", "CET_39", "CET_40", "CET_41", "CET_42", "CET_43", "CET_44", "CET_45", "CET_46", "CET_52"]}
+]
+
+

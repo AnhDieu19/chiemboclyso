@@ -1,0 +1,301 @@
+/* Chart Grid - 4x4 with center */
+.chart-container {
+    background: #fff;
+    border: 2px solid #000;
+    position: relative;
+}
+
+.chart-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, minmax(120px, auto));
+}
+
+/* Palace Cell */
+.palace {
+    border: 1px solid #000;
+    padding: 5px;
+    font-size: 13px;
+    /* Increased base font size */
+    position: relative;
+    background: #FFFAF0;
+    /* FloralWhite background like image */
+    min-height: 120px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+}
+
+.palace-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 3px;
+    margin-bottom: 5px;
+}
+
+.palace-code {
+    font-size: 10px;
+    color: #666;
+}
+
+.palace-name {
+    font-weight: bold;
+    color: #000;
+    font-size: 12px;
+    text-align: center;
+    flex: 1;
+}
+
+.palace-number {
+    font-size: 10px;
+    color: #666;
+}
+
+/* Main Stars */
+.main-stars {
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.main-star {
+    font-weight: 700;
+    color: #8B0000;
+    font-size: 16px;
+    /* Larger font for main stars */
+    text-transform: uppercase;
+    display: block;
+    /* Ensure block display like image */
+    margin-bottom: 2px;
+}
+
+.main-star.secondary {
+    color: #000080;
+}
+
+/* Auxiliary Stars */
+.aux-stars {
+    font-size: 10px;
+    line-height: 1.4;
+    color: #333;
+}
+
+.aux-star {
+    display: inline;
+    font-size: 13px;
+    /* Increased from 10px */
+    line-height: 1.4;
+    font-weight: 600;
+    /* Semi-bold */
+}
+
+.aux-star.good {
+    color: #006400;
+    /* Dark green for good stars */
+}
+
+.aux-star.bad {
+    color: #8B0000;
+    /* Dark red for bad stars */
+}
+
+/* Two-column layout for good/bad stars */
+.stars-columns {
+    display: flex;
+    gap: 5px;
+    margin-top: 3px;
+}
+
+.stars-good {
+    flex: 1;
+    font-size: 13px;
+    line-height: 1.4;
+    color: #006400;
+    border-right: 1px dashed #ccc;
+    padding-right: 5px;
+}
+
+.stars-bad {
+    flex: 1;
+    font-size: 13px;
+    line-height: 1.4;
+    color: #8B0000;
+}
+
+.main-star.bad {
+    color: #000080;
+    /* Navy for main bad stars */
+}
+
+.hoa-badge {
+    font-size: 9px;
+    color: #fff;
+    background: #c00;
+    padding: 0 3px;
+    border-radius: 2px;
+    margin-left: 2px;
+}
+
+.star-indicator {
+    font-size: 9px;
+    color: #c00;
+}
+
+/* Star brightness indicators */
+.bright-mieu {
+    color: #006400;
+}
+
+/* Miếu - green */
+.bright-vuong {
+    color: #0000CD;
+}
+
+/* Vượng - blue */
+.bright-dac {
+    color: #FF4500;
+}
+
+/* Đắc - orange-red */
+.bright-ham {
+    color: #808080;
+}
+
+/* Hãm - gray */
+
+/* Palace footer */
+.palace-footer {
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px;
+    font-size: 10px;
+    color: #666;
+    border-top: 1px solid #eee;
+    padding-top: 3px;
+}
+
+/* Center Info Panel - spans 2x2 */
+.center-info {
+    grid-column: 2 / 4;
+    grid-row: 2 / 4;
+    border: 2px solid #8B0000;
+    padding: 15px;
+    background: linear-gradient(135deg, #fffef0 0%, #fff 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.center-title {
+    text-align: center;
+    font-size: 20px;
+    color: #8B0000;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 5px 10px;
+    font-size: 13px;
+}
+
+.info-label {
+    color: #666;
+}
+
+.info-value {
+    color: #000;
+    font-weight: bold;
+}
+
+/* Tứ Hóa Box */
+.tu-hoa-box {
+    margin-top: 15px;
+    border: 1px solid #c00;
+    padding: 8px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    font-size: 12px;
+}
+
+.tu-hoa-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hoa-name {
+    color: #c00;
+}
+
+.hoa-star {
+    color: #000;
+}
+
+/* Special markers */
+.menh-marker {
+    background: #ffeb3b;
+    padding: 2px 5px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.than-marker {
+    background: #90EE90;
+    padding: 2px 5px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+/* Hide cells that are replaced by center */
+.palace.hidden {
+    display: none;
+}
+
+/* Interpretation section */
+.interpretation {
+    background: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.interp-title {
+    font-size: 18px;
+    color: #8B0000;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #8B0000;
+    padding-bottom: 5px;
+}
+
+.interp-section {
+    margin-bottom: 15px;
+}
+
+.interp-section h4 {
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.interp-section p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Tieu Han Badge */
+.tieu-han-badge {
+    background-color: #000;
+    color: #fff;
+    padding: 1px 4px;
+    font-size: 10px;
+    border-radius: 2px;
+    font-weight: bold;
+    margin-left: 5px;
+}

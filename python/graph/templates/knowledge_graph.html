@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Tu Vi Knowledge Graph - Visualization moi quan he giua cac sao trong Tu Vi Dau So">
+    <title>Tu Vi Knowledge Graph</title>
+
+    <!-- D3.js -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="{{ url_for('graph.static', filename='css/graph.css') }}">
+    <link rel="stylesheet" href="{{ url_for('graph.static', filename='css/multiselect.css') }}">
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="header">
+        <h1>Tu Vi Knowledge Graph</h1>
+        <div id="controls">
+            <input type="text" id="search-box" placeholder="Tim kiem..." oninput="searchNodes()" autocomplete="off">
+            <button class="btn btn-primary" onclick="resetZoom()">Reset</button>
+            <button class="btn btn-secondary" onclick="toggleLabels()">Labels</button>
+
+            <!-- Node Type Dropdown -->
+            <!-- Node Type Multi-Select -->
+            <div class="custom-multiselect" id="node-filter-container">
+                <div class="select-box" onclick="toggleCheckboxArea()">
+                    <span id="multiselect-text">Tất cả Node</span>
+                    <div class="arrow">▼</div>
+                </div>
+                <div class="checkboxes" id="node-type-checkboxes">
+                    <label><input type="checkbox" value="all" checked onchange="filterByType('all')"> Tất cả
+                        Node</label>
+                    <label><input type="checkbox" value="ngu_hanh" onchange="filterByType('ngu_hanh')"> Ngũ Hành</label>
+                    <label><input type="checkbox" value="thien_can" onchange="filterByType('thien_can')"> Thiên
+                        Can</label>
+                    <label><input type="checkbox" value="dia_chi" onchange="filterByType('dia_chi')"> Địa Chi</label>
+                    <label><input type="checkbox" value="chinh_tinh" onchange="filterByType('chinh_tinh')"> Chính
+                        Tinh</label>
+                    <label><input type="checkbox" value="luc_cat" onchange="filterByType('luc_cat')"> Lục Cát</label>
+                    <label><input type="checkbox" value="luc_sat" onchange="filterByType('luc_sat')"> Lục Sát</label>
+                    <label><input type="checkbox" value="tu_hoa" onchange="filterByType('tu_hoa')"> Tứ Hóa</label>
+                    <label><input type="checkbox" value="muoi_hai_cung" onchange="filterByType('muoi_hai_cung')"> 12
+                        Cung</label>
+                    <label><input type="checkbox" value="tap_tinh" onchange="filterByType('tap_tinh')"> Tạp Tinh</label>
+                </div>
+            </div>
+
+            <div class="separator" style="width:1px; height:20px; background:rgba(255,255,255,0.2); margin:0 5px;">
+            </div>
+
+            <!-- Link Type Checkboxes -->
+            <div class="link-filters">
+                <label class="checkbox-container">
+                    <input type="checkbox" value="sinh" checked onchange="updateLinkVisibility()">
+                    <span class="checkmark custom-sinh"></span> T.Sinh
+                </label>
+                <label class="checkbox-container">
+                    <input type="checkbox" value="khac" checked onchange="updateLinkVisibility()">
+                    <span class="checkmark custom-khac"></span> T.Khắc
+                </label>
+                <label class="checkbox-container">
+                    <input type="checkbox" value="thuoc" checked onchange="updateLinkVisibility()">
+                    <span class="checkmark custom-thuoc"></span> Thuộc
+                </label>
+                <label class="checkbox-container">
+                    <input type="checkbox" value="vong" checked onchange="updateLinkVisibility()">
+                    <span class="checkmark custom-vong"></span> Vòng
+                </label>
+            </div>
+    </header>
+
+    <!-- Birth Form Panel (Collapsible) -->
+    <aside id="birth-form-panel" class="birth-form-panel">
+        <div class="panel-header" onclick="toggleBirthFormPanel()">
+            <h4>An Sao vao 12 Cung</h4>
+            <span class="toggle-icon">+</span>
+        </div>
+        <div class="panel-content" id="birth-form-content">
+            <div class="calendar-toggle">
+                <button id="btnSolarGraph" class="active" onclick="setGraphCalendarMode('solar')">Duong Lich</button>
+                <button id="btnLunarGraph" onclick="setGraphCalendarMode('lunar')">Am Lich</button>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Ngay</label>
+                    <input type="number" id="graph-day" min="1" max="31" value="28">
+                </div>
+                <div class="form-group">
+                    <label>Thang</label>
+                    <input type="number" id="graph-month" min="1" max="12" value="3">
+                </div>
+                <div class="form-group">
+                    <label>Nam</label>
+                    <input type="number" id="graph-year" min="1900" max="2100" value="1994">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Gio sinh</label>
+                    <select id="graph-hour">
+                        <option value="0">Ty (23-01h)</option>
+                        <option value="1">Suu (01-03h)</option>
+                        <option value="2">Dan (03-05h)</option>
+                        <option value="3">Mao (05-07h)</option>
+                        <option value="4">Thin (07-09h)</option>
+                        <option value="5">Ty (09-11h)</option>
+                        <option value="6" selected>Ngo (11-13h)</option>
+                        <option value="7">Mui (13-15h)</option>
+                        <option value="8">Than (15-17h)</option>
+                        <option value="9">Dau (17-19h)</option>
+                        <option value="10">Tuat (19-21h)</option>
+                        <option value="11">Hoi (21-23h)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Gioi tinh</label>
+                    <select id="graph-gender">
+                        <option value="nam">Nam</option>
+                        <option value="nu">Nu</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row leap-month-row" id="graph-leap-month-row" style="display:none;">
+                <label>
+                    <input type="checkbox" id="graph-leap-month"> Thang nhuan
+                </label>
+            </div>
+            <button class="btn-an-sao" onclick="anSaoVaoCung()">An Sao</button>
+        </div>
+    </aside>
+
+    <!-- 12 Cung Grid Container (Hidden by default) -->
+    <div id="cung-grid-container" class="cung-grid-container" style="display:none;">
+        <div class="cung-grid">
+            <!-- Row 1: Ty(5), Ngo(6), Mui(7), Than(8) -->
+            <div class="cung-cell" data-position="5">
+                <div class="cung-header"><span class="cung-chi">Ty</span><span class="cung-name"></span></div>
+                <div class="cung-stars"></div>
+            </div>
+            <div class="cung-cell" data-position="6">
+                <div class="cung-header"><span class="cung-chi">Ngo</span><span class="cung-name"></span></div>
+                <div class="cung-stars"></div>
+            </div>
+            <div class="cung-cell" data-position="7">
+                <div class="cung-header"><span class="cung-chi">Mui</span><span class="cung-name"></span></div>
+                <div class="cung-stars"></div>
+            </div>
+            <div class="cung-cell" data-position="8">
+                <div class="cung-header"><span class="cung-chi">Than</span><span class="cung-name"></span></div>
+                <div class="cung-stars"></div>
+            </div>
+            <!-- Row 2: Thin(4), CENTER, Dau(9) -->
+            <div class="cung-cell" data-position="4">
+                <div class="cung-header"><span class="cung-chi">Thin</span><span class="cung-name"></span></div>
+                <div class="cung-stars"></div>
+            </div>
+            <div class="cung-center" id="cung-center-info">
+                <div class="center-title">Thong Tin La So</div>
+                <div class="center-content" id="chart-summary"></div>
+            </div>
+            <div class="cung-cell" data-position="9">
+                <div class="cung-header"><span class="cung-chi">Dau</span><span class="cung-name"></span></div>
+                <div class="cung-stars"></div>
+            </div>
+            <!-- Row 3: Mao(3), CENTER continued, Tuat(10) -->
+            <div class="cung-cell" data-position="3">
+                <div class="cung-header"><span class="cung-chi">Mao</span><span class="cung-name"></span></div>
+                <div class="cung-stars"></div>
+            </div>
+            <div class="cung-cell" data-position="10">
+                <div class="cung-header"><span class="cung-chi">Tuat</span><span class="cung-name"></span></div>
+                <div class="cung-stars"></div>
+            </div>
+            <!-- Row 4: Dan(2), Suu(1), Ty(0), Hoi(11) -->
+            <div class="cung-cell" data-position="2">
+                <div class="cung-header"><span class="cung-chi">Dan</span><span class="cung-name"></span></div>
+                <div class="cung-stars"></div>
+            </div>
+            <div class="cung-cell" data-position="1">
+                <div class="cung-header"><span class="cung-chi">Suu</span><span class="cung-name"></span></div>
+                <div class="cung-stars"></div>
+            </div>
+            <div class="cung-cell" data-position="0">
+                <div class="cung-header"><span class="cung-chi">Ty</span><span class="cung-name"></span></div>
+                <div class="cung-stars"></div>
+            </div>
+            <div class="cung-cell" data-position="11">
+                <div class="cung-header"><span class="cung-chi">Hoi</span><span class="cung-name"></span></div>
+                <div class="cung-stars"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Graph Canvas -->
+    <svg id="graph"></svg>
+
+    <!-- Tooltip -->
+    <div id="tooltip">
+        <h3 id="tooltip-title"></h3>
+        <p id="tooltip-content"></p>
+        <p class="type-label" id="tooltip-type"></p>
+    </div>
+
+    <!-- Legend -->
+    <aside id="legend">
+        <h4>Chu Thich</h4>
+
+        <div class="legend-section">
+            <h5>Ngu Hanh</h5>
+            <div class="legend-item">
+                <div class="legend-dot" style="background: #FFFFFF;"></div>
+                <span>Kim</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-dot" style="background: #2ecc71;"></div>
+                <span>Moc</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-dot" style="background: #00a8ff;"></div>
+                <span>Thuy</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-dot" style="background: #ff4757;"></div>
+                <span>Hoa</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-dot" style="background: #ffa502;"></div>
+                <span>Tho</span>
+            </div>
+        </div>
+
+        <div class="legend-section">
+            <h5>Loai Node</h5>
+            <div class="legend-item">
+                <div class="legend-dot" style="background: #E91E63;"></div>
+                <span>Thien Can</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-dot" style="background: #00BCD4;"></div>
+                <span>Dia Chi</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-dot" style="background: #FF6B6B;"></div>
+                <span>Vong Tu Vi</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-dot" style="background: #4ECDC4;"></div>
+                <span>Vong Thien Phu</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-dot" style="background: #27ae60;"></div>
+                <span>Luc Cat</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-dot" style="background: #e74c3c;"></div>
+                <span>Luc Sat</span>
+            </div>
+        </div>
+
+        <div class="legend-section">
+            <h5>Tinh Chat</h5>
+            <div class="legend-item">
+                <span style="color:#2ecc71; font-weight:bold; font-size:14px;">+</span>
+                <span>Cat tinh (Tot)</span>
+            </div>
+            <div class="legend-item">
+                <span style="color:#e74c3c; font-weight:bold; font-size:14px;">-</span>
+                <span>Hung tinh (Xau)</span>
+            </div>
+        </div>
+
+        <div class="legend-section">
+            <h5>Quan He</h5>
+            <div class="legend-item">
+                <div style="width:20px; height:3px; background:#27ae60;"></div>
+                <span>Tuong Sinh</span>
+            </div>
+            <div class="legend-item">
+                <div style="width:20px; height:3px; background:#e74c3c; border-style:dashed;"></div>
+                <span>Tuong Khac</span>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Stats -->
+    <aside id="stats"></aside>
+
+    <!-- Scripts -->
+    <script src="{{ url_for('graph.static', filename='js/graph_config.js') }}"></script>
+    <script src="{{ url_for('graph.static', filename='js/data.js') }}"></script>
+    <script src="{{ url_for('graph.static', filename='js/graph.js') }}"></script>
+</body>
+
+</html>

@@ -1,0 +1,191 @@
+{
+    "dong_vat_dia_ban": {
+        "0":  ["Dơi 🦇", "Chuột 🐭", "Én 🐦"],
+        "1":  ["Trâu 🐃", "Cua 🦀", "Rùa 🐢"],
+        "2":  ["Hổ 🐯", "Báo 🐆", "Chồn 🦝"],
+        "3":  ["Thỏ 🐇", "Cáo 🦊", "Chằn 🦎"],
+        "4":  ["Rồng 🐉", "Giun 🪱", "Cá chép 🐟"],
+        "5":  ["Rắn 🐍", "Giun đất 🪱", "Nhím 🦔"],
+        "6":  ["Ngựa 🐴", "Nai 🦌", "Lừa 🫏"],
+        "7":  ["Dê 🐐", "Chim ưng 🦅", "Nhạn 🕊️"],
+        "8":  ["Khỉ 🐵", "Vượn 🦧", "Chó 🐕"],
+        "9":  ["Gà 🐓", "Trĩ 🦚", "Quạ 🐦‍⬛"],
+        "10": ["Chó 🐕", "Sói 🐺", "Chó sói 🐕‍🦺"],
+        "11": ["Heo 🐷", "Lợn rừng 🐗", "Nhím gai 🦔"]
+    },
+    "quantum_vedic_isomorphism": {
+        "tong_cau_hinh": 1440,
+        "cong_thuc": "12 Thần Tướng × 12 Địa Chi × 12 canh giờ",
+        "vat_ly_veda": {
+            "so_cap_hat": 720,
+            "tong_hat": 1440,
+            "mo_ta": "720 cặp hạt hạ nguyên tử (subatomic particles) trong mô hình Vật lý Hạt nhân Vệ Đà",
+            "nguon": "Vedic Nuclear Physics - Maharishi Mahesh Yogi & modern interpretation"
+        },
+        "nguyen_ly": {
+            "ten": "Như trên, thế dưới (As Above, So Below)",
+            "han": "上下相應",
+            "giai_thich": "Nguyên lý Hermes Trismegistus: cấu trúc vi mô ↔ vĩ mô đẳng cấu. Mọi thứ xảy ra ở tầm mức hạ nguyên tử đều phản chiếu trên dòng thời gian."
+        },
+        "lien_he_luong_tu": {
+            "superposition": "Bàn thức tại mỗi thời điểm = trạng thái chồng chất (superposition) của 1.440 khả năng, sụp đổ khi \"chiêm\" (quan sát)",
+            "entanglement": "Tứ Khóa thể hiện sự vướng víu lượng tử (entanglement) giữa Can-Chi Ngày-Giờ: thay đổi một yếu tố ảnh hưởng toàn bộ",
+            "decoherence": "Tam Truyền = quá trình giải kết hợp (decoherence): sự kiện từ trạng thái lượng tử bước ra hiện thực cổ điển qua 3 giai đoạn"
+        },
+        "doi_xung": {
+            "so_doi_xung": 12,
+            "nhom_doi_xung": "Z₁₂ × Z₁₂ × Z₁₂ (nhóm tuần hoàn)",
+            "factorial_720": "6! = 720 (hoán vị 6 giai đoạn Lục Nhâm)",
+            "lien_he": "1.440 = 2 × 6! = 2 × 720 (đối xứng Âm-Dương × hoán vị)"
+        },
+        "concept_mapping": [
+            {
+                "luc_nham": "Bàn Thức (盤式)",
+                "quantum": "Không gian Hilbert (Hilbert Space)",
+                "vedic": "Akasha (आकाश) - Không gian nguyên thủy",
+                "formula": "H = ℂ¹² ⊗ ℂ¹² ⊗ ℂ¹²",
+                "detail": "Bàn Thức với 12×12×12 = 1.440 cấu hình là không gian trạng thái hoàn chỉnh, tương đương không gian Hilbert 12-chiều tensor product. Trong Vệ Đà, Akasha là trường thống nhất chứa mọi khả năng hiện hữu."
+            },
+            {
+                "luc_nham": "Thiên Bàn xoay (天盤)",
+                "quantum": "Toán tử xoay (Rotation Operator)",
+                "vedic": "Kalachakra (कालचक्र) - Bánh xe thời gian",
+                "formula": "R(θ) = e^{-iθJ_z/ℏ}",
+                "detail": "Thiên bàn xoay trên Địa bàn cố định chính là phép quay trong không gian trạng thái. Mỗi offset tạo ra một bàn thức mới — tương đương toán tử đơn nhất (unitary). Kalachakra Vệ Đà mô tả vòng quay thời gian tạo ra hiện thực."
+            },
+            {
+                "luc_nham": "Hành vi Chiêm (占)",
+                "quantum": "Phép đo lượng tử (Quantum Measurement)",
+                "vedic": "Darshana (दर्शन) - Tri kiến trực giác",
+                "formula": "P(a_n) = |⟨a_n|ψ⟩|²",
+                "detail": "Khoảnh khắc 'chiêm' (đặt câu hỏi chiêm bốc) chính là phép đo làm sụp đổ hàm sóng — từ 1.440 khả năng chồng chất thành 1 bàn thức cụ thể. Vệ Đà gọi là Darshana: khi ý thức hướng đến, thực tại được xác lập."
+            },
+            {
+                "luc_nham": "Tứ Khóa (四課)",
+                "quantum": "Vướng víu lượng tử (Entanglement)",
+                "vedic": "Pratityasamutpada - Duyên khởi",
+                "formula": "|ψ⟩ ≠ |ψ₁⟩ ⊗ |ψ₂⟩ ⊗ |ψ₃⟩ ⊗ |ψ₄⟩",
+                "detail": "4 Khóa không thể tách rời — thay đổi 1 khóa ảnh hưởng toàn bộ, giống như trạng thái vướng víu Bell. Trong Phật giáo Vệ Đà, Duyên Khởi (Pratityasamutpada) mô tả: mọi hiện tượng tồn tại qua sự tương thuộc."
+            },
+            {
+                "luc_nham": "Tam Truyền (三傳)",
+                "quantum": "Giải kết hợp (Decoherence)",
+                "vedic": "Trimurti (त्रिमूर्ति) - Ba mặt của Brahman",
+                "formula": "ρ(t) → Σᵢ pᵢ |i⟩⟨i|",
+                "detail": "Sơ Truyền (sụp đổ hàm sóng) → Trung Truyền (tiến hóa đơn nhất) → Mạt Truyền (trạng thái riêng). Ba giai đoạn từ lượng tử → cổ điển, song hành với Brahma (tạo) → Vishnu (duy trì) → Shiva (hủy/tái sinh)."
+            },
+            {
+                "luc_nham": "12 Thần Tướng (十二神將)",
+                "quantum": "12 Boson chuẩn (Gauge Bosons)",
+                "vedic": "12 Adityas (आदित्य) - 12 Thái Dương thần",
+                "formula": "SU(3) × SU(2) × U(1) → 12 bosons",
+                "detail": "12 Thần Tướng mang lực tương tác giữa Thiên-Địa, tương đương 12 boson truyền lực trong Mô hình Chuẩn (8 gluon + W⁺ W⁻ Z + γ). Rig Veda mô tả 12 Adityas là 12 mặt trời cai quản 12 tháng, mỗi vị mang một năng lượng riêng."
+            },
+            {
+                "luc_nham": "Ngũ Hành (五行)",
+                "quantum": "5 Loại tương tác cơ bản",
+                "vedic": "Pancha Mahabhuta (पञ्चमहाभूत)",
+                "formula": "Kim↔Điện từ, Mộc↔Hạt nhân mạnh, Thủy↔Hạt nhân yếu, Hỏa↔Trọng lực, Thổ↔Higgs",
+                "detail": "Ngũ Hành là 5 dạng chuyển hóa năng lượng cơ bản, đẳng cấu với 5 lực/trường cơ bản của vật lý. Pancha Mahabhuta (Đất-Nước-Lửa-Gió-Không) của Vệ Đà mô tả 5 trạng thái vật chất từ thô đến tinh."
+            },
+            {
+                "luc_nham": "Âm Dương (陰陽)",
+                "quantum": "Spin ½ (Spin-½ Symmetry)",
+                "vedic": "Purusha-Prakriti (पुरुष-प्रकृति)",
+                "formula": "SU(2): |↑⟩ = Dương, |↓⟩ = Âm",
+                "detail": "Âm-Dương là đối xứng cơ bản nhất, tương đương nhóm SU(2) của spin-½. Mọi hạt có 2 trạng thái spin. Vệ Đà gọi là Purusha (ý thức/Dương) và Prakriti (vật chất/Âm) — hai cực tạo nên vũ trụ."
+            },
+            {
+                "luc_nham": "Lục Nhâm 6 Chu Kỳ",
+                "quantum": "6 Flavor Quark",
+                "vedic": "Shadripu (षड्रिपु) - 6 năng lượng gốc",
+                "formula": "u, d, c, s, t, b ↔ 6 Nhâm",
+                "detail": "6 tổ hợp Nhâm (Nhâm Thân, Nhâm Ngọ, Nhâm Thìn, Nhâm Dần, Nhâm Tý, Nhâm Tuất) song hành với 6 loại quark — mỗi loại mang một 'hương vị' năng lượng khác nhau, tạo nên sự đa dạng của vật chất."
+            },
+            {
+                "luc_nham": "Khóa Thể (課體)",
+                "quantum": "Trạng thái cơ bản (Ground State)",
+                "vedic": "Guna (गुण) - 3 phẩm tính",
+                "formula": "E₀ = ½ℏω (năng lượng điểm không)",
+                "detail": "Khóa Thể xác định bản chất cơ bản của bàn thức, tương đương trạng thái cơ bản quyết định hành vi hệ lượng tử. Vệ Đà có 3 Guna (Sattva-Rajas-Tamas) quyết định bản chất mọi hiện tượng."
+            }
+        ],
+        "than_tuong_quantum": {
+            "Quý Nhân": {"particle": "Photon (γ)", "vedic": "Surya", "role": "Hạt truyền ánh sáng, không khối lượng, tốc độ cực đại — Quý Nhân là ngôi sao dẫn đường, năng lượng thuần khiết nhất"},
+            "Đằng Xà": {"particle": "Gluon (g)", "vedic": "Shesha Naga", "role": "Gluon truyền lực mạnh, giam giữ quark — Đằng Xà ràng buộc, uốn lượn, biến ảo không lường"},
+            "Chu Tước": {"particle": "W⁺ Boson", "vedic": "Agni", "role": "W⁺ gây phân rã beta dương — Chu Tước thuộc Hỏa, tranh tụng, biến đổi trạng thái"},
+            "Lục Hợp": {"particle": "Z⁰ Boson", "vedic": "Mitra", "role": "Z⁰ trung tính, truyền lực yếu trung hòa — Lục Hợp hòa hợp, kết nối, giao dịch êm đẹp"},
+            "Câu Trận": {"particle": "Higgs Boson", "vedic": "Prithvi", "role": "Higgs tạo khối lượng cho hạt — Câu Trận thuộc Thổ, tạo nền tảng, ổn định cấu trúc"},
+            "Thanh Long": {"particle": "Graviton (giả thuyết)", "vedic": "Indra", "role": "Graviton truyền lực hấp dẫn — Thanh Long đại cát, sức mạnh bao trùm vũ trụ"},
+            "Thiên Không": {"particle": "Neutrino (ν)", "vedic": "Rahu", "role": "Neutrino gần như không tương tác — Thiên Không rỗng, hư vô, khó nắm bắt"},
+            "Bạch Hổ": {"particle": "W⁻ Boson", "vedic": "Vayu", "role": "W⁻ gây phân rã beta âm — Bạch Hổ thuộc Kim, phá hủy, tang tóc, biến đổi mạnh"},
+            "Thái Thường": {"particle": "Muon (μ)", "vedic": "Vishnu", "role": "Muon ổn định hơn nhưng phân rã chậm — Thái Thường bảo thủ, ổn định, truyền thống"},
+            "Huyền Vũ": {"particle": "Anti-neutrino (ν̄)", "vedic": "Ketu", "role": "Phản neutrino ẩn tàng — Huyền Vũ thuộc Thủy, đạo tặc, bí ẩn, tiềm ẩn"},
+            "Thái Âm": {"particle": "Electron (e⁻)", "vedic": "Chandra", "role": "Electron tạo vỏ nguyên tử, liên kết — Thái Âm che chở, bí mật, âm tính nhưng thiết yếu"},
+            "Thiên Hậu": {"particle": "Positron (e⁺)", "vedic": "Lakshmi", "role": "Positron là phản hạt electron — Thiên Hậu đối xứng Thái Âm, may mắn, phúc lộc, cát tường"}
+        },
+        "ngu_hanh_quantum": {
+            "Kim": {"force": "Lực Điện từ", "boson": "Photon", "vedic_element": "Vayu (Phong)", "coupling": "α ≈ 1/137", "desc": "Kim cứng rắn, sắc bén — Lực điện từ quyết định cấu trúc nguyên tử và hóa học"},
+            "Mộc": {"force": "Lực Hạt nhân Mạnh", "boson": "Gluon", "vedic_element": "Akasha (Không)", "coupling": "αs ≈ 1", "desc": "Mộc sinh trưởng mãnh liệt — Lực mạnh giam giữ quark, tạo proton/neutron, nền tảng vật chất"},
+            "Thủy": {"force": "Lực Hạt nhân Yếu", "boson": "W±, Z⁰", "vedic_element": "Jala (Thủy)", "coupling": "αw ≈ 10⁻⁶", "desc": "Thủy biến hóa vô tận — Lực yếu gây phân rã phóng xạ, biến đổi hương vị quark"},
+            "Hỏa": {"force": "Lực Hấp dẫn", "boson": "Graviton*", "vedic_element": "Tejas (Hỏa)", "coupling": "αG ≈ 10⁻³⁹", "desc": "Hỏa bao trùm — Hấp dẫn yếu nhất nhưng tầm xa vô hạn, cai quản cấu trúc vũ trụ"},
+            "Thổ": {"force": "Trường Higgs", "boson": "Higgs", "vedic_element": "Prithvi (Địa)", "coupling": "v = 246 GeV", "desc": "Thổ tạo khối lượng — Trường Higgs cho phép hạt có khối lượng, tạo nền tảng vật chất nặng"}
+        }
+    },
+    "khoa_the": {
+        "nguyen_thu": {
+            "ten": "Nguyên Thủ", "han": "元首",
+            "dieu_kien": "Tứ Khóa thuận sinh, không xung khắc",
+            "y_nghia": "Đại cát, mọi việc thuận lợi, lãnh đạo sáng suốt",
+            "tinh_chat": "đại_cát"
+        },
+        "trung_thiem": {
+            "ten": "Trùng Thẩm", "han": "重審",
+            "dieu_kien": "Tứ Khóa có 2 khóa giống nhau",
+            "y_nghia": "Cần cân nhắc lại, không nên vội vàng",
+            "tinh_chat": "trung"
+        },
+        "tri_nhat": {
+            "ten": "Tri Nhất", "han": "知一",
+            "dieu_kien": "Can Ngày vượng, các khóa khác suy",
+            "y_nghia": "Biết một suy vạn, nắm được then chốt",
+            "tinh_chat": "cát"
+        },
+        "thiep_kinh": {
+            "ten": "Thiệp Kinh", "han": "涉經",
+            "dieu_kien": "Tứ Khóa đều khắc nhau",
+            "y_nghia": "Kinh qua nhiều gian nan, cần kiên nhẫn",
+            "tinh_chat": "hung"
+        },
+        "duoc_do": {
+            "ten": "Dược Đồ", "han": "藥圖",
+            "dieu_kien": "Tứ Khóa toàn sinh, quá tốt",
+            "y_nghia": "Cần có \"thuốc\" bổ sung, đề phòng cực thịnh suy",
+            "tinh_chat": "cát"
+        },
+        "phat_dung": {
+            "ten": "Phát Dụng", "han": "發用",
+            "dieu_kien": "Can Giờ khắc Can Ngày mạnh",
+            "y_nghia": "Hành động ngay, cơ hội chuyển từ bên ngoài ập đến",
+            "tinh_chat": "cát"
+        },
+        "phuc_ngam": {
+            "ten": "Phục Ngâm", "han": "伏吟",
+            "dieu_kien": "Thiên bàn = Địa bàn (không xoay)",
+            "y_nghia": "Bế tắc, ru rú, không tiến được",
+            "tinh_chat": "hung"
+        },
+        "phan_ngam": {
+            "ten": "Phản Ngâm", "han": "返吟",
+            "dieu_kien": "Thiên bàn xung với Địa bàn (cách 6 cung)",
+            "y_nghia": "Đảo lộn, bất ngờ, mọi thứ ngược lại dự đoán",
+            "tinh_chat": "đại_hung"
+        },
+        "bat_bi": {
+            "ten": "Bát Bị", "han": "八備",
+            "dieu_kien": "Tứ Khóa cân bằng hoàn hảo",
+            "y_nghia": "Đủ đầy, hoàn bị, mọi mặt cân bằng",
+            "tinh_chat": "đại_cát"
+        }
+    }
+}

@@ -1,0 +1,120 @@
+/* Base Layout */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    overflow: hidden;
+    background-color: #f8f9fa;
+}
+
+h1 {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    margin: 0;
+    z-index: 10;
+    font-size: 24px;
+    color: #333;
+    pointer-events: none;
+    /* Let clicks pass through to graph */
+}
+
+h1 a {
+    pointer-events: auto;
+    /* Enable clicks on the link */
+}
+
+
+/* Filter Panel */
+#filter-panel {
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    width: 250px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    font-size: 14px;
+}
+
+.filter-group {
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+/* Controls (Node/Link Count) */
+#controls {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+/* Tooltip */
+#tooltip {
+    position: absolute;
+    display: none;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    pointer-events: none;
+    z-index: 20;
+    max-width: 300px;
+    line-height: 1.4;
+}
+
+/* Graph Elements */
+#graph-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff;
+    /* Force white background */
+}
+
+.links line {
+    transition: stroke-opacity 0.3s;
+}
+
+.nodes circle {
+    stroke: #fff;
+    stroke-width: 1.5px;
+    cursor: grab;
+    transition: r 0.2s, stroke-width 0.2s;
+}
+
+.nodes circle:active {
+    cursor: grabbing;
+}
+
+.node-label {
+    font-size: 10px;
+    fill: #333;
+    pointer-events: none;
+    text-shadow: 1px 1px 2px white, -1px -1px 2px white, 1px -1px 2px white, -1px 1px 2px white;
+}
+
+/* Highlight Classes */
+.node-dimmed {
+    opacity: 0.1;
+}
+
+.link-dimmed {
+    opacity: 0.05;
+}
+
+.node-highlight {
+    stroke: #ff0000 !important;
+    stroke-width: 2px !important;
+}
+
+.link-highlight {
+    stroke: #ff0000;
+    opacity: 1;
+}

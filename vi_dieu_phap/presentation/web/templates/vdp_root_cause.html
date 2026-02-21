@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VDP - Nhân Sanh (Root Cause)</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('.static', filename='css/vdp_style.css') }}">
+</head>
+
+<body>
+    <h1>
+        <a href="/vdp">← Menu</a>
+        &nbsp;&nbsp;
+        Nhân Sanh (Root Cause)
+    </h1>
+
+    <div id="search-container">
+        <input type="text" id="search-input" placeholder="Tìm kiếm node... (Esc để xóa)">
+        <span id="search-count"></span>
+    </div>
+
+    <div id="controls">
+        <div>Nodes: <span id="node-count">0</span></div>
+        <div>Links: <span id="link-count">0</span></div>
+    </div>
+
+    <div id="filter-panel"></div>
+    <div id="graph-container"></div>
+    <div id="tooltip"></div>
+    <div id="detail-panel"></div>
+
+    <div id="loading-overlay">
+        <div class="spinner"></div>
+        <p>Đang tải dữ liệu nhân sanh...</p>
+    </div>
+
+    <script src="{{ url_for('.static', filename='js/vdp_ui.js') }}"></script>
+    <script src="{{ url_for('.static', filename='js/vdp_core.js') }}"></script>
+    <script>
+        VDP.UI.init();
+        VDP.Core.init();
+
+        d3.json("/vdp/api/data/root_cause").then(data => {
+            document.getElementById("node-count").innerText = data.nodes.length;
+            document.getElementById("link-count").innerText = data.links.length;
+
+            VDP.UI.renderDynamicFilters(data.nodes, 'root_cause');
+            VDP.Core.render(data.nodes, data.links);
+            VDP.UI.updateFilters();
+            VDP.UI.hideLoading();
+            console.log("Root cause graph loaded:", data.nodes.length, "nodes,", data.links.length, "links");
+        }).catch(err => {
+            console.error("Failed to load root cause data:", err);
+            VDP.UI.hideLoading();
+            alert("Lỗi tải dữ liệu: " + err.message);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,739 @@
+/* ============================================================
+   Octonion–Bát Quái Visualization — Stylesheet
+   ============================================================ */
+
+/* ── Reset & Base ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+    --bg-primary: #0d1117;
+    --bg-secondary: #161b22;
+    --bg-card: #1c2333;
+    --bg-hover: #252d3d;
+    --text-primary: #e6edf3;
+    --text-secondary: #8b949e;
+    --text-muted: #6e7681;
+    --border-color: #30363d;
+    --accent-gold: #F9A825;
+    --accent-blue: #42A5F5;
+    --accent-red: #EF5350;
+    --accent-green: #66BB6A;
+    --accent-purple: #AB47BC;
+    --sinh-color: #66BB6A;
+    --khac-color: #EF5350;
+    --font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+    --font-sans: 'Inter', 'Segoe UI', sans-serif;
+}
+
+body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ── Header ── */
+.site-header {
+    text-align: center;
+    padding: 2rem 1rem 1.5rem;
+    background: linear-gradient(180deg, rgba(249, 168, 37, 0.08) 0%, transparent 100%);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.site-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--accent-gold), var(--accent-red));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.3rem;
+}
+
+.site-header .subtitle {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.site-header .formula {
+    color: var(--accent-gold);
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+    opacity: 0.8;
+}
+
+/* ── Navigation ── */
+nav.section-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav.section-nav a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 0.4rem 1rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    transition: all 0.2s;
+}
+
+nav.section-nav a:hover,
+nav.section-nav a.active {
+    color: var(--accent-gold);
+    background: rgba(249, 168, 37, 0.1);
+}
+
+/* ── Sections ── */
+.viz-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+.viz-section h2 {
+    font-size: 1.5rem;
+    color: var(--accent-gold);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgba(249, 168, 37, 0.2);
+}
+
+.viz-section h2 .han {
+    font-size: 1.2rem;
+    opacity: 0.6;
+    margin-left: 0.5rem;
+}
+
+/* ── Fano Plane ── */
+.fano-container {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 1.5rem;
+    align-items: start;
+}
+
+#fano-svg-container {
+    background: var(--bg-card);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    min-height: 460px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#fano-svg-container svg {
+    width: 100%;
+    height: 100%;
+}
+
+#fano-info {
+    background: var(--bg-card);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    padding: 1.2rem;
+    min-height: 200px;
+}
+
+#fano-info h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.nature-tag {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    margin-bottom: 0.8rem;
+    font-family: var(--font-mono);
+}
+
+.relation-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+}
+
+.relation-table th {
+    text-align: left;
+    color: var(--text-muted);
+    padding: 0.3rem 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+    font-weight: 500;
+}
+
+.relation-table td {
+    padding: 0.35rem 0.5rem;
+    border-bottom: 1px solid rgba(48, 54, 61, 0.5);
+}
+
+.relation-table tr.sinh td { color: var(--sinh-color); }
+.relation-table tr.khac td { color: var(--khac-color); }
+
+.sign-badge {
+    display: inline-block;
+    padding: 1px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.sign-badge.sinh {
+    background: rgba(102, 187, 106, 0.15);
+    color: var(--sinh-color);
+}
+
+.sign-badge.khac {
+    background: rgba(239, 83, 80, 0.15);
+    color: var(--khac-color);
+}
+
+.hint {
+    color: var(--text-muted);
+    font-style: italic;
+    font-size: 0.85rem;
+}
+
+/* Fano SVG internal styles */
+.fano-legend text { font-family: var(--font-sans); }
+
+
+/* ── Multiplication Table ── */
+.mult-table-wrapper {
+    overflow-x: auto;
+}
+
+.mult-table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    font-size: 0.9rem;
+}
+
+.mult-table th {
+    padding: 0.5rem 0.6rem;
+    font-weight: 600;
+    border-bottom: 2px solid var(--border-color);
+    white-space: nowrap;
+}
+
+.mult-table thead th {
+    background: var(--bg-secondary);
+    position: sticky;
+    top: 0;
+}
+
+.mult-table tbody th {
+    text-align: right;
+    padding-right: 0.8rem;
+    border-right: 2px solid var(--border-color);
+    background: var(--bg-secondary);
+}
+
+.mult-table .corner-cell {
+    background: var(--bg-primary);
+    color: var(--accent-gold);
+    font-size: 1.2rem;
+}
+
+.tri-sym { font-size: 1.1rem; }
+.th-name { font-size: 0.7rem; color: var(--text-secondary); }
+
+.mult-cell {
+    padding: 0.5rem 0.6rem;
+    text-align: center;
+    border: 1px solid rgba(48, 54, 61, 0.4);
+    transition: all 0.15s;
+    cursor: default;
+    min-width: 50px;
+}
+
+.mult-cell .cell-sign {
+    font-size: 0.7rem;
+    font-weight: 700;
+    margin-right: 1px;
+}
+
+.mult-cell .cell-sign.neg { color: var(--khac-color); }
+.mult-cell .cell-sign.pos { color: var(--sinh-color); }
+.mult-cell .cell-sym { font-size: 1rem; }
+
+.mult-cell.identity {
+    background: rgba(249, 168, 37, 0.06);
+}
+
+.mult-cell.self-product {
+    background: rgba(171, 71, 188, 0.12);
+}
+
+.mult-cell.positive {
+    background: rgba(102, 187, 106, 0.06);
+}
+
+.mult-cell.negative {
+    background: rgba(239, 83, 80, 0.06);
+}
+
+/* Hover highlighting */
+.row-highlight td { background: rgba(66, 165, 245, 0.08) !important; }
+.col-highlight { background: rgba(66, 165, 245, 0.08) !important; }
+.active-cell {
+    background: rgba(66, 165, 245, 0.2) !important;
+    outline: 2px solid var(--accent-blue);
+    outline-offset: -2px;
+}
+
+.mult-info {
+    margin-top: 1rem;
+    padding: 0.8rem 1rem;
+    background: var(--bg-card);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    min-height: 50px;
+}
+
+.mult-detail {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    font-size: 1rem;
+}
+
+.mult-detail .operand { font-weight: 600; font-size: 1.1rem; }
+.mult-detail .operator { color: var(--text-muted); font-size: 1.2rem; }
+.mult-detail .equals { color: var(--text-muted); font-size: 1.2rem; }
+.mult-detail .result { font-weight: 700; font-size: 1.1rem; }
+.mult-detail .result.sinh { text-shadow: 0 0 8px rgba(102, 187, 106, 0.3); }
+.mult-detail .result.khac { text-shadow: 0 0 8px rgba(239, 83, 80, 0.3); }
+
+.xor-badge {
+    display: inline-block;
+    background: rgba(171, 71, 188, 0.15);
+    color: var(--accent-purple);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+}
+
+.commute-check {
+    margin-top: 0.3rem;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+
+/* ── Cayley-Dickson Chain ── */
+.cd-chain {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    overflow-x: auto;
+    padding: 1rem 0;
+}
+
+.cd-stage {
+    flex: 1;
+    min-width: 200px;
+    background: var(--bg-card);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    border-top: 3px solid var(--stage-color);
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.cd-stage:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.cd-header {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 0.8rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.cd-algebra {
+    font-family: var(--font-mono);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--stage-color);
+}
+
+.cd-dim {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.cd-body {
+    padding: 1rem;
+}
+
+.cd-names {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    margin-bottom: 0.6rem;
+}
+
+.cd-math-name {
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.cd-dich-name {
+    font-size: 0.85rem;
+    color: var(--accent-gold);
+    font-weight: 600;
+}
+
+.cd-desc {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin-bottom: 0.6rem;
+}
+
+.cd-props {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+}
+
+.cd-prop {
+    font-size: 0.72rem;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.cd-prop.kept {
+    background: rgba(102, 187, 106, 0.12);
+    color: var(--sinh-color);
+}
+
+.cd-prop.lost {
+    background: rgba(239, 83, 80, 0.12);
+    color: var(--khac-color);
+}
+
+.cd-arrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 50px;
+    color: var(--text-muted);
+}
+
+.cd-arrow-line {
+    width: 2px;
+    height: 30px;
+    background: var(--border-color);
+    display: none;
+}
+
+.cd-arrow-label {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--accent-gold);
+    margin: 0.2rem 0;
+}
+
+.cd-arrow-head {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+}
+
+.cd-hurwitz {
+    margin-top: 1.5rem;
+    padding: 1.2rem;
+    background: var(--bg-card);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--accent-purple);
+}
+
+.cd-hurwitz h4 {
+    color: var(--accent-purple);
+    margin-bottom: 0.5rem;
+}
+
+.cd-hurwitz p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.4rem;
+}
+
+.hurwitz-insight {
+    color: var(--accent-gold) !important;
+    font-weight: 600;
+    font-size: 0.9rem !important;
+}
+
+
+/* ── Properties Panel ── */
+.prop-section {
+    margin-bottom: 2rem;
+}
+
+.prop-section h4 {
+    color: var(--accent-blue);
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
+}
+
+.prop-explain {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-family: var(--font-mono);
+    margin-bottom: 1rem;
+    padding: 0.5rem 0.8rem;
+    background: rgba(66, 165, 245, 0.06);
+    border-radius: 6px;
+    border-left: 3px solid var(--accent-blue);
+}
+
+.examples-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1rem;
+}
+
+.example-card {
+    background: var(--bg-card);
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    padding: 1rem;
+}
+
+.example-card.noncommut {
+    border-top: 3px solid var(--accent-blue);
+}
+
+.example-card.nonassoc {
+    border-top: 3px solid var(--accent-purple);
+}
+
+.ex-label {
+    font-weight: 600;
+    color: var(--accent-gold);
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.ex-forward, .ex-left {
+    font-size: 0.82rem;
+    color: var(--sinh-color);
+    margin-bottom: 0.4rem;
+    padding: 0.3rem 0.5rem;
+    background: rgba(102, 187, 106, 0.06);
+    border-radius: 4px;
+}
+
+.ex-reverse, .ex-right {
+    font-size: 0.82rem;
+    color: var(--khac-color);
+    margin-bottom: 0.4rem;
+    padding: 0.3rem 0.5rem;
+    background: rgba(239, 83, 80, 0.06);
+    border-radius: 4px;
+}
+
+.ex-result {
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 0.3rem 0.5rem;
+    border-radius: 4px;
+    margin-top: 0.3rem;
+}
+
+.ex-result.warn {
+    color: var(--khac-color);
+    background: rgba(239, 83, 80, 0.1);
+}
+
+.ex-result.ok {
+    color: var(--sinh-color);
+    background: rgba(102, 187, 106, 0.1);
+}
+
+.sinh-dot, .khac-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
+.sinh-dot { background: var(--sinh-color); }
+.khac-dot { background: var(--khac-color); }
+
+
+/* ── Trigram Reference Table ── */
+.trigram-ref {
+    overflow-x: auto;
+}
+
+.trigram-ref table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+}
+
+.trigram-ref th {
+    text-align: left;
+    padding: 0.5rem 0.8rem;
+    background: var(--bg-secondary);
+    color: var(--text-muted);
+    font-weight: 600;
+    border-bottom: 2px solid var(--border-color);
+    white-space: nowrap;
+}
+
+.trigram-ref td {
+    padding: 0.5rem 0.8rem;
+    border-bottom: 1px solid rgba(48, 54, 61, 0.5);
+}
+
+.trigram-ref tr:hover td {
+    background: var(--bg-hover);
+}
+
+.tri-symbol-large {
+    font-size: 1.4rem;
+    margin-right: 0.3rem;
+}
+
+.binary-code {
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    background: rgba(171, 71, 188, 0.12);
+    color: var(--accent-purple);
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+.element-badge {
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+/* ── Footer ── */
+.site-footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    border-top: 1px solid var(--border-color);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+    .fano-container {
+        grid-template-columns: 1fr;
+    }
+
+    .cd-chain {
+        flex-direction: column;
+    }
+
+    .cd-arrow {
+        min-width: auto;
+        flex-direction: row;
+        padding: 0.3rem 0;
+    }
+
+    .cd-arrow-head {
+        transform: rotate(90deg);
+    }
+
+    .examples-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .site-header h1 {
+        font-size: 1.4rem;
+    }
+
+    nav.section-nav {
+        flex-wrap: wrap;
+    }
+}
+
+/* ── Viên Đồ (Circular Bát Quái Diagram) ── */
+.vd-container {
+    background: var(--bg-card);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+#viendo-svg-container {
+    width: 100%;
+    height: 700px;
+    position: relative;
+}
+
+#viendo-svg-container svg {
+    width: 100%;
+    height: 100%;
+}
+
+.vd-tooltip {
+    position: absolute;
+    pointer-events: none;
+    background: rgba(28, 35, 51, 0.96);
+    border: 1px solid var(--accent-gold);
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 0.82rem;
+    line-height: 1.5;
+    color: var(--text-primary);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    max-width: 380px;
+    transition: opacity 0.15s;
+}
+
+.vd-tooltip.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.vd-tooltip code {
+    font-family: var(--font-mono);
+    background: rgba(255, 255, 255, 0.08);
+    padding: 1px 4px;
+    border-radius: 3px;
+    font-size: 0.85em;
+    color: var(--accent-gold);
+}

@@ -1,0 +1,71 @@
+# cetasika_master.py
+# Danh sách 52 Sở Hữu Tâm (Mental Factors)
+
+CETASIKA_MASTER = [
+    # --- BIẾN HÀNH (Universals - 7) ---
+    {"id": "CET_01", "name": "Xúc", "name_pali": "Phassa", "group": "Universals"},
+    {"id": "CET_02", "name": "Thọ", "name_pali": "Vedana", "group": "Universals"},
+    {"id": "CET_03", "name": "Tưởng", "name_pali": "Sanna", "group": "Universals"},
+    {"id": "CET_04", "name": "Tư", "name_pali": "Cetana", "group": "Universals"},
+    {"id": "CET_05", "name": "Nhất hành", "name_pali": "Ekaggata", "group": "Universals"},
+    {"id": "CET_06", "name": "Mạng quyền", "name_pali": "Jivitindriya", "group": "Universals"},
+    {"id": "CET_07", "name": "Tác ý", "name_pali": "Manasikara", "group": "Universals"},
+
+    # --- BIỆT CẢNH (Occasionals - 6) ---
+    {"id": "CET_08", "name": "Tầm", "name_pali": "Vitakka", "group": "Occasionals"},
+    {"id": "CET_09", "name": "Tứ", "name_pali": "Vicara", "group": "Occasionals"},
+    {"id": "CET_10", "name": "Thắng giải", "name_pali": "Adhimokkha", "group": "Occasionals"},
+    {"id": "CET_11", "name": "Cần", "name_pali": "Viriya", "group": "Occasionals"},
+    {"id": "CET_12", "name": "Hỷ", "name_pali": "Piti", "group": "Occasionals"},
+    {"id": "CET_13", "name": "Dục", "name_pali": "Chanda", "group": "Occasionals"},
+
+    # --- BẤT THIỆN (Unwholesome - 14) ---
+    {"id": "CET_14", "name": "Si", "name_pali": "Moha", "group": "Unwholesome"},
+    {"id": "CET_15", "name": "Vô tàm", "name_pali": "Ahirika", "group": "Unwholesome"},
+    {"id": "CET_16", "name": "Vô quý", "name_pali": "Anottappa", "group": "Unwholesome"},
+    {"id": "CET_17", "name": "Phóng dật", "name_pali": "Uddhacca", "group": "Unwholesome"},
+    {"id": "CET_18", "name": "Tham (Lobha)", "name_pali": "Lobha", "group": "Unwholesome"},
+    {"id": "CET_19", "name": "Tà kiến", "name_pali": "Ditthi", "group": "Unwholesome"},
+    {"id": "CET_20", "name": "Ngã mạn", "name_pali": "Mana", "group": "Unwholesome"},
+    {"id": "CET_21", "name": "Sân", "name_pali": "Dosa", "group": "Unwholesome"},
+    {"id": "CET_22", "name": "Tật", "name_pali": "Issa", "group": "Unwholesome"},
+    {"id": "CET_23", "name": "Lận", "name_pali": "Macchariya", "group": "Unwholesome"},
+    {"id": "CET_24", "name": "Hối", "name_pali": "Kukkucca", "group": "Unwholesome"},
+    {"id": "CET_25", "name": "Hôn trầm", "name_pali": "Thina", "group": "Unwholesome"},
+    {"id": "CET_26", "name": "Thụy miên", "name_pali": "Middha", "group": "Unwholesome"},
+    {"id": "CET_27", "name": "Hoài nghi", "name_pali": "Vicikiccha", "group": "Unwholesome"},
+
+    # --- TỊNH HẢO (Beautiful - 25) ---
+    # Tịnh Hảo Biến Hành (19)
+    {"id": "CET_28", "name": "Tín", "name_pali": "Saddha", "group": "Beautiful"},
+    {"id": "CET_29", "name": "Niệm", "name_pali": "Sati", "group": "Beautiful"},
+    {"id": "CET_30", "name": "Tàm", "name_pali": "Hiri", "group": "Beautiful"},
+    {"id": "CET_31", "name": "Úy (Ottappa)", "name_pali": "Ottappa", "group": "Beautiful"},
+    {"id": "CET_32", "name": "Vô tham", "name_pali": "Alobha", "group": "Beautiful"},
+    {"id": "CET_33", "name": "Vô sân", "name_pali": "Adosa", "group": "Beautiful"},
+    {"id": "CET_34", "name": "Hành xả", "name_pali": "Tatramajjhattata", "group": "Beautiful"},
+    {"id": "CET_35", "name": "Tịnh thân", "name_pali": "Kayapassaddhi", "group": "Beautiful"},
+    {"id": "CET_36", "name": "Tịnh tâm", "name_pali": "Cittapassaddhi", "group": "Beautiful"},
+    {"id": "CET_37", "name": "Khinh thân", "name_pali": "Kayalahuta", "group": "Beautiful"},
+    {"id": "CET_38", "name": "Khinh tâm", "name_pali": "Cittalahuta", "group": "Beautiful"},
+    {"id": "CET_39", "name": "Nhu thân", "name_pali": "Kayamuduta", "group": "Beautiful"},
+    {"id": "CET_40", "name": "Nhu tâm", "name_pali": "Cittamuduta", "group": "Beautiful"},
+    {"id": "CET_41", "name": "Thuần thân", "name_pali": "Kayakammannata", "group": "Beautiful"},
+    {"id": "CET_42", "name": "Thuần tâm", "name_pali": "Cittakammannata", "group": "Beautiful"},
+    {"id": "CET_43", "name": "Thích thân", "name_pali": "Kayapagunnata", "group": "Beautiful"},
+    {"id": "CET_44", "name": "Thích tâm", "name_pali": "Cittapagunnata", "group": "Beautiful"},
+    {"id": "CET_45", "name": "Chánh thân", "name_pali": "Kayujukata", "group": "Beautiful"},
+    {"id": "CET_46", "name": "Chánh tâm", "name_pali": "Cittujukata", "group": "Beautiful"},
+    
+    # Giới Phần (3)
+    {"id": "CET_47", "name": "Chánh ngữ", "name_pali": "Sammavaca", "group": "Beautiful"},
+    {"id": "CET_48", "name": "Chánh nghiệp", "name_pali": "Sammakammanta", "group": "Beautiful"},
+    {"id": "CET_49", "name": "Chánh mạng", "name_pali": "Samma-ajiva", "group": "Beautiful"},
+    
+    # Vô Lượng Phần (2)
+    {"id": "CET_50", "name": "Bi", "name_pali": "Karuna", "group": "Beautiful"},
+    {"id": "CET_51", "name": "Tùy hỷ", "name_pali": "Mudita", "group": "Beautiful"},
+    
+    # Trí Tuệ (1)
+    {"id": "CET_52", "name": "Tuệ quyền (Trí)", "name_pali": "Panna", "group": "Beautiful"},
+]

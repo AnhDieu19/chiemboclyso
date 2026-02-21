@@ -1,0 +1,72 @@
+[
+  {
+    "id": "K_PATISANDHI",
+    "name": "Tục Sinh (Patisandhi)",
+    "description": "Rebirth-linking"
+  },
+  {
+    "id": "K_BHAVANGA",
+    "name": "Hộ Kiếp (Bhavanga)",
+    "description": "Life-continuum"
+  },
+  {
+    "id": "K_AVAJJANA",
+    "name": "Khai Môn (Avajjana)",
+    "description": "Adverting"
+  },
+  {
+    "id": "K_DASSANA",
+    "name": "Thấy (Dassana)",
+    "description": "Seeing"
+  },
+  {
+    "id": "K_SAVANA",
+    "name": "Nghe (Savana)",
+    "description": "Hearing"
+  },
+  {
+    "id": "K_GHAYANA",
+    "name": "Ngửi (Ghayana)",
+    "description": "Smelling"
+  },
+  {
+    "id": "K_SAYANA",
+    "name": "Nếm (Sayana)",
+    "description": "Tasting"
+  },
+  {
+    "id": "K_PHUSANA",
+    "name": "Xúc (Phusana)",
+    "description": "Touching"
+  },
+  {
+    "id": "K_SAMPATICCHANA",
+    "name": "Tiếp Thâu (Sampaticchana)",
+    "description": "Receiving"
+  },
+  {
+    "id": "K_SANTIRANA",
+    "name": "Quan Sát (Santirana)",
+    "description": "Investigating"
+  },
+  {
+    "id": "K_VOTTHAPANA",
+    "name": "Phân Đoán (Votthapana)",
+    "description": "Determining"
+  },
+  {
+    "id": "K_JAVANA",
+    "name": "Đổng Lực (Javana)",
+    "description": "Impulsion"
+  },
+  {
+    "id": "K_TADALAMBANA",
+    "name": "Thập Di (Tadalambana)",
+    "description": "Registration"
+  },
+  {
+    "id": "K_CUTI",
+    "name": "Tử (Cuti)",
+    "description": "Death"
+  }
+]

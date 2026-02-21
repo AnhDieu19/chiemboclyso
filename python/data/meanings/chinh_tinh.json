@@ -1,0 +1,283 @@
+{
+  "Tử Vi": {
+    "nature": "Đế Tinh, vua của các vì sao, mang tính chất tôn quý. Ngũ hành Âm Thổ, hóa khí là Tôn Quý, Tôn Quyền; chủ về Phúc Thọ và công danh.",
+    "positive": "Có tài hô hào, đoàn kết tập thể, có quyền quyết định và khả năng lãnh đạo. Đôn hậu, nhẹ nhàng, bình tĩnh, thư thái, chính trực, sạch sẽ, ít lòng tham.",
+    "negative": "Dễ mủi lòng, dễ bị kích động hoặc nghe theo lời người khác. Đàn ông có Tử Vi thường 'sợ vợ' (nể vợ) do cung Phu Thê luôn có Sát Phá Tham.",
+    "detailed": "Tử Vi là sao đế tinh, chủ về sự cao quý, quyền uy. Người có Tử Vi nhập mệnh thường được mọi người kính trọng, có uy quyền tự nhiên. Là người luôn đặt tập thể lên trên bản thân.",
+    "appearance": "Người vừa vặn, tầm thước; mặt thường vuông, mũi đẹp, tai dày, khuôn dung phúc hậu. Dáng vẻ uy nghiêm, phong thái cao sang.",
+    "career": [
+      "Lãnh đạo",
+      "Quản lý",
+      "Chính trị",
+      "Doanh nhân"
+    ],
+    "in_palace": {
+      "Mệnh": "Người phúc hậu, thông minh, ôn hòa, tiết hạnh; cuộc đời gặp nhiều may mắn, được lãnh đạo tin tưởng.",
+      "Quan Lộc": "Tay nắm binh phù, có tài điều động nhân sự và quản lý con người. (Liêm Tướng đồng cung/hội chiếu)",
+      "Tài Bạch": "Vũ Khúc miếu địa chủ về giàu có lớn ('phú gia địch quốc'); có khả năng quản lý dòng tiền lớn hoặc ngân khố.",
+      "Thiên Di": "Ra ngoài mạnh mẽ, có thể 'đánh đông dẹp bắc', dễ xuất ngoại. (Có Thất Sát)",
+      "Phu Thê": "Người phối ngẫu khôn ngoan, đảm đang, giúp đỡ chồng/vợ rất nhiều trong sự nghiệp. (Có Phá Quân)",
+      "Nô Bộc": "Bạn bè, người giúp việc thường là người tốt, trung thành và bảo vệ mình. (Có Thiên Lương)",
+      "Điền Trạch": "Điền sản dồi dào, nhiều đất đai và nhà cửa, nhà cửa sạch sẽ, tự tay lập lên. Trong nhà có người giúp việc, nhà phải có phòng đọc sách, trang viên. Dễ rước phật thánh về thờ tại gia"
+    },
+    "associations": {
+      "likes": "Lục Cát Tinh, Tam Hóa (Hóa Khoa, Hóa Quyền, Hóa Lộc), vòng Thái Tuế, Ấn Cáo.",
+      "dislikes": "Lục Sát Tinh (Kình, Đà, Không, Kiếp, Hỏa, Linh), các ám tinh (Riêu, Đà, Kỵ), và đặc biệt sợ Tuần, Triệt.",
+      "bad_interactions": "Tử Vi gặp Triệt gọi là cách 'đái ấn triều hồi' (mất đường công danh, phải về vườn); gặp Tuần thì có chức vụ nhưng không có thực quyền."
+    }
+  },
+  "Thiên Cơ": {
+    "nature": "Sao mưu trí, linh hoạt, thông minh",
+    "positive": "Thông minh lanh lợi, nhiều sáng kiến",
+    "negative": "Hay lo nghĩ, thiếu quyết đoán",
+    "detailed": "Thiên Cơ vốn mộc chủ sao thiện lành. Là sao mưu sự nên trong tháng xuất hiện nhiều việc cần nhờ đến mình, nên chủ động giúp đỡ tạo phước. Thiên Cơ cũng chủ là sao mua sắm.",
+    "appearance": "Khuôn mặt thông minh, lanh lợi",
+    "career": [
+      "Nghiên cứu",
+      "Kế hoạch",
+      "Phân tích",
+      "Tư vấn"
+    ],
+    "health_note": "Về bệnh tật liên quan đến chân, sườn, gân",
+    "in_palace": {
+      "Mệnh": "Thông minh, giỏi tính toán, nhiều mưu lược",
+      "Tài Bạch": "Thiên Cơ, Cự Môn hay Thiên Cơ, Lương hay Thiên Cơ ở Ngọ Mùi: Phát tài, dễ kiếm tiền và kiếm được nhiều tiền. Ở các cung khác: Làm ăn chật vật, thất thường. Đồng cung với Thái Âm ở Thân thì tự lực lập nên cơ nghiệp khá giả. Nếu có Lộc Mã thì đại phú",
+      "Phúc Đức": "Ngầm ám chỉ ngôi mộ lục đời (sáu đời). Thiên Cơ hóa khí là sao thiện lành, thiện tú, chủ quản phát vượng cho con cháu lợi đường công danh, dễ tiến thân vào con đường chính trị. Ngầm ám chỉ sự an lành cát lợi về âm phần tổ tiên mồ mả đất cát, thể hiện sự nối tiếp, sự kế thừa đặc biệt trong các gia đình có nghề truyền thống"
+    }
+  },
+  "Thái Dương": {
+    "nature": "Sao ánh sáng, danh tiếng, quý nhân",
+    "positive": "Quang minh chính đại, có quý nhân phù trợ",
+    "negative": "Vất vả lao tâm, hay dốc lòng vì người khác",
+    "detailed": "Thái Dương là sao dương khí, chủ về ánh sáng, sự nghiệp công danh. Người có Thái Dương tốt thường được quý nhân giúp đỡ.",
+    "appearance": "Khuôn mặt sáng sủa, rạng rỡ",
+    "career": [
+      "Quản lý",
+      "Ngoại giao",
+      "Chính trị",
+      "Giáo dục"
+    ],
+    "in_palace": {
+      "Mệnh": "Có quý nhân phù trợ, danh tiếng tốt",
+      "Thiên Di": "Dễ xuất ngoại ra ngoài làm ăn, ra nước ngoài học hành, công tác. Gặp nhiều may mắn, có quý nhân giúp đỡ. Gặp người hôn phối ở nơi phương xa, lấy vợ lấy chồng ở nơi phương xa"
+    }
+  },
+  "Vũ Khúc": {
+    "nature": "Sao tài tinh, cứng cỏi, quyết đoán",
+    "positive": "Giỏi làm giàu, có tài quản lý tiền bạc",
+    "negative": "Cô độc, cứng nhắc, hay xung đột",
+    "detailed": "Vũ Khúc là sao tài tinh, chủ về tiền bạc. Nhập nguyệt hạn chủ có lợi về cả công việc lẫn tiền bạc, trong tháng thường có món tiền lớn bất ngờ xuất hiện, hay như gặp quý nhân bất ngờ giúp mình.",
+    "appearance": "Khuôn mặt cương nghị, đường nét rõ ràng",
+    "career": [
+      "Tài chính",
+      "Ngân hàng",
+      "Kinh doanh",
+      "Quân đội"
+    ],
+    "in_palace": {
+      "Mệnh": "Giỏi làm giàu, cương quyết, có tài lãnh đạo",
+      "Nô Bộc": "Ít bạn bè, ít giao thiệp, đời sống khép kín"
+    }
+  },
+  "Thiên Đồng": {
+    "nature": "Phúc tinh, mong manh, dễ vỡ. Thiên Đồng mang tính chất phục vụ, phụng sự và có tâm hồn nghệ sĩ. Tứ Đại Thọ Tinh.",
+    "positive": "Ôn hòa, biết hưởng thụ, tuổi già an nhàn. Nhân hậu, thiện lành, được lãnh đạo tin tưởng.",
+    "negative": "Thiếu chí tiến thủ, dễ hưởng lạc, hao phước. Tính cách khó chiều, hay dỗi, hay xét nét, cố chấp và 'láu táu' (nếu ở vị trí xấu).",
+    "detailed": "Thiên Đồng là sao phúc tinh, chủ về ban hành phước, tính thật thà, thiện năng, thay đổi, tích phước. Bản chất cốt lõi mong manh, dễ vỡ. Nếu gặp Phá Quân ở Tật Ách dễ mắc bệnh nan y. Người có Thiên Đồng thủ mệnh thường được cụ cố bốn đời phù hộ (do Phúc Đức có Thái Dương). Nếu chỉ mải mê hưởng thụ phúc đức sẵn có mà không tu bồi, phúc báu sẽ sớm tan biến.",
+    "appearance": "Thường là người có tướng diện to cao, đẫy đà, béo tốt (đặc biệt khi ở Dần Thân). Khuôn mặt hiền hòa, phúc hậu.",
+    "career": [
+      "Kỹ sư",
+      "Kiến trúc sư",
+      "Khoa học",
+      "Kinh tế tài chính",
+      "Thầy giáo",
+      "Thầy thuốc",
+      "Thầy phong thủy",
+      "Nghệ sĩ (Ca sĩ, Nhạc sĩ)",
+      "Phục vụ",
+      "Trợ lý"
+    ],
+    "in_palace": {
+      "Mệnh": "Hiền hòa, phúc hậu, tuổi già an nhàn. Được cụ cố bốn đời phù hộ.",
+      "Quan Lộc": "Hay chuyển công việc, di chuyển nhiều. Phù hợp làm công trình, lắp đặt, xây dựng, vận tải, phục vụ, trợ lý."
+    },
+    "associations": {
+      "likes": "Cát tinh, Tuần/Triệt (nếu ở vị trí hãm), Đào Hồng (ở Tị/Hợi - có năng khiếu nghệ thuật).",
+      "dislikes": "Điếu Khách (dễ cờ bạc, rượu chè), Phá Quân (ở Tật Ách - bệnh nan y)."
+    },
+    "zodiac_positions": {
+      "Tý": "Đồng - Âm. Cách 'Thủy trừng Quế ngạ' rất đẹp. Người từ tốn, hài hòa, thông minh, vừa giàu vừa thọ. Phù hợp tham mưu, trợ lý, quản lý tiền bạc.",
+      "Ngọ": "Đồng - Âm. Cách 'Thủy trừng Quế ngạ' rất đẹp. Người từ tốn, hài hòa, thông minh, vừa giàu vừa thọ. Phù hợp tham mưu, trợ lý, quản lý tiền bạc.",
+      "Sửu": "Đồng - Cự (Hãm). Tính cách khó chiều, hay dỗi, hay xét nét, cố chấp và 'láu táu'. Làm chuyên môn kỹ thuật, tư vấn luật, hôn nhân. Cần có Tam Hóa hoặc Tuần/Triệt để tốt lên.",
+      "Mùi": "Đồng - Cự (Hãm). Tính cách khó chiều, hay dỗi, hay xét nét, cố chấp và 'láu táu'. Làm chuyên môn kỹ thuật, tư vấn luật, hôn nhân. Cần có Tam Hóa hoặc Tuần/Triệt để tốt lên.",
+      "Dần": "Đồng - Lương. Vị trí đẹp nhất của Thiên Đồng. Người nhân hậu, thiện lành, được lãnh đạo tin tưởng. Kỹ sư, kiến trúc sư, làm khoa học hoặc kinh tế tài chính. Ham chơi, thích hưởng thụ.",
+      "Thân": "Đồng - Lương. Vị trí đẹp nhất của Thiên Đồng. Người nhân hậu, thiện lành, được lãnh đạo tin tưởng. Kỹ sư, kiến trúc sư, làm khoa học hoặc kinh tế tài chính. Ham chơi, thích hưởng thụ.",
+      "Mão": "Độc tọa. Rất nghệ sĩ, phong lưu, đôi khi mê tín dị đoan. Là vị trí của các bậc 'Thầy' (giáo, thuốc, phong thủy, ca nhạc sĩ).",
+      "Dậu": "Độc tọa. Rất nghệ sĩ, phong lưu, đôi khi mê tín dị đoan. Là vị trí của các bậc 'Thầy' (giáo, thuốc, phong thủy, ca nhạc sĩ).",
+      "Thìn": "Độc tọa (Hãm). Cách cục kém nhất. Tính tình như trẻ con, nói đùa như thật, hay nói 'cuội'. Cuộc đời lận đận, dễ sinh họa từ bạn bè.",
+      "Tuất": "Độc tọa (Hãm). Cách cục kém nhất. Tính tình như trẻ con, nói đùa như thật, hay nói 'cuội'. Cuộc đời lận đận, dễ sinh họa từ bạn bè.",
+      "Tị": "Độc tọa (Đắc). Người nhu thuận, ôn hòa, sống biết điều, suốt đời hay giúp người. Có năng khiếu nghệ thuật nếu hội Đào Hồng. Trường thọ.",
+      "Hợi": "Độc tọa (Đắc). Người nhu thuận, ôn hòa, sống biết điều, suốt đời hay giúp người. Có năng khiếu nghệ thuật nếu hội Đào Hồng. Trường thọ."
+    }
+  },
+  "Liêm Trinh": {
+    "nature": "Sao tù tinh, phức tạp, đa diện",
+    "positive": "Nhạy bén, có tài ăn nói, biết cách xử thế",
+    "negative": "Hay gặp thị phi, dễ vướng kiện tụng",
+    "detailed": "Liêm Trinh nhập nguyệt hạn trong tháng xảy ra rất nhiều việc ồn ào, vội vã dồn dập. Do hóa khí là tù tinh, chủ là đào hoa nên thường tránh việc hiểu lầm ghen tuông. Cả tháng bận rộn công việc thường mang tính chất bế tắc, nhiều áp lực.",
+    "appearance": "Khuôn mặt sắc sảo, đa diện",
+    "career": [
+      "Pháp lý",
+      "Chính trị",
+      "Điều tra",
+      "Nghệ thuật"
+    ],
+    "health_note": "Đề phòng bị ốm sốt hay như cảm hàn lửa điện nước sôi",
+    "in_palace": {
+      "Mệnh": "Nhạy bén, có tài ngoại giao, hay gặp thị phi",
+      "Phụ Mẫu": "Cha mẹ là người sống nguyên tắc, khắt khe với con cái, gò ép, áp đặt, có phần gia trưởng. Cha mẹ là người sống thanh khiết, tử tế"
+    }
+  },
+  "Thiên Phủ": {
+    "nature": "Sao tài khố, sung túc, ổn định",
+    "positive": "Giàu có, ổn định, gia đình hạnh phúc",
+    "negative": "Thủ thành, thiếu đột phá",
+    "detailed": "Thiên Phủ là sao tài khố, chủ về sự sung túc, ổn định. Thiên Phủ là sao giải rất mạnh, giúp tránh hay giảm được nhiều tai họa, bệnh tật.",
+    "appearance": "Khuôn mặt phúc hậu, đầy đặn",
+    "career": [
+      "Quản lý",
+      "Tài chính",
+      "Bất động sản",
+      "Kinh doanh"
+    ],
+    "in_palace": {
+      "Mệnh": "Giàu có, ổn định, được mọi người tin tưởng",
+      "Tật Ách": "Ngày chết để lại nhiều phong bì, phúng viếng cho con cháu. Dễ mắc bệnh về Gan, đau dạ dày, bệnh liên quan đến đường tiêu hóa. Nếu gặp các sao thuộc hỏa, sẽ chủ về vị nhiệt, hôi miệng, sâu răng, nhọt ở lưỡi. Nếu gặp các sao thuộc thủy chủ về vị hàn, đau dạ dày"
+    }
+  },
+  "Thái Âm": {
+    "nature": "Sao điền sản, tình cảm, nữ tính",
+    "positive": "Giàu tình cảm, có tài về nghệ thuật, tài sản",
+    "negative": "Hay lo nghĩ, đa cảm, mộng mơ",
+    "detailed": "Thái Âm nguyên thuộc thủy, chủ tài tinh. Nhập nguyệt hạn báo hiệu tháng tốt đẹp có lợi cho tiền bạc vật chất buôn bán, trong nhà thường có hỷ tín tin vui kể như họ hàng có người cưới hỏi hay như tin vui bầu bí sinh đẻ. Cũng chủ báo hiệu việc đi lại thuận tiện, làm ăn dễ dàng, mọi việc luôn trong tâm thế chủ động. Dễ mua tài sản lớn.",
+    "appearance": "Khuôn mặt hiền dịu, thanh tú",
+    "career": [
+      "Nghệ thuật",
+      "Bất động sản",
+      "Tài chính",
+      "Thời trang"
+    ],
+    "in_palace": {
+      "Mệnh": "Giàu tình cảm, thiên hướng nghệ thuật",
+      "Tài Bạch": "Thường kiếm nhiều và cũng tiêu nhiều, chi tiêu cho các mối quan hệ, các mối làm ăn hay cho những thú vui. Thích kinh doanh để kiếm tiền",
+      "Phúc Đức": "Biểu thị phát ngôi mộ cụ bà tam đại. Quản tài, thuộc thủy, ngầm báo hiệu họ tộc nhiều người thịnh vượng, gia đình ắt sinh được người con gái giàu phú gia địch quốc. Chủ quản vượng phát cho đàn bà con gái trong họ tộc. Nếu ngộ cùng Hoa Cái, Long Phượng ắt có mả kết 3 đời, đời con cháu thường có người làm nghề thầy thuốc, bác sỹ, y dược"
+    }
+  },
+  "Tham Lang": {
+    "nature": "Sao đào hoa, dục vọng, tham vọng",
+    "positive": "Có sức hút, nhiều tham vọng, đa tài",
+    "negative": "Tham lam, háo sắc, không biết đủ",
+    "detailed": "Tham Lang nằm chòm bắc đẩu tinh. Nhập nguyệt hạn chủ tháng nhiều biến động, thường có xu hướng tìm đến sự giúp đỡ như thầy thuốc, thầy giáo, thầy tâm linh. Thường kết giao bạn bè, mở mang các mối quan hệ, được nhiều người quý mến, dễ nảy sinh tình cảm. Biểu hiện của việc tìm mưu cầu hạnh phúc, chi tiêu và mua sắm nhiều.",
+    "appearance": "Khuôn mặt quyến rũ, có sức hút",
+    "career": [
+      "Giải trí",
+      "Kinh doanh",
+      "Ngoại giao",
+      "Nghệ thuật"
+    ],
+    "in_palace": {
+      "Mệnh": "Có sức hút, đa tài, nhiều tham vọng",
+      "Tử Tức": "Dễ có con trai, con cái thường nghịch ngợm, ham chơi, ham vui, ăn chơi, phá bĩnh, cờ bạc, nợ nần. Nuôi con vất vả",
+      "Điền Trạch": "Nhà cửa gần nơi nhiều quán karaoke, nhà hàng, quán ăn. Nếu hội thêm Linh Hỏa, Khoa Quyền Lộc, Đà La thì lắm đất nhiều nhà, buôn bán kinh doanh bất động sản nên giàu có"
+    }
+  },
+  "Cự Môn": {
+    "nature": "Sao thị phi, ăn nói, tranh cãi",
+    "positive": "Có tài ăn nói, biện luận, thuyết phục",
+    "negative": "Hay gây thị phi, tranh cãi, miệng lưỡi",
+    "detailed": "Cự Môn nhập tiểu hạn thường xảy ra thị phi tranh chấp cãi vã lời qua tiếng lại. Cần hạn chế đi xa, không nên du lịch mạo hiểm hay chơi trò mạo hiểm. Gia đình thường to tiếng, bạn bè thường dèm pha, giấy tờ thường trục trặc. Mọi việc nên xử lý bình tĩnh. Xu cát tị hung, nên sửa nhà cửa mua loa đài.",
+    "appearance": "Khuôn mặt sắc sảo, miệng rộng",
+    "career": [
+      "Luật sư",
+      "MC",
+      "Giảng viên",
+      "Bán hàng"
+    ],
+    "health_note": "Ốm đau thường liên quan đến răng miệng lưỡi họng phổi",
+    "in_palace": {
+      "Mệnh": "Có tài ăn nói, hay gặp thị phi",
+      "Phu Thê": "Thường có tình trạng lời qua tiếng lại, cãi vã, gây sự, nên lấy người lớn tuổi hơn mình. Vợ chồng là người khôn ngoan tỏ tường, để giữ hạnh phúc gia đình vợ chồng cần bao dung sẻ chia nhiều hơn trong cuộc sống hàng ngày"
+    }
+  },
+  "Thiên Tướng": {
+    "nature": "Sao ấn tinh, quyền chức, chức vụ",
+    "positive": "Có chức vị, được tin tưởng, quân tử",
+    "negative": "Dễ bị lợi dụng, chịu trách nhiệm thay người khác",
+    "detailed": "Thiên Tướng nhập nguyệt hạn chủ về may mắn được học hành, thi cử, trong tháng thường được nhận văn bản giấy tờ, quyết định có lợi. Chủ về giao lưu thêm nhiều mối quan hệ, nhiều công việc gia đình phải giải quyết. Có lợi cho bằng cấp, tốt cho học hành, tốt cho cầu nhân duyên, gặp nhiều may mắn, thi cử dễ đỗ, học hành dễ đậu, làm thủ tục giấy tờ nhanh được hoàn thiện.",
+    "appearance": "Khuôn mặt đoan trang, uy nghiêm",
+    "career": [
+      "Quản lý",
+      "Hành chính",
+      "Công chức",
+      "Giáo dục"
+    ],
+    "in_palace": {
+      "Mệnh": "Có chức vị, được tin tưởng, chính nhân quân tử",
+      "Huynh Đệ": "Anh em là người hiền lương, lễ giáo, hòa thuận, trợ giúp cho mình được, anh em có công danh"
+    }
+  },
+  "Thiên Lương": {
+    "nature": "Sao Ấm tinh, cai quản về tuổi thọ",
+    "positive": "Hiền lành, dịu dàng, bao dung, từ bi bác ái, trường thọ",
+    "negative": "Không ưa bon chen, khắc khổ, hay lo lắng thái quá",
+    "detailed": "Thiên Lương là một trong những bộ sao có sự kháng cự rất yếu, thế nên Mệnh có sao Thiên Lương mà có sao xấu thì tính chất khác đi hoàn toàn. Thiên Lương cai quản về tuổi thọ của con người, tính khí hiền lành, dịu dàng, nhẹ nhàng, hơi trầm. Người không ưa bon chen, dù sống ở môi trường nào cũng không thích nổi trội lên, chỉ thích làm một mình, ở một góc, ưa cái độ tĩnh lặng, thích sự tu hành. Ăn chậm, nói chậm, đi nhanh, làm nhanh. Không bao giờ phân biệt, so sánh, mến mọi người bình đẳng. Sinh lòng từ bi bác ái, hướng người ta đến cái chân thiện mỹ. Thiên Lương ngũ hành thuộc Mộc chủ về sự sinh trưởng, rất ham học, chịu khó mày mò, ý thức tự giác là số một. Có nếp sống khá khoa học nhưng hơi cổ. Sống vô cùng giản dị, rất nhẹ nhàng thuần khiết. Không bao giờ đấu đá, không bao giờ ganh đua, được hưởng thọ trường cao, sống an toàn, an nhàn. Thích hướng dẫn, thích giúp đỡ người khác. Có trí tuệ, phù hợp làm giảng dạy và giáo dục. Khi đi vào các cung Dần, Thân, Tí, Ngọ là người kinh doanh giỏi. Làm gì chắc cái đó, tính đâu là được đấy, không ham làm liều, không ham hưởng lạc thú. Người tích đức, thích tu hành, thích hành thiện và đặc biệt thích nghiên cứu lịch sử, văn hóa, xã hội.",
+    "appearance": "Khuôn mặt hơi khắc khổ một tí, nhiều nếp nhăn, rất nhanh già. Ngũ quan rất cân đối, có vẻ ngoài thận trọng. Sắc mặt trắng vàng. Khuôn mặt thanh tú và cái đầu thông minh. Khuôn mặt thuôn dài, mũi thẳng và cao. Tại cung Ngọ nhập Mệnh phần lớn là người lùn và béo, ở cung Kỷ nhập Mệnh phần lớn là người mảnh khảnh hoặc hơi béo. Nếu Thiên Lương nhập miếu người này thân hình cao lớn và mạnh mẽ, nếu lạc hãm người đó yếu và gầy.",
+    "personality": "Cô độc xa rời đám đông, nhưng chính trực và vị tha, tính tình hòa nhã, có phong thái của một người nổi tiếng, có khả năng lập kế hoạch và ra quyết định tốt khi giải quyết công việc, giỏi phán đoán, giỏi ăn nói, thích hợp cho việc giảng dạy trước công chúng. Rất thận trọng và hào phóng với tính khí ngay thẳng.",
+    "career": [
+      "Giảng dạy",
+      "Giáo dục",
+      "Y học",
+      "Tâm linh",
+      "Kinh doanh (ở cung Dần, Thân, Tí, Ngọ)"
+    ],
+    "fortune": "Dù có gặp tai họa trong cuộc sống nhưng tuổi thọ rất dài. Gặp ác có thể chuyển hóa, gặp hoạn có thể hóa giải.",
+    "in_palace": {
+      "Mệnh": "Người không ưa bon chen, thích tĩnh lặng, thích tu hành. Bao dung, không phân biệt, từ bi bác ái. Ham học, tự giác, giản dị, thuần khiết. Phù hợp giảng dạy, giáo dục",
+      "Tý": "Thiện ấm triều cương, phúc thọ song toàn"
+    }
+  },
+  "Thất Sát": {
+    "nature": "Sao tướng tinh, cương quyết, xông xáo",
+    "positive": "Dũng cảm, quyết đoán, có tài lãnh đạo",
+    "negative": "Cô đơn, cô độc, dễ xung đột, sát khí nặng",
+    "detailed": "Thất Sát nhập nguyệt hạn báo hiệu trong tháng thường có biến động về tiền bạc nhưng có lợi, biến động về công việc nhưng có ích. Trong tháng nhìn chung có lợi cho việc ký kết hợp đồng, tích phúc trợ duyên. Do Thất Sát thuộc kim đới hỏa nên dễ xảy ra ốm đau chân tay sứt sẹo. Cần tránh va chạm pháp luật. Nếu phải tiêm, chích thì nên đến cơ sở lớn khi gặp ốm đau.",
+    "appearance": "Khuôn mặt nghiêm nghị, đường nét cứng rắn",
+    "career": [
+      "Quân đội",
+      "Công an",
+      "Kinh doanh",
+      "Thể thao"
+    ],
+    "in_palace": {
+      "Mệnh": "Dũng cảm, quyết đoán, có tài lãnh đạo, cô độc",
+      "Phụ Mẫu": "Cha mẹ là người nghiêm khắc. Do ngũ hành thuộc kim nên cha mẹ là người cô đơn, cô độc, không hợp với con cái. Thọ trường của cha hoặc mẹ có phần kém. Cha hoặc mẹ vất vả từ nhỏ, bôn ba kiếm sống"
+    }
+  },
+  "Phá Quân": {
+    "nature": "Sao đổi mới, phá hoại, tiên phong",
+    "positive": "Tiên phong, dám nghĩ dám làm, đột phá",
+    "negative": "Phá tán, bất ổn, hay thay đổi",
+    "detailed": "Phá Quân nhập nguyệt hạn báo hiệu tháng nhiều việc phải lo, nhìn chung tiền bạc hư hao nhiều, trong tháng này ắt phải chi số tiền, khối tiền lớn cho bản thân và gia đình. Phá Quân biểu hiện việc mua bán số tiền lớn như nhà cửa, xe cộ. Trong tháng phải đi lại nhiều, di chuyển nhiều.",
+    "appearance": "Khuôn mặt sắc sảo, có thần khí",
+    "career": [
+      "Kinh doanh",
+      "Cải cách",
+      "Sáng tạo",
+      "Quản lý"
+    ],
+    "in_palace": {
+      "Mệnh": "Tiên phong, dám làm, hay thay đổi, phá cách",
+      "Nô Bộc": "Dễ vì bạn bè mà hao tài tốn của hoặc dễ bị bạn bè phản bội lợi dụng dẫn đến sự hao hụt về tiền bạc hay như bạn bè tôi tới bội bạc"
+    }
+  }
+}

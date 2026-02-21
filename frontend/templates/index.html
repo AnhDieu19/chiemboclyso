@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tử Vi Đẩu Số - Python Application</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/chart.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>🔮 TỬ VI ĐẨU SỐ</h1>
+        <div class="home-button-container">
+            <a href="/finder" class="btn-calculate btn-home-link btn-gradient-blue">🔍
+                Tìm Giờ Sinh (Ngược)</a>
+            <a href="/analytics/beauty" class="btn-calculate btn-home-link btn-gradient-orange">📊
+                Thống Kê Hồng Nhan</a>
+            <a href="/vdp/" class="btn-calculate btn-home-link btn-gradient-green">🕸️
+                Vi Diệu Pháp</a>
+        </div>
+        <div class="form-section">
+            <div class="calendar-toggle"> <button id="btnSolar" class="active" onclick="setCalendarMode('solar')">☀️
+                    Dương Lịch</button> <button id="btnLunar" onclick="setCalendarMode('lunar')">🌙 Âm Lịch</button>
+            </div>
+            <form id="birthForm">
+                <div class="form-grid">
+                    <div class="form-group"> <label id="dayLabel">Ngày</label> <input type="number" id="day" min="1"
+                            max="31" value="28"> </div>
+                    <div class="form-group"> <label id="monthLabel">Tháng</label> <input type="number" id="month"
+                            min="1" max="12" value="3"> </div>
+                    <div class="form-group"> <label>Năm</label> <input type="number" id="year" min="1900" max="2100"
+                            value="1994" required> </div>
+                    <div class="form-group"> <label>Giờ sinh</label> <select id="hour">
+                            <option value="">(Không biết)</option>
+                            <option value="0">Tý (23-01h)</option>
+                            <option value="2">Sửu (01-03h)</option>
+                            <option value="4">Dần (03-05h)</option>
+                            <option value="6">Mão (05-07h)</option>
+                            <option value="8">Thìn (07-09h)</option>
+                            <option value="10">Tỵ (09-11h)</option>
+                            <option value="12" selected>Ngọ (11-13h)</option>
+                            <option value="14">Mùi (13-15h)</option>
+                            <option value="16">Thân (15-17h)</option>
+                            <option value="18">Dậu (17-19h)</option>
+                            <option value="20">Tuất (19-21h)</option>
+                            <option value="22">Hợi (21-23h)</option>
+                        </select> </div>
+                    <div class="form-group"> <label>Giới tính</label> <select id="gender">
+                            <option value="nam">Nam</option>
+                            <option value="nu">Nữ</option>
+                        </select> </div>
+                    <div class="form-group leap-month" id="leapMonth"> <label>Tháng nhuận</label> <input type="checkbox"
+                            id="leapMonthCheck"> </div>
+                </div> <button type="submit" class="btn-calculate">🔮 Lấy Lá Số</button>
+            </form>
+        </div>
+        <div class="loading" id="loading">
+            <p>Đang tính toán lá số...</p>
+        </div>
+
+        <!-- NEW ANALYTICS SECTION -->
+        <div class="analytics-dashboard" style="margin-top: 40px; background: #fff; padding: 25px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+            <h2 style="text-align: center; color: #2c3e50; margin-bottom: 25px; font-size: 1.8rem;">📊 Phân Tích Dữ Liệu Lớn (500k Lá Số)</h2>
+            
+            <div class="analytics-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                <!-- Chart 1: Heatmap -->
+                <div class="analytics-card" style="border: 1px solid #eee; padding: 15px; border-radius: 12px;">
+                    <h3 style="font-size: 1.1rem; margin-bottom: 10px; color: #34495e;">1. Thời Điểm Vàng (Giờ vs Tháng)</h3>
+                    <img src="{{ url_for('static', filename='images/analytics/1_destiny_heatmap.png') }}" style="width: 100%; border-radius: 8px;" alt="Heatmap">
+                    <p style="font-size: 0.9rem; color: #7f8c8d; margin-top: 8px;">Giờ Tý (23h-1h) có chỉ số hạnh phúc cao nhất.</p>
+                </div>
+
+                <!-- Chart 2: Stars -->
+                <div class="analytics-card" style="border: 1px solid #eee; padding: 15px; border-radius: 12px;">
+                    <h3 style="font-size: 1.1rem; margin-bottom: 10px; color: #34495e;">2. Xếp Hạng Chính Tinh</h3>
+                    <img src="{{ url_for('static', filename='images/analytics/2_star_power_ranking.png') }}" style="width: 100%; border-radius: 8px;" alt="Star Ranking">
+                    <p style="font-size: 0.9rem; color: #7f8c8d; margin-top: 8px;">Top các sao mang lại cuộc sống thuận lợi nhất.</p>
+                </div>
+
+                <!-- Chart 5: Ban Menh -->
+                <div class="analytics-card" style="border: 1px solid #eee; padding: 15px; border-radius: 12px;">
+                    <h3 style="font-size: 1.1rem; margin-bottom: 10px; color: #34495e;">3. Tương Quan Ngũ Hành</h3>
+                    <img src="{{ url_for('static', filename='images/analytics/5_ban_menh_correlation.png') }}" style="width: 100%; border-radius: 8px;" alt="Ban Menh">
+                    <p style="font-size: 0.9rem; color: #7f8c8d; margin-top: 8px;">Phân phối chỉ số hạnh phúc theo Bản Mệnh.</p>
+                </div>
+
+                <!-- Chart 3: Generation -->
+                <div class="analytics-card" style="border: 1px solid #eee; padding: 15px; border-radius: 12px;">
+                    <h3 style="font-size: 1.1rem; margin-bottom: 10px; color: #34495e;">4. Xu Hướng Thời Đại</h3>
+                    <img src="{{ url_for('static', filename='images/analytics/3_generation_gap.png') }}" style="width: 100%; border-radius: 8px;" alt="Generation Gap">
+                    <p style="font-size: 0.9rem; color: #7f8c8d; margin-top: 8px;">Biến động chỉ số Life Index qua các năm (1950-2005).</p>
+                </div>
+
+                <!-- Chart 4: Distribution -->
+                <div class="analytics-card" style="border: 1px solid #eee; padding: 15px; border-radius: 12px;">
+                    <h3 style="font-size: 1.1rem; margin-bottom: 10px; color: #34495e;">5. Phân Phối May Mắn</h3>
+                    <img src="{{ url_for('static', filename='images/analytics/4_luck_distribution.png') }}" style="width: 100%; border-radius: 8px;" alt="Distribution">
+                    <p style="font-size: 0.9rem; color: #7f8c8d; margin-top: 8px;">Phần lớn mọi người đều có chỉ số cân bằng (Bell Curve).</p>
+                </div>
+            </div>
+            
+            <div style="margin-top: 20px; padding: 15px; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #e74c3c;">
+                <strong>⚠️ Phát hiện quan trọng:</strong> 
+                Lá số có <em>Địa Không</em> tại Mệnh thường có chỉ số thấp hơn trung bình (-0.86 điểm). 
+                Tuy nhiên, Tuần/Triệt lại có xu hướng ổn định mệnh số tích cực.
+            </div>
+        </div>
+        <div id="results">
+            <div class="chart-container">
+                <div class="chart-grid" id="chartGrid"> <!-- Will be populated by JavaScript --> </div>
+            </div>
+            <div class="interpretation" id="interpretation"> <!-- Interpretation will be added here --> </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/chart-renderer.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/interpretation.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/form-handler.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/ai-chat.js') }}"></script>
+    <!-- Reverse Lookup Modal -->
+    <div id="reverseLookupModal" class="modal">
+        <div class="modal-content reverse-modal-content"> <span class="close">&times;</span>
+            <h2>Tra Cứu Ngược (Tìm Ngày Sinh từ Sao)</h2>
+            <div class="reverse-container"> <!-- Left: Star Selection -->
+                <div class="reverse-col">
+                    <h3>1. Chọn Sao và Cung</h3>
+                    <div class="form-group"> <label>Sao muốn tìm:</label> <select id="revStarSelect"
+                            class="form-control">
+                            <option value="Tử Vi">Tử Vi</option>
+                            <option value="Lộc Tồn">Lộc Tồn</option>
+                            <option value="Thái Tuế">Thái Tuế</option>
+                            <option value="Thiên Mã">Thiên Mã</option>
+                            <option value="Tả Phụ">Tả Phụ</option>
+                            <option value="Hữu Bật">Hữu Bật</option>
+                            <option value="Văn Xương">Văn Xương</option>
+                            <option value="Văn Khúc">Văn Khúc</option>
+                            <option value="Kinh Dương">Kinh Dương</option>
+                            <option value="Đà La">Đà La</option>
+                            <option value="Thiên Khôi">Thiên Khôi</option>
+                            <option value="Thiên Việt">Thiên Việt</option>
+                        </select> </div>
+                    <div class="form-group"> <label>Đặt tại Cung:</label> <select id="revPalaceSelect"
+                            class="form-control">
+                            <option value="0">Tý</option>
+                            <option value="1">Sửu</option>
+                            <option value="2">Dần</option>
+                            <option value="3">Mão</option>
+                            <option value="4">Thìn</option>
+                            <option value="5">Tỵ</option>
+                            <option value="6">Ngọ</option>
+                            <option value="7">Mùi</option>
+                            <option value="8">Thân</option>
+                            <option value="9">Dậu</option>
+                            <option value="10">Tuất</option>
+                            <option value="11">Hợi</option>
+                        </select> </div> <button onclick="addConstraint()" class="btn-primary" style="width:100%">Thêm
+                        Điều Kiện</button>
+                    <h3 style="margin-top: 20px;">2. Điều kiện đã chọn</h3>
+                    <ul id="constraintList" class="constraint-list"></ul>
+                    <button onclick="searchDates()" class="btn-primary btn-search-dates">Tìm Ngày Sinh</button>
+                </div> <!-- Right: Results -->
+                <div class="reverse-col">
+                    <h3>3. Kết quả Tìm kiếm</h3>
+                    <div id="searchResults" class="search-results-box">
+                        <div class="search-results-placeholder">Kết quả sẽ hiện ở đây...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/modal.js') }}"></script>
+
+    <!-- AI Master Modal -->
+    <div id="aiModal" class="modal" style="display:none">
+        <div class="modal-content ai-modal-content">
+            <!-- Header -->
+            <div class="ai-header">
+                <span onclick="closeAIModal()" class="ai-close-btn">&times;</span>
+                <div class="ai-header-flex">
+                    <div class="ai-avatar">🧙‍♂️</div>
+                    <div>
+                        <h2 class="ai-title">Thầy Tử Vi AI</h2>
+                        <p class="ai-subtitle">50 năm kinh nghiệm - Nam Phái</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Action -->
+            <div class="ai-quick-action">
+                <button onclick="askAIFull()" class="ai-btn-full">
+                    🔮 Xin Thầy Luận Giải Toàn Bộ Lá Số
+                </button>
+            </div>
+
+            <!-- Chat Messages -->
+            <div id="aiChatMessages" class="ai-chat-messages">
+                <div class="ai-welcome-box">
+                    <div class="ai-welcome-icon">🧙‍♂️</div>
+                    <p>Xin chào! Tôi là thầy tử vi AI với 50 năm kinh nghiệm.</p>
+                    <p class="ai-welcome-hint">Nhấn "Xin Thầy Luận Giải" để tôi xem lá số của bạn,<br>hoặc gõ câu hỏi
+                        vào
+                        ô bên dưới.</p>
+                </div>
+            </div>
+
+            <!-- Chat Input -->
+            <div class="ai-input-area">
+                <input type="text" id="aiChatInput" placeholder="Hỏi thầy về lá số của bạn..." class="ai-chat-input">
+                <button onclick="sendChatMessage()" class="ai-send-btn">
+                    Gửi
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

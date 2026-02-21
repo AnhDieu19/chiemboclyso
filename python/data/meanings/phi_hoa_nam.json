@@ -1,0 +1,109 @@
+{
+    "description": "Phi Hóa theo năm xem hạn - Lưu niên Tứ Hóa bay vào các cung",
+    "phi_hoa_loc": {
+        "Quan Lộc": {
+            "meaning": "Nhiều thành tựu, nhiều thành tích, nhiều may mắn",
+            "detail": "Phi Hóa Lộc nhập cung Quan biểu hiện một năm nhiều thành tựu, nhiều thành tích, nhiều may mắn. Trong năm này gặp nhiều hỷ sự, nhiều tin vui, người làm kinh doanh thường thành công, tạo ra tài sản nhiều, tiền bạc lớn. Còn biểu hiện cho việc tiền tài tự nhiên đến, nói cách khác đây còn là một năm bận rộn nhưng có kết quả ngoài mong đợi. Người làm quan viên, quan chức được nâng đỡ, giúp đỡ, luân chuyển, thụ hưởng. Người kinh doanh buôn bán lợi lộc, lợi tài."
+        },
+        "Tài Bạch": {
+            "meaning": "Phát tài, tiền bạc dồi dào",
+            "detail": "Phi Hóa Lộc nhập cung Tài biểu hiện một năm phát tài, tiền bạc tự nhiên đến, làm ăn thuận lợi, buôn bán có lời."
+        },
+        "Mệnh": {
+            "meaning": "Bản thân may mắn, vạn sự hanh thông",
+            "detail": "Phi Hóa Lộc nhập cung Mệnh biểu hiện bản thân gặp nhiều may mắn, mọi việc thuận lợi hanh thông."
+        },
+        "Điền Trạch": {
+            "meaning": "Mua nhà đất, tài sản gia tăng",
+            "detail": "Phi Hóa Lộc nhập cung Điền biểu hiện dễ mua được nhà đất, tài sản bất động sản gia tăng."
+        }
+    },
+    "phi_hoa_quyen": {
+        "Tài Bạch": {
+            "meaning": "Sự đầu tư, sắp đặt, phân bổ tài chính",
+            "detail": "Hóa Quyền thể hiện sự đầu tư, sự sắp đặt, sự phân bổ về tài chính. Trong năm nhiều việc phải lo, đây cũng là hình thái đấu cơ dàn trải, đầu tư có mục đích, nhìn chung có lợi cho tài bạch của 1 năm. Thể hiện sự kết hợp với nhiều người trong nhiều hoàn cảnh."
+        },
+        "Quan Lộc": {
+            "meaning": "Thăng tiến, nắm quyền trong công việc",
+            "detail": "Phi Hóa Quyền nhập cung Quan biểu hiện được thăng chức, nắm quyền điều hành, có tiếng nói trong công việc."
+        },
+        "Mệnh": {
+            "meaning": "Bản thân có quyền lực, được tôn trọng",
+            "detail": "Phi Hóa Quyền nhập cung Mệnh biểu hiện bản thân có quyền uy, được người khác tôn trọng, có sức ảnh hưởng."
+        }
+    },
+    "phi_hoa_khoa": {
+        "Tật Ách": {
+            "meaning": "Giải trừ tai ách, xu cát tị hung",
+            "detail": "Phi Hóa Khoa nhập cung Tật Ách giúp giải trừ tai ách, né tránh được hung họa, bệnh tật nhẹ nhàng."
+        },
+        "Quan Lộc": {
+            "meaning": "Danh tiếng trong công việc, được công nhận",
+            "detail": "Phi Hóa Khoa nhập cung Quan biểu hiện công việc được công nhận, có danh tiếng trong nghề nghiệp."
+        },
+        "Mệnh": {
+            "meaning": "Bản thân có danh tiếng, được khen ngợi",
+            "detail": "Phi Hóa Khoa nhập cung Mệnh biểu hiện bản thân được khen ngợi, có danh tiếng tốt."
+        }
+    },
+    "phi_hoa_ky": {
+        "Phụ Mẫu": {
+            "meaning": "Cha mẹ có vấn đề sức khỏe, bất hòa",
+            "detail": "Biểu hiện của sức khỏe cha mẹ có vấn đề, trong năm cha mẹ thường hay đau yếu. Hóa Kỵ chủ hình thương tai nạn bất ngờ, nhẹ thì khắc khẩu hình khẩu, nặng cha mẹ có thể bị hình thương, thương tật, thậm chí gặp đại nạn."
+        },
+        "Thiên Di": {
+            "meaning": "Ra ngoài gặp thị phi, tai tiếng",
+            "detail": "Phi Hóa Kỵ nhập cung Thiên Di là người ra ngoài gặp nhiều tai tiếng, thị phi, ít quan tâm tới người khác xung quanh, dễ bị người đời ghen ghét, đàm tiếu, hay như làm phúc phải tội, dễ hay bị hiểu lầm, họa toàn từ miệng mà ra."
+        },
+        "Quan Lộc": {
+            "meaning": "Công việc gặp trắc trở, thị phi",
+            "detail": "Phi Hóa Kỵ nhập cung Quan biểu hiện công việc gặp trắc trở, nhiều thị phi, dễ bị người khác gây khó dễ."
+        },
+        "Tài Bạch": {
+            "meaning": "Tiền bạc hao hụt, làm ăn khó khăn",
+            "detail": "Phi Hóa Kỵ nhập cung Tài biểu hiện tiền bạc hao hụt, làm ăn khó khăn, dễ mất tiền."
+        },
+        "Phu Thê": {
+            "meaning": "Vợ chồng bất hòa, mâu thuẫn",
+            "detail": "Phi Hóa Kỵ nhập cung Phu Thê biểu hiện vợ chồng hay cãi vã, bất hòa, mâu thuẫn trong năm."
+        }
+    },
+    "luu_tinh": {
+        "L.Bạch Hổ": {
+            "Phúc Đức": {
+                "meaning": "Gia đình họ tộc có người sắp gặp đại nạn",
+                "detail": "Báo hiệu trong gia đình họ tộc có người sắp gặp đại nạn. Lưu Bạch Hổ tính thuộc kim chủ về quan sự quan trọng nên đề phòng vợ chồng xích mích, thậm chí ly tán, ly hôn. Hết sức chú ý và cẩn trọng những việc liên quan đến tâm linh trong gia đình, dòng họ."
+            }
+        },
+        "L.Đà La": {
+            "Quan Lộc": {
+                "meaning": "Trắc trở, ám muội trong công việc",
+                "detail": "Lưu Đà La tại cung Quan chủ sự về trắc trở, ám muội, ngăn cản, cản trở, lừa gạt. Trong năm đó hết sức lưu ý quan tâm đến công việc, tránh chuyện đấu đá thị phi kiện tụng. Chủ sự về thất bại, khó khăn, áp lực, thậm chí bị hình thương tai nạn nghề nghiệp bắt bớ giam cầm, nhẹ có thể bị kỷ luật, khiển trách, nặng có thể ảnh hưởng đến sự nghiệp."
+            }
+        },
+        "L.Lộc Tồn": {
+            "Nô Bộc": {
+                "meaning": "May mắn về nhân duyên, quý nhân giúp đỡ",
+                "detail": "Lưu Lộc Tồn tại cung Nô Bộc thể hiện giá trị may mắn, giá trị về nhân duyên người khác mang đến cho mình. Trong năm này thường xuất hiện quý nhân hay như nhiều người đến nhờ vả, nhờ việc, nhiều người đến để tạo dựng các mối quan hệ nhưng cũng dễ gây ra phiền toái, áp lực và sự mệt mỏi."
+            }
+        },
+        "L.Thái Tuế": {
+            "Thiên Di": {
+                "meaning": "Thay đổi môi trường sống, dễ xuất ngoại",
+                "detail": "Lưu Thái Tuế chủ sự về thay đổi, chủ tầng áp lực, nhưng cũng tầng khởi điểm, giai đoạn đánh dấu sự bắt đầu. Nhập cung Di chủ một năm dễ xuất ngoại, một năm dễ thay đổi môi trường sống. Cát lợi cho chuyện hôn nhân, có lợi trong chuyện tạo dựng sự nghiệp đi xa học hành. Năm này thường nhận được giấy tờ, thủ tục, giấy mời từ phương xa."
+            }
+        },
+        "L.Kinh Dương": {
+            "Thiên Di": {
+                "meaning": "Cẩn thận xuất ngoại, giao thông",
+                "detail": "Cần lưu tâm chú ý hết sức cẩn trọng việc xuất ngoại, việc tham gia giao thông cũng như gặp người hung ác kẻ thủ đoạn ngoài đường. Trong năm này hạn chế việc đi lại để tránh bị hình thương, thương tích, tránh vi phạm pháp luật, đề phòng bị bắt bớ giam cầm."
+            }
+        },
+        "L.Tang Môn": {
+            "Tài Bạch": {
+                "meaning": "Vất vả về kinh tế, hao tài tốn của",
+                "detail": "Báo hiệu một năm vất vả về kinh tế, nhiều dự định làm ăn, nhiều toan tính khó thành công. Trong năm này thường của đi thay người, phải dùng tiền bạc để giải quyết các vấn đề, giải quyết các mâu thuẫn phát sinh. Tại cung tài bạch cũng là một năm hao tài tốn của, kinh tế thường sa sút, nhiều việc phải lo cho bản thân cũng như cho gia đình, năm này thường phải bỏ tiền để lo cho việc tâm linh hay giúp đỡ anh em họ hàng."
+            }
+        }
+    }
+}

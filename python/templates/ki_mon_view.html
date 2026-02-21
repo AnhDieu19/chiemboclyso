@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kì Môn Độn Giáp</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .palace-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 5px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .palace-cell {
+            border: 1px solid #bdc3c7;
+            padding: 10px;
+            min-height: 180px;
+            background: #fff;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .palace-cell.center {
+            background: #fdfefe;
+            border: 2px solid #f39c12;
+        }
+
+        /* Grid Layout internal 3x3 for elements */
+        .cell-elements {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5px;
+            font-size: 0.85rem;
+        }
+
+        .element-box {
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+
+        .elem-mon {
+            background: #e8daef;
+            color: #8e44ad;
+        }
+
+        .elem-tinh {
+            background: #d6eaf8;
+            color: #2980b9;
+        }
+
+        .elem-than {
+            background: #ffecb3;
+            color: #d35400;
+            font-weight: bold;
+        }
+
+        .elem-ky {
+            background: #abebc6;
+            color: #27ae60;
+            font-weight: bold;
+            grid-column: span 2;
+            text-align: center;
+        }
+
+        .palace-footer {
+            border-top: 1px dashed #eee;
+            margin-top: 5px;
+            padding-top: 5px;
+            font-size: 0.8rem;
+            color: #7f8c8d;
+            text-align: center;
+        }
+
+        .direction-badge {
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #2c3e50;
+            color: #fff;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.7rem;
+        }
+
+        .nature-dai_cat { color: #1abc9c; font-weight: bold; }
+        .nature-cat { color: #27ae60; font-weight: bold; }
+        .nature-trung { color: #f39c12; }
+        .nature-hung { color: #e74c3c; font-weight: bold; }
+        .nature-dai_hung { color: #c0392b; font-weight: bold; }
+        .nature-cat_hung { color: #e67e22; }
+
+        .elem-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 0;
+            border-bottom: 1px dotted #eee;
+        }
+        .elem-row:last-child { border-bottom: none; }
+        .elem-row .elem-label {
+            font-weight: 600;
+            min-width: 40px;
+            font-size: 0.82rem;
+        }
+        .elem-row .elem-name {
+            font-weight: bold;
+        }
+        .elem-row .elem-han {
+            color: #95a5a6;
+            font-size: 0.78rem;
+        }
+        .elem-row .elem-meaning {
+            color: #555;
+            font-size: 0.82rem;
+        }
+        .elem-row .elem-score {
+            font-size: 0.78rem;
+            margin-left: auto;
+        }
+        .elem-score.positive { color: #27ae60; }
+        .elem-score.negative { color: #e74c3c; }
+
+        .app-badge {
+            display: inline-block;
+            background: #eaf2f8;
+            color: #2471a3;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.72rem;
+            margin: 2px;
+        }
+
+        .ngu-hanh-badge {
+            display: inline-block;
+            padding: 1px 7px;
+            border-radius: 8px;
+            font-size: 0.72rem;
+            font-weight: 600;
+        }
+        .hanh-Kim { background: #fdebd0; color: #b9770e; }
+        .hanh-Mộc, .hanh-Moc { background: #d5f5e3; color: #1e8449; }
+        .hanh-Thủy, .hanh-Thuy { background: #d6eaf8; color: #2874a6; }
+        .hanh-Hỏa, .hanh-Hoa { background: #fadbd8; color: #cb4335; }
+        .hanh-Thổ, .hanh-Tho { background: #f9e79f; color: #7d6608; }
+
+        .combined-box {
+            background: #fef9e7;
+            border-left: 3px solid #f39c12;
+            padding: 10px 14px;
+            margin-top: 8px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            line-height: 1.6;
+            color: #444;
+        }
+        .combined-box.nature-cat, .combined-box.nature-dai_cat {
+            background: #eafaf1;
+            border-left-color: #27ae60;
+        }
+        .combined-box.nature-hung, .combined-box.nature-dai_hung {
+            background: #fdedec;
+            border-left-color: #e74c3c;
+        }
+
+        .palace-cell .palace-short-meaning {
+            font-size: 0.72rem;
+            color: #666;
+            margin-top: 4px;
+            border-top: 1px dashed #ddd;
+            padding-top: 3px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success mb-4">
+        <div class="container">
+            <a class="navbar-brand" id="link-home" href="/">Tử Vi Đẩu Số</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" id="link-thai-at" href="/thai-at">Thái Ất</a></li>
+                    <li class="nav-item"><a class="nav-link active" id="link-ki-mon" href="/ki-mon">Kì Môn</a></li>
+                </ul>
+                <script>
+                    if (window.location.protocol === 'file:') {
+                        document.getElementById('link-home').href = 'http://localhost:5001/';
+                        document.getElementById('link-thai-at').href = 'http://localhost:5001/thai-at';
+                        document.getElementById('link-ki-mon').href = 'http://localhost:5001/ki-mon';
+                    }
+                </script>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="card mb-4">
+            <div class="card-header bg-white">
+                <h4 class="mb-0">Kì Môn Độn Giáp - Lập Bàn</h4>
+            </div>
+            <div class="card-body">
+                <form id="qiMenForm" class="row g-3">
+                    <div class="col-md-4">
+                        <label class="form-label">Năm</label>
+                        <input type="number" class="form-control" name="year" value="2024">
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Tháng</label>
+                        <input type="number" class="form-control" name="month" value="12">
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Ngày</label>
+                        <input type="number" class="form-control" name="day" value="24" onchange="updateCanChiHour()">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">Giờ (0-23)</label>
+                        <input type="number" class="form-control" name="hour" value="10" onchange="updateCanChiHour()">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Phút</label>
+                        <input type="number" class="form-control" name="minute" value="0" onchange="updateCanChiHour()">
+                    </div>
+
+                    <div class="col-md-12 text-center mt-2">
+                        <button type="button" class="btn btn-outline-primary btn-sm mb-2" onclick="setCurrentTime()">🕒
+                            Lấy giờ hiện tại</button>
+                        <br>
+                        <span id="canChiHourLabel" class="badge bg-light text-dark border"
+                            style="font-size: 1rem; padding: 10px 20px;">--:--</span>
+                    </div>
+
+                    <div class="col-12 text-center mt-4">
+                        <button type="button" class="btn btn-success px-5" onclick="calculateQiMen()">Lập Bàn</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="resultArea" style="display: none;">
+            <div class="alert alert-info text-center">
+                <h4 id="headerInfo" class="mb-0">Cục 6 - Dương Độn (Tiết Đông Chí)</h4>
+            </div>
+
+            <div class="palace-grid" id="chartGrid">
+                <!-- Grid will be generated here -->
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <div class="card border-success h-100">
+                        <div class="card-header bg-success text-white">Phương Hướng Tốt Nhất</div>
+                        <div class="card-body">
+                            <h3 id="bestDir">Đông Nam</h3>
+                            <p id="bestReason" class="mb-0"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card border-danger h-100">
+                        <div class="card-header bg-danger text-white">Phương Hướng Xấu Nhất</div>
+                        <div class="card-body">
+                            <h3 id="worstDir">Tây Bắc</h3>
+                            <p id="worstReason" class="mb-0"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Analysis Section -->
+            <div class="card mt-4 mb-5">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">📜 Bình Giải Chi Tiết Các Cung</h5>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped">
+                            <thead class="table-light">
+                                <tr>
+                                    <th style="width: 15%">Hướng / Cung</th>
+                                    <th style="width: 10%">Điểm</th>
+                                    <th style="width: 75%">Luận Giải Chi Tiết</th>
+                                </tr>
+                            </thead>
+                            <tbody id="analysisTableBody">
+                                <!-- JS will populate this -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Layout Lạc Thư: 4 9 2 | 3 5 7 | 8 1 6
+        const LAYOUT = [
+            [4, 9, 2],
+            [3, 5, 7],
+            [8, 1, 6]
+        ];
+
+        const API_BASE = window.location.protocol === 'file:' ? 'http://localhost:5001' : '';
+
+        async function calculateQiMen() {
+            const formData = new FormData(document.getElementById('qiMenForm'));
+            const data = Object.fromEntries(formData);
+
+            try {
+                const response = await fetch(API_BASE + '/api/ki-mon/calculate', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+
+                const result = await response.json();
+                if (result.success) {
+                    renderChart(result.data);
+                } else {
+                    alert('Lỗi: ' + result.error);
+                }
+            } catch (e) {
+                alert('Lỗi kết nối: ' + e + '\n\nHãy đảm bảo server đang chạy tại http://localhost:5001 và truy cập trang qua địa chỉ đó.');
+            }
+        }
+
+        function renderChart(data) {
+            document.getElementById('resultArea').style.display = 'block';
+
+            // Header Info
+            const cuc = data.cuc_info;
+            document.getElementById('headerInfo').textContent = `Cục ${cuc.cuc} - ${cuc.don_type} (Tiết ${cuc.tiet_khi})`;
+
+            // Best/Worst
+            document.getElementById('bestDir').textContent = `${data.best_direction.direction} (Cung ${data.best_direction.palace})`;
+            document.getElementById('bestReason').textContent = data.best_direction.reason;
+
+            document.getElementById('worstDir').textContent = `${data.worst_direction.direction} (Cung ${data.worst_direction.palace})`;
+            document.getElementById('worstReason').textContent = data.worst_direction.reason;
+
+            const grid = document.getElementById('chartGrid');
+            grid.innerHTML = '';
+
+            for (let row = 0; row < 3; row++) {
+                for (let col = 0; col < 3; col++) {
+                    const palaceId = LAYOUT[row][col];
+                    const palaceData = data.palaces[palaceId];
+                    renderPalaceCell(grid, palaceData, palaceId);
+                }
+            }
+
+            // Render Analysis Table
+            renderAnalysisTable(data.palaces);
+        }
+
+        function renderAnalysisTable(palaces) {
+            const tbody = document.getElementById('analysisTableBody');
+            tbody.innerHTML = '';
+
+            const sortedPalaces = Object.values(palaces)
+                .filter(p => p.palace !== 5)
+                .sort((a, b) => b.score - a.score);
+
+            const natureLabels = {
+                dai_cat: '🌟 ĐẠI CÁT', cat: '⭐ CÁT', trung: '⚖️ TRUNG',
+                hung: '⚠️ HUNG', dai_hung: '🔥 ĐẠI HUNG', cat_hung: '☯️ CÁT HUNG'
+            };
+
+            sortedPalaces.forEach(p => {
+                const tr = document.createElement('tr');
+
+                let scoreClass = 'text-muted';
+                if (p.score >= 20) scoreClass = 'text-success fw-bold';
+                else if (p.score >= 10) scoreClass = 'text-success';
+                else if (p.score <= -10) scoreClass = 'text-danger fw-bold';
+                else if (p.score <= -5) scoreClass = 'text-danger';
+
+                // Build detailed element rows
+                let details = '';
+                const natureLabel = natureLabels[p.nature] || p.nature.toUpperCase();
+                details += `<div class="mb-2"><span class="nature-${p.nature}">${natureLabel}</span></div>`;
+
+                // Môn
+                if (p.mon_detail) {
+                    const d = p.mon_detail;
+                    const sc = d.score >= 0 ? 'positive' : 'negative';
+                    details += `<div class="elem-row">`;
+                    details += `<span class="elem-label elem-mon">Môn</span> `;
+                    details += `<span class="elem-name">${d.name}</span> `;
+                    details += `<span class="elem-han">${d.han}</span> `;
+                    details += `<span class="elem-meaning">— ${d.meaning}</span>`;
+                    details += `<span class="elem-score ${sc}">${d.score > 0 ? '+' : ''}${d.score}</span>`;
+                    details += `</div>`;
+                    if (d.applications && d.applications.length) {
+                        details += `<div class="ms-4 mb-1">`;
+                        d.applications.forEach(a => { details += `<span class="app-badge">${a}</span>`; });
+                        details += `</div>`;
+                    }
+                }
+
+                // Tinh
+                if (p.tinh_detail) {
+                    const d = p.tinh_detail;
+                    const sc = d.score >= 0 ? 'positive' : 'negative';
+                    const hanh = d.ngu_hanh ? `<span class="ngu-hanh-badge hanh-${d.ngu_hanh}">${d.ngu_hanh}</span> ` : '';
+                    details += `<div class="elem-row">`;
+                    details += `<span class="elem-label elem-tinh">Tinh</span> `;
+                    details += `<span class="elem-name">${d.name}</span> `;
+                    details += `<span class="elem-han">${d.han}</span> ${hanh}`;
+                    details += `<span class="elem-meaning">— ${d.meaning}</span>`;
+                    details += `<span class="elem-score ${sc}">${d.score > 0 ? '+' : ''}${d.score}</span>`;
+                    details += `</div>`;
+                }
+
+                // Thần
+                if (p.than_detail) {
+                    const d = p.than_detail;
+                    const sc = d.score >= 0 ? 'positive' : 'negative';
+                    details += `<div class="elem-row">`;
+                    details += `<span class="elem-label elem-than">Thần</span> `;
+                    details += `<span class="elem-name">${d.name}</span> `;
+                    details += `<span class="elem-han">${d.han}</span> `;
+                    details += `<span class="elem-meaning">— ${d.meaning}</span>`;
+                    details += `<span class="elem-score ${sc}">${d.score > 0 ? '+' : ''}${d.score}</span>`;
+                    details += `</div>`;
+                }
+
+                // Tam Kỳ
+                if (p.ky_detail) {
+                    const d = p.ky_detail;
+                    const hanh = d.ngu_hanh ? `<span class="ngu-hanh-badge hanh-${d.ngu_hanh}">${d.ngu_hanh}</span> ` : '';
+                    details += `<div class="elem-row">`;
+                    details += `<span class="elem-label elem-ky">Kỳ</span> `;
+                    details += `<span class="elem-name">${d.name}</span> `;
+                    details += `<span class="elem-han">${d.han}</span> ${hanh}`;
+                    if (d.alias) details += `<em class="text-muted">(${d.alias})</em> `;
+                    details += `<span class="elem-meaning">— ${d.meaning}</span>`;
+                    details += `<span class="elem-score positive">+${d.score}</span>`;
+                    details += `</div>`;
+                }
+
+                // Combined analysis
+                if (p.combined_analysis) {
+                    details += `<div class="combined-box nature-${p.nature}">`;
+                    details += `<strong>📋 Tổng hợp:</strong> ${p.combined_analysis}`;
+                    details += `</div>`;
+                }
+
+                if (!p.mon_detail && !p.tinh_detail && !p.than_detail && !p.ky_detail) {
+                    details += '<em class="text-muted">Bình hòa, không có yếu tố đặc biệt.</em>';
+                }
+
+                tr.innerHTML = `
+                    <td>
+                        <strong>${p.palace_info.direction}</strong><br>
+                        <small class="text-muted">Cung ${p.palace_info.name}</small>
+                    </td>
+                    <td class="${scoreClass} text-center display-6" style="vertical-align: middle;">
+                        ${p.score}
+                    </td>
+                    <td>${details}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        function renderPalaceCell(container, data, id) {
+            const div = document.createElement('div');
+            div.className = `palace-cell ${id === 5 ? 'center' : ''}`;
+
+            // Elements
+            let elementsHtml = '<div class="cell-elements">';
+            if (data.than) elementsHtml += `<div class="element-box elem-than">${data.than}</div>`;
+            if (data.tinh) elementsHtml += `<div class="element-box elem-tinh">${data.tinh}</div>`;
+            if (data.mon) elementsHtml += `<div class="element-box elem-mon">${data.mon}</div>`;
+            elementsHtml += '</div>'; // Close row 1
+
+            if (data.tam_ky) {
+                elementsHtml += `<div class="element-box elem-ky mt-2 text-center" style="width:100%">Kỳ: ${data.tam_ky}</div>`;
+            }
+
+            // Nature icon
+            let nIcon = '';
+            if (data.nature.includes('cat')) nIcon = '⭐';
+            else if (data.nature.includes('hung')) nIcon = '⚠️';
+            else nIcon = '⚖️';
+
+            // Short combined meaning
+            let shortMeaning = '';
+            if (data.combined_analysis) {
+                // Take first sentence only
+                shortMeaning = data.combined_analysis.split('.')[0] + '.';
+            }
+
+            div.innerHTML = `
+                <div class="direction-badge">${data.palace_info.direction}</div>
+                <div class="text-center mb-2" style="font-weight:bold; color:#7f8c8d">${data.palace_info.name}</div>
+                ${elementsHtml}
+                <div class="palace-footer">
+                    ${nIcon} Điểm: <strong class="nature-${data.nature}">${data.score}</strong>
+                </div>
+                ${shortMeaning ? `<div class="palace-short-meaning">${shortMeaning}</div>` : ''}
+            `;
+
+            container.appendChild(div);
+        }
+
+        // Auto-fill current date/time on load
+        document.addEventListener('DOMContentLoaded', function () {
+            setCurrentTime();
+        });
+
+        function setCurrentTime() {
+            const now = new Date();
+            document.querySelector('input[name="year"]').value = now.getFullYear();
+            document.querySelector('input[name="month"]').value = now.getMonth() + 1;
+            document.querySelector('input[name="day"]').value = now.getDate();
+            document.querySelector('input[name="hour"]').value = now.getHours();
+            document.querySelector('input[name="minute"]').value = now.getMinutes();
+            updateCanChiHour();
+        }
+
+        const CHI_NAMES = [
+            "Tý (23h-1h)", "Sửu (1h-3h)", "Dần (3h-5h)", "Mão (5h-7h)",
+            "Thìn (7h-9h)", "Tỵ (9h-11h)", "Ngọ (11h-13h)", "Mùi (13h-15h)",
+            "Thân (15h-17h)", "Dậu (17h-19h)", "Tuất (19h-21h)", "Hợi (21h-23h)"
+        ];
+
+        function updateCanChiHour() {
+            const h = parseInt(document.querySelector('input[name="hour"]').value);
+            const m = parseInt(document.querySelector('input[name="minute"]').value);
+
+            if (isNaN(h) || isNaN(m)) return;
+
+            // Logic tính Chi: (Giờ + 1) / 2 lấy phần nguyên % 12
+            const chiIndex = Math.floor((h + 1) / 2) % 12;
+            const chiName = CHI_NAMES[chiIndex];
+
+            const label = document.getElementById('canChiHourLabel');
+            label.textContent = `Giờ ${chiName} - (Thời gian thực: ${h}h${m.toString().padStart(2, '0')})`;
+
+            // Highlight nếu sát giờ giao thoa (phút <= 10 hoặc phút >= 50)
+            if (m <= 10 || m >= 50) {
+                label.className = 'badge bg-warning text-dark border';
+                label.textContent += " [Sát giờ giao thoa]";
+            } else {
+                label.className = 'badge bg-info text-dark border';
+            }
+        }
+    </script>
+</body>
+
+</html>

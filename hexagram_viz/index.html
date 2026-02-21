@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>64 Quẻ Dịch - Viên Đồ</title>
+
+    <!-- External Libraries -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Modules -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/tooltip.css">
+    <link rel="stylesheet" href="css/hexagram.css">
+</head>
+
+<body>
+    <div id="container">
+        <!-- SVG will be appended here -->
+    </div>
+    <div id="tooltip" class="hidden">
+        <h3 id="hex-name"></h3>
+        <p><strong>Tượng:</strong> <span id="hex-image"></span></p>
+        <p><strong>Ý Nghĩa:</strong> <span id="hex-meaning"></span></p>
+        <p><strong>Thoán Từ:</strong> <span id="hex-judgment"></span></p>
+        <p><strong>Lời Khuyên:</strong> <span id="hex-advice"></span></p>
+    </div>
+
+    <!-- JS Modules (load order matters) -->
+    <script src="js/config.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/analysis.js"></script>
+    <script src="js/tooltip.js"></script>
+    <script src="js/interactions.js"></script>
+    <script src="js/layers/luong-nghi.js"></script>
+    <script src="js/layers/tu-tuong.js"></script>
+    <script src="js/layers/bat-quai.js"></script>
+    <script src="js/layers/hexagrams.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

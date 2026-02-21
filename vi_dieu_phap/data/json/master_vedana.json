@@ -1,0 +1,32 @@
+[
+  {
+    "id": "V_UPEKKHA",
+    "name": "Thọ Xả (Upekkha)",
+    "color": "#FFFFE0",
+    "description": "Neutral Feeling"
+  },
+  {
+    "id": "V_SOMANASSA",
+    "name": "Thọ Hỷ (Somanassa)",
+    "color": "#FFD700",
+    "description": "Pleasant Mental Feeling"
+  },
+  {
+    "id": "V_DOMANASSA",
+    "name": "Thọ Ưu (Domanassa)",
+    "color": "#FF4500",
+    "description": "Unpleasant Mental Feeling"
+  },
+  {
+    "id": "V_SUKHA",
+    "name": "Thọ Lạc (Sukha)",
+    "color": "#00FF00",
+    "description": "Pleasant Bodily Feeling"
+  },
+  {
+    "id": "V_DUKKHA",
+    "name": "Thọ Khổ (Dukkha)",
+    "color": "#808080",
+    "description": "Painful Bodily Feeling"
+  }
+]

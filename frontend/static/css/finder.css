@@ -1,0 +1,178 @@
+/**
+ * finder.css - Finder Page Styles
+ * Giao diện Ổ Khóa Số (Slot Machine) tìm giờ sinh
+ */
+
+/* --- Rank Cards --- */
+.rank-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #fff;
+    transition: transform 0.2s;
+}
+
+.rank-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.gold-trophy {
+    color: #ecc94b;
+    font-size: 1.5rem;
+}
+
+.archetype-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+}
+
+body {
+    background-color: #f4f6f9;
+}
+
+.card-header {
+    font-weight: bold;
+    background-color: #4a5568;
+    color: white;
+}
+
+/* --- Slot Machine --- */
+.slot-machine-wrapper {
+    display: flex;
+    gap: 20px;
+    height: 400px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    position: relative;
+}
+
+/* Reel Container */
+.reels-container {
+    display: flex;
+    flex: 2;
+    gap: 10px;
+    position: relative;
+    background: #f8fafc;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    overflow: hidden;
+}
+
+/* Focus Bar (Reading Line) */
+.focus-bar {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background: rgba(66, 153, 225, 0.1);
+    border-top: 2px solid #4299e1;
+    border-bottom: 2px solid #4299e1;
+    transform: translateY(-50%);
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* Individual Reel */
+.reel {
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    height: 100%;
+    scrollbar-width: none;
+    position: relative;
+    text-align: center;
+}
+
+#reelYear { flex: 1; }
+#reelMonth { flex: 0.8; }
+#reelDay { flex: 1.5; }
+#reelHour { flex: 2.5; }
+
+.reel::-webkit-scrollbar {
+    display: none;
+}
+
+/* Reel Item */
+.reel-item {
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.1rem;
+    color: #718096;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+}
+
+/* Spacer for scrolling first/last items to center */
+.reel-spacer {
+    height: 175px;
+}
+
+/* Active Item */
+.reel-item.active {
+    color: #2b6cb0;
+    font-weight: bold;
+    font-size: 1.3rem;
+    transform: scale(1.1);
+    transition: all 0.2s;
+}
+
+/* --- Heatmap Dots --- */
+.heat-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+.dot-green {
+    background-color: #48bb78;
+    box-shadow: 0 0 5px #48bb78;
+}
+
+.dot-yellow {
+    background-color: #ecc94b;
+}
+
+.dot-grey {
+    background-color: #cbd5e0;
+}
+
+/* --- Result Panel --- */
+.result-panel {
+    flex: 3;
+    border-left: 1px solid #e2e8f0;
+    padding-left: 20px;
+    overflow-y: auto;
+}
+
+.score-display {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #2b6cb0;
+}
+
+.cung-menh-box {
+    background: #ebf8ff;
+    border-left: 4px solid #4299e1;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.choices__inner {
+    background-color: white;
+    min-height: 40px;
+}

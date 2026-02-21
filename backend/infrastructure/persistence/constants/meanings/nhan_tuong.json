@@ -1,0 +1,65 @@
+{
+    "dien_tuong": {
+        "description": "Đặc điểm khuôn mặt để đánh giá bản chất và vận mệnh.",
+        "parts": {
+            "Mắt": {
+                "tot": "Mắt sáng, long lanh (thông minh); mắt có thần.",
+                "xau": "Mắt trắng dã (độc ác, thủ đoạn); mắt dại/láo liên (kém trí); mắt đục (thiếu xác xảo)."
+            },
+            "Tai": {
+                "tot": "Rái tai to, dài, thòng xuống (tượng tai Phật); tai dày, hồng hào, có Thành quách (giàu có, thọ).",
+                "xau": "Tai mỏng, đen, loe ra hoặc bạt nhĩ (nghèo khổ, lười tư duy)."
+            },
+            "Miệng & Răng": {
+                "tot": "Miệng đều, môi trên dưới cân xứng; răng đều như hạt ngô (giàu có); răng nanh (khôn ngoan, gan dạ).",
+                "xau": "Môi thâm (tâm địa thâm độc); môi mỏng quá (điêu ngoa); răng thưa (khó giữ tiền); răng mọc lệch (nói lời thiếu sâu sắc)."
+            },
+            "Trán": {
+                "tot": "Trán dựng, cao, rộng và đều (người có tài văn chương, lỗi lạc).",
+                "xau": "Gân trán nổi cao (tính tình nóng nảy)."
+            },
+            "Mũi": {
+                "tot": "Mũi cao, đầy đặn (tài khố - kho tiền).",
+                "xau": "Mũi nhỏ, mỏng, hếch (lỗ mũi hướng thiên) hoặc mũi quặp (tướng dâm bất chấp, xấu tính)."
+            }
+        }
+    },
+    "thu_tuong": {
+        "description": "Bàn tay được coi là bộ phận quan trọng để đoán định công danh và tài lộc.",
+        "traits": {
+            "Màu sắc": "Bàn tay đỏ ửng như son hoặc hồng hào là quý tướng, thường là lãnh đạo, quan chức hoặc người có học thức, tài lộc suốt đời.",
+            "Hình dáng": "Bàn tay mềm mại, các ngón tay kín (không hở kẽ khi khép lại) là người có tương lai, giữ được tiền.",
+            "Độ mở": "Người khôn ngoan thường có xu hướng hơi nắm tay lại (kín đáo); tay lúc nào cũng xòe ra là người khó thành đạt.",
+            "Chỉ tay": "Chỉ cần đường Thái dương và Sinh đạo rõ nét là đủ để phú quý, vinh hiển và trường thọ.",
+            "Hoa tay": "Có 3 hoặc 4 hoa tay là đẹp nhất (đa tài, nổi danh); quá nhiều hoặc quá ít thường bình thường."
+        },
+        "nhan_ngon_tay": {
+            "Ngón cái": "Tưởng nhớ và đề cao người Cha.",
+            "Ngón trỏ": "Tưởng nhớ và đề cao người Mẹ (người đeo ngón này thường bướng bỉnh, cái tôi lớn).",
+            "Ngón giữa": "Chỉ quan tâm đến Bản thân mình (cái tôi cực cao).",
+            "Ngón áp út": "Đề cao Hôn nhân và sự thủy chung trong tình yêu.",
+            "Ngón út": "Trân trọng Tình bạn và bạn bè."
+        }
+    },
+    "dam_tuong": {
+        "description": "Đặc điểm của người có nhu cầu sinh lý cao hoặc đào hoa đa tình.",
+        "signs": {
+            "Đôi mắt": "Mắt ướt, long lanh; mắt lá răm/lá tre; đuôi mắt dài hoặc có nốt ruồi ở đuôi mắt.",
+            "Nốt ruồi": "Nốt ruồi quanh miệng, ở ngực, hoặc ở bộ phận sinh dục (chỗ kín) chủ về đời sống chăn gối mặn nồng, dễ thay đổi.",
+            "Dáng đi & Giọng nói": "Dáng đi uốn éo như rắn; giọng nói lanh lảnh, chua hoặc đanh.",
+            "Lông & Tóc": "Lông mày dày rậm, cong vút; lông tay, lông chân và lông mao nhiều (đa mao thường đa dâm).",
+            "Diện mạo khác": "Gò má cao và thường xuyên ửng hồng; nhân trung to và sâu; môi mỏng và hay cười thầm, nhìn trộm.",
+            "Hình thể": "Ngực nở, mông dày, cổ ngắn có ngấn; phụ nữ chân thẳng tuột từ trên xuống dưới."
+        }
+    },
+    "hinh_tuong_giong_noi": {
+        "description": "Nhận diện qua giọng nói và dáng đi.",
+        "traits": {
+            "Người khôn": "Nói tiếng dịu dàng, dễ nghe.",
+            "Phụ nữ giọng lanh lảnh": "Như tiếng đồng thường dễ sát chồng, hại con.",
+            "Dáng đi tốt": "Cần thẳng, chắc chắn.",
+            "Dáng đi xấu": "Uốn éo như rắn thường là người gian tà, đa đoan."
+        }
+    },
+    "luu_y": "Xem tướng là bộ môn cần sự trải nghiệm, quan sát lâu dài và mang tính tương đối. Một đặc điểm xấu có thể được chế hóa nếu tổng thể diện tướng có nhiều điểm tốt bổ trợ. Phải xem xét toàn bộ bố cục, màu sắc và thần thái."
+}

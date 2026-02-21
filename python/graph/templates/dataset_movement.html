@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dataset Star Movement Analysis</title>
+
+    <!-- D3.js -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: #ffffff;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1800px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        /* Control Panel */
+        .control-panel {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-inline {
+            display: flex;
+            gap: 20px;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            min-width: 120px;
+        }
+
+        .form-group label {
+            font-size: 0.9em;
+            margin-bottom: 5px;
+            opacity: 0.9;
+        }
+
+        .form-group input,
+        .form-group select {
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            font-size: 1em;
+        }
+
+        .btn-analyze {
+            padding: 10px 30px;
+            border: none;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-analyze:hover {
+            transform: translateY(-2px);
+        }
+
+        .info-text {
+            margin-top: 15px;
+            padding: 15px;
+            background: rgba(255, 215, 0, 0.1);
+            border-left: 4px solid #fbbf24;
+            border-radius: 5px;
+            font-size: 0.95em;
+        }
+
+        /* Results Grid */
+        .results-container {
+            display: none;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        .stat-card h3 {
+            margin-bottom: 15px;
+            color: #fbbf24;
+            font-size: 1.1em;
+        }
+
+        .stat-value {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #667eea;
+            margin: 10px 0;
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+
+        /* Star Movement Visualization */
+        .star-viz-container {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+
+        .star-viz-container h3 {
+            margin-bottom: 20px;
+            color: #fbbf24;
+        }
+
+        #movement-graph {
+            width: 100%;
+            height: 600px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+
+        /* Star Lists */
+        .star-lists {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .star-list-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
+            max-height: 500px;
+            overflow-y: auto;
+        }
+
+        .star-list-card h3 {
+            margin-bottom: 15px;
+            color: #fbbf24;
+            position: sticky;
+            top: 0;
+            background: inherit;
+            padding-bottom: 10px;
+        }
+
+        .star-item {
+            padding: 10px;
+            margin-bottom: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            border-left: 4px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .star-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateX(5px);
+        }
+
+        .star-item.fixed {
+            border-left-color: #3b82f6;
+        }
+
+        .star-item.moving {
+            border-left-color: #fbbf24;
+        }
+
+        .star-name {
+            font-weight: bold;
+            font-size: 1.05em;
+            margin-bottom: 5px;
+        }
+
+        .star-detail {
+            font-size: 0.85em;
+            opacity: 0.8;
+        }
+
+        /* Loading */
+        .loading {
+            text-align: center;
+            padding: 60px;
+            display: none;
+        }
+
+        .spinner {
+            width: 60px;
+            height: 60px;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            border-top-color: white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Scrollbar */
+        .star-list-card::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .star-list-card::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+
+        .star-list-card::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 4px;
+        }
+
+        /* D3 Graph Styles */
+        .cung-circle {
+            fill: rgba(100, 149, 237, 0.3);
+            stroke: #6495ED;
+            stroke-width: 2;
+        }
+
+        .cung-label {
+            fill: white;
+            font-size: 13px;
+            font-weight: bold;
+            text-anchor: middle;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+        }
+
+        .star-path {
+            fill: none;
+            stroke-width: 2;
+            opacity: 0.6;
+            transition: opacity 0.3s;
+        }
+
+        .star-path:hover {
+            opacity: 1;
+            stroke-width: 3;
+        }
+
+        .star-point {
+            cursor: pointer;
+        }
+
+        .tooltip {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 1000;
+            font-size: 0.9em;
+        }
+
+        .tooltip.show {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>📊 Dataset Star Movement Analysis</h1>
+            <p class="subtitle">Phân Tích Quy Luật Di Chuyển Các Sao Trên Toàn Bộ Dataset (<span id="dataset-size">Loading...</span> lá số)</p>
+        </header>
+
+        <!-- Control Panel -->
+        <div class="control-panel">
+            <div class="form-inline">
+                <div class="form-group">
+                    <label>Năm Từ</label>
+                    <input type="number" id="year-from" min="1950" max="2005" value="2000">
+                </div>
+                <div class="form-group">
+                    <label>Năm Đến</label>
+                    <input type="number" id="year-to" min="1950" max="2005" value="2005">
+                </div>
+                <div class="form-group">
+                    <label>Giới Tính</label>
+                    <select id="gender-filter">
+                        <option value="">Cả Nam & Nữ</option>
+                        <option value="nam">Nam</option>
+                        <option value="nu">Nữ</option>
+                    </select>
+                </div>
+                <button class="btn-analyze" onclick="analyzeDataset()">🔍 Phân Tích</button>
+            </div>
+            
+            <!-- Quick Presets -->
+            <div style="display: flex; gap: 10px; margin-top: 15px; flex-wrap: wrap;">
+                <div style="opacity: 0.8; font-size: 0.9em; margin-right: 10px;">⚡ Preset nhanh:</div>
+                <button onclick="setPreset('1year')" style="padding: 6px 15px; border: none; border-radius: 6px; background: rgba(74, 222, 128, 0.2); color: #4ade80; cursor: pointer; font-size: 0.9em;">1 Năm (2005)</button>
+                <button onclick="setPreset('5year')" style="padding: 6px 15px; border: none; border-radius: 6px; background: rgba(96, 165, 250, 0.2); color: #60a5fa; cursor: pointer; font-size: 0.9em;">5 Năm (2000-2005)</button>
+                <button onclick="setPreset('10year')" style="padding: 6px 15px; border: none; border-radius: 6px; background: rgba(251, 191, 36, 0.2); color: #fbbf24; cursor: pointer; font-size: 0.9em;">10 Năm (1995-2005)</button>
+                <button onclick="setPreset('full')" style="padding: 6px 15px; border: none; border-radius: 6px; background: rgba(248, 113, 113, 0.2); color: #f87171; cursor: pointer; font-size: 0.9em;">Toàn bộ (1950-2005) ⚠️</button>
+            </div>
+            
+            <div class="info-text" style="margin-top: 15px;">
+                💡 <strong>Chức năng:</strong> Phân tích <strong>TOÀN BỘ</strong> records trong khoảng năm được chọn để tìm quy luật di chuyển các sao.
+                <br><strong style="color: #fbbf24;">⚠️ Thời gian xử lý:</strong> 
+                1 năm (~5s) | 5 năm (~20s) | 10 năm (~40s) | Toàn bộ 56 năm (~2-3 phút)
+            </div>
+        </div>
+
+        <!-- Loading -->
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Đang phân tích dataset... Vui lòng đợi...</p>
+        </div>
+
+        <!-- Results Container -->
+        <div class="results-container" id="results">
+            <!-- Statistics Cards -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Tổng Lá Số Phân Tích</h3>
+                    <div class="stat-value" id="total-records">0</div>
+                    <div class="stat-label">records</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Tổng Số Sao</h3>
+                    <div class="stat-value" id="total-stars">0</div>
+                    <div class="stat-label">unique stars</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Sao Cố Định</h3>
+                    <div class="stat-value" id="fixed-count">0</div>
+                    <div class="stat-label">không di chuyển</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Sao Di Chuyển</h3>
+                    <div class="stat-value" id="moving-count">0</div>
+                    <div class="stat-label">theo canh giờ</div>
+                </div>
+            </div>
+
+            <!-- Movement Visualization -->
+            <div class="star-viz-container">
+                <h3>🌟 Biểu Đồ Di Chuyển Các Sao Qua 12 Cung</h3>
+                
+                <!-- Timeline Controls -->
+                <div style="background: rgba(0,0,0,0.3); padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                        <button onclick="playAnimation()" style="padding: 10px 20px; border: none; border-radius: 8px; background: #4ade80; color: white; cursor: pointer; font-size: 1em;">
+                            ▶️ Play
+                        </button>
+                        <button onclick="pauseAnimation()" style="padding: 10px 20px; border: none; border-radius: 8px; background: #f87171; color: white; cursor: pointer; font-size: 1em;">
+                            ⏸️ Pause
+                        </button>
+                        <button onclick="resetAnimation()" style="padding: 10px 20px; border: none; border-radius: 8px; background: #60a5fa; color: white; cursor: pointer; font-size: 1em;">
+                            🔄 Reset
+                        </button>
+                        <input type="range" id="timeline-slider" min="0" max="11" value="0" oninput="updateHour(this.value)" 
+                            style="flex: 1; height: 8px; border-radius: 5px; background: rgba(255,255,255,0.2); outline: none;">
+                        <div id="hour-indicator" style="min-width: 120px; text-align: center; font-weight: bold; font-size: 1.1em; padding: 8px 15px; background: rgba(255,255,255,0.1); border-radius: 8px;">
+                            Tý (23-01h)
+                        </div>
+                    </div>
+                    
+                    <div style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap;">
+                        <div style="display: flex; gap: 10px; align-items: center;">
+                            <label style="font-size: 0.9em; opacity: 0.9;">Tốc độ:</label>
+                            <button onclick="setSpeed(2000)" style="padding: 6px 15px; border: none; border-radius: 6px; background: rgba(255,255,255,0.15); color: white; cursor: pointer;">Chậm</button>
+                            <button onclick="setSpeed(1000)" style="padding: 6px 15px; border: none; border-radius: 6px; background: rgba(255,255,255,0.15); color: white; cursor: pointer;">Vừa</button>
+                            <button onclick="setSpeed(500)" style="padding: 6px 15px; border: none; border-radius: 6px; background: rgba(255,255,255,0.15); color: white; cursor: pointer;">Nhanh</button>
+                        </div>
+                        
+                        <div style="display: flex; gap: 10px; align-items: center; margin-left: auto;">
+                            <label style="font-size: 0.9em; opacity: 0.9;">Bộ lọc:</label>
+                            <select id="star-filter" onchange="applyStarFilter()" style="padding: 6px 12px; border: none; border-radius: 6px; background: rgba(255,255,255,0.15); color: white;">
+                                <option value="all">Tất cả sao</option>
+                                <option value="moving">Chỉ sao di chuyển</option>
+                                <option value="fixed">Chỉ sao cố định</option>
+                            </select>
+                            <select id="star-count" onchange="applyStarFilter()" style="width: 120px; padding: 6px 10px; border: none; border-radius: 6px; background: rgba(255,255,255,0.15); color: white;">
+                                <option value="all">Tất cả</option>
+                                <option value="20">Top 20</option>
+                                <option value="50">Top 50</option>
+                                <option value="100">Top 100</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <svg id="movement-graph"></svg>
+            </div>
+
+            <!-- Star Lists -->
+            <div class="star-lists">
+                <div class="star-list-card">
+                    <h3>📍 Sao Cố Định (Không Di Chuyển)</h3>
+                    <div id="fixed-stars-list"></div>
+                </div>
+                <div class="star-list-card">
+                    <h3>🔄 Sao Di Chuyển (Theo Pattern)</h3>
+                    <div id="moving-stars-list"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let analysisData = null;
+        let currentHourIndex = 0;
+        let animationInterval = null;
+        let animationSpeed = 1000;
+        let svg, width, height, centerX, centerY, radius;
+        let cungNodes = [];
+        let currentStarFilter = 'all';
+        let currentStarCount = Infinity; // Default to show ALL stars
+        
+        const CHI_NAMES = ['Tý', 'Sửu', 'Dần', 'Mão', 'Thìn', 'Tỵ', 'Ngọ', 'Mùi', 'Thân', 'Dậu', 'Tuất', 'Hợi'];
+
+        function setPreset(type) {
+            const yearFromInput = document.getElementById('year-from');
+            const yearToInput = document.getElementById('year-to');
+            
+            switch(type) {
+                case '1year':
+                    yearFromInput.value = '2005';
+                    yearToInput.value = '2005';
+                    break;
+                case '5year':
+                    yearFromInput.value = '2000';
+                    yearToInput.value = '2005';
+                    break;
+                case '10year':
+                    yearFromInput.value = '1995';
+                    yearToInput.value = '2005';
+                    break;
+                case 'full':
+                    yearFromInput.value = '1950';
+                    yearToInput.value = '2005';
+                    if (!confirm('Phân tích toàn bộ 56 năm (490k records) có thể mất 2-3 phút. Bạn có chắc muốn tiếp tục?')) {
+                        return;
+                    }
+                    break;
+            }
+            
+            // Auto run analysis
+            analyzeDataset();
+        }
+
+        async function analyzeDataset() {
+            const yearFrom = parseInt(document.getElementById('year-from').value);
+            const yearTo = parseInt(document.getElementById('year-to').value);
+            const gender = document.getElementById('gender-filter').value;
+
+            document.getElementById('loading').style.display = 'block';
+            document.getElementById('results').style.display = 'none';
+
+            try {
+                const response = await fetch('/graph/api/dataset-movement', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        sample_size: null, // Always analyze ALL records in year range
+                        year_range: [yearFrom, yearTo],
+                        gender: gender || null
+                    })
+                });
+
+                const result = await response.json();
+
+                if (result.status === 'success') {
+                    analysisData = result.data;
+                    currentHourIndex = 0;
+                    document.getElementById('timeline-slider').value = 0;
+                    displayResults(analysisData);
+                } else {
+                    alert('Lỗi: ' + result.message);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Có lỗi xảy ra khi phân tích dataset!');
+            } finally {
+                document.getElementById('loading').style.display = 'none';
+            }
+        }
+
+        function displayResults(data) {
+            // Display statistics
+            document.getElementById('total-records').textContent = data.total_records_analyzed.toLocaleString();
+            document.getElementById('dataset-size').textContent = data.total_records_analyzed.toLocaleString();
+            document.getElementById('total-stars').textContent = data.movement_statistics.total_unique_stars;
+            document.getElementById('fixed-count').textContent = data.movement_statistics.fixed_star_count;
+            document.getElementById('moving-count').textContent = data.movement_statistics.moving_star_count;
+
+            // Display star lists
+            displayFixedStars(data);
+            displayMovingStars(data);
+
+            // Initialize and draw movement graph
+            initGraph();
+            updateVisualization(currentHourIndex);
+
+            document.getElementById('results').style.display = 'block';
+        }
+
+        function initGraph() {
+            svg = d3.select('#movement-graph');
+            const container = document.getElementById('movement-graph').parentElement;
+            width = container.clientWidth;
+            height = 600;
+
+            svg.attr('width', width).attr('height', height);
+            svg.selectAll('*').remove();
+
+            centerX = width / 2;
+            centerY = height / 2;
+            radius = Math.min(width, height) / 2.5 - 50; // Increased size
+
+            // Create 12 cung positions - arrange in proper circle
+            cungNodes = CHI_NAMES.map((chi, i) => {
+                // Start from top (Tý at position 0), go clockwise
+                const angle = (i * 30) * Math.PI / 180; // 30 degrees per position
+                return {
+                    id: i,
+                    chi: chi,
+                    x: centerX + radius * Math.sin(angle),
+                    y: centerY - radius * Math.cos(angle)
+                };
+            });
+        }
+
+        function updateVisualization(hourIndex) {
+            if (!analysisData) return;
+
+            // Update hour indicator
+            document.getElementById('hour-indicator').textContent = 
+                `${CHI_NAMES[hourIndex]} (${hourIndex*2-1 >= 0 ? hourIndex*2-1 : 23}-${(hourIndex*2+1)%24}h)`;
+
+            svg.selectAll('*').remove();
+
+            const g = svg.append('g');
+
+            // Draw circle guide
+            g.append('circle')
+                .attr('cx', centerX)
+                .attr('cy', centerY)
+                .attr('r', radius)
+                .attr('fill', 'none')
+                .attr('stroke', 'rgba(255, 255, 255, 0.1)')
+                .attr('stroke-dasharray', '5,5');
+
+            // Draw 12 cung nodes
+            const cungGroup = g.selectAll('.cung-node')
+                .data(cungNodes)
+                .enter()
+                .append('g')
+                .attr('class', 'cung-node')
+                .attr('transform', d => `translate(${d.x}, ${d.y})`);
+
+            cungGroup.append('circle')
+                .attr('class', 'cung-circle')
+                .attr('r', 30);
+
+            cungGroup.append('text')
+                .attr('class', 'cung-label')
+                .attr('dy', 5)
+                .text(d => d.chi);
+
+            // Filter stars based on current filter
+            let starsToShow = Object.entries(analysisData.star_movement_patterns);
+            
+            if (currentStarFilter === 'moving') {
+                starsToShow = starsToShow.filter(([_, info]) => info.movement_type === 'moving');
+            } else if (currentStarFilter === 'fixed') {
+                starsToShow = starsToShow.filter(([_, info]) => info.movement_type === 'fixed');
+            }
+
+            // Sort by appearances and take top N (or all if Infinity)
+            starsToShow = starsToShow
+                .sort((a, b) => b[1].total_appearances - a[1].total_appearances);
+            
+            // Only slice if not showing all
+            if (currentStarCount !== Infinity) {
+                starsToShow = starsToShow.slice(0, currentStarCount);
+            }
+
+            const colorScale = d3.scaleOrdinal(d3.schemeTableau10);
+
+            // Draw stars
+            const starData = [];
+            starsToShow.forEach(([starName, info], idx) => {
+                const position = info.positions[hourIndex];
+                if (position !== null && position !== undefined) {
+                    const cung = cungNodes.find(c => c.id === position);
+                    if (cung) {
+                        starData.push({
+                            name: starName,
+                            info: info,
+                            x: cung.x,
+                            y: cung.y,
+                            color: colorScale(idx)
+                        });
+                    }
+                }
+            });
+
+            const starNodes = g.selectAll('.star-node')
+                .data(starData, d => d.name)
+                .enter()
+                .append('g')
+                .attr('class', 'star-node');
+
+            // Add random offset to avoid overlap
+            starNodes.each(function(d) {
+                const angle = Math.random() * 2 * Math.PI;
+                const offset = 40 + Math.random() * 25;
+                d.offsetX = d.x + offset * Math.cos(angle);
+                d.offsetY = d.y + offset * Math.sin(angle);
+            });
+
+            starNodes.append('circle')
+                .attr('cx', d => d.offsetX)
+                .attr('cy', d => d.offsetY)
+                .attr('r', 0)
+                .attr('fill', d => d.color)
+                .attr('stroke', 'white')
+                .attr('stroke-width', 2)
+                .style('cursor', 'pointer')
+                .style('filter', 'drop-shadow(0 2px 4px rgba(0,0,0,0.5))')
+                .transition()
+                .duration(600)
+                .ease(d3.easeCubicOut)
+                .attr('r', 10);
+
+            starNodes.append('text')
+                .attr('x', d => d.offsetX)
+                .attr('y', d => d.offsetY - 15)
+                .attr('text-anchor', 'middle')
+                .attr('fill', 'white')
+                .attr('font-size', '12px')
+                .attr('font-weight', 'bold')
+                .style('text-shadow', '1px 1px 3px rgba(0,0,0,0.9), -1px -1px 3px rgba(0,0,0,0.9)')
+                .style('pointer-events', 'none')
+                .style('opacity', 0)
+                .text(d => d.name)
+                .transition()
+                .duration(600)
+                .style('opacity', 1);
+
+            // Add tooltips
+            starNodes.on('mouseenter', function(event, d) {
+                d3.select(this).select('circle')
+                    .transition()
+                    .duration(200)
+                    .attr('r', 12);
+                
+                showTooltip(event, d.name, 
+                    `${d.info.pattern_description}<br>Xuất hiện: ${d.info.total_appearances.toLocaleString()} lần`);
+            })
+            .on('mouseleave', function() {
+                d3.select(this).select('circle')
+                    .transition()
+                    .duration(200)
+                    .attr('r', 8);
+                hideTooltip();
+            });
+
+            // Add legend
+            drawLegend(starsToShow.map(([name, _], idx) => ({name, color: colorScale(idx)})));
+        }
+
+        function drawLegend(items) {
+            const legendGroup = svg.append('g')
+                .attr('class', 'legend')
+                .attr('transform', `translate(${width - 180}, 20)`); // Move to right side
+
+            legendGroup.append('rect')
+                .attr('x', -10)
+                .attr('y', -10)
+                .attr('width', 170)
+                .attr('height', Math.min(items.length * 22 + 20, 400))
+                .attr('fill', 'rgba(0, 0, 0, 0.85)')
+                .attr('rx', 8)
+                .attr('stroke', 'rgba(255, 255, 255, 0.3)')
+                .attr('stroke-width', 1);
+
+            // Add scrollable container if needed
+            const visibleItems = items.slice(0, 18); // Max 18 items visible
+
+            const legendItems = legendGroup.selectAll('.legend-item')
+                .data(visibleItems)
+                .enter()
+                .append('g')
+                .attr('class', 'legend-item')
+                .attr('transform', (d, i) => `translate(0, ${i * 22})`);
+
+            legendItems.append('circle')
+                .attr('cx', 5)
+                .attr('cy', 5)
+                .attr('r', 5)
+                .attr('fill', d => d.color)
+                .attr('stroke', 'white')
+                .attr('stroke-width', 1);
+
+            legendItems.append('text')
+                .attr('x', 15)
+                .attr('y', 9)
+                .attr('fill', 'white')
+                .attr('font-size', '11px')
+                .text(d => d.name.length > 15 ? d.name.substring(0, 15) + '...' : d.name);
+        }
+
+        function displayFixedStars(data) {
+            const container = document.getElementById('fixed-stars-list');
+            container.innerHTML = '';
+
+            const fixedStars = Object.entries(data.star_movement_patterns)
+                .filter(([_, info]) => info.movement_type === 'fixed')
+                .sort((a, b) => b[1].total_appearances - a[1].total_appearances);
+
+            fixedStars.forEach(([starName, info]) => {
+                const div = document.createElement('div');
+                div.className = 'star-item fixed';
+                div.innerHTML = `
+                    <div class="star-name">${starName}</div>
+                    <div class="star-detail">${info.pattern_description}</div>
+                    <div class="star-detail">Xuất hiện: ${info.total_appearances.toLocaleString()} lần</div>
+                `;
+                container.appendChild(div);
+            });
+        }
+
+        function displayMovingStars(data) {
+            const container = document.getElementById('moving-stars-list');
+            container.innerHTML = '';
+
+            const movingStars = Object.entries(data.star_movement_patterns)
+                .filter(([_, info]) => info.movement_type === 'moving')
+                .sort((a, b) => b[1].unique_positions - a[1].unique_positions);
+
+            movingStars.forEach(([starName, info]) => {
+                const div = document.createElement('div');
+                div.className = 'star-item moving';
+                div.innerHTML = `
+                    <div class="star-name">${starName}</div>
+                    <div class="star-detail">${info.pattern_description}</div>
+                    <div class="star-detail">Vị trí: ${info.unique_positions} / 12</div>
+                    <div class="star-detail">Xuất hiện: ${info.total_appearances.toLocaleString()} lần</div>
+                `;
+                container.appendChild(div);
+            });
+        }
+
+        function updateHour(hourIndex) {
+            currentHourIndex = parseInt(hourIndex);
+            document.getElementById('timeline-slider').value = currentHourIndex;
+            updateVisualization(currentHourIndex);
+        }
+
+        function playAnimation() {
+            if (animationInterval) return;
+            animationInterval = setInterval(() => {
+                currentHourIndex = (currentHourIndex + 1) % 12;
+                updateHour(currentHourIndex);
+            }, animationSpeed);
+        }
+
+        function pauseAnimation() {
+            if (animationInterval) {
+                clearInterval(animationInterval);
+                animationInterval = null;
+            }
+        }
+
+        function resetAnimation() {
+            pauseAnimation();
+            currentHourIndex = 0;
+            updateHour(0);
+        }
+
+        function setSpeed(speed) {
+            animationSpeed = speed;
+            if (animationInterval) {
+                pauseAnimation();
+                playAnimation();
+            }
+        }
+
+        function applyStarFilter() {
+            currentStarFilter = document.getElementById('star-filter').value;
+            const starCountValue = document.getElementById('star-count').value;
+            
+            // Handle "all" option
+            if (starCountValue === 'all') {
+                currentStarCount = Infinity; // Show all stars
+            } else {
+                currentStarCount = parseInt(starCountValue) || 20;
+            }
+            
+            if (analysisData) {
+                updateVisualization(currentHourIndex);
+            }
+        }
+
+        function showTooltip(event, title, content) {
+            d3.select('body').selectAll('.tooltip').remove();
+            d3.select('body').append('div')
+                .attr('class', 'tooltip show')
+                .style('left', (event.pageX + 10) + 'px')
+                .style('top', (event.pageY - 10) + 'px')
+                .html(`<strong>${title}</strong><br>${content}`);
+        }
+
+        function hideTooltip() {
+            d3.selectAll('.tooltip').remove();
+        }
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            if (analysisData) {
+                initGraph();
+                updateVisualization(currentHourIndex);
+            }
+        });
+    </script>
+</body>
+
+</html>
+            const sampleSize = document.getElementById('sample-size').value;
+            const yearFrom = parseInt(document.getElementById('year-from').value);
+            const yearTo = parseInt(document.getElementById('year-to').value);
+            const gender = document.getElementById('gender-filter').value;
+
+            document.getElementById('loading').style.display = 'block';
+            document.getElementById('results').style.display = 'none';
+
+            try {
+                const response = await fetch('/graph/api/dataset-movement', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        sample_size: sampleSize ? parseInt(sampleSize) : null,
+                        year_range: [yearFrom, yearTo],
+                        gender: gender || null
+                    })
+                });
+
+                const result = await response.json();
+
+                if (result.status === 'success') {
+                    analysisData = result.data;
+                    displayResults(analysisData);
+                } else {
+                    alert('Lỗi: ' + result.message);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Có lỗi xảy ra khi phân tích dataset!');
+            } finally {
+                document.getElementById('loading').style.display = 'none';
+            }
+        }
+
+        function displayResults(data) {
+            // Display statistics
+            document.getElementById('total-records').textContent = data.total_records_analyzed.toLocaleString();
+            document.getElementById('total-stars').textContent = data.movement_statistics.total_unique_stars;
+            document.getElementById('fixed-count').textContent = data.movement_statistics.fixed_star_count;
+            document.getElementById('moving-count').textContent = data.movement_statistics.moving_star_count;
+
+            // Display star lists
+            displayFixedStars(data);
+            displayMovingStars(data);
+
+            // Draw movement graph
+            drawMovementGraph(data);
+
+            document.getElementById('results').style.display = 'block';
+        }
+
+        function displayFixedStars(data) {
+            const container = document.getElementById('fixed-stars-list');
+            container.innerHTML = '';
+
+            const fixedStars = Object.entries(data.star_movement_patterns)
+                .filter(([_, info]) => info.movement_type === 'fixed')
+                .sort((a, b) => b[1].total_appearances - a[1].total_appearances);
+
+            fixedStars.forEach(([starName, info]) => {
+                const div = document.createElement('div');
+                div.className = 'star-item fixed';
+                div.innerHTML = `
+                    <div class="star-name">${starName}</div>
+                    <div class="star-detail">${info.pattern_description}</div>
+                    <div class="star-detail">Xuất hiện: ${info.total_appearances.toLocaleString()} lần</div>
+                `;
+                container.appendChild(div);
+            });
+        }
+
+        function displayMovingStars(data) {
+            const container = document.getElementById('moving-stars-list');
+            container.innerHTML = '';
+
+            const movingStars = Object.entries(data.star_movement_patterns)
+                .filter(([_, info]) => info.movement_type === 'moving')
+                .sort((a, b) => b[1].unique_positions - a[1].unique_positions);
+
+            movingStars.forEach(([starName, info]) => {
+                const div = document.createElement('div');
+                div.className = 'star-item moving';
+                div.innerHTML = `
+                    <div class="star-name">${starName}</div>
+                    <div class="star-detail">${info.pattern_description}</div>
+                    <div class="star-detail">Vị trí: ${info.unique_positions} / 12</div>
+                    <div class="star-detail">Xuất hiện: ${info.total_appearances.toLocaleString()} lần</div>
+                `;
+                container.appendChild(div);
+            });
+        }
+
+        function drawMovementGraph(data) {
+            const svg = d3.select('#movement-graph');
+            const container = document.getElementById('movement-graph').parentElement;
+            const width = container.clientWidth;
+            const height = 600;
+
+            svg.attr('width', width).attr('height', height);
+            svg.selectAll('*').remove();
+
+            const centerX = width / 2;
+            const centerY = height / 2;
+            const radius = Math.min(width, height) / 2 - 80;
+
+            // Draw 12 cung circle
+            const cungNodes = CHI_NAMES.map((chi, i) => {
+                const angle = (i * 30 - 90) * Math.PI / 180;
+                return {
+                    id: i,
+                    chi: chi,
+                    x: centerX + radius * Math.cos(angle),
+                    y: centerY + radius * Math.sin(angle)
+                };
+            });
+
+            const g = svg.append('g');
+
+            // Draw circle guide
+            g.append('circle')
+                .attr('cx', centerX)
+                .attr('cy', centerY)
+                .attr('r', radius)
+                .attr('fill', 'none')
+                .attr('stroke', 'rgba(255, 255, 255, 0.1)')
+                .attr('stroke-dasharray', '5,5');
+
+            // Draw 12 cung nodes
+            const cungGroup = g.selectAll('.cung-node')
+                .data(cungNodes)
+                .enter()
+                .append('g')
+                .attr('class', 'cung-node')
+                .attr('transform', d => `translate(${d.x}, ${d.y})`);
+
+            cungGroup.append('circle')
+                .attr('class', 'cung-circle')
+                .attr('r', 25);
+
+            cungGroup.append('text')
+                .attr('class', 'cung-label')
+                .attr('dy', 5)
+                .text(d => d.chi);
+
+            // Draw star movement paths (only for moving stars)
+            const movingStars = Object.entries(data.star_movement_patterns)
+                .filter(([_, info]) => info.movement_type === 'moving')
+                .slice(0, 10); // Show top 10 moving stars
+
+            const colorScale = d3.scaleOrdinal(d3.schemeCategory10);
+
+            movingStars.forEach(([starName, info], idx) => {
+                const positions = info.positions.filter(p => p !== null);
+                
+                if (positions.length < 2) return;
+
+                const pathPoints = positions.map(pos => {
+                    const cung = cungNodes.find(c => c.id === pos);
+                    return [cung.x, cung.y];
+                });
+
+                // Draw path
+                const line = d3.line()
+                    .curve(d3.curveCatmullRom.alpha(0.5));
+
+                g.append('path')
+                    .datum(pathPoints)
+                    .attr('class', 'star-path')
+                    .attr('d', line)
+                    .attr('stroke', colorScale(idx))
+                    .on('mouseenter', function(event) {
+                        d3.select(this).attr('opacity', 1).attr('stroke-width', 3);
+                        showTooltip(event, starName, info.pattern_description);
+                    })
+                    .on('mouseleave', function() {
+                        d3.select(this).attr('opacity', 0.6).attr('stroke-width', 2);
+                        hideTooltip();
+                    });
+
+                // Draw points
+                pathPoints.forEach((point, i) => {
+                    g.append('circle')
+                        .attr('class', 'star-point')
+                        .attr('cx', point[0])
+                        .attr('cy', point[1])
+                        .attr('r', 4)
+                        .attr('fill', colorScale(idx))
+                        .on('mouseenter', function(event) {
+                            showTooltip(event, `${starName} (giờ ${i})`, CHI_NAMES[positions[i]]);
+                        })
+                        .on('mouseleave', hideTooltip);
+                });
+            });
+        }
+
+        function showTooltip(event, title, content) {
+            const tooltip = d3.select('body').append('div')
+                .attr('class', 'tooltip show')
+                .style('left', (event.pageX + 10) + 'px')
+                .style('top', (event.pageY - 10) + 'px')
+                .html(`<strong>${title}</strong><br>${content}`);
+        }
+
+        function hideTooltip() {
+            d3.selectAll('.tooltip').remove();
+        }
+    </script>
+</body>
+
+</html>

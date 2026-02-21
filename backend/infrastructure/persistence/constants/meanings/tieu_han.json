@@ -1,0 +1,71 @@
+{
+    "sao_nhap_tieu_han": {
+        "Thiên Lương": {
+            "general": "Sao Thiên Lương thuộc dương thổ, hóa khí là ấm tinh, chủ quản về thọ lạc an lành.",
+            "effect": "Tiểu vận năm này gặp sao Thiên Lương thường được sự bình yên, an lành, may mắn đến bất ngờ. Do tính chất của Cơ Nguyệt Đồng Lương nên nhìn chung bất chiến tự nhiên thành, mười năm khá yên bình, ít biến cố, mọi việc may ắt nhiều hơn rủi.",
+            "social": "Năm tiểu vận Thiên Lương luôn gặp nhiều bạn tốt, nhiều quý nhân, nhiều cơ hội và cát lành.",
+            "fortune": "Do tính thiện ấm nên sao Thiên Lương báo hiệu trong năm ắt dựng được cơ đồ, được hưởng tài sản thừa kế.",
+            "spiritual": "Thiên Lương nhập tiểu vận còn thể hiện sự giác ngộ, sự ngộ đạo và cơ duyên với tôn giáo, tâm linh, phật giáo. Vận đến đây thường được bề trên che chở, khai sáng, khai mở về tư duy cảm quan tâm linh.",
+            "combination": {
+                "Thiên Đồng": "Nếu đi cùng Thiên Đồng ắt có lợi về phúc, về nhân, nhà thêm người, thêm con thêm cháu, sự nghiệp thêm hưng thịnh, tài chính thêm vững vàng",
+                "Âm Dương": "Nếu đơn thủ được Âm Dương hội chiếu ắt lợi cả công danh lẫn tiền bạc"
+            },
+            "warning": "Tiểu vận ngộ sao Thiên Lương tuy mang nhiều tính phúc thiện nhưng báo hiệu trong giai đoạn này sẽ có biến cố về gia đình."
+        },
+        "Phúc Bình": {
+            "general": "Biểu hiện của một năm khó khăn, một năm gặp nhiều trắc trở, một năm gặp nhiều phiền toái.",
+            "effect": "Trong công việc ắt gặp người cản trở, gặp người tranh đấu ngăn cản, mọi việc khó thành, công danh khó toại.",
+            "warning": "Phúc Bình nhập tiểu hạn cần đề phòng bị lừa đảo, bị dụ giỗ, bị hãm hại, bị chèn ép."
+        },
+        "Thiên Mã": {
+            "general": "Tiểu hạn gặp sao Thiên Mã báo hiệu một năm bận rộn, một năm thay đổi nhiều, đi lại nhiều, dịch chuyển nhiều giữa các địa bàn, địa phương.",
+            "effect": "Trong năm này rất thuận lợi cho việc đi học, du học, du lịch, công tác.",
+            "work": "Tiểu hạn ngộ Thiên Mã chủ về một năm nhiều việc phải tính toán, nhiều việc phải lo toan gánh vác nhưng nhìn chung ắt có thành tựu, có nhiều kết quả tốt đẹp."
+        },
+        "Địa Giải": {
+            "general": "Tiểu hạn một năm gặp Địa Giải giúp giải ách trừ tai, gặp nhiều may mắn."
+        },
+        "Thanh Long": {
+            "general": "Trong năm công thành danh toại, cửa nhà yên ấm.",
+            "effect": "Trong công việc được phong cấp, phong chức, được luân chuyển, điều động, gia đình gặp nhiều hỷ sự tin vui."
+        },
+        "Thiên Quý": {
+            "general": "Chủ về hạnh ngộ giai nhân, hóa cát trừ tai.",
+            "effect": "Trong năm thường đạt nhiều thành tựu, thành tích, ắt có nhân duyên thiện lành, gặp được quý nhân, hạn lớn thành nhỏ, hạn nhỏ tự qua.",
+            "luck": "Thiên Quý nhập tiểu hạn còn ngầm thể hiện sự cát lành may mắn, một năm thịnh vượng, an lành.",
+            "spiritual": "Còn được gieo duyên gặp người tốt, gặp quý nhân, được gieo duyên làm việc lành như đi từ thiện, công quả xây chùa chiền, hay như các lễ về tâm linh như cầu siêu, phát nguyện phóng sinh.",
+            "education": "Chủ cát lợi cát lành cho việc thi cử, học hành nhận chức, nhập tiểu hạn còn giải ách trừ tai, nhanh ốm nhanh khỏi."
+        }
+    },
+    "sao_nhap_nguyet_han": {
+        "Thiên Cơ": {
+            "general": "Sao Thiên Cơ nhập nguyệt hạn chủ nhiều việc phải lo phải tính toán.",
+            "advice": "Trong tháng đi lại cẩn thận chú ý ngã ngẹo.",
+            "spiritual": "Thiên Cơ vốn mộc chủ sao thiện lành tính túc vậy nên báo hiệu 1 tháng thường liên quan tới việc tâm linh như lễ bái kêu cầu. Nếu việc đại sự trong tháng gặp trời mưa ắt sẽ được việc.",
+            "work": "Sao Thiên Cơ là sao mưu sự vậy nên trong tháng xuất hiện nhiều việc cần nhờ đến mình nên chủ động giúp đỡ tạo phước. Sao Thiên Cơ cũng chủ là sao mua sắm.",
+            "health": "Khám bệnh ắt tìm ra bệnh, tâm linh tìm được nhân duyên, bói toán tìm được căn cơ. Về bệnh tật liên quan đến chân, sườn, gân."
+        },
+        "Thái Âm": {
+            "general": "Sao Thái Âm nhập nguyệt hạn báo hiệu 1 tháng tốt đẹp có lợi cho tiền bạc vật chất buôn bán.",
+            "family": "Trong nhà thường có hỷ tín tin vui kể như họ hàng có người cưới hỏi hay như tin vui bầu bí sinh đẻ.",
+            "travel": "Sao Thái Âm cũng chủ báo hiệu việc đi lại thuận tiện, làm ăn dễ dàng, mọi việc luôn trong tâm thế chủ động như đi chơi, đi du lịch hay như ký kết.",
+            "fortune": "Dễ mua tài sản lớn."
+        },
+        "Thiên Đồng": {
+            "general": "Sao Thiên Đồng nhập nguyệt hạn hóa cát trừ tai, gặp nhiều may mắn trong tháng.",
+            "travel": "Thường có xu hướng di chuyển và đi lại nhiều thường là du lịch, công tác, thăm thú, về quê hay như đi dự tiệc dự lễ.",
+            "luck": "Trong tháng ốm đau nhanh khỏi, thất vật tìm được vật, thất nhân tìm được nhân, đón người phương xa trở về.",
+            "health": "Về bệnh tật trong tháng thường bị các bệnh về tiêu hóa, đau bụng đi ngoài.",
+            "note": "Thiên Đồng vẫn được coi là bộ sao may mắn, vậy nên nguyệt hạn gặp thường là tốt lành nhưng phải đi lại và di chuyển nhiều, gia đình thường tổ chức cúng bái."
+        },
+        "Lộc Tồn": {
+            "general": "Sao Lộc Tồn nhập nguyệt hạn báo hiệu sự may mắn về tiền bạc, rủng rỉnh về vật chất ấy là thời cơ và cơ hội cho việc kiếm tiền cho lợi ích.",
+            "fortune": "Sao Lộc Tồn thường báo hiệu cho tiền bạc làm ăn dư giả, tài chính may mắn, được chia phần trăm cổ phần, cổ phiếu, lợi nhuận, lợi ích."
+        },
+        "Địa Kiếp": {
+            "general": "Sao Địa Kiếp nhập nguyệt hạn chủ về sự bất ngờ táo bạo được mất hư hao sinh tử hên xui.",
+            "effect": "Nhìn chung nguyệt hạn gặp Địa Kiếp mất nhiều không mất hết, được nhiều không được hết. Vốn dĩ Địa Kiếp nằm trong quy luật tuần hoàn của hư không vũ trụ nên 1 tháng được về tiền bạc sẽ kém về sức khỏe, được nhân duyên sẽ kém về công việc, may mắn đi đôi với rủi ro, thách thức đi đôi với thời cơ.",
+            "warning": "Địa Kiếp chủ về phát tác vậy nên nhanh đến sẽ nhanh đi. Hết sức đề phòng việc làm ăn rủi ro mang hệ quả hậu quả cho ngày sau. Cần thận tai nạn hình thương, thương tích, va chạm, mâu thuẫn, pháp luật."
+        }
+    }
+}

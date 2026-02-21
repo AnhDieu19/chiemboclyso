@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Báo Cáo Thống Kê Hồng Nhan (1950-2007)</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/analytics.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <a href="/" class="nav-btn">⬅️ Quay lại Trang Chủ</a>
+        <h1>📊 Báo Cáo Phân Tích "Hồng Nhan" (1950 - 2007)</h1>
+        
+        {% if data.data_source == 'json_meta' %}
+        <div class="card" style="background: #fff3cd; border: 1px solid #ffc107; color: #856404;">
+            <strong>⚠️ Lưu ý:</strong> {{ data.note }}
+            <br>Để có dữ liệu chi tiết (Sướng/Khổ), cần chạy full scan và tạo file CSV.
+        </div>
+        {% endif %}
+        
+        <!-- Gender Filter -->
+        <div style="margin-bottom: 15px;">
+            <label>Lọc theo giới tính: </label>
+            <select id="genderFilter" onchange="applyFilter()">
+                <option value="all" {% if current_gender == 'all' %}selected{% endif %}>Tất cả</option>
+                <option value="nam" {% if current_gender == 'nam' %}selected{% endif %}>Nam</option>
+                <option value="nu" {% if current_gender == 'nu' %}selected{% endif %}>Nữ</option>
+            </select>
+        </div>
+
+        <div class="card bg-primary text-white"
+            style="background: linear-gradient(135deg, #667eea, #764ba2); color: white;">
+            <div style="display: flex; justify-content: space-around; align-items: center; text-align: center;">
+                <div>
+                    <h3>Tổng Quét (Total Scanned)</h3>
+                    <div style="font-size: 2em; font-weight: bold;">{{ "{:,.0f}".format(data.total_scanned) }}</div>
+                    <small>Lá số (12 canh giờ x 365 ngày x 58 năm)</small>
+                </div>
+                <div style="font-size: 2em;">👉</div>
+                <div>
+                    <h3>Tìm Thấy (Beauty Found)</h3>
+                    <div style="font-size: 2em; font-weight: bold;">{{ "{:,.0f}".format(data.count) }}</div>
+                    <small>Lá số đạt chuẩn Hồng Nhan ({{ "{:.1f}".format(data.count / data.total_scanned * 100)
+                        }}%)</small>
+                </div>
+            </div>
+        </div>
+
+        {% if data.data_source != 'json_meta' %}
+        <!-- Filter Panel -->
+        <div class="card" style="background: #f8f9fa; border: 2px solid #dee2e6;">
+            <h3 style="margin-top: 0;">🔍 Bộ Lọc</h3>
+            <div style="display: flex; gap: 20px; flex-wrap: wrap; align-items: end;">
+                <div>
+                    <label><strong>Bộ Sao:</strong></label>
+                    <select id="filterSet" style="padding: 8px; border-radius: 5px; border: 1px solid #ccc;">
+                        <option value="all">Tất cả</option>
+                        <option value="DAO_HONG">Đào Hồng Hỷ</option>
+                        <option value="VAN_TINH">Văn Xương/Khúc</option>
+                        <option value="QUYEN_RU">Tham/Liêm</option>
+                        <option value="PHUC_THIEN">Phủ/Tướng/Âm</option>
+                    </select>
+                </div>
+                <div>
+                    <label><strong>Năm:</strong></label>
+                    <select id="filterYear" style="padding: 8px; border-radius: 5px; border: 1px solid #ccc;">
+                        <option value="all">Tất cả</option>
+                        {% if data.line_labels %}
+                        {% for year in data.line_labels %}
+                        <option value="{{ year }}">{{ year }}</option>
+                        {% endfor %}
+                        {% endif %}
+                    </select>
+                </div>
+                <div>
+                    <button onclick="applyFilters()" style="padding: 8px 20px; background: #667eea; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">✅ Áp dụng</button>
+                    <button onclick="resetFilters()" style="padding: 8px 20px; background: #6c757d; color: white; border: none; border-radius: 5px; cursor: pointer; margin-left: 10px;">🔄 Reset</button>
+                </div>
+            </div>
+            <div id="filterInfo" style="margin-top: 15px; padding: 10px; background: #e7f3ff; border-radius: 5px; color: #004085;">
+                <strong>📊 Đang xem:</strong> <span id="filterCount">{{ data.count }}</span> mẫu
+            </div>
+        </div>
+
+        <!-- Legend Component -->
+        <div class="card" style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);">
+            <h3 style="margin-top: 0; text-align: center;">📊 LEGEND - 5 CẤP ĐỘ HỒNG NHAN</h3>
+            <div id="legendContainer" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px;">
+                <!-- Legend items will be populated by JavaScript -->
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col card">
+                <h2>1. Phân Bố 5 Cấp Độ (Toàn bộ)</h2>
+                <canvas id="pieChart"></canvas>
+            </div>
+            <div class="col card">
+                <h2>2. Tương Quan Theo Bộ Sao</h2>
+                <canvas id="barChart"></canvas>
+            </div>
+        </div>
+        {% endif %}
+
+        <div class="card">
+            <h2>3. Tỷ Lệ Phân Bổ Hồng Nhan Theo Năm (%)</h2>
+            <p>Trong một năm, có bao nhiêu % lá số sinh ra là "Người Đẹp"?</p>
+            <canvas id="beautyRateChart" height="80"></canvas>
+        </div>
+
+        {% if data.data_source != 'json_meta' %}
+        <div class="card">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                    <h2>4. Xu Hướng Sướng vs Khổ (Drill Down)</h2>
+                    <p id="chartTitle">Dữ liệu theo Năm (Click vào điểm để xem chi tiết)</p>
+                </div>
+                <button id="resetZoomBtn" class="btn btn-sm" onclick="resetDrillDown()"
+                    style="display: none; background: #607d8b; color: white;">🔄 Xem Tất Cả Năm</button>
+            </div>
+            <canvas id="lineChart" height="100"></canvas>
+        </div>
+        {% endif %}
+        {% if data.line_beauty_count %}
+        <div class="card" style="background: #e3f2fd;">
+            <h2>4. Số Lượng Hồng Nhan Theo Năm</h2>
+            <p>Số lá số "Hồng Nhan" tìm thấy mỗi năm</p>
+            <canvas id="countChart" height="100"></canvas>
+        </div>
+        {% endif %}
+    </div>
+
+    <!-- Jinja2 server-side data bridge -->
+    <script>
+        const currentGender = "{{ current_gender }}";
+        const dataSource = "{{ data.data_source | default('csv', true) }}";
+        const serverFateLabels = {{ data.fate_labels | tojson }};
+        const serverPieData = {{ data.pie_data | tojson }};
+        const serverBeautySets = {{ data.beauty_sets | tojson }};
+        const serverBarDatasets = {{ data.bar_datasets | tojson }};
+        const serverLineLabels = {{ data.line_labels | tojson }};
+        const serverLineLucky = {{ data.line_lucky | tojson }};
+        const serverLineTragic = {{ data.line_tragic | tojson }};
+        const serverLineBeautyRate = {{ data.line_beauty_rate | tojson }};
+    </script>
+    <script src="{{ url_for('static', filename='js/analytics.js') }}"></script>
+    <script>
+        // Initialize charts based on data source
+        {% if data.data_source != 'json_meta' %}
+        initCsvCharts();
+        {% endif %}
+
+        initBeautyRateChart();
+
+        {% if data.line_beauty_count %}
+        initCountChart({{ data.line_beauty_count | tojson }});
+        {% endif %}
+    </script>
+</body>
+
+</html>

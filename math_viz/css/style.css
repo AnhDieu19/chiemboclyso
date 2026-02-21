@@ -1,0 +1,393 @@
+/* ============================================
+   Thái Ất · Kỳ Môn — Cấu Trúc Toán Học
+   style.css
+   ============================================ */
+
+/* ── Variables ── */
+:root {
+    --bg-primary:   #0d1117;
+    --bg-secondary: #161b22;
+    --bg-tertiary:  #21262d;
+    --text-primary: #e6edf3;
+    --text-muted:   #8b949e;
+    --accent-gold:  #F9A825;
+    --accent-blue:  #4FC3F7;
+    --accent-green: #66BB6A;
+    --accent-red:   #EF5350;
+    --accent-purple:#AB47BC;
+    --accent-orange:#FF8A65;
+    --border-color: #30363d;
+    --radius:       8px;
+    --shadow:       0 2px 12px rgba(0,0,0,.4);
+}
+
+/* ── Reset & Base ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+a { color: var(--accent-blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ── Header ── */
+.site-header {
+    text-align: center;
+    padding: 2.5rem 1rem 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    background: linear-gradient(180deg, rgba(249,168,37,.06), transparent 80%);
+}
+.site-header h1 {
+    font-size: 2rem;
+    color: var(--accent-gold);
+    letter-spacing: .04em;
+    margin-bottom: .3rem;
+}
+.site-header .subtitle {
+    color: var(--text-muted);
+    font-size: .95rem;
+}
+
+/* ── Navigation ── */
+.nav-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .6rem;
+    padding: .8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    background: var(--bg-secondary);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.nav-bar a {
+    padding: .35rem .8rem;
+    border-radius: var(--radius);
+    font-size: .82rem;
+    color: var(--text-muted);
+    transition: all .2s;
+}
+.nav-bar a:hover {
+    background: var(--bg-tertiary);
+    color: var(--accent-gold);
+    text-decoration: none;
+}
+
+/* ── Main ── */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem 4rem;
+}
+
+/* ── Sections ── */
+.viz-section {
+    margin-bottom: 3rem;
+    padding: 1.5rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+.viz-section h2 {
+    font-size: 1.35rem;
+    color: var(--accent-gold);
+    margin-bottom: .3rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: .5rem;
+}
+.viz-section h2 .sec-num {
+    color: var(--accent-blue);
+    font-size: .9rem;
+    margin-right: .4rem;
+}
+.viz-section .sec-desc {
+    color: var(--text-muted);
+    font-size: .88rem;
+    margin-bottom: 1rem;
+}
+
+.sub-title {
+    font-size: 1rem;
+    color: var(--accent-blue);
+    margin: 1.2rem 0 .6rem;
+    padding-bottom: .3rem;
+    border-bottom: 1px dashed var(--border-color);
+}
+
+/* ── Controls ── */
+.phi-controls, .mod-controls, .tc-controls {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    margin-bottom: .8rem;
+    flex-wrap: wrap;
+}
+.phi-controls label, .mod-controls label, .tc-controls label {
+    color: var(--text-muted);
+    font-size: .85rem;
+}
+.phi-select, .mod-input {
+    padding: .3rem .6rem;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    color: var(--text-primary);
+    font-size: .85rem;
+    min-width: 80px;
+}
+.phi-btn {
+    padding: .35rem 1rem;
+    background: var(--accent-blue);
+    color: var(--bg-primary);
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-weight: 600;
+    font-size: .85rem;
+    transition: background .2s;
+}
+.phi-btn:hover { background: #29B6F6; }
+.phi-btn.active { background: var(--accent-gold); }
+
+/* ── SVG containers ── */
+.lt-svg, .cyc-svg-wrap, .phi-svg, .tc-svg, .km-svg {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    margin: .5rem auto;
+}
+.surj-svg {
+    max-width: 900px;
+}
+
+/* ── Lac Thu cells ── */
+.lt-cell rect { cursor: pointer; }
+.lt-cell:hover rect { stroke-width: 3; }
+
+/* ── Cyclic cards ── */
+.cyclic-card {
+    display: inline-block;
+    vertical-align: top;
+    width: 200px;
+    margin: .5rem;
+    padding: .8rem;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    text-align: center;
+}
+.cyclic-card h4 {
+    color: var(--accent-gold);
+    font-size: .95rem;
+    margin-bottom: .3rem;
+}
+.cyclic-card .cyc-formula {
+    color: var(--text-muted);
+    font-size: .78rem;
+    margin-bottom: .5rem;
+}
+.cyclic-card .cyc-used {
+    color: var(--accent-blue);
+    font-size: .75rem;
+    font-style: italic;
+}
+.cyc-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .5rem;
+}
+
+/* ── Phi Cung ── */
+.phi-info {
+    margin-top: .6rem;
+    padding: .6rem;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius);
+    font-size: .85rem;
+}
+.phi-info .phi-formula {
+    color: var(--accent-gold);
+    font-family: monospace;
+    margin-bottom: .3rem;
+}
+.phi-info .phi-sequence {
+    color: var(--text-muted);
+    font-size: .8rem;
+}
+
+/* ── Modular Chain ── */
+.mod-result {
+    margin-top: .6rem;
+}
+.mod-header {
+    padding: .6rem;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius);
+    margin-bottom: .8rem;
+}
+.mod-epoch { color: var(--text-muted); font-size: .82rem; }
+.mod-tich { font-size: 1rem; margin-top: .3rem; }
+.mod-highlight { color: var(--accent-gold); font-size: 1.1rem; }
+
+.mod-chain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .3rem;
+    margin: 1rem 0;
+}
+.mod-step {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    padding: .5rem 1rem;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius);
+    border-left: 3px solid var(--accent-blue);
+}
+.mod-step-label { min-width: 60px; }
+.mod-level {
+    color: var(--accent-blue);
+    font-weight: 600;
+    font-size: .82rem;
+}
+.mod-step-calc { font-family: monospace; font-size: .9rem; }
+.mod-input-val { color: var(--text-primary); }
+.mod-op { color: var(--accent-gold); margin: 0 .3rem; }
+.mod-mod-val { color: var(--accent-orange); }
+.mod-eq { color: var(--text-muted); margin: 0 .3rem; }
+.mod-result-val { color: var(--accent-green); font-weight: bold; }
+.mod-arrow { color: var(--accent-blue); font-size: 1.2rem; }
+
+.mod-final {
+    text-align: center;
+    padding: .8rem;
+    background: linear-gradient(90deg, rgba(249,168,37,.1), transparent);
+    border-radius: var(--radius);
+    border: 1px solid var(--accent-gold);
+    margin: .5rem 0;
+}
+.mod-ky-du { font-size: 1.1rem; color: var(--accent-gold); }
+.mod-note { color: var(--text-muted); font-size: .78rem; margin-left: .5rem; }
+
+.mod-breakdown { margin-top: .8rem; }
+.mod-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .85rem;
+}
+.mod-table td, .mod-table th {
+    padding: .4rem .8rem;
+    border-bottom: 1px solid var(--border-color);
+    text-align: left;
+}
+.mod-table th {
+    color: var(--accent-blue);
+    font-weight: 600;
+}
+.mod-badge {
+    padding: .15rem .5rem;
+    border-radius: 4px;
+    font-size: .8rem;
+    font-weight: 600;
+}
+.mod-duong { background: rgba(79,195,247,.2); color: var(--accent-blue); }
+.mod-am { background: rgba(239,83,80,.2); color: var(--accent-red); }
+
+.mod-math-note {
+    margin-top: .8rem;
+    padding: .6rem;
+    background: var(--bg-tertiary);
+    border-left: 3px solid var(--accent-purple);
+    border-radius: var(--radius);
+    font-size: .82rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+.mod-math-note strong { color: var(--accent-purple); }
+.mod-math-note code {
+    background: var(--bg-primary);
+    padding: .1rem .4rem;
+    border-radius: 3px;
+    font-size: .8rem;
+}
+
+/* ── Tam Cơ ── */
+.tc-svg {
+    max-width: 500px;
+}
+.tc-legend {
+    text-align: center;
+    margin: .5rem 0;
+    font-size: .82rem;
+}
+.tc-legend-item { margin-right: 1rem; }
+.tc-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: .3rem;
+    vertical-align: middle;
+}
+.tc-info { margin-top: .5rem; }
+
+/* ── Kỳ Môn ── */
+.km-svg {
+    max-width: 100%;
+}
+.km-info { margin-top: .5rem; }
+
+/* ── Constants table ── */
+.const-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: .5rem;
+}
+.const-card {
+    padding: .6rem;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius);
+    border-left: 3px solid var(--accent-gold);
+}
+.const-card .const-name {
+    color: var(--accent-gold);
+    font-weight: 600;
+    font-size: .85rem;
+}
+.const-card .const-val {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    font-family: monospace;
+}
+.const-card .const-desc {
+    color: var(--text-muted);
+    font-size: .75rem;
+}
+
+/* ── Footer ── */
+.site-footer {
+    text-align: center;
+    padding: 1.5rem;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-muted);
+    font-size: .8rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+    .site-header h1 { font-size: 1.4rem; }
+    .viz-section { padding: 1rem; }
+    .cyclic-card { width: 160px; }
+    .nav-bar { gap: .3rem; }
+    .nav-bar a { font-size: .75rem; padding: .25rem .5rem; }
+    .mod-step { flex-direction: column; align-items: flex-start; }
+}

@@ -1,0 +1,80 @@
+{
+    "Càn": {
+        "number": -6,
+        "stem": "Quý",
+        "element": "Thủy (Hà Đồ) / Kim (Tiên Thiên)",
+        "direction": "Bắc (North)",
+        "season": "Đông",
+        "organ": "Đầu, Phổi, Ruột Già",
+        "image_note": "Càn cư Bắc, số 6"
+    },
+    "Khảm": {
+        "number": 1,
+        "stem": "Nhâm",
+        "element": "Thủy",
+        "direction": "Bắc (North)",
+        "season": "Đông",
+        "organ": "Tai, Thận, Bàng Quang",
+        "image_note": "Khảm cư Bắc, số 1"
+    },
+    "Cấn": {
+        "number": -8,
+        "stem": "Ất",
+        "element": "Mộc (Hà Đồ) / Thổ",
+        "direction": "Đông (East)",
+        "season": "Xuân",
+        "organ": "Tay, Tỳ, Dạ Dày",
+        "image_note": "Cấn cư Đông, số 8"
+    },
+    "Chấn": {
+        "number": 9,
+        "stem": "Canh",
+        "element": "Kim (Hà Đồ) / Mộc",
+        "direction": "Tây (West)",
+        "season": "Thu",
+        "organ": "Chân, Gan, Mật",
+        "image_note": "Chấn cư Tây, số 9"
+    },
+    "Tốn": {
+        "number": 3,
+        "stem": "Giáp",
+        "element": "Mộc",
+        "direction": "Đông (East)",
+        "season": "Xuân",
+        "organ": "Đùi, Mật, Gan",
+        "image_note": "Tốn cư Đông, số 3"
+    },
+    "Ly": {
+        "number": 7,
+        "stem": "Bính",
+        "element": "Hỏa",
+        "direction": "Nam (South)",
+        "season": "Hè",
+        "organ": "Mắt, Tim, Ruột Non",
+        "image_note": "Ly cư Nam, số 7"
+    },
+    "Khôn": {
+        "number": -2,
+        "stem": "Đinh",
+        "element": "Hỏa (Hà Đồ) / Thổ",
+        "direction": "Nam (South)",
+        "season": "Hè",
+        "organ": "Bụng, Dạ Dày, Tỳ",
+        "image_note": "Khôn cư Nam, số 2"
+    },
+    "Đoài": {
+        "number": -4,
+        "stem": "Tân",
+        "element": "Kim",
+        "direction": "Tây (West)",
+        "season": "Thu",
+        "organ": "Miệng, Phổi, Ruột Già",
+        "image_note": "Đoài cư Tây, số 4"
+    },
+    "Center": {
+        "number": "5/10",
+        "stem": "Mậu, Kỷ",
+        "element": "Thổ",
+        "note": "Trung Cung"
+    }
+}

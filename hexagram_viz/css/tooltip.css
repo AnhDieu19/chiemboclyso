@@ -1,0 +1,40 @@
+/**
+ * tooltip.css - Tooltip Styles
+ * Hiệu ứng tooltip hiển thị thông tin quẻ
+ */
+
+#tooltip {
+    position: absolute;
+    background-color: rgba(30, 30, 30, 0.95);
+    border: 1px solid #444;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    max-width: 300px;
+    font-size: 0.9rem;
+    z-index: 10;
+    transition: opacity 0.2s;
+}
+
+#tooltip.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#tooltip h3 {
+    margin-top: 0;
+    color: #ffca28;
+    border-bottom: 1px solid #555;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+}
+
+#tooltip p {
+    margin: 5px 0;
+    line-height: 1.4;
+}
+
+#tooltip strong {
+    color: #90caf9;
+}

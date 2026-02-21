@@ -1,0 +1,747 @@
+/* ═══════════════════════════════════════════════════════════════
+   ĐẠI LỤC NHÂM - THIÊN VIÊN ĐỊA PHƯƠNG
+   Grand Six Ren Divination Styles
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ─── Bàn Thức Grid Layout ─────────────────────────────────── */
+.ban-thuc-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px;
+    max-width: 960px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.ban-thuc-grid::before {
+    content: '地 盤';
+    position: absolute;
+    top: -28px;
+    right: 0;
+    font-size: 0.75rem;
+    color: #95a5a6;
+}
+
+.cung-cell {
+    border: 1px solid #bdc3c7;
+    padding: 8px;
+    min-height: 140px;
+    background: #fff;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.2s;
+}
+
+.cung-cell:hover {
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.18);
+    transform: translateY(-2px);
+    z-index: 10;
+}
+
+.cung-cell.center-cell {
+    background: linear-gradient(135deg, #fef9e7, #fdebd0);
+    border: 2px solid #f39c12;
+    min-height: 160px;
+}
+
+/* ─── Thiên bàn / Địa bàn chi ──────────────────────────────── */
+.thien-dia-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.thien-chi-badge {
+    background: #3498db;
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.dia-chi-badge {
+    background: #e8e8e8;
+    color: #555;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+}
+
+/* ─── Thần Tướng ────────────────────────────────────────────── */
+.than-tuong-box {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 4px 0;
+}
+
+.than-dai_cat { background: #d5f5e3; color: #1e8449; border-left: 3px solid #27ae60; }
+.than-cat { background: #eafaf1; color: #27ae60; border-left: 3px solid #82e0aa; }
+.than-trung { background: #fef9e7; color: #7d6608; border-left: 3px solid #f9e79f; }
+.than-hung { background: #fdedec; color: #cb4335; border-left: 3px solid #e74c3c; }
+.than-dai_hung,
+.than-đại_hung { background: #f9ebea; color: #922b21; border-left: 3px solid #c0392b; }
+.than-đại_cát { background: #d5f5e3; color: #1e8449; border-left: 3px solid #27ae60; }
+
+/* ─── Ngũ Hành badges ───────────────────────────────────────── */
+.hanh-badge {
+    display: inline-block;
+    padding: 1px 6px;
+    border-radius: 8px;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+.hanh-Kim { background: #fdebd0; color: #b9770e; }
+.hanh-Moc,
+.hanh-Mộc { background: #d5f5e3; color: #1e8449; }
+.hanh-Thuy,
+.hanh-Thủy { background: #d6eaf8; color: #2874a6; }
+.hanh-Hoa,
+.hanh-Hỏa { background: #fadbd8; color: #cb4335; }
+.hanh-Tho,
+.hanh-Thổ { background: #f9e79f; color: #7d6608; }
+
+/* ─── Cung footer & hướng badge ─────────────────────────────── */
+.cung-footer {
+    margin-top: auto;
+    border-top: 1px dashed #ddd;
+    padding-top: 4px;
+    font-size: 0.72rem;
+    color: #888;
+    text-align: center;
+}
+
+.huong-badge {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #2c3e50;
+    color: #fff;
+    padding: 1px 8px;
+    border-radius: 10px;
+    font-size: 0.68rem;
+    white-space: nowrap;
+}
+
+/* ─── Nature colors ─────────────────────────────────────────── */
+.nature-đại_cát,
+.nature-dai_cat { color: #1abc9c; font-weight: bold; }
+.nature-cát,
+.nature-cat { color: #27ae60; font-weight: bold; }
+.nature-trung { color: #f39c12; }
+.nature-hung { color: #e74c3c; font-weight: bold; }
+.nature-đại_hung,
+.nature-dai_hung { color: #c0392b; font-weight: bold; }
+
+/* ═══════════════════════════════════════════════════════════════
+   TỨ KHÓA & TAM TRUYỀN Layout
+   ═══════════════════════════════════════════════════════════════ */
+.tu-khoa-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.khoa-card {
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 12px;
+    text-align: center;
+    background: #fff;
+    transition: all 0.2s;
+}
+
+.khoa-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.khoa-card.positive { border-color: #27ae60; }
+.khoa-card.negative { border-color: #e74c3c; }
+.khoa-card.neutral  { border-color: #f39c12; }
+
+.khoa-number {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.khoa-chi {
+    font-size: 1.2rem;
+    margin: 6px 0;
+}
+
+.khoa-chi .thuong {
+    display: block;
+    font-weight: bold;
+    color: #3498db;
+    font-size: 1.3rem;
+}
+
+.khoa-chi .arrow {
+    color: #95a5a6;
+    font-size: 0.8rem;
+}
+
+.khoa-chi .ha {
+    display: block;
+    color: #7f8c8d;
+}
+
+.khoa-role {
+    font-size: 0.78rem;
+    color: #666;
+    margin-top: 6px;
+    padding-top: 6px;
+    border-top: 1px dashed #eee;
+}
+
+/* ─── Tam Truyền Flow ───────────────────────────────────────── */
+.tam-truyen-flow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.truyen-card {
+    flex: 1;
+    min-width: 200px;
+    max-width: 280px;
+    border: 2px solid #3498db;
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+    background: #fff;
+    position: relative;
+}
+
+.truyen-card .truyen-label {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #3498db;
+    color: #fff;
+    padding: 2px 12px;
+    border-radius: 10px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+}
+
+.truyen-card.so-truyen          { border-color: #e74c3c; }
+.truyen-card.so-truyen .truyen-label   { background: #e74c3c; }
+.truyen-card.trung-truyen       { border-color: #f39c12; }
+.truyen-card.trung-truyen .truyen-label { background: #f39c12; }
+.truyen-card.mat-truyen         { border-color: #27ae60; }
+.truyen-card.mat-truyen .truyen-label  { background: #27ae60; }
+
+.truyen-arrow {
+    font-size: 1.5rem;
+    color: #bdc3c7;
+}
+
+.truyen-chi {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 8px 0;
+}
+
+.truyen-quantum {
+    font-size: 0.72rem;
+    color: #8e44ad;
+    font-style: italic;
+    margin-top: 6px;
+    padding-top: 6px;
+    border-top: 1px dashed #d2b4de;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   QUANTUM & VEDIC Section
+   ═══════════════════════════════════════════════════════════════ */
+.quantum-card {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: #eee;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.quantum-card h5 { color: #00d2ff; }
+
+.quantum-card .highlight-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #00d2ff;
+    text-shadow: 0 0 20px rgba(0, 210, 255, 0.5);
+}
+
+.quantum-card .formula-box {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(0, 210, 255, 0.3);
+    border-radius: 8px;
+    padding: 12px;
+    margin: 8px 0;
+    font-family: 'Courier New', monospace;
+}
+
+.quantum-card .vedic-badge {
+    display: inline-block;
+    background: rgba(255, 193, 7, 0.2);
+    color: #ffc107;
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    border: 1px solid rgba(255, 193, 7, 0.3);
+}
+
+.symmetry-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.symmetry-item {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 12px;
+    border-left: 3px solid #00d2ff;
+}
+
+.symmetry-item h6 { color: #74b9ff; margin-bottom: 4px; }
+.symmetry-item p  { color: #b2bec3; font-size: 0.85rem; margin: 0; }
+
+/* ═══════════════════════════════════════════════════════════════
+   LỤC NHÂM 6 Tổ Hợp
+   ═══════════════════════════════════════════════════════════════ */
+.luc-nham-cycle {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.nham-item {
+    width: 130px;
+    text-align: center;
+    border: 2px solid #2980b9;
+    border-radius: 10px;
+    padding: 10px;
+    background: #ebf5fb;
+    transition: all 0.2s;
+}
+
+.nham-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(41, 128, 185, 0.3);
+}
+
+.nham-item .nham-han {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #2980b9;
+}
+
+.nham-item .nham-name {
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.nham-item .nham-phase {
+    font-size: 0.72rem;
+    color: #666;
+    margin-top: 4px;
+    border-top: 1px dashed #bbb;
+    padding-top: 4px;
+}
+
+/* ─── Miscellaneous ─────────────────────────────────────────── */
+.dong-vat-text {
+    font-size: 0.7rem;
+    color: #999;
+}
+
+.strategy-card {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.strategy-icon {
+    font-size: 2rem;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   QUANTUM DETAIL SECTIONS
+   ═══════════════════════════════════════════════════════════════ */
+
+.quantum-detail-card .quantum-header {
+    background: linear-gradient(135deg, #0c0c1d, #1a1a3e);
+    color: #e0e0ff;
+    border-bottom: 2px solid #6c5ce7;
+}
+
+.quantum-detail-card .quantum-header h5 { color: #a29bfe; }
+.quantum-detail-card .quantum-header small { color: #b2bec3; }
+
+.quantum-interpretation {
+    font-size: 0.88rem;
+    color: #636e72;
+    font-style: italic;
+    padding: 8px 12px;
+    background: #f8f9fa;
+    border-left: 3px solid #6c5ce7;
+    border-radius: 0 6px 6px 0;
+}
+
+/* Coherence Meter */
+.quantum-meter {
+    margin-bottom: 12px;
+}
+
+.meter-label {
+    font-weight: 600;
+    color: #2d3436;
+    margin-bottom: 6px;
+}
+
+.meter-bar-bg {
+    background: #dfe6e9;
+    border-radius: 12px;
+    height: 24px;
+    overflow: hidden;
+    position: relative;
+}
+
+.meter-bar-fill {
+    height: 100%;
+    border-radius: 12px;
+    background: linear-gradient(90deg, #6c5ce7, #a29bfe, #00cec9);
+    transition: width 1s ease-out;
+    position: relative;
+}
+
+.meter-bar-fill::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.3) 50%, transparent 100%);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.meter-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #6c5ce7;
+    text-align: center;
+    margin-top: 4px;
+    font-family: 'Courier New', monospace;
+}
+
+/* Ngũ Hành Quantum Distribution */
+.ngu-hanh-quantum-dist {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.hanh-quantum-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+}
+
+.hanh-quantum-row .hanh-name {
+    width: 50px;
+    font-weight: 600;
+}
+
+.hanh-quantum-row .hanh-bar-bg {
+    flex: 1;
+    background: #ecf0f1;
+    height: 18px;
+    border-radius: 9px;
+    overflow: hidden;
+}
+
+.hanh-quantum-row .hanh-bar-fill {
+    height: 100%;
+    border-radius: 9px;
+    transition: width 0.8s ease-out;
+}
+
+.hanh-quantum-row .hanh-force {
+    width: 120px;
+    font-size: 0.75rem;
+    color: #636e72;
+    text-align: right;
+}
+
+/* Entanglement Grid */
+.entanglement-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+}
+
+.entanglement-pair {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 12px;
+    border: 1px solid #dfe6e9;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.entanglement-pair:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(108, 92, 231, 0.2);
+}
+
+.entanglement-pair .pair-label {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #2d3436;
+}
+
+.entanglement-pair .correlation-bar {
+    height: 8px;
+    background: #dfe6e9;
+    border-radius: 4px;
+    margin: 8px 0;
+    overflow: hidden;
+}
+
+.entanglement-pair .correlation-fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.8s ease-out;
+}
+
+.entanglement-pair .correlation-fill.positive {
+    background: linear-gradient(90deg, #00b894, #55efc4);
+}
+
+.entanglement-pair .correlation-fill.negative {
+    background: linear-gradient(90deg, #d63031, #ff7675);
+}
+
+.entanglement-pair .bell-state {
+    font-family: 'Courier New', monospace;
+    font-size: 0.78rem;
+    color: #6c5ce7;
+    margin-top: 4px;
+}
+
+.entanglement-pair .hanh-pair {
+    font-size: 0.8rem;
+    margin-top: 4px;
+}
+
+/* Decoherence Timeline */
+.decoherence-timeline {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.decoherence-stage {
+    flex: 1;
+    min-width: 220px;
+    max-width: 320px;
+    padding: 16px;
+    border-radius: 12px;
+    text-align: center;
+    position: relative;
+}
+
+.decoherence-stage.stage-0 {
+    background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+    color: white;
+}
+
+.decoherence-stage.stage-1 {
+    background: linear-gradient(135deg, #0984e3, #74b9ff);
+    color: white;
+}
+
+.decoherence-stage.stage-2 {
+    background: linear-gradient(135deg, #00b894, #55efc4);
+    color: #2d3436;
+}
+
+.decoherence-stage .stage-header {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.8;
+}
+
+.decoherence-stage .stage-chi {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 4px 0;
+}
+
+.decoherence-stage .stage-quantum {
+    font-family: 'Courier New', monospace;
+    font-size: 0.8rem;
+    padding: 4px 8px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 6px;
+    display: inline-block;
+    margin: 4px 0;
+}
+
+.decoherence-stage .stage-vedic {
+    font-size: 0.82rem;
+    opacity: 0.9;
+    margin-top: 6px;
+}
+
+.decoherence-stage .stage-particle {
+    font-size: 0.78rem;
+    opacity: 0.85;
+    margin-top: 4px;
+}
+
+.decoherence-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: #6c5ce7;
+    padding: 0 8px;
+}
+
+/* Particle Table */
+.quantum-particle-table {
+    font-size: 0.85rem;
+}
+
+.quantum-particle-table thead {
+    background: linear-gradient(135deg, #0c0c1d, #1a1a3e);
+    color: #a29bfe;
+}
+
+.quantum-particle-table .particle-badge {
+    display: inline-block;
+    background: #6c5ce7;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.78rem;
+    font-family: 'Courier New', monospace;
+}
+
+.quantum-particle-table .vedic-name {
+    color: #e17055;
+    font-weight: 600;
+}
+
+.quantum-particle-table .role-text {
+    font-size: 0.78rem;
+    color: #636e72;
+    max-width: 280px;
+}
+
+/* Concept Mapping Grid */
+.concept-mapping-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.concept-row {
+    display: grid;
+    grid-template-columns: 180px 200px 200px 1fr;
+    gap: 12px;
+    align-items: center;
+    padding: 12px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border-left: 4px solid #6c5ce7;
+    transition: all 0.3s;
+}
+
+.concept-row:hover {
+    background: #eee5ff;
+    transform: translateX(4px);
+}
+
+.concept-row .concept-ln {
+    font-weight: 700;
+    color: #2d3436;
+}
+
+.concept-row .concept-qt {
+    color: #6c5ce7;
+    font-family: 'Courier New', monospace;
+    font-size: 0.85rem;
+}
+
+.concept-row .concept-vd {
+    color: #e17055;
+    font-style: italic;
+}
+
+.concept-row .concept-formula {
+    font-family: 'Courier New', monospace;
+    font-size: 0.8rem;
+    color: #636e72;
+    background: rgba(108, 92, 231, 0.08);
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+
+.concept-row .concept-detail {
+    font-size: 0.8rem;
+    color: #636e72;
+    grid-column: 1 / -1;
+    padding-top: 8px;
+    border-top: 1px dashed #dfe6e9;
+    display: none;
+}
+
+.concept-row.expanded .concept-detail {
+    display: block;
+}
+
+.concept-row .expand-btn {
+    cursor: pointer;
+    color: #6c5ce7;
+    font-size: 0.75rem;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .concept-row {
+        grid-template-columns: 1fr;
+    }
+    .decoherence-timeline {
+        flex-direction: column;
+        align-items: center;
+    }
+    .decoherence-arrow {
+        transform: rotate(90deg);
+    }
+    .entanglement-grid {
+        grid-template-columns: 1fr;
+    }
+}

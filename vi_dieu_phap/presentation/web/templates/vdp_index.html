@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vi Diệu Pháp Knowledge Graph</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 40px;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            color: #e0e0e0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(30, 30, 50, 0.95);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        h1 {
+            color: #e0e0e0;
+            margin-bottom: 8px;
+            font-size: 28px;
+        }
+
+        .subtitle {
+            color: #90caf9;
+            margin-bottom: 40px;
+            font-size: 17px;
+        }
+
+        .option-card {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 28px;
+            margin: 16px 0;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: block;
+            color: inherit;
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .option-card:hover {
+            background: rgba(144, 202, 249, 0.08);
+            border-color: #90caf9;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(144, 202, 249, 0.15);
+        }
+
+        .option-card h2 {
+            color: #90caf9;
+            margin-bottom: 8px;
+            font-size: 22px;
+        }
+
+        .option-card p { color: #bbb; line-height: 1.6; }
+        .option-card .hint { margin-top: 8px; color: #666; font-size: 14px; }
+
+        .home-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #90caf9;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.2s;
+        }
+
+        .home-link:hover { color: #bbdefb; text-decoration: underline; }
+
+        .stats {
+            margin-top: 30px;
+            padding: 16px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            font-size: 13px;
+            color: #888;
+        }
+
+        .stats span { color: #90caf9; font-weight: bold; }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="/" class="home-link">← Về Trang Chủ</a>
+
+        <h1>Vi Diệu Pháp Knowledge Graph</h1>
+        <p class="subtitle">Abhidhamma Visualization - Chọn loại quan hệ để trực quan hóa</p>
+
+        <a href="/vdp/structure" class="option-card">
+            <h2>1. Cấu trúc (Hierarchy)</h2>
+            <p>Hiển thị phân cấp: Tâm, Sở Hữu Tâm, Sắc Pháp, Niết Bàn và các nhóm con</p>
+            <p class="hint">Tập trung vào tổ chức phân cấp của các pháp</p>
+        </a>
+
+        <a href="/vdp/association" class="option-card">
+            <h2>2. Tương ưng (Association)</h2>
+            <p>Hiển thị quan hệ giữa Citta (Tâm) và Cetasika (Sở Hữu Tâm)</p>
+            <p class="hint">Xem các sở hữu nào đi kèm với các loại tâm</p>
+        </a>
+
+        <a href="/vdp/root-cause" class="option-card">
+            <h2>3. Nhân Sanh (Root Cause)</h2>
+            <p>Hiển thị quan hệ giữa Tâm và Nhân (Tham, Sân, Si, Vô Tham, Vô Sân, Vô Si)</p>
+            <p class="hint">Phân tích nguyên nhân sanh khởi của các tâm</p>
+        </a>
+
+        <div class="stats" id="stats-box">Đang tải thống kê...</div>
+    </div>
+
+    <script>
+        fetch('/vdp/api/stats')
+            .then(r => r.json())
+            .then(s => {
+                const box = document.getElementById('stats-box');
+                box.innerHTML = `📊 <span>${s.total_nodes}</span> nodes | <span>${s.total_links}</span> links | `
+                    + Object.entries(s.node_types || {}).map(([k, v]) => `${k}: <span>${v}</span>`).join(' | ');
+            })
+            .catch(() => {
+                document.getElementById('stats-box').innerHTML = '📊 Không tải được thống kê';
+            });
+    </script>
+</body>
+
+</html>

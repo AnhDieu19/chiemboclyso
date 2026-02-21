@@ -1,0 +1,465 @@
+[
+    {
+        "id": "L1_BẤT_THIỆN_AKUSALA",
+        "name": "Bất Thiện (Akusala)",
+        "type": "sub_category",
+        "group": "Akusala",
+        "parent_id": "CAT_TÂM_CITTA",
+        "criteria": {
+            "group": "Akusala"
+        }
+    },
+    {
+        "id": "L2_TÂM_THAM",
+        "name": "Tâm Tham",
+        "type": "sub_category",
+        "group": "Akusala",
+        "parent_id": "L1_BẤT_THIỆN_AKUSALA",
+        "criteria": {
+            "group": "Akusala",
+            "name_contains": "Tham"
+        }
+    },
+    {
+        "id": "L3_HỢP_TÀ",
+        "name": "Hợp Tà",
+        "type": "sub_category",
+        "group": "Akusala",
+        "parent_id": "L2_TÂM_THAM",
+        "criteria": {
+            "group": "Akusala",
+            "name_contains": [
+                "Tham",
+                "Hợp Tà"
+            ]
+        }
+    },
+    {
+        "id": "L3_LY_TÀ",
+        "name": "Ly Tà",
+        "type": "sub_category",
+        "group": "Akusala",
+        "parent_id": "L2_TÂM_THAM",
+        "criteria": {
+            "group": "Akusala",
+            "name_contains": [
+                "Tham",
+                "Ly Tà"
+            ]
+        }
+    },
+    {
+        "id": "L4_THAM_HOPT_COTRO",
+        "name": "Có Trợ",
+        "type": "sub_category",
+        "group": "Akusala",
+        "parent_id": "L3_HỢP_TÀ",
+        "criteria": {
+            "group": "Akusala",
+            "name_contains": [
+                "Tham",
+                "Hợp Tà"
+            ],
+            "name_contains_any": [
+                "Có Trợ",
+                "Hữu Dẫn"
+            ]
+        }
+    },
+    {
+        "id": "L4_THAM_HOPT_KHONGTRO",
+        "name": "Không Trợ",
+        "type": "sub_category",
+        "group": "Akusala",
+        "parent_id": "L3_HỢP_TÀ",
+        "criteria": {
+            "group": "Akusala",
+            "name_contains": [
+                "Tham",
+                "Hợp Tà"
+            ],
+            "name_contains_any": [
+                "Không Trợ",
+                "Vô Dẫn"
+            ]
+        }
+    },
+    {
+        "id": "L4_THAM_LYT_COTRO",
+        "name": "Có Trợ",
+        "type": "sub_category",
+        "group": "Akusala",
+        "parent_id": "L3_LY_TÀ",
+        "criteria": {
+            "group": "Akusala",
+            "name_contains": [
+                "Tham",
+                "Ly Tà"
+            ],
+            "name_contains_any": [
+                "Có Trợ",
+                "Hữu Dẫn"
+            ]
+        }
+    },
+    {
+        "id": "L4_THAM_LYT_KHONGTRO",
+        "name": "Không Trợ",
+        "type": "sub_category",
+        "group": "Akusala",
+        "parent_id": "L3_LY_TÀ",
+        "criteria": {
+            "group": "Akusala",
+            "name_contains": [
+                "Tham",
+                "Ly Tà"
+            ],
+            "name_contains_any": [
+                "Không Trợ",
+                "Vô Dẫn"
+            ]
+        }
+    },
+    {
+        "id": "L2_TÂM_SÂN",
+        "name": "Tâm Sân",
+        "type": "sub_category",
+        "group": "Akusala",
+        "parent_id": "L1_BẤT_THIỆN_AKUSALA",
+        "criteria": {
+            "group": "Akusala",
+            "name_contains": "Sân"
+        }
+    },
+    {
+        "id": "L3_SAN_COTRO",
+        "name": "Có Trợ",
+        "type": "sub_category",
+        "group": "Akusala",
+        "parent_id": "L2_TÂM_SÂN",
+        "criteria": {
+            "group": "Akusala",
+            "name_contains": "Sân",
+            "name_contains_any": [
+                "Có Trợ",
+                "Hữu Dẫn"
+            ]
+        }
+    },
+    {
+        "id": "L3_SAN_KHONGTRO",
+        "name": "Không Trợ",
+        "type": "sub_category",
+        "group": "Akusala",
+        "parent_id": "L2_TÂM_SÂN",
+        "criteria": {
+            "group": "Akusala",
+            "name_contains": "Sân",
+            "name_contains_any": [
+                "Không Trợ",
+                "Vô Dẫn"
+            ]
+        }
+    },
+    {
+        "id": "L2_TÂM_SI",
+        "name": "Tâm Si",
+        "type": "sub_category",
+        "group": "Akusala",
+        "parent_id": "L1_BẤT_THIỆN_AKUSALA",
+        "criteria": {
+            "group": "Akusala",
+            "name_contains": "Si"
+        }
+    },
+    {
+        "id": "L1_VÔ_NHÂN_AHETUKA",
+        "name": "Vô Nhân (Ahetuka)",
+        "type": "sub_category",
+        "group": "Ahetuka",
+        "parent_id": "CAT_TÂM_CITTA",
+        "criteria": {
+            "group": "Ahetuka"
+        }
+    },
+    {
+        "id": "L2_QUẢ_BẤT_THIỆN",
+        "name": "Quả Bất Thiện",
+        "type": "sub_category",
+        "group": "Ahetuka-Akusala-Vipaka",
+        "parent_id": "L1_VÔ_NHÂN_AHETUKA",
+        "criteria": {
+            "group": "Ahetuka",
+            "name_contains": "Quả Bất Thiện"
+        }
+    },
+    {
+        "id": "L2_QUẢ_THIỆN",
+        "name": "Quả Thiện",
+        "type": "sub_category",
+        "group": "Ahetuka-Kusala-Vipaka",
+        "parent_id": "L1_VÔ_NHÂN_AHETUKA",
+        "criteria": {
+            "group": "Ahetuka",
+            "name_contains": "Quả Thiện"
+        }
+    },
+    {
+        "id": "L2_DUY_TÁC_VÔ_NHÂN",
+        "name": "Duy Tác Vô Nhân",
+        "type": "sub_category",
+        "group": "Ahetuka-Kiriya",
+        "parent_id": "L1_VÔ_NHÂN_AHETUKA",
+        "criteria": {
+            "group": "Ahetuka",
+            "name_not_contains": [
+                "Quả Thiện",
+                "Quả Bất Thiện"
+            ]
+        }
+    },
+    {
+        "id": "L1_DỤC_GIỚI_TỊNH_HẢO_THIỆN",
+        "name": "Dục Giới Tịnh Hảo (Thiện)",
+        "type": "sub_category",
+        "group": "Kama-Kusala",
+        "parent_id": "CAT_TÂM_CITTA",
+        "criteria": {
+            "group": "Kama-Kusala"
+        }
+    },
+    {
+        "id": "L2_HỢP_TRÍ",
+        "name": "Hợp Trí",
+        "type": "sub_category",
+        "group": "Kama-Kusala",
+        "parent_id": "L1_DỤC_GIỚI_TỊNH_HẢO_THIỆN",
+        "criteria": {
+            "group": "Kama-Kusala",
+            "name_contains": "Hợp Trí"
+        }
+    },
+    {
+        "id": "L2_LY_TRÍ",
+        "name": "Ly Trí",
+        "type": "sub_category",
+        "group": "Kama-Kusala",
+        "parent_id": "L1_DỤC_GIỚI_TỊNH_HẢO_THIỆN",
+        "criteria": {
+            "group": "Kama-Kusala",
+            "name_contains": "Ly Trí"
+        }
+    },
+    {
+        "id": "L3_KK_HT_HUUDAN",
+        "name": "Hữu Dẫn",
+        "type": "sub_category",
+        "group": "Kama-Kusala",
+        "parent_id": "L2_HỢP_TRÍ",
+        "criteria": {
+            "group": "Kama-Kusala",
+            "name_contains": [
+                "Hợp Trí",
+                "Hữu Dẫn"
+            ]
+        }
+    },
+    {
+        "id": "L3_KK_HT_VODAN",
+        "name": "Vô Dẫn",
+        "type": "sub_category",
+        "group": "Kama-Kusala",
+        "parent_id": "L2_HỢP_TRÍ",
+        "criteria": {
+            "group": "Kama-Kusala",
+            "name_contains": [
+                "Hợp Trí",
+                "Vô Dẫn"
+            ]
+        }
+    },
+    {
+        "id": "L3_KK_LT_HUUDAN",
+        "name": "Hữu Dẫn",
+        "type": "sub_category",
+        "group": "Kama-Kusala",
+        "parent_id": "L2_LY_TRÍ",
+        "criteria": {
+            "group": "Kama-Kusala",
+            "name_contains": [
+                "Ly Trí",
+                "Hữu Dẫn"
+            ]
+        }
+    },
+    {
+        "id": "L3_KK_LT_VODAN",
+        "name": "Vô Dẫn",
+        "type": "sub_category",
+        "group": "Kama-Kusala",
+        "parent_id": "L2_LY_TRÍ",
+        "criteria": {
+            "group": "Kama-Kusala",
+            "name_contains": [
+                "Ly Trí",
+                "Vô Dẫn"
+            ]
+        }
+    },
+    {
+        "id": "L1_DỤC_GIỚI_TỊNH_HẢO_QUẢ",
+        "name": "Dục Giới Tịnh Hảo (Quả)",
+        "type": "sub_category",
+        "group": "Kama-Vipaka",
+        "parent_id": "CAT_TÂM_CITTA",
+        "criteria": {
+            "group": "Kama-Vipaka"
+        }
+    },
+    {
+        "id": "L2_KV_HOP_TRI",
+        "name": "Hợp Trí",
+        "type": "sub_category",
+        "group": "Kama-Vipaka",
+        "parent_id": "L1_DỤC_GIỚI_TỊNH_HẢO_QUẢ",
+        "criteria": {
+            "group": "Kama-Vipaka",
+            "name_contains": "Hợp Trí"
+        }
+    },
+    {
+        "id": "L2_KV_LY_TRI",
+        "name": "Ly Trí",
+        "type": "sub_category",
+        "group": "Kama-Vipaka",
+        "parent_id": "L1_DỤC_GIỚI_TỊNH_HẢO_QUẢ",
+        "criteria": {
+            "group": "Kama-Vipaka",
+            "name_contains": "Ly Trí"
+        }
+    },
+    {
+        "id": "L1_DỤC_GIỚI_TỊNH_HẢO_DUY_TÁC",
+        "name": "Dục Giới Tịnh Hảo (Duy Tác)",
+        "type": "sub_category",
+        "group": "Kama-Kiriya",
+        "parent_id": "CAT_TÂM_CITTA",
+        "criteria": {
+            "group": "Kama-Kiriya"
+        }
+    },
+    {
+        "id": "L2_KKI_HOP_TRI",
+        "name": "Hợp Trí",
+        "type": "sub_category",
+        "group": "Kama-Kiriya",
+        "parent_id": "L1_DỤC_GIỚI_TỊNH_HẢO_DUY_TÁC",
+        "criteria": {
+            "group": "Kama-Kiriya",
+            "name_contains": "Hợp Trí"
+        }
+    },
+    {
+        "id": "L2_KKI_LY_TRI",
+        "name": "Ly Trí",
+        "type": "sub_category",
+        "group": "Kama-Kiriya",
+        "parent_id": "L1_DỤC_GIỚI_TỊNH_HẢO_DUY_TÁC",
+        "criteria": {
+            "group": "Kama-Kiriya",
+            "name_contains": "Ly Trí"
+        }
+    },
+    {
+        "id": "L1_RUPA_KUSALA",
+        "name": "Sắc Giới (Thiện)",
+        "type": "sub_category",
+        "group": "Rupa-Kusala",
+        "parent_id": "L1_SẮC_GIỚI_RUPA",
+        "criteria": {
+            "group": "Rupa-Kusala"
+        }
+    },
+    {
+        "id": "L1_RUPA_VIPAKA",
+        "name": "Sắc Giới (Quả)",
+        "type": "sub_category",
+        "group": "Rupa-Vipaka",
+        "parent_id": "L1_SẮC_GIỚI_RUPA",
+        "criteria": {
+            "group": "Rupa-Vipaka"
+        }
+    },
+    {
+        "id": "L1_RUPA_KIRIYA",
+        "name": "Sắc Giới (Duy Tác)",
+        "type": "sub_category",
+        "group": "Rupa-Kiriya",
+        "parent_id": "L1_SẮC_GIỚI_RUPA",
+        "criteria": {
+            "group": "Rupa-Kiriya"
+        }
+    },
+    {
+        "id": "L1_ARUPA_KUSALA",
+        "name": "Vô Sắc Giới (Thiện)",
+        "type": "sub_category",
+        "group": "Arupa-Kusala",
+        "parent_id": "L1_VÔ_SẮC_GIỚI_ARUPA",
+        "criteria": {
+            "group": "Arupa-Kusala"
+        }
+    },
+    {
+        "id": "L1_ARUPA_VIPAKA",
+        "name": "Vô Sắc Giới (Quả)",
+        "type": "sub_category",
+        "group": "Arupa-Vipaka",
+        "parent_id": "L1_VÔ_SẮC_GIỚI_ARUPA",
+        "criteria": {
+            "group": "Arupa-Vipaka"
+        }
+    },
+    {
+        "id": "L1_ARUPA_KIRIYA",
+        "name": "Vô Sắc Giới (Duy Tác)",
+        "type": "sub_category",
+        "group": "Arupa-Kiriya",
+        "parent_id": "L1_VÔ_SẮC_GIỚI_ARUPA",
+        "criteria": {
+            "group": "Arupa-Kiriya"
+        }
+    },
+    {
+        "id": "L1_SIÊU_THẾ_LOKUTTARA",
+        "name": "Siêu Thế (Lokuttara)",
+        "type": "sub_category",
+        "group": "Lokuttara",
+        "parent_id": "CAT_TÂM_CITTA",
+        "criteria": {
+            "plane": "Lokuttara"
+        }
+    },
+    {
+        "id": "L2_ĐẠO_MAGGA",
+        "name": "Đạo (Magga)",
+        "type": "sub_category",
+        "group": "Lokuttara-Magga",
+        "parent_id": "L1_SIÊU_THẾ_LOKUTTARA",
+        "criteria": {
+            "plane": "Lokuttara",
+            "name_contains": "Đạo"
+        }
+    },
+    {
+        "id": "L2_QUẢ_PHALA",
+        "name": "Quả (Phala)",
+        "type": "sub_category",
+        "group": "Lokuttara-Phala",
+        "parent_id": "L1_SIÊU_THẾ_LOKUTTARA",
+        "criteria": {
+            "plane": "Lokuttara",
+            "name_contains": "Quả"
+        }
+    }
+]

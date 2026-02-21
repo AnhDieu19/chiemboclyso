@@ -1,0 +1,43 @@
+{
+    "Thiên Di": {
+        "title": "Thân cư Thiên Di",
+        "personality": "Tự giác - Tự lập - Tự do",
+        "description": "Người Thân cư Thiên Di rất đặc biệt, có ba cái đó là Tự giác - Tự lập - Tự do. Rất thích tự lập, sớm ra khỏi gia đình, sớm ly hương tổ nghiệp, học hành ở phương xa, không muốn cha mẹ lo cho mình, muốn tất cả đều tự tay mình làm nên. Tự giác ở đây là không phải để ai nhắc nhở vấn đề gì, coi đó là trách nhiệm phải làm, tự chăm lo cho bản thân, tự giác học hành chau dồi kiến thức. Thích tự do về tâm thế, tự do về tâm hồn, tự do về con người. Ba điểm này tạo ra sự khác biệt. Cũng chính vì ba điểm này sẽ tạo ra thất bại nếu bị gò bó, gò ép về Không gian - Thời gian - Cuộc sống.",
+        "tendency": "Thường ly hương tổ nghiệp từ sớm. Tâm hồn sẽ hướng ngoại, thích đi xa, thích chấp nhận rủi ro, không ưa dựa dẫm vào người khác, có thái độ rất lạc quan, tinh thần phóng khoáng.",
+        "career": [
+            "Báo chí",
+            "Du lịch",
+            "Phân tích",
+            "Điện ảnh",
+            "Nghệ thuật",
+            "Thiết kế",
+            "Tổ chức sự kiện"
+        ],
+        "traits": "Rất ham học hỏi, tận dụng mọi cơ hội để học hỏi, để bản thân tốt lên. Thường có thiên hướng xuất ngoại, thích đi đây đó, thích khám phá, thích du lịch."
+    },
+    "Mệnh": {
+        "title": "Thân đồng cung Mệnh",
+        "description": "Thân đồng cung Mệnh tức mệnh và thân cùng một cung, người này tự quyết định vận mệnh của mình.",
+        "tendency": "Tự lực cánh sinh, không dựa vào ai."
+    },
+    "Tài Bạch": {
+        "title": "Thân cư Tài Bạch",
+        "description": "Thân cư Tài Bạch là người suốt đời bận rộn vì tiền bạc.",
+        "tendency": "Tập trung vào việc kiếm tiền, tài chính là ưu tiên."
+    },
+    "Quan Lộc": {
+        "title": "Thân cư Quan Lộc",
+        "description": "Thân cư Quan Lộc là người suốt đời bận rộn vì sự nghiệp.",
+        "tendency": "Tập trung vào công việc, sự nghiệp là ưu tiên."
+    },
+    "Phu Thê": {
+        "title": "Thân cư Phu Thê",
+        "description": "Thân cư Phu Thê là người suốt đời bận rộn vì chuyện tình cảm, hôn nhân.",
+        "tendency": "Tình cảm, hôn nhân ảnh hưởng lớn đến cuộc đời."
+    },
+    "Phúc Đức": {
+        "title": "Thân cư Phúc Đức",
+        "description": "Thân cư Phúc Đức là người hưởng phúc từ tổ tiên.",
+        "tendency": "Có phúc đức, được tổ tiên phù hộ."
+    }
+}

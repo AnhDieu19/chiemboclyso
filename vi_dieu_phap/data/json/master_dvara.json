@@ -1,0 +1,26 @@
+[
+  {
+    "id": "DVA_MAT",
+    "name": "Nhãn Môn (Cakkhu-dvara)"
+  },
+  {
+    "id": "DVA_TAI",
+    "name": "Nhĩ Môn (Sota-dvara)"
+  },
+  {
+    "id": "DVA_MUI",
+    "name": "Tỷ Môn (Ghana-dvara)"
+  },
+  {
+    "id": "DVA_LUOI",
+    "name": "Thiệt Môn (Jivha-dvara)"
+  },
+  {
+    "id": "DVA_THAN",
+    "name": "Thân Môn (Kaya-dvara)"
+  },
+  {
+    "id": "DVA_Y",
+    "name": "Ý Môn (Mano-dvara)"
+  }
+]
