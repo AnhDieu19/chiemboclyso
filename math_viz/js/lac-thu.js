@@ -13,7 +13,7 @@ const LacThuViz = (() => {
     const GAP = 6;
     const GRID_W = CELL_SIZE * 3 + GAP * 4;
     const GRID_H = CELL_SIZE * 3 + GAP * 4;
-    const MARGIN = { top: 55, right: 260, bottom: 55, left: 55 };
+    const MARGIN = { top: 55, right: 280, bottom: 120, left: 55 };
 
     let containerId, svg, activeCell = null;
 
@@ -28,17 +28,20 @@ const LacThuViz = (() => {
         const container = d3.select(containerId);
         container.selectAll("svg").remove();
         container.selectAll(".transform-title").remove();
+        container.selectAll(".lt-sub-panels").remove();
         activeCell = null;
 
         const cfg = _cfg();
         const totalW = GRID_W + MARGIN.left + MARGIN.right;
-        const totalH = GRID_H + MARGIN.top + MARGIN.bottom;
+        // Right panel extends much further than grid in TQ mode
+        const rightPanelH = cfg.mode === 'TQ' ? 660 : 380;
+        const leftPanelH = GRID_H + MARGIN.bottom;  // grid + opposition + sums
+        const totalH = MARGIN.top + Math.max(leftPanelH, rightPanelH) + 20;
 
         svg = container.append("svg")
             .attr("viewBox", `0 0 ${totalW} ${totalH}`)
             .attr("preserveAspectRatio", "xMidYMid meet")
-            .style("width", "100%")
-            .style("max-height", "680px");
+            .style("width", "100%");
 
         const g = svg.append("g")
             .attr("transform", `translate(${MARGIN.left}, ${MARGIN.top})`);
@@ -46,8 +49,8 @@ const LacThuViz = (() => {
         drawCompass(g, cfg);
         drawGrid(g, cfg);
         drawSumLabels(g);
+        drawOppositionDiagram(g, cfg);  // below grid, before info
         drawInfoPanel(g, cfg);
-        drawOppositionDiagram(g, cfg);
 
         // Transformation diagram (Viên Như formula)
         drawTransformDiagram(container, cfg);
@@ -384,17 +387,18 @@ const LacThuViz = (() => {
             .text("Click ô → highlight các đường qua ô đó");
     }
 
-    /* ── opposition diagram ── */
+    /* ── opposition diagram (below grid) ── */
     function drawOppositionDiagram(g, cfg) {
-        const cx = GRID_W + 140;
-        const cy = GRID_H - 30;
-        const r = 40;
+        const cx = GRID_W / 2;
+        const cy = GRID_H + 75;  // below grid + sum labels
+        const r = 36;
         const oppG = g.append("g").attr("class", "lt-opp")
             .attr("transform", `translate(${cx}, ${cy})`);
 
-        oppG.append("text").attr("y", -r - 10).attr("text-anchor", "middle")
-            .attr("font-size", "10px").attr("fill", "var(--text-muted)")
-            .text("p ↔ 10−p");
+        oppG.append("text").attr("y", -r - 12).attr("text-anchor", "middle")
+            .attr("font-size", "11px").attr("font-weight", "600")
+            .attr("fill", "var(--accent-gold)")
+            .text("Đối Xứng: p ↔ 10−p");
 
         const pairs = [[1, 9], [2, 8], [3, 7], [4, 6]];
         pairs.forEach((pair, i) => {

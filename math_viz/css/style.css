@@ -81,7 +81,7 @@ a:hover { text-decoration: underline; }
 
 /* ── Main ── */
 main {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 1.5rem 1rem 4rem;
 }
@@ -165,6 +165,20 @@ main {
 }
 .surj-svg {
     max-width: 900px;
+}
+
+/* ── Lạc Thư viz container ── */
+#viz-lacthu svg {
+    overflow: visible;
+}
+#viz-lacthu .transform-title {
+    text-align: center;
+    margin-top: 1.2rem;
+    padding-top: .8rem;
+    border-top: 1px solid var(--border-color);
+}
+#viz-lacthu .transform-svg {
+    margin-top: .5rem;
 }
 
 /* ── Lac Thu cells ── */
