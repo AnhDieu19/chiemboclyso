@@ -39,6 +39,18 @@
             Lạc Thư là ma trận 3 × 3 với mọi hàng, cột, đường chéo đều = 15.
             Tính chất đối xứng: p + (10 − p) = 10. Nền tảng Cửu Cung cho cả Thái Ất và Kỳ Môn.
         </p>
+
+        <!-- Mode toggle: Đại Việt ↔ Trung Quốc -->
+        <div class="lt-toggle-bar">
+            <button id="btn-lt-tq" class="lt-toggle-btn active" onclick="setLacThuMode('TQ')">
+                🇨🇳 Trung Quốc
+            </button>
+            <button id="btn-lt-dv" class="lt-toggle-btn" onclick="setLacThuMode('DV')">
+                🇻🇳 Đại Việt
+            </button>
+            <span id="lt-mode-hint" class="lt-mode-hint">Nam trên — Bắc dưới</span>
+        </div>
+
         <div id="viz-lacthu"></div>
     </section>
 
@@ -128,6 +140,20 @@ document.addEventListener("DOMContentLoaded", () => {
     // Constants cards
     buildConstants();
 });
+
+/** Switch Lạc Thư between TQ / DV mode */
+function setLacThuMode(mode) {
+    if (LacThuMode.current !== mode) {
+        LacThuMode.current = mode;
+        LacThuViz.render();
+    }
+    // Update button active states
+    document.getElementById("btn-lt-tq").classList.toggle("active", mode === "TQ");
+    document.getElementById("btn-lt-dv").classList.toggle("active", mode === "DV");
+    // Update hint text
+    const cfg = mode === "TQ" ? LAC_THU_TQ : LAC_THU_DV;
+    document.getElementById("lt-mode-hint").textContent = cfg.orientation;
+}
 
 function buildConstants() {
     const grid = document.querySelector("#viz-constants");

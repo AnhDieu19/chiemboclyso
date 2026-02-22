@@ -7,39 +7,104 @@
 
 /* ═══════════════ 1. Lạc Thư Magic Square ═══════════════ */
 
-const LAC_THU = {
-    /** 3×3 layout — row-major (top=South, bottom=North in traditional orientation) */
+/**
+ * Current active mode: 'TQ' (Trung Quốc standard) or 'DV' (Đại Việt)
+ * Changed via LacThuMode.toggle() or LacThuMode.set()
+ */
+const LacThuMode = {
+    _current: 'TQ',
+    get current() { return this._current; },
+    set current(v) { this._current = v; },
+    toggle() { this._current = this._current === 'TQ' ? 'DV' : 'TQ'; return this._current; },
+    isTQ() { return this._current === 'TQ'; },
+    isDV() { return this._current === 'DV'; },
+    label() { return this._current === 'TQ' ? 'Trung Quốc (Hậu Thiên)' : 'Đại Việt'; },
+};
+
+/**
+ * Trung Quốc standard: Nam on top, Ly=9, Đoài=7, Tốn=SE, Khôn=SW
+ */
+const LAC_THU_TQ = {
+    mode: 'TQ',
+    modeName: 'Trung Quốc (Hậu Thiên)',
+    orientation: 'Nam trên — Bắc dưới',
     matrix: [
         [4, 9, 2],  // Tốn(SE), Ly(S), Khôn(SW)
         [3, 5, 7],  // Chấn(E), Trung(Center), Đoài(W)
         [8, 1, 6],  // Cấn(NE), Khảm(N), Càn(NW)
     ],
     magicConstant: 15,
-
-    /** Palace metadata: index 0 unused, 1–9 are the palaces */
     palaces: [
         null,
-        { id: 1, name: "Khảm",  han: "坎", symbol: "☵", element: "Thủy", dir: "Bắc",     row: 2, col: 1, color: "#1565C0" },
-        { id: 2, name: "Khôn",  han: "坤", symbol: "☷", element: "Thổ",  dir: "Tây Nam",  row: 0, col: 2, color: "#8D6E63" },
-        { id: 3, name: "Chấn",  han: "震", symbol: "☳", element: "Mộc",  dir: "Đông",     row: 1, col: 0, color: "#2E7D32" },
-        { id: 4, name: "Tốn",   han: "巽", symbol: "☴", element: "Mộc",  dir: "Đông Nam", row: 0, col: 0, color: "#43A047" },
-        { id: 5, name: "Trung", han: "中", symbol: "◎", element: "Thổ",  dir: "Trung",    row: 1, col: 1, color: "#FFB300" },
-        { id: 6, name: "Càn",   han: "乾", symbol: "☰", element: "Kim",  dir: "Tây Bắc",  row: 2, col: 2, color: "#F9A825" },
-        { id: 7, name: "Đoài",  han: "兌", symbol: "☱", element: "Kim",  dir: "Tây",      row: 1, col: 2, color: "#78909C" },
-        { id: 8, name: "Cấn",   han: "艮", symbol: "☶", element: "Thổ",  dir: "Đông Bắc", row: 2, col: 0, color: "#795548" },
-        { id: 9, name: "Ly",    han: "離", symbol: "☲", element: "Hỏa",  dir: "Nam",      row: 0, col: 1, color: "#D32F2F" },
+        { id: 1, name: "Khảm",  han: "坎", symbol: "☵", element: "Thủy", dir: "Bắc",     can: null,   row: 2, col: 1, color: "#1565C0" },
+        { id: 2, name: "Khôn",  han: "坤", symbol: "☷", element: "Thổ",  dir: "Tây Nam",  can: null,   row: 0, col: 2, color: "#8D6E63" },
+        { id: 3, name: "Chấn",  han: "震", symbol: "☳", element: "Mộc",  dir: "Đông",     can: null,   row: 1, col: 0, color: "#2E7D32" },
+        { id: 4, name: "Tốn",   han: "巽", symbol: "☴", element: "Mộc",  dir: "Đông Nam", can: null,   row: 0, col: 0, color: "#43A047" },
+        { id: 5, name: "Trung", han: "中", symbol: "◎", element: "Thổ",  dir: "Trung",    can: null,   row: 1, col: 1, color: "#FFB300" },
+        { id: 6, name: "Càn",   han: "乾", symbol: "☰", element: "Kim",  dir: "Tây Bắc",  can: null,   row: 2, col: 2, color: "#F9A825" },
+        { id: 7, name: "Đoài",  han: "兌", symbol: "☱", element: "Kim",  dir: "Tây",      can: null,   row: 1, col: 2, color: "#78909C" },
+        { id: 8, name: "Cấn",   han: "艮", symbol: "☶", element: "Thổ",  dir: "Đông Bắc", can: null,   row: 2, col: 0, color: "#795548" },
+        { id: 9, name: "Ly",    han: "離", symbol: "☲", element: "Hỏa",  dir: "Nam",      can: null,   row: 0, col: 1, color: "#D32F2F" },
     ],
-
-    /** Opposition: p ↔ 10−p */
     opposite(p) { return p === 5 ? 5 : 10 - p; },
-
-    /** All 8 "lines" that sum to 15 (3 rows, 3 cols, 2 diags) */
     lines: [
-        [4, 9, 2], [3, 5, 7], [8, 1, 6],  // rows
-        [4, 3, 8], [9, 5, 1], [2, 7, 6],  // cols
-        [4, 5, 6], [2, 5, 8],             // diags
-    ]
+        [4, 9, 2], [3, 5, 7], [8, 1, 6],
+        [4, 3, 8], [9, 5, 1], [2, 7, 6],
+        [4, 5, 6], [2, 5, 8],
+    ],
+    /** Direction labels for grid edges (top, right, bottom, left) */
+    compassLabels: {
+        top: "Nam — Hỏa 🔥", bottom: "Bắc — Thủy 💧",
+        left: "Đông — Mộc 🌿", right: "Tây — Kim ⚙️"
+    }
 };
+
+/**
+ * Đại Việt variant: Bắc on top, Ly=7, Đoài=9, Tốn=SW, Khôn=SE
+ * Mỗi Quái gán Thiên Can theo truyền thống Việt
+ */
+const LAC_THU_DV = {
+    mode: 'DV',
+    modeName: 'Đại Việt',
+    orientation: 'Bắc trên — Nam dưới',
+    matrix: [
+        [6, 1, 8],  // Càn(NW), Khảm(N), Cấn(NE)
+        [9, 5, 3],  // Đoài(W), Trung(C), Chấn(E)
+        [4, 7, 2],  // Tốn(SW), Ly(S), Khôn(SE)
+    ],
+    magicConstant: 15,
+    palaces: [
+        null,
+        { id: 1, name: "Khảm",  han: "坎", symbol: "☵", element: "Thủy", dir: "Bắc",      can: "Quý",  row: 0, col: 1, color: "#1565C0" },
+        { id: 2, name: "Khôn",  han: "坤", symbol: "☷", element: "Thổ",  dir: "Đông Nam",  can: "Ất",   row: 2, col: 2, color: "#D32F2F" },
+        { id: 3, name: "Chấn",  han: "震", symbol: "☳", element: "Mộc",  dir: "Đông",      can: "Bính", row: 1, col: 2, color: "#2E7D32" },
+        { id: 4, name: "Tốn",   han: "巽", symbol: "☴", element: "Mộc",  dir: "Tây Nam",   can: "Đinh", row: 2, col: 0, color: "#FFFFFF" },
+        { id: 5, name: "Trung", han: "中", symbol: "◎", element: "Thổ",  dir: "Trung",     can: "Mậu/Quí", row: 1, col: 1, color: "#FFB300" },
+        { id: 6, name: "Càn",   han: "乾", symbol: "☰", element: "Kim",  dir: "Tây Bắc",   can: "Nhâm", row: 0, col: 0, color: "#FFFFFF" },
+        { id: 7, name: "Ly",    han: "離", symbol: "☲", element: "Hỏa",  dir: "Nam",       can: "Canh", row: 2, col: 1, color: "#D32F2F" },
+        { id: 8, name: "Cấn",   han: "艮", symbol: "☶", element: "Mộc",  dir: "Đông Bắc",  can: "Tân",  row: 0, col: 2, color: "#2E7D32" },
+        { id: 9, name: "Đoài",  han: "兌", symbol: "☱", element: "Kim",  dir: "Tây",       can: "Nhâm", row: 1, col: 0, color: "#FFB300" },
+    ],
+    opposite(p) { return p === 5 ? 5 : 10 - p; },
+    lines: [
+        [6, 1, 8], [9, 5, 3], [4, 7, 2],
+        [6, 9, 4], [1, 5, 7], [8, 3, 2],
+        [6, 5, 2], [8, 5, 4],
+    ],
+    compassLabels: {
+        top: "Bắc — Thủy 💧", bottom: "Nam — Hỏa 🔥",
+        left: "Tây — Kim ⚙️", right: "Đông — Mộc 🌿"
+    }
+};
+
+/** Dynamic accessor — always returns the active configuration */
+const LAC_THU = new Proxy({}, {
+    get(_, prop) {
+        const cfg = LacThuMode.isTQ() ? LAC_THU_TQ : LAC_THU_DV;
+        if (prop in cfg) return cfg[prop];
+        return undefined;
+    }
+});
 
 /* ═══════════════ 2. Ngũ Hành (5 Elements) ═══════════════ */
 

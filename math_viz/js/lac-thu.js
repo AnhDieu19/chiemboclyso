@@ -1,24 +1,35 @@
 /**
  * Lạc Thư (洛書) Magic Square — Interactive Visualization
  * ========================================================
- * Shows the 3×3 magic square with:
- * - Palace Ngũ Hành colors
- * - Row/Col/Diagonal sums = 15
- * - Opposition pairs (p ↔ 10−p)
- * - Click to highlight lines through a cell
+ * Two modes:
+ *   - Trung Quốc (Hậu Thiên): Nam on top, Ly=9, Đoài=7
+ *   - Đại Việt: Bắc on top, Ly=7, Đoài=9, Thiên Can per palace
+ *
+ * Toggle via LacThuViz.toggleMode()
  */
 
 const LacThuViz = (() => {
-    const CELL_SIZE = 100;
+    const CELL_SIZE = 110;
     const GAP = 6;
     const GRID_W = CELL_SIZE * 3 + GAP * 4;
     const GRID_H = CELL_SIZE * 3 + GAP * 4;
-    const MARGIN = { top: 40, right: 240, bottom: 60, left: 40 };
+    const MARGIN = { top: 55, right: 240, bottom: 55, left: 55 };
 
-    let svg, activeCell = null;
+    let containerId, svg, activeCell = null;
 
-    function init(containerId) {
+    /* ── public init ── */
+    function init(id) {
+        containerId = id;
+        render();
+    }
+
+    /* ── full (re)draw ── */
+    function render() {
         const container = d3.select(containerId);
+        container.select("svg").remove();
+        activeCell = null;
+
+        const cfg = _cfg();
         const totalW = GRID_W + MARGIN.left + MARGIN.right;
         const totalH = GRID_H + MARGIN.top + MARGIN.bottom;
 
@@ -26,24 +37,65 @@ const LacThuViz = (() => {
             .attr("viewBox", `0 0 ${totalW} ${totalH}`)
             .attr("preserveAspectRatio", "xMidYMid meet")
             .style("width", "100%")
-            .style("max-height", "500px");
+            .style("max-height", "560px");
 
         const g = svg.append("g")
             .attr("transform", `translate(${MARGIN.left}, ${MARGIN.top})`);
 
-        drawGrid(g);
+        drawCompass(g, cfg);
+        drawGrid(g, cfg);
         drawSumLabels(g);
-        drawInfoPanel(g);
-        drawOppositionDiagram(g);
+        drawInfoPanel(g, cfg);
+        drawOppositionDiagram(g, cfg);
     }
 
-    function drawGrid(g) {
+    /* ── toggle mode & redraw ── */
+    function toggleMode() {
+        LacThuMode.toggle();
+        render();
+        return LacThuMode.current;
+    }
+
+    /* ── active config shortcut ── */
+    function _cfg() {
+        return LacThuMode.isTQ() ? LAC_THU_TQ : LAC_THU_DV;
+    }
+
+    /* ── Compass direction labels around grid ── */
+    function drawCompass(g, cfg) {
+        const cl = cfg.compassLabels;
+        const midX = GRID_W / 2;
+        const midY = GRID_H / 2;
+
+        g.append("text").attr("x", midX).attr("y", -18)
+            .attr("text-anchor", "middle").attr("font-size", "12px")
+            .attr("font-weight", "600").attr("fill", "var(--accent-blue)")
+            .text(cl.top);
+        g.append("text").attr("x", midX).attr("y", GRID_H + 42)
+            .attr("text-anchor", "middle").attr("font-size", "12px")
+            .attr("font-weight", "600").attr("fill", "var(--accent-red)")
+            .text(cl.bottom);
+        g.append("text")
+            .attr("transform", `translate(-18, ${midY}) rotate(-90)`)
+            .attr("text-anchor", "middle").attr("font-size", "12px")
+            .attr("font-weight", "600").attr("fill", "var(--accent-gold)")
+            .text(cl.left);
+        g.append("text")
+            .attr("transform", `translate(${GRID_W + 18}, ${midY}) rotate(90)`)
+            .attr("text-anchor", "middle").attr("font-size", "12px")
+            .attr("font-weight", "600").attr("fill", "var(--accent-green)")
+            .text(cl.right);
+    }
+
+    /* ── 3×3 grid cells ── */
+    function drawGrid(g, cfg) {
         const gridG = g.append("g").attr("class", "lt-grid");
+        const hasCan = cfg.mode === 'DV';
 
         for (let row = 0; row < 3; row++) {
             for (let col = 0; col < 3; col++) {
-                const val = LAC_THU.matrix[row][col];
-                const palace = LAC_THU.palaces[val];
+                const val = cfg.matrix[row][col];
+                const palace = cfg.palaces[val];
                 const x = GAP + col * (CELL_SIZE + GAP);
                 const y = GAP + row * (CELL_SIZE + GAP);
 
@@ -51,115 +103,137 @@ const LacThuViz = (() => {
                     .attr("class", `lt-cell lt-cell-${val}`)
                     .attr("transform", `translate(${x}, ${y})`)
                     .style("cursor", "pointer")
-                    .on("click", () => toggleCell(val, g))
+                    .on("click", () => toggleCell(val, g, cfg))
                     .on("mouseenter", function () {
-                        d3.select(this).select("rect").attr("stroke-width", 3).attr("stroke", "#fff");
+                        d3.select(this).select("rect.lt-bg").attr("stroke-width", 3).attr("stroke", "#fff");
                     })
                     .on("mouseleave", function () {
                         const isActive = activeCell === val;
-                        d3.select(this).select("rect")
+                        d3.select(this).select("rect.lt-bg")
                             .attr("stroke-width", isActive ? 3 : 1.5)
                             .attr("stroke", isActive ? "#FFD700" : "rgba(255,255,255,0.2)");
                     });
 
-                // Element-colored background
                 const hanhColor = NGU_HANH.colors[palace.element];
-                cellG.append("rect")
-                    .attr("width", CELL_SIZE)
-                    .attr("height", CELL_SIZE)
-                    .attr("rx", 8)
-                    .attr("fill", hanhColor.bg)
-                    .attr("fill-opacity", 0.25)
-                    .attr("stroke", "rgba(255,255,255,0.2)")
-                    .attr("stroke-width", 1.5);
 
-                // Number (large)
+                // Background
+                cellG.append("rect").attr("class", "lt-bg")
+                    .attr("width", CELL_SIZE).attr("height", CELL_SIZE)
+                    .attr("rx", 8)
+                    .attr("fill", hanhColor.bg).attr("fill-opacity", 0.25)
+                    .attr("stroke", "rgba(255,255,255,0.2)").attr("stroke-width", 1.5);
+
+                // Number
+                const displayNum = (val === 5 && hasCan) ? "5·10" : String(val);
                 cellG.append("text")
                     .attr("x", CELL_SIZE / 2)
-                    .attr("y", CELL_SIZE / 2 - 12)
+                    .attr("y", hasCan ? 22 : (CELL_SIZE / 2 - 12))
                     .attr("text-anchor", "middle")
-                    .attr("font-size", "32px")
+                    .attr("font-size", hasCan ? "24px" : "32px")
                     .attr("font-weight", "700")
                     .attr("fill", hanhColor.bg)
-                    .text(val);
+                    .text(displayNum);
 
-                // Trigram symbol
-                cellG.append("text")
-                    .attr("x", CELL_SIZE / 2)
-                    .attr("y", CELL_SIZE / 2 + 14)
-                    .attr("text-anchor", "middle")
-                    .attr("font-size", "20px")
-                    .attr("fill", "rgba(255,255,255,0.8)")
-                    .text(palace.symbol);
+                // Thiên Can (Đại Việt only)
+                if (hasCan && palace.can) {
+                    cellG.append("text")
+                        .attr("x", CELL_SIZE / 2).attr("y", 42)
+                        .attr("text-anchor", "middle")
+                        .attr("font-size", "15px").attr("font-weight", "700")
+                        .attr("fill", "#fff")
+                        .text(palace.can);
+                }
 
-                // Palace name + direction
+                // Trigram name / symbol
+                if (hasCan) {
+                    cellG.append("text")
+                        .attr("x", CELL_SIZE / 2).attr("y", 60)
+                        .attr("text-anchor", "middle")
+                        .attr("font-size", "13px")
+                        .attr("fill", "rgba(255,255,255,0.85)")
+                        .text(palace.name);
+                    cellG.append("text")
+                        .attr("x", CELL_SIZE / 2).attr("y", 78)
+                        .attr("text-anchor", "middle")
+                        .attr("font-size", "18px")
+                        .attr("fill", "rgba(255,255,255,0.5)")
+                        .text(palace.symbol);
+                } else {
+                    cellG.append("text")
+                        .attr("x", CELL_SIZE / 2).attr("y", CELL_SIZE / 2 + 14)
+                        .attr("text-anchor", "middle")
+                        .attr("font-size", "20px")
+                        .attr("fill", "rgba(255,255,255,0.8)")
+                        .text(palace.symbol);
+                }
+
+                // Direction label
+                const dirY = hasCan ? 96 : (CELL_SIZE / 2 + 35);
                 cellG.append("text")
-                    .attr("x", CELL_SIZE / 2)
-                    .attr("y", CELL_SIZE / 2 + 35)
+                    .attr("x", CELL_SIZE / 2).attr("y", dirY)
                     .attr("text-anchor", "middle")
                     .attr("font-size", "10px")
                     .attr("fill", "var(--text-muted)")
-                    .text(`${palace.name} · ${palace.dir}`);
+                    .text(hasCan ? palace.dir : `${palace.name} · ${palace.dir}`);
 
-                // Element badge
+                // Element badge (top-right)
                 cellG.append("rect")
-                    .attr("x", CELL_SIZE - 32)
-                    .attr("y", 4)
-                    .attr("width", 28)
-                    .attr("height", 16)
-                    .attr("rx", 8)
-                    .attr("fill", hanhColor.bg)
-                    .attr("fill-opacity", 0.6);
+                    .attr("x", CELL_SIZE - 32).attr("y", 4)
+                    .attr("width", 28).attr("height", 16).attr("rx", 8)
+                    .attr("fill", hanhColor.bg).attr("fill-opacity", 0.6);
                 cellG.append("text")
-                    .attr("x", CELL_SIZE - 18)
-                    .attr("y", 15)
+                    .attr("x", CELL_SIZE - 18).attr("y", 15)
                     .attr("text-anchor", "middle")
-                    .attr("font-size", "8px")
-                    .attr("font-weight", "600")
+                    .attr("font-size", "8px").attr("font-weight", "600")
                     .attr("fill", hanhColor.fg)
                     .text(palace.element);
             }
         }
     }
 
+    /* ── row/col sum labels ── */
     function drawSumLabels(g) {
         const sumG = g.append("g").attr("class", "lt-sums");
-        // Row sums
         for (let row = 0; row < 3; row++) {
             const y = GAP + row * (CELL_SIZE + GAP) + CELL_SIZE / 2;
             sumG.append("text")
-                .attr("x", GRID_W + 8)
-                .attr("y", y)
-                .attr("dy", "0.35em")
-                .attr("font-size", "14px")
-                .attr("font-weight", "600")
-                .attr("fill", "var(--accent-gold)")
-                .text("= 15");
+                .attr("x", GRID_W + 8).attr("y", y).attr("dy", "0.35em")
+                .attr("font-size", "14px").attr("font-weight", "600")
+                .attr("fill", "var(--accent-gold)").text("= 15");
         }
-        // Col sums
         for (let col = 0; col < 3; col++) {
             const x = GAP + col * (CELL_SIZE + GAP) + CELL_SIZE / 2;
             sumG.append("text")
-                .attr("x", x)
-                .attr("y", GRID_H + 20)
+                .attr("x", x).attr("y", GRID_H + 20)
                 .attr("text-anchor", "middle")
-                .attr("font-size", "14px")
-                .attr("font-weight", "600")
-                .attr("fill", "var(--accent-gold)")
-                .text("= 15");
+                .attr("font-size", "14px").attr("font-weight", "600")
+                .attr("fill", "var(--accent-gold)").text("= 15");
         }
-        // Diagonal indicators
         sumG.append("text")
             .attr("x", GRID_W + 8).attr("y", GRID_H + 20)
             .attr("font-size", "11px").attr("fill", "var(--text-muted)")
             .text("↗↘ = 15");
     }
 
-    function drawInfoPanel(g) {
+    /* ── info panel ── */
+    function drawInfoPanel(g, cfg) {
         const infoX = GRID_W + 50;
-        const infoG = g.append("g").attr("class", "lt-info").attr("transform", `translate(${infoX}, 0)`);
+        const infoG = g.append("g").attr("class", "lt-info")
+            .attr("transform", `translate(${infoX}, 0)`);
 
-        infoG.append("text").attr("y", 0).attr("font-size", "14px").attr("font-weight", "700").attr("fill", "var(--accent-gold)").text("Tính Chất Toán Học");
+        // Mode indicator
+        infoG.append("text").attr("y", -10)
+            .attr("font-size", "12px").attr("font-weight", "700")
+            .attr("fill", cfg.mode === 'DV' ? "var(--accent-red)" : "var(--accent-blue)")
+            .text(`⚙ ${cfg.modeName}`);
+        infoG.append("text").attr("y", 8)
+            .attr("font-size", "10px").attr("fill", "var(--text-muted)")
+            .text(cfg.orientation);
+
+        infoG.append("text").attr("y", 30)
+            .attr("font-size", "14px").attr("font-weight", "700")
+            .attr("fill", "var(--accent-gold)")
+            .text("Tính Chất Toán Học");
 
         const props = [
             "Ma phương chuẩn 3×3",
@@ -169,29 +243,44 @@ const LacThuViz = (() => {
             "Duy nhất (trừ phép quay/lật)",
             "Trung Cung (5) = bất biến"
         ];
+        if (cfg.mode === 'DV') {
+            props.push("Bắc trên — chuẩn Đại Việt");
+            props.push("Thiên Can gán mỗi Quái");
+        }
         props.forEach((t, i) => {
             infoG.append("text")
-                .attr("y", 24 + i * 18)
+                .attr("y", 50 + i * 18)
                 .attr("font-size", "11px")
                 .attr("fill", "var(--text-secondary)")
                 .text("• " + t);
         });
 
-        // Formula
-        infoG.append("text").attr("y", 160).attr("font-size", "12px").attr("fill", "var(--accent-blue)").attr("font-family", "var(--font-mono)").text("opposite(p) = 10 − p");
-        infoG.append("text").attr("y", 180).attr("font-size", "12px").attr("fill", "var(--accent-blue)").attr("font-family", "var(--font-mono)").text("∀ row,col,diag: Σ = 15");
+        const formulaY = 50 + props.length * 18 + 12;
+        infoG.append("text").attr("y", formulaY)
+            .attr("font-size", "12px").attr("fill", "var(--accent-blue)")
+            .attr("font-family", "var(--font-mono)")
+            .text("opposite(p) = 10 − p");
+        infoG.append("text").attr("y", formulaY + 20)
+            .attr("font-size", "12px").attr("fill", "var(--accent-blue)")
+            .attr("font-family", "var(--font-mono)")
+            .text("∀ row,col,diag: Σ = 15");
 
-        // Interaction hint
-        infoG.append("text").attr("y", 220).attr("font-size", "10px").attr("fill", "var(--text-muted)").text("Click ô → highlight các đường qua ô đó");
+        infoG.append("text").attr("y", formulaY + 50)
+            .attr("font-size", "10px").attr("fill", "var(--text-muted)")
+            .text("Click ô → highlight các đường qua ô đó");
     }
 
-    function drawOppositionDiagram(g) {
+    /* ── opposition diagram ── */
+    function drawOppositionDiagram(g, cfg) {
         const cx = GRID_W + 140;
         const cy = GRID_H - 30;
         const r = 40;
-        const oppG = g.append("g").attr("class", "lt-opp").attr("transform", `translate(${cx}, ${cy})`);
+        const oppG = g.append("g").attr("class", "lt-opp")
+            .attr("transform", `translate(${cx}, ${cy})`);
 
-        oppG.append("text").attr("y", -r - 10).attr("text-anchor", "middle").attr("font-size", "10px").attr("fill", "var(--text-muted)").text("p ↔ 10−p");
+        oppG.append("text").attr("y", -r - 10).attr("text-anchor", "middle")
+            .attr("font-size", "10px").attr("fill", "var(--text-muted)")
+            .text("p ↔ 10−p");
 
         const pairs = [[1, 9], [2, 8], [3, 7], [4, 6]];
         pairs.forEach((pair, i) => {
@@ -206,18 +295,28 @@ const LacThuViz = (() => {
             [pair[0], pair[1]].forEach((val, j) => {
                 const x = j === 0 ? x1 : x2;
                 const y = j === 0 ? y1 : y2;
-                const pal = LAC_THU.palaces[val];
+                const pal = cfg.palaces[val];
                 const c = NGU_HANH.colors[pal.element].bg;
-                oppG.append("circle").attr("cx", x).attr("cy", y).attr("r", 12).attr("fill", c).attr("fill-opacity", 0.4).attr("stroke", c).attr("stroke-width", 1);
-                oppG.append("text").attr("x", x).attr("y", y).attr("dy", "0.35em").attr("text-anchor", "middle").attr("font-size", "10px").attr("font-weight", "600").attr("fill", "#fff").text(val);
+                oppG.append("circle").attr("cx", x).attr("cy", y).attr("r", 12)
+                    .attr("fill", c).attr("fill-opacity", 0.4)
+                    .attr("stroke", c).attr("stroke-width", 1);
+                oppG.append("text").attr("x", x).attr("y", y)
+                    .attr("dy", "0.35em").attr("text-anchor", "middle")
+                    .attr("font-size", "10px").attr("font-weight", "600")
+                    .attr("fill", "#fff").text(val);
             });
         });
-        // Center 5
-        oppG.append("circle").attr("r", 10).attr("fill", "var(--accent-gold)").attr("fill-opacity", 0.3).attr("stroke", "var(--accent-gold)");
-        oppG.append("text").attr("dy", "0.35em").attr("text-anchor", "middle").attr("font-size", "10px").attr("font-weight", "700").attr("fill", "#fff").text("5");
+
+        oppG.append("circle").attr("r", 10)
+            .attr("fill", "var(--accent-gold)").attr("fill-opacity", 0.3)
+            .attr("stroke", "var(--accent-gold)");
+        oppG.append("text").attr("dy", "0.35em").attr("text-anchor", "middle")
+            .attr("font-size", "10px").attr("font-weight", "700")
+            .attr("fill", "#fff").text("5");
     }
 
-    function toggleCell(val, g) {
+    /* ── cell click → highlight lines ── */
+    function toggleCell(val, g, cfg) {
         if (activeCell === val) {
             activeCell = null;
             resetHighlight(g);
@@ -226,18 +325,21 @@ const LacThuViz = (() => {
         activeCell = val;
         resetHighlight(g);
 
-        // Find all lines containing this value
-        const matchLines = LAC_THU.lines.filter(line => line.includes(val));
+        const matchLines = cfg.lines.filter(line => line.includes(val));
         const highlightVals = new Set();
         matchLines.forEach(line => line.forEach(v => highlightVals.add(v)));
 
-        // Highlight
         for (let v = 1; v <= 9; v++) {
             const cell = g.select(`.lt-cell-${v}`);
             if (highlightVals.has(v)) {
-                cell.select("rect").attr("fill-opacity", 0.5).attr("stroke", v === val ? "#FFD700" : "#fff").attr("stroke-width", v === val ? 3 : 2);
+                cell.select("rect.lt-bg")
+                    .attr("fill-opacity", 0.5)
+                    .attr("stroke", v === val ? "#FFD700" : "#fff")
+                    .attr("stroke-width", v === val ? 3 : 2);
             } else {
-                cell.select("rect").attr("fill-opacity", 0.08).attr("stroke", "rgba(255,255,255,0.05)");
+                cell.select("rect.lt-bg")
+                    .attr("fill-opacity", 0.08)
+                    .attr("stroke", "rgba(255,255,255,0.05)");
                 cell.selectAll("text").attr("opacity", 0.3);
             }
         }
@@ -245,12 +347,14 @@ const LacThuViz = (() => {
 
     function resetHighlight(g) {
         for (let v = 1; v <= 9; v++) {
-            const pal = LAC_THU.palaces[v];
             const cell = g.select(`.lt-cell-${v}`);
-            cell.select("rect").attr("fill-opacity", 0.25).attr("stroke", "rgba(255,255,255,0.2)").attr("stroke-width", 1.5);
+            cell.select("rect.lt-bg")
+                .attr("fill-opacity", 0.25)
+                .attr("stroke", "rgba(255,255,255,0.2)")
+                .attr("stroke-width", 1.5);
             cell.selectAll("text").attr("opacity", 1);
         }
     }
 
-    return { init };
+    return { init, toggleMode, render };
 })();
