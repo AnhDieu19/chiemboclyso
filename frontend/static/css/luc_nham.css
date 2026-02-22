@@ -96,7 +96,7 @@
     font-size: 0.7rem;
     font-weight: 600;
 }
-.hanh-Kim { background: #fdebd0; color: #b9770e; }
+.hanh-Kim { background: #e0e0e0; color: #424242; }
 .hanh-Moc,
 .hanh-Mộc { background: #d5f5e3; color: #1e8449; }
 .hanh-Thuy,
@@ -104,7 +104,7 @@
 .hanh-Hoa,
 .hanh-Hỏa { background: #fadbd8; color: #cb4335; }
 .hanh-Tho,
-.hanh-Thổ { background: #f9e79f; color: #7d6608; }
+.hanh-Thổ { background: #fff3cd; color: #7d6608; }
 
 /* ─── Cung footer & hướng badge ─────────────────────────────── */
 .cung-footer {

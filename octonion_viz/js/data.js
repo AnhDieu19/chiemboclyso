@@ -11,20 +11,20 @@ const TRIGRAMS = [
     { id: 0, name: "Khôn",  han: "坤", symbol: "☷", element: "Thổ",  nature: "Đất",   binary: "000", color: "#8B6914", octonion: "e₀ (1)",  desc: "Tiếp nhận, nhu thuận" },
     { id: 1, name: "Chấn",  han: "震", symbol: "☳", element: "Mộc",  nature: "Sấm",   binary: "001", color: "#2E7D32", octonion: "e₁ (i)",  desc: "Kích động, chấn động" },
     { id: 2, name: "Khảm",  han: "坎", symbol: "☵", element: "Thủy", nature: "Nước",  binary: "010", color: "#1565C0", octonion: "e₂ (j)",  desc: "Hiểm trở, lưu chuyển" },
-    { id: 3, name: "Đoài",  han: "兌", symbol: "☱", element: "Kim",  nature: "Hồ",    binary: "011", color: "#78909C", octonion: "e₃ (k)",  desc: "Vui vẻ, trao đổi" },
+    { id: 3, name: "Đoài",  han: "兌", symbol: "☱", element: "Kim",  nature: "Hồ",    binary: "011", color: "#B0BEC5", octonion: "e₃ (k)",  desc: "Vui vẻ, trao đổi" },
     { id: 4, name: "Cấn",   han: "艮", symbol: "☶", element: "Thổ",  nature: "Núi",   binary: "100", color: "#795548", octonion: "e₄ (l)",  desc: "Ngưng nghỉ, ổn định" },
     { id: 5, name: "Ly",    han: "離", symbol: "☲", element: "Hỏa",  nature: "Lửa",   binary: "101", color: "#D32F2F", octonion: "e₅ (il)", desc: "Sáng tỏ, phân tách" },
     { id: 6, name: "Tốn",   han: "巽", symbol: "☴", element: "Mộc",  nature: "Gió",   binary: "110", color: "#43A047", octonion: "e₆ (jl)", desc: "Thâm nhập, nhu thuận" },
-    { id: 7, name: "Càn",   han: "乾", symbol: "☰", element: "Kim",  nature: "Trời",  binary: "111", color: "#F9A825", octonion: "e₇ (kl)", desc: "Sáng tạo, cương kiện" }
+    { id: 7, name: "Càn",   han: "乾", symbol: "☰", element: "Kim",  nature: "Trời",  binary: "111", color: "#CFD8DC", octonion: "e₇ (kl)", desc: "Sáng tạo, cương kiện" }
 ];
 
-/* Ngũ Hành Colors for element badges */
+/* Ngũ Hành Colors for element badges — Đại Việt: Kim=Trắng, Thổ=Vàng */
 const NGU_HANH_COLORS = {
-    "Kim":  { bg: "#FFD700", fg: "#333" },
+    "Kim":  { bg: "#E0E0E0", fg: "#333" },
     "Mộc":  { bg: "#2E7D32", fg: "#fff" },
     "Thủy": { bg: "#1565C0", fg: "#fff" },
     "Hỏa":  { bg: "#D32F2F", fg: "#fff" },
-    "Thổ":  { bg: "#8D6E63", fg: "#fff" }
+    "Thổ":  { bg: "#FFB300", fg: "#333" }
 };
 
 /**

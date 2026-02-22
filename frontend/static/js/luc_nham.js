@@ -290,9 +290,10 @@ function renderQuantumVedic(qv) {
 // QUANTUM ANALYSIS RENDERERS (Dynamic)
 // ═══════════════════════════════════════════════════════════════
 
+/* Đại Việt: Kim = Trắng (White), Thổ = Vàng (Yellow) */
 const HANH_COLORS = {
-    'Kim': '#f1c40f', 'Mộc': '#27ae60', 'Thủy': '#2980b9',
-    'Hỏa': '#e74c3c', 'Thổ': '#e67e22',
+    'Kim': '#9E9E9E', 'Mộc': '#27ae60', 'Thủy': '#2980b9',
+    'Hỏa': '#e74c3c', 'Thổ': '#FFB300',
 };
 
 function renderQuantumAnalysis(qa, qv) {

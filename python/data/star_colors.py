@@ -3,20 +3,19 @@ Data Layer - Star Colors Mapping
 Logic quy định màu sắc của sao dựa trên Ngũ Hành
 """
 
-# Mapping Ngũ Hành sang mã màu (CSS classes hoặc Hex)
-# Dựa trên yêu cầu của user:
-# - Kim (Vàng): color-kim
+# Mapping Ngũ Hành sang mã màu — Đại Việt convention:
+# - Kim (Trắng/Bạc): color-kim
 # - Mộc (Xanh Lá): color-moc
-# - Thủy (Đen/Xám): color-thuy
+# - Thủy (Xanh Dương): color-thuy
 # - Hỏa (Đỏ): color-hoa
-# - Thổ (Vàng/Nâu): color-tho (Thường gộp vào Kim nếu là quý tinh, hoặc Nâu)
+# - Thổ (Vàng): color-tho
 
 ELEMENT_COLORS = {
-    'Kim': '#f1c40f',    # Vàng (Gold) - Giữ nguyên hoặc chỉnh sáng hơn nếu cần
+    'Kim': '#B0B0B0',    # Trắng/Bạc (White/Silver) — Đại Việt: Kim = Trắng
     'Mộc': '#2ecc71',    # Xanh lá (Emerald)
-    'Thủy': '#7f8c8d',   # Xám (Concrete) - User request "Xám"
+    'Thủy': '#2980b9',   # Xanh dương (Blue)
     'Hỏa': '#e74c3c',    # Đỏ (Alizarin)
-    'Thổ': '#d35400',    # Nâu/Cam (Pumpkin)
+    'Thổ': '#f39c12',    # Vàng (Yellow) — Đại Việt: Thổ = Vàng
 }
 
 CSS_CLASSES = {

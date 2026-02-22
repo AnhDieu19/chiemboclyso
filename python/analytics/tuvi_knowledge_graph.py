@@ -176,7 +176,7 @@ def visualize_ngu_hanh_graph(G, output_path='tuvi_ngu_hanh.png'):
     pos = nx.circular_layout(H)
     
     # Màu cho từng hành
-    colors = {'Kim': '#FFD700', 'Mộc': '#228B22', 'Thủy': '#1E90FF', 'Hỏa': '#FF4500', 'Thổ': '#8B4513'}
+    colors = {'Kim': '#B0B0B0', 'Mộc': '#228B22', 'Thủy': '#1E90FF', 'Hỏa': '#FF4500', 'Thổ': '#FFB300'}
     node_colors = [colors.get(n, '#888888') for n in H.nodes()]
     
     # Vẽ edges

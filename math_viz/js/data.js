@@ -76,14 +76,14 @@ const LAC_THU_DV = {
     palaces: [
         null,
         { id: 1, name: "Khảm",  han: "坎", symbol: "☵", element: "Thủy", dir: "Bắc",      can: "Quý",  row: 0, col: 1, color: "#1565C0" },
-        { id: 2, name: "Khôn",  han: "坤", symbol: "☷", element: "Thổ",  dir: "Đông Nam",  can: "Ất",   row: 2, col: 2, color: "#D32F2F" },
+        { id: 2, name: "Khôn",  han: "坤", symbol: "☷", element: "Thổ",  dir: "Đông Nam",  can: "Ất",   row: 2, col: 2, color: "#FFB300" },
         { id: 3, name: "Chấn",  han: "震", symbol: "☳", element: "Mộc",  dir: "Đông",      can: "Bính", row: 1, col: 2, color: "#2E7D32" },
-        { id: 4, name: "Tốn",   han: "巽", symbol: "☴", element: "Mộc",  dir: "Tây Nam",   can: "Đinh", row: 2, col: 0, color: "#FFFFFF" },
+        { id: 4, name: "Tốn",   han: "巽", symbol: "☴", element: "Mộc",  dir: "Tây Nam",   can: "Đinh", row: 2, col: 0, color: "#43A047" },
         { id: 5, name: "Trung", han: "中", symbol: "◎", element: "Thổ",  dir: "Trung",     can: "Mậu/Quí", row: 1, col: 1, color: "#FFB300" },
-        { id: 6, name: "Càn",   han: "乾", symbol: "☰", element: "Kim",  dir: "Tây Bắc",   can: "Nhâm", row: 0, col: 0, color: "#FFFFFF" },
+        { id: 6, name: "Càn",   han: "乾", symbol: "☰", element: "Kim",  dir: "Tây Bắc",   can: "Nhâm", row: 0, col: 0, color: "#E0E0E0" },
         { id: 7, name: "Ly",    han: "離", symbol: "☲", element: "Hỏa",  dir: "Nam",       can: "Canh", row: 2, col: 1, color: "#D32F2F" },
         { id: 8, name: "Cấn",   han: "艮", symbol: "☶", element: "Mộc",  dir: "Đông Bắc",  can: "Tân",  row: 0, col: 2, color: "#2E7D32" },
-        { id: 9, name: "Đoài",  han: "兌", symbol: "☱", element: "Kim",  dir: "Tây",       can: "Nhâm", row: 1, col: 0, color: "#FFB300" },
+        { id: 9, name: "Đoài",  han: "兌", symbol: "☱", element: "Kim",  dir: "Tây",       can: "Nhâm", row: 1, col: 0, color: "#E0E0E0" },
     ],
     opposite(p) { return p === 5 ? 5 : 10 - p; },
     lines: [
@@ -108,14 +108,31 @@ const LAC_THU = new Proxy({}, {
 
 /* ═══════════════ 2. Ngũ Hành (5 Elements) ═══════════════ */
 
+/**
+ * Đại Việt: Kim = Trắng (White), Thổ = Vàng (Yellow)
+ * Trung Quốc: Kim = Vàng/Gold, Thổ = Nâu (Brown)
+ * Mộc = Xanh lá, Thủy = Xanh dương, Hỏa = Đỏ — giống cả 2
+ */
+const NGU_HANH_COLORS_DV = {
+    "Kim":  { bg: "#E0E0E0", fg: "#333" },   // Trắng (White/Silver)
+    "Mộc":  { bg: "#2E7D32", fg: "#fff" },   // Xanh lá (Green)
+    "Thủy": { bg: "#1565C0", fg: "#fff" },   // Xanh dương (Blue)
+    "Hỏa":  { bg: "#D32F2F", fg: "#fff" },   // Đỏ (Red)
+    "Thổ":  { bg: "#FFB300", fg: "#333" }    // Vàng (Yellow)
+};
+const NGU_HANH_COLORS_TQ = {
+    "Kim":  { bg: "#FFD700", fg: "#333" },   // Vàng/Gold
+    "Mộc":  { bg: "#2E7D32", fg: "#fff" },   // Xanh lá (Green)
+    "Thủy": { bg: "#1565C0", fg: "#fff" },   // Xanh dương (Blue)
+    "Hỏa":  { bg: "#D32F2F", fg: "#fff" },   // Đỏ (Red)
+    "Thổ":  { bg: "#8D6E63", fg: "#fff" }    // Nâu (Brown)
+};
+
 const NGU_HANH = {
     elements: ["Kim", "Mộc", "Thủy", "Hỏa", "Thổ"],
-    colors: {
-        "Kim":  { bg: "#FFD700", fg: "#333" },
-        "Mộc":  { bg: "#2E7D32", fg: "#fff" },
-        "Thủy": { bg: "#1565C0", fg: "#fff" },
-        "Hỏa":  { bg: "#D32F2F", fg: "#fff" },
-        "Thổ":  { bg: "#8D6E63", fg: "#fff" }
+    /** Dynamic colors — switches with LacThuMode */
+    get colors() {
+        return LacThuMode.isDV() ? NGU_HANH_COLORS_DV : NGU_HANH_COLORS_TQ;
     },
     /** Sinh cycle: Kim→Thủy→Mộc→Hỏa→Thổ→Kim */
     sinh: { "Kim": "Thủy", "Thủy": "Mộc", "Mộc": "Hỏa", "Hỏa": "Thổ", "Thổ": "Kim" },
