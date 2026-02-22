@@ -33,6 +33,7 @@ CORS(app, resources={r"/api/*": {"origins": "*"}})
 # ── Eager import after path setup ───────────────────────────────────────────
 from logic.luc_nham_engine import LucNhamEngine
 from logic.ki_mon_engine import KiMonEngine
+from logic.thai_at_engine import ThaiAtEngine
 
 
 # ── Routes ──────────────────────────────────────────────────────────────────
@@ -51,6 +52,8 @@ def api_info():
             'luc_nham_api': '/api/luc-nham/calculate [POST]',
             'ki_mon': '/ki-mon',
             'ki_mon_api': '/api/ki-mon/calculate [POST]',
+            'thai_at': '/thai-at',
+            'thai_at_api': '/api/thai-at/calculate [POST]',
         }
     })
 
@@ -136,6 +139,51 @@ def ki_mon_calculate():
             }), 400
 
         engine = KiMonEngine(year, month, day, hour)
+        chart_data = engine.get_full_chart()
+
+        return jsonify({'success': True, 'data': chart_data})
+
+    except Exception as e:
+        return jsonify({'success': False, 'error': str(e)}), 400
+
+
+# ── Thái Ất Routes ──────────────────────────────────────────────────────────
+@app.route('/thai-at')
+def thai_at_index():
+    """Render trang chủ Thái Ất"""
+    return render_template('thai_at_view.html')
+
+
+@app.route('/api/thai-at/calculate', methods=['POST'])
+def thai_at_calculate():
+    """API tính toán Thái Ất"""
+    try:
+        data = request.json
+        if not data:
+            return jsonify({'success': False, 'error': 'No data provided'}), 400
+
+        year_val = data.get('year')
+        month_val = data.get('month')
+        day_val = data.get('day')
+
+        if year_val is None or month_val is None or day_val is None:
+            return jsonify({
+                'success': False,
+                'error': 'Missing required fields: year, month, day'
+            }), 400
+
+        try:
+            year = int(year_val)
+            month = int(month_val)
+            day = int(day_val)
+            hour = int(data.get('hour', 0))
+        except (ValueError, TypeError) as e:
+            return jsonify({
+                'success': False,
+                'error': f'Invalid numeric input: {e}'
+            }), 400
+
+        engine = ThaiAtEngine(year, month, day, hour)
         chart_data = engine.get_full_chart()
 
         return jsonify({'success': True, 'data': chart_data})
