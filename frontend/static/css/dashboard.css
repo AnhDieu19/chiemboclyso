@@ -1,0 +1,254 @@
+/* ============================================
+   Dashboard — Vercel-style App Grid
+   dashboard.css
+   ============================================ */
+
+/* ── Variables ── */
+:root {
+    --d-bg:        #0a0a0a;
+    --d-surface:   #111111;
+    --d-card:      #171717;
+    --d-border:    #262626;
+    --d-text:      #ededed;
+    --d-muted:     #888888;
+    --d-accent:    #0070f3;
+    --d-radius:    12px;
+    --d-font:      'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+}
+
+/* ── Reset & Base ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: var(--d-font);
+    background: var(--d-bg);
+    color: var(--d-text);
+    line-height: 1.6;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ── Header ── */
+.dash-header {
+    border-bottom: 1px solid var(--d-border);
+    background: rgba(10,10,10,.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.dash-header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.25rem 1.5rem;
+}
+.dash-logo {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    margin-bottom: .3rem;
+}
+.dash-logo-icon {
+    font-size: 1.5rem;
+    background: linear-gradient(135deg, #f59e0b, #ef4444, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 800;
+}
+.dash-logo-text {
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: -.02em;
+}
+.dash-tagline {
+    color: var(--d-muted);
+    font-size: .85rem;
+}
+
+/* ── Main ── */
+.dash-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+}
+
+/* ── Section ── */
+.dash-section {
+    margin-bottom: 2.5rem;
+}
+.dash-section-title {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--d-muted);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    font-size: .8rem;
+}
+.dash-section-icon {
+    font-size: 1rem;
+}
+
+/* ── Grid ── */
+.dash-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1rem;
+}
+
+/* ── Card ── */
+.dash-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.25rem;
+    background: var(--d-card);
+    border: 1px solid var(--d-border);
+    border-radius: var(--d-radius);
+    text-decoration: none;
+    color: var(--d-text);
+    transition: all .2s ease;
+    position: relative;
+    overflow: hidden;
+}
+.dash-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, transparent 60%, rgba(255,255,255,.02));
+    pointer-events: none;
+}
+.dash-card:hover {
+    border-color: #444;
+    background: #1a1a1a;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0,0,0,.4);
+}
+
+.dash-card-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--d-surface);
+    border-radius: 10px;
+    border: 1px solid var(--d-border);
+}
+
+.dash-card-body h3 {
+    font-size: .95rem;
+    font-weight: 600;
+    margin-bottom: .25rem;
+    letter-spacing: -.01em;
+}
+.dash-card-body p {
+    color: var(--d-muted);
+    font-size: .8rem;
+    line-height: 1.5;
+}
+
+.dash-card-tag {
+    position: absolute;
+    top: .75rem;
+    right: .75rem;
+    font-size: .65rem;
+    font-weight: 600;
+    padding: .15rem .5rem;
+    border-radius: 20px;
+    background: var(--d-border);
+    color: var(--d-muted);
+    text-transform: uppercase;
+    letter-spacing: .04em;
+}
+
+/* ── Card accent colors on hover ── */
+.dash-card--tuvi:hover      { border-color: #8b5cf6; }
+.dash-card--tuvi:hover .dash-card-tag { background: #8b5cf6; color: #fff; }
+
+.dash-card--thai-at:hover   { border-color: #f59e0b; }
+.dash-card--thai-at:hover .dash-card-tag { background: #f59e0b; color: #000; }
+
+.dash-card--ki-mon:hover    { border-color: #06b6d4; }
+.dash-card--ki-mon:hover .dash-card-tag { background: #06b6d4; color: #000; }
+
+.dash-card--luc-nham:hover  { border-color: #a855f7; }
+.dash-card--luc-nham:hover .dash-card-tag { background: #a855f7; color: #fff; }
+
+.dash-card--hexagram:hover  { border-color: #10b981; }
+.dash-card--hexagram:hover .dash-card-tag { background: #10b981; color: #000; }
+
+.dash-card--vdp:hover       { border-color: #f97316; }
+.dash-card--vdp:hover .dash-card-tag { background: #f97316; color: #000; }
+
+.dash-card--finder:hover    { border-color: #3b82f6; }
+.dash-card--finder:hover .dash-card-tag { background: #3b82f6; color: #fff; }
+
+.dash-card--analytics:hover { border-color: #ec4899; }
+.dash-card--analytics:hover .dash-card-tag { background: #ec4899; color: #fff; }
+
+.dash-card--graph:hover     { border-color: #14b8a6; }
+.dash-card--graph:hover .dash-card-tag { background: #14b8a6; color: #000; }
+
+.dash-card--movement:hover  { border-color: #6366f1; }
+.dash-card--movement:hover .dash-card-tag { background: #6366f1; color: #fff; }
+
+.dash-card--dataset:hover   { border-color: #f43f5e; }
+.dash-card--dataset:hover .dash-card-tag { background: #f43f5e; color: #fff; }
+
+.dash-card--math:hover      { border-color: #f59e0b; }
+.dash-card--math:hover .dash-card-tag { background: #f59e0b; color: #000; }
+
+.dash-card--octonion:hover  { border-color: #8b5cf6; }
+.dash-card--octonion:hover .dash-card-tag { background: #8b5cf6; color: #fff; }
+
+.dash-card--acupoints:hover { border-color: #22c55e; }
+.dash-card--acupoints:hover .dash-card-tag { background: #22c55e; color: #000; }
+
+/* ── Footer ── */
+.dash-footer {
+    border-top: 1px solid var(--d-border);
+    text-align: center;
+    padding: 2rem 1rem;
+    color: var(--d-muted);
+    font-size: .8rem;
+}
+.dash-footer-sub {
+    margin-top: .3rem;
+    font-size: .72rem;
+    color: #555;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+    .dash-grid {
+        grid-template-columns: 1fr;
+    }
+    .dash-header-inner {
+        padding: 1rem;
+    }
+    .dash-main {
+        padding: 1.5rem 1rem 3rem;
+    }
+    .dash-logo-text {
+        font-size: 1.15rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .dash-card {
+        padding: 1rem;
+    }
+    .dash-card-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.6rem;
+    }
+}

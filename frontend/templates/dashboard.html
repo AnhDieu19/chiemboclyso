@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chiêm Bốc Lý Số — Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+</head>
+<body>
+
+<!-- ═══════ Header ═══════ -->
+<header class="dash-header">
+    <div class="dash-header-inner">
+        <div class="dash-logo">
+            <span class="dash-logo-icon">☰</span>
+            <span class="dash-logo-text">Chiêm Bốc Lý Số</span>
+        </div>
+        <p class="dash-tagline">Nền tảng tổng hợp — Tử Vi · Thái Ất · Kỳ Môn · Lục Nhâm · Quẻ Dịch · Vi Diệu Pháp</p>
+    </div>
+</header>
+
+<main class="dash-main">
+
+    <!-- ═══════ § Divination Services ═══════ -->
+    <section class="dash-section">
+        <h2 class="dash-section-title">
+            <span class="dash-section-icon">🔮</span> Ứng Dụng Chiêm Bốc
+        </h2>
+        <div class="dash-grid">
+
+            <!-- Tử Vi -->
+            <a href="/tuvi" class="dash-card dash-card--tuvi">
+                <div class="dash-card-icon">🔮</div>
+                <div class="dash-card-body">
+                    <h3>Tử Vi Đẩu Số</h3>
+                    <p>Lập lá số, luận giải cung mệnh, chính tinh, phụ tinh. AI Thầy Tử Vi.</p>
+                </div>
+                <div class="dash-card-tag">Core</div>
+            </a>
+
+            <!-- Thái Ất -->
+            <a href="/thai-at" class="dash-card dash-card--thai-at">
+                <div class="dash-card-icon">🔢</div>
+                <div class="dash-card-body">
+                    <h3>Thái Ất Thần Số</h3>
+                    <p>Tính Tích Niên, Kỷ Dư, Phi Cung. Dự đoán vận quốc gia, thiên tai.</p>
+                </div>
+                <div class="dash-card-tag">Service</div>
+            </a>
+
+            <!-- Kỳ Môn -->
+            <a href="/ki-mon" class="dash-card dash-card--ki-mon">
+                <div class="dash-card-icon">🏛️</div>
+                <div class="dash-card-body">
+                    <h3>Kỳ Môn Độn Giáp</h3>
+                    <p>Bát Môn, Cửu Tinh, Bát Thần. 3 lớp Địa–Thiên–Nhân trên Cửu Cung.</p>
+                </div>
+                <div class="dash-card-tag">Service</div>
+            </a>
+
+            <!-- Lục Nhâm -->
+            <a href="/luc-nham" class="dash-card dash-card--luc-nham">
+                <div class="dash-card-icon">🔯</div>
+                <div class="dash-card-body">
+                    <h3>Đại Lục Nhâm</h3>
+                    <p>Thiên Bàn, Địa Bàn, Tứ Khóa, Tam Truyền, Quantum Analysis.</p>
+                </div>
+                <div class="dash-card-tag">Service</div>
+            </a>
+
+            <!-- Quẻ Dịch -->
+            <a href="/hexagram-viz/" class="dash-card dash-card--hexagram">
+                <div class="dash-card-icon">☯</div>
+                <div class="dash-card-body">
+                    <h3>Quẻ Dịch Visualization</h3>
+                    <p>64 quẻ, Bát Quái, Hà Đồ, Lạc Thư. Tương tác D3.js.</p>
+                </div>
+                <div class="dash-card-tag">Viz</div>
+            </a>
+
+            <!-- Vi Diệu Pháp -->
+            <a href="/vdp/" class="dash-card dash-card--vdp">
+                <div class="dash-card-icon">📿</div>
+                <div class="dash-card-body">
+                    <h3>Vi Diệu Pháp</h3>
+                    <p>Tâm Sở, Tâm Vương, Knowledge Graph. Abhidhamma hệ thống.</p>
+                </div>
+                <div class="dash-card-tag">Service</div>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- ═══════ § Analysis Tools ═══════ -->
+    <section class="dash-section">
+        <h2 class="dash-section-title">
+            <span class="dash-section-icon">📊</span> Phân Tích & Tra Cứu
+        </h2>
+        <div class="dash-grid">
+
+            <!-- Finder -->
+            <a href="/finder" class="dash-card dash-card--finder">
+                <div class="dash-card-icon">🔍</div>
+                <div class="dash-card-body">
+                    <h3>Tìm Giờ Sinh (Ngược)</h3>
+                    <p>Reverse lookup — từ sao và cung, tìm ra ngày giờ sinh phù hợp.</p>
+                </div>
+                <div class="dash-card-tag">Tool</div>
+            </a>
+
+            <!-- Analytics Beauty -->
+            <a href="/analytics/beauty" class="dash-card dash-card--analytics">
+                <div class="dash-card-icon">📈</div>
+                <div class="dash-card-body">
+                    <h3>Thống Kê Hồng Nhan</h3>
+                    <p>Dashboard 500k lá số — heatmap, ranking sao, xu hướng thời đại.</p>
+                </div>
+                <div class="dash-card-tag">Analytics</div>
+            </a>
+
+            <!-- Knowledge Graph -->
+            <a href="/knowledge-graph" class="dash-card dash-card--graph">
+                <div class="dash-card-icon">🌐</div>
+                <div class="dash-card-body">
+                    <h3>Knowledge Graph</h3>
+                    <p>Đồ thị tri thức quan hệ sao — cung — ngũ hành — vòng tràng sinh.</p>
+                </div>
+                <div class="dash-card-tag">Graph</div>
+            </a>
+
+            <!-- Star Movement -->
+            <a href="/star-movement" class="dash-card dash-card--movement">
+                <div class="dash-card-icon">🌠</div>
+                <div class="dash-card-body">
+                    <h3>Star Movement</h3>
+                    <p>Trực quan hoá quỹ đạo chuyển động các sao qua Đại Hạn và Lưu Niên.</p>
+                </div>
+                <div class="dash-card-tag">Graph</div>
+            </a>
+
+            <!-- Dataset Movement -->
+            <a href="/dataset-movement" class="dash-card dash-card--dataset">
+                <div class="dash-card-icon">📊</div>
+                <div class="dash-card-body">
+                    <h3>Dataset Movement</h3>
+                    <p>Phân tích chuyển động bộ dữ liệu 500k qua các tham số thời gian.</p>
+                </div>
+                <div class="dash-card-tag">Graph</div>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- ═══════ § Math Visualizations ═══════ -->
+    <section class="dash-section">
+        <h2 class="dash-section-title">
+            <span class="dash-section-icon">📐</span> Trực Quan Toán Học
+        </h2>
+        <div class="dash-grid">
+
+            <!-- Math Viz -->
+            <a href="/math-viz/" class="dash-card dash-card--math">
+                <div class="dash-card-icon">📐</div>
+                <div class="dash-card-body">
+                    <h3>Toán Lý Số</h3>
+                    <p>Lạc Thư, nhóm Cyclic, Phi Cung ℤ₉, Module lồng, Tam Cơ, Kỳ Môn 3 lớp.</p>
+                </div>
+                <div class="dash-card-tag">Viz</div>
+            </a>
+
+            <!-- Octonion -->
+            <a href="/octonion-viz/" class="dash-card dash-card--octonion">
+                <div class="dash-card-icon">🎱</div>
+                <div class="dash-card-body">
+                    <h3>Bát Nguyên Số (Octonion)</h3>
+                    <p>Cấu trúc Octonion ℍ⊗ℍ ánh xạ sang Bát Quái, D3 interactive.</p>
+                </div>
+                <div class="dash-card-tag">Viz</div>
+            </a>
+
+            <!-- Acupoints -->
+            <a href="/acupoints-viz/" class="dash-card dash-card--acupoints">
+                <div class="dash-card-icon">📍</div>
+                <div class="dash-card-body">
+                    <h3>Huyệt Đạo 3D</h3>
+                    <p>Mô hình 3D hệ kinh lạc, huyệt đạo trên cơ thể người. Three.js.</p>
+                </div>
+                <div class="dash-card-tag">Viz</div>
+            </a>
+
+        </div>
+    </section>
+
+</main>
+
+<!-- ═══════ Footer ═══════ -->
+<footer class="dash-footer">
+    <p>Chiêm Bốc Lý Số Platform — Tử Vi · Thái Ất · Kỳ Môn · Lục Nhâm · Vi Diệu Pháp</p>
+    <p class="dash-footer-sub">
+        <span id="service-count">11</span> ứng dụng ·
+        <span id="current-year">2026</span>
+    </p>
+</footer>
+
+<script>
+document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

@@ -90,11 +90,19 @@ def register_monolith_blueprints(app):
     from presentation.api.v1.legacy_routes import legacy_bp
     app.register_blueprint(legacy_bp, url_prefix='/api')
     
-    # Thai At & Ki Mon
+    # Thai At & Ki Mon & Luc Nham
     from services.thai_at_service import thai_at_bp
     from services.ki_mon_service import ki_mon_bp
     app.register_blueprint(thai_at_bp)
     app.register_blueprint(ki_mon_bp)
+    
+    # Luc Nham
+    import importlib.util
+    _luc_nham_routes = os.path.join(_services_dir, 'luc-nham', 'routes.py')
+    spec = importlib.util.spec_from_file_location('luc_nham_routes', _luc_nham_routes)
+    luc_nham_mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(luc_nham_mod)
+    app.register_blueprint(luc_nham_mod.luc_nham_bp)
     
     # Error handlers
     from presentation.api.middleware.error_handler import register_error_handlers
@@ -171,6 +179,13 @@ def register_proxy_routes(app):
         if path:
             return proxy_request('ki-mon', f'/api/ki-mon/{path}')
         return proxy_request('ki-mon', '/ki-mon')
+    
+    @app.route('/luc-nham', defaults={'path': ''})
+    @app.route('/api/luc-nham/<path:path>', methods=['GET', 'POST', 'PUT', 'DELETE'])
+    def proxy_luc_nham(path):
+        if path:
+            return proxy_request('luc-nham', f'/api/luc-nham/{path}')
+        return proxy_request('luc-nham', '/luc-nham')
     
     @app.route('/knowledge-graph')
     @app.route('/star-movement')
