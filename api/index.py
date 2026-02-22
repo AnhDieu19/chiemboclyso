@@ -16,7 +16,7 @@ for p in [_python_dir, _project_root]:
         sys.path.insert(0, p)
 
 # ── Flask App ───────────────────────────────────────────────────────────────
-from flask import Flask, jsonify, request, render_template
+from flask import Flask, jsonify, request, render_template, redirect
 from flask_cors import CORS
 
 _templates_dir = os.path.join(_python_dir, 'templates')
@@ -37,6 +37,11 @@ from logic.luc_nham_engine import LucNhamEngine
 # ── Routes ──────────────────────────────────────────────────────────────────
 @app.route('/')
 def home():
+    return redirect('/luc-nham')
+
+
+@app.route('/api/info')
+def api_info():
     return jsonify({
         'app': 'Chiêm Bốc Lý Số',
         'version': '2.0',
