@@ -21,6 +21,7 @@
 
 <!-- ════════════ Navigation ════════════ -->
 <nav class="nav-bar">
+    <a href="#sec-hado">河 Hà Đồ</a>
     <a href="#sec-lacthu">① Lạc Thư</a>
     <a href="#sec-cyclic">② Nhóm Cyclic</a>
     <a href="#sec-phicung">③ Phi Cung ℤ₉</a>
@@ -31,6 +32,17 @@
 </nav>
 
 <main>
+
+    <!-- ═══ § 0: Hà Đồ ═══ -->
+    <section id="sec-hado" class="viz-section">
+        <h2><span class="sec-num">河</span> Hà Đồ — Thiên Sinh Địa Thành</h2>
+        <p class="sec-desc">
+            Hà Đồ là sơ đồ bản thể vũ trụ: 5 cặp Sinh–Thành (1–10), 4 phương + Trung tâm.
+            Thiên (lẻ) Sinh, Địa (chẵn) Thành. Tổng = 55 (Thiên 25 + Địa 30).
+            Nền tảng Tiên Thiên Bát Quái với 4 trục: Tung, Hoành, Tả, Hữu.
+        </p>
+        <div id="viz-hado"></div>
+    </section>
 
     <!-- ═══ § 1: Lạc Thư Magic Square ═══ -->
     <section id="sec-lacthu" class="viz-section">
@@ -120,6 +132,7 @@
 <!-- ════════════ Scripts ════════════ -->
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <script src="js/data.js"></script>
+<script src="js/ha-do.js"></script>
 <script src="js/lac-thu.js"></script>
 <script src="js/cyclic.js"></script>
 <script src="js/phi-cung.js"></script>
@@ -130,6 +143,7 @@
 <script>
 // Boot all visualizations
 document.addEventListener("DOMContentLoaded", () => {
+    HaDoViz.init("#viz-hado");
     LacThuViz.init("#viz-lacthu");
     CyclicViz.init("#viz-cyclic");
     PhiCungViz.init("#viz-phicung");

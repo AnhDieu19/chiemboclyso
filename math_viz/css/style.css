@@ -167,6 +167,11 @@ main {
     max-width: 900px;
 }
 
+/* ── Hà Đồ viz container ── */
+#viz-hado svg {
+    overflow: visible;
+}
+
 /* ── Lạc Thư viz container ── */
 #viz-lacthu svg {
     overflow: visible;
