@@ -26,7 +26,8 @@ const LacThuViz = (() => {
     /* ── full (re)draw ── */
     function render() {
         const container = d3.select(containerId);
-        container.select("svg").remove();
+        container.selectAll("svg").remove();
+        container.selectAll(".transform-title").remove();
         activeCell = null;
 
         const cfg = _cfg();
@@ -47,6 +48,9 @@ const LacThuViz = (() => {
         drawSumLabels(g);
         drawInfoPanel(g, cfg);
         drawOppositionDiagram(g, cfg);
+
+        // Transformation diagram (Viên Như formula)
+        drawTransformDiagram(container, cfg);
     }
 
     /* ── toggle mode & redraw ── */
@@ -465,6 +469,285 @@ const LacThuViz = (() => {
                 .attr("stroke-width", 1.5);
             cell.selectAll("text").attr("opacity", 1);
         }
+    }
+
+    /* ═══════════ Viên Như Transform Diagram ═══════════ */
+
+    /**
+     * Draws a second SVG showing the Hà Đồ ↔ Lạc Thư transformation.
+     * Left: Hà Đồ 4-axis diagram.  Right: Lạc Thư 4-axis diagram.
+     * Center: 4 transformation steps with arrows.
+     */
+    function drawTransformDiagram(container, cfg) {
+        const T = HA_DO_LAC_THU_TRANSFORM;
+        const W = 700, H = 420;
+        const axisR = 100;  // radius of axis diagrams
+
+        // Title
+        container.append("div").attr("class", "transform-title")
+            .style("text-align", "center").style("margin-top", "18px")
+            .style("font-size", "15px").style("font-weight", "700")
+            .style("color", "var(--accent-gold)")
+            .html("Công thức Hà Đồ ↔ Lạc Thư — Viên Như");
+
+        const svg2 = container.append("svg")
+            .attr("class", "transform-svg")
+            .attr("viewBox", `0 0 ${W} ${H}`)
+            .attr("preserveAspectRatio", "xMidYMid meet")
+            .style("width", "100%")
+            .style("max-height", "440px")
+            .style("margin-top", "6px");
+
+        // Defs: arrow markers
+        const defs = svg2.append("defs");
+        ["#42A5F5", "#FFD700", "#66BB6A", "#FF7043"].forEach((color, i) => {
+            defs.append("marker").attr("id", `arrow-step-${i}`)
+                .attr("viewBox", "0 0 10 6").attr("refX", 9).attr("refY", 3)
+                .attr("markerWidth", 8).attr("markerHeight", 6).attr("orient", "auto")
+                .append("path").attr("d", "M0,0 L10,3 L0,6 Z").attr("fill", color);
+        });
+        // Generic white arrow
+        defs.append("marker").attr("id", "arrow-white")
+            .attr("viewBox", "0 0 10 6").attr("refX", 9).attr("refY", 3)
+            .attr("markerWidth", 7).attr("markerHeight", 5).attr("orient", "auto")
+            .append("path").attr("d", "M0,0 L10,3 L0,6 Z").attr("fill", "rgba(255,255,255,0.6)");
+
+        /* ── Left: Hà Đồ axes ── */
+        const hdCx = 140, hdCy = H / 2;
+        const hdG = svg2.append("g").attr("transform", `translate(${hdCx}, ${hdCy})`);
+        drawAxisCircle(hdG, T.haDo.axes, axisR, "Hà Đồ", "Tiên Thiên Bát Quái", true);
+
+        /* ── Right: Lạc Thư axes ── */
+        const ltCx = W - 140, ltCy = H / 2;
+        const ltG = svg2.append("g").attr("transform", `translate(${ltCx}, ${ltCy})`);
+        drawAxisCircle(ltG, T.lacThu.axes, axisR, "Lạc Thư", "Hậu Thiên Bát Quái", false);
+
+        /* ── Center: 4 transformation steps ── */
+        const stepColors = ["#42A5F5", "#FFD700", "#66BB6A", "#FF7043"];
+        const stepX = W / 2;
+        const stepsG = svg2.append("g").attr("transform", `translate(${stepX}, 30)`);
+
+        // Big arrow HĐ → LT
+        svg2.append("line")
+            .attr("x1", hdCx + axisR + 20).attr("y1", hdCy)
+            .attr("x2", ltCx - axisR - 20).attr("y2", ltCy)
+            .attr("stroke", "rgba(255,255,255,0.1)").attr("stroke-width", 2)
+            .attr("stroke-dasharray", "6,4")
+            .attr("marker-end", "url(#arrow-white)");
+        svg2.append("text")
+            .attr("x", stepX).attr("y", hdCy + 2)
+            .attr("text-anchor", "middle")
+            .attr("font-size", "9px").attr("fill", "var(--text-muted)")
+            .text("Ngoại tại → thuận KĐH");
+
+        // Title for steps
+        stepsG.append("text")
+            .attr("text-anchor", "middle")
+            .attr("font-size", "12px").attr("font-weight", "700")
+            .attr("fill", "var(--accent-blue)")
+            .text("4 Bước Biến Đổi");
+
+        T.haDoToLacThu.steps.forEach((s, i) => {
+            const y = 22 + i * 52;
+            const color = stepColors[i];
+
+            // Step box
+            stepsG.append("rect")
+                .attr("x", -105).attr("y", y)
+                .attr("width", 210).attr("height", 42).attr("rx", 6)
+                .attr("fill", color).attr("fill-opacity", 0.1)
+                .attr("stroke", color).attr("stroke-width", 1).attr("stroke-opacity", 0.4);
+
+            // Step number
+            stepsG.append("circle")
+                .attr("cx", -85).attr("cy", y + 21)
+                .attr("r", 10)
+                .attr("fill", color).attr("fill-opacity", 0.25)
+                .attr("stroke", color).attr("stroke-width", 1);
+            stepsG.append("text")
+                .attr("x", -85).attr("y", y + 25)
+                .attr("text-anchor", "middle")
+                .attr("font-size", "11px").attr("font-weight", "700")
+                .attr("fill", color)
+                .text(s.step);
+
+            // Formula label
+            stepsG.append("text")
+                .attr("x", -65).attr("y", y + 15)
+                .attr("font-size", "10px").attr("font-weight", "600")
+                .attr("fill", "#fff")
+                .text(`${s.from.name}(${s.from.quai.join("-")}) + ${s.to.name}(${s.to.quai.join("-")})`);
+
+            // Result
+            stepsG.append("text")
+                .attr("x", -65).attr("y", y + 32)
+                .attr("font-size", "9px")
+                .attr("fill", color)
+                .text(`→ ${s.to.name} = ${s.result.quai.join("-")} (${s.result.rotation})`);
+        });
+
+        /* ── Bottom: Number rules ── */
+        const rulesG = svg2.append("g").attr("transform", `translate(${W / 2}, ${H - 50})`);
+
+        // Viên / Phương rule
+        const rules = T.numberRules;
+        const ruleItems = [
+            { label: "Viên ○", nums: rules.placement.vien.numbers.join(","), type: "Dương", color: "#42A5F5" },
+            { label: "Phương □", nums: rules.placement.phuong.numbers.join(","), type: "Âm", color: "#FF7043" },
+            { label: "Trung ◎", nums: "5", type: "Cố định", color: "#FFD700" },
+            { label: "Đối xung", nums: "Σ = 10", type: "10 ẩn", color: "#66BB6A" },
+        ];
+        ruleItems.forEach((r, i) => {
+            const x = (i - 1.5) * 140;
+            rulesG.append("text")
+                .attr("x", x).attr("y", 0)
+                .attr("text-anchor", "middle")
+                .attr("font-size", "10px").attr("font-weight", "600")
+                .attr("fill", r.color)
+                .text(r.label);
+            rulesG.append("text")
+                .attr("x", x).attr("y", 16)
+                .attr("text-anchor", "middle")
+                .attr("font-size", "10px")
+                .attr("fill", "var(--text-secondary)")
+                .text(`${r.nums} — ${r.type}`);
+        });
+
+        // Thể/Dụng comparison
+        const tdG = svg2.append("g").attr("transform", `translate(${W / 2}, ${H - 10})`);
+        tdG.append("text").attr("x", -140).attr("text-anchor", "middle")
+            .attr("font-size", "9px").attr("fill", "var(--text-muted)")
+            .text(`HĐ: ${T.haDo.the.desc} · ${T.haDo.dung.desc}`);
+        tdG.append("text").attr("x", 140).attr("text-anchor", "middle")
+            .attr("font-size", "9px").attr("fill", "var(--text-muted)")
+            .text(`LT: ${T.lacThu.the.desc} · ${T.lacThu.dung.desc}`);
+    }
+
+    /**
+     * Draw an axis circle diagram: 4 axes through center with quái + numbers
+     * @param {d3 group} g — group element (already translated)
+     * @param {Array} axes — array of axis objects from HA_DO_LAC_THU_TRANSFORM
+     * @param {number} r — radius
+     * @param {string} title — diagram title
+     * @param {string} subtitle — sub label
+     * @param {boolean} isHaDo — true for Hà Đồ
+     */
+    function drawAxisCircle(g, axes, r, title, subtitle, isHaDo) {
+        const axisColors = ["#42A5F5", "#FF7043", "#66BB6A", "#AB47BC"];
+        // Angles: Tung=vertical(90°), Hoành=horizontal(0°), Tả=left diag(135°), Hữu=right diag(45°)
+        const axisAngles = isHaDo
+            ? [Math.PI / 2, 0, (3 * Math.PI) / 4, Math.PI / 4]       // HĐ: Tung↕, Hoành↔, Tả⟋, Hữu⟍
+            : [Math.PI / 2, 0, (3 * Math.PI) / 4, Math.PI / 4];      // LT: same axis directions
+
+        // Title
+        g.append("text")
+            .attr("y", -r - 24)
+            .attr("text-anchor", "middle")
+            .attr("font-size", "13px").attr("font-weight", "700")
+            .attr("fill", isHaDo ? "var(--accent-red)" : "var(--accent-blue)")
+            .text(title);
+        g.append("text")
+            .attr("y", -r - 10)
+            .attr("text-anchor", "middle")
+            .attr("font-size", "9px")
+            .attr("fill", "var(--text-muted)")
+            .text(subtitle);
+
+        // Outer circle
+        g.append("circle")
+            .attr("r", r)
+            .attr("fill", "none")
+            .attr("stroke", "rgba(255,255,255,0.1)").attr("stroke-width", 1);
+
+        // Center dot
+        g.append("circle")
+            .attr("r", 4)
+            .attr("fill", "#FFB300").attr("fill-opacity", 0.5);
+        g.append("text")
+            .attr("dy", "0.35em")
+            .attr("text-anchor", "middle")
+            .attr("font-size", "7px").attr("fill", "#fff")
+            .text("5");
+
+        // Draw each axis
+        axes.forEach((axis, i) => {
+            const angle = axisAngles[i];
+            const color = axisColors[i];
+            const cos = Math.cos(angle), sin = Math.sin(angle);
+
+            // Axis line
+            g.append("line")
+                .attr("x1", -r * cos).attr("y1", r * sin)   // note: SVG y is inverted
+                .attr("x2", r * cos).attr("y2", -r * sin)
+                .attr("stroke", color).attr("stroke-width", 1.5)
+                .attr("stroke-opacity", 0.6);
+
+            // YinYang indicator
+            const yyText = axis.yinYang === "Dương" ? "☰" : "☷";
+
+            // Quái labels at endpoints
+            if (axis.quai.length >= 2) {
+                // End 1 (positive direction)
+                const ex1 = (r + 18) * cos, ey1 = -(r + 18) * sin;
+                g.append("text")
+                    .attr("x", ex1).attr("y", ey1)
+                    .attr("dy", "0.35em")
+                    .attr("text-anchor", "middle")
+                    .attr("font-size", "10px").attr("font-weight", "600")
+                    .attr("fill", color)
+                    .text(axis.quaiSymbol ? axis.quaiSymbol[0] : axis.quai[0]);
+                g.append("text")
+                    .attr("x", ex1).attr("y", ey1 + 12)
+                    .attr("text-anchor", "middle")
+                    .attr("font-size", "8px")
+                    .attr("fill", "var(--text-secondary)")
+                    .text(axis.quai[0]);
+
+                // End 2 (negative direction)
+                const ex2 = -(r + 18) * cos, ey2 = (r + 18) * sin;
+                g.append("text")
+                    .attr("x", ex2).attr("y", ey2)
+                    .attr("dy", "0.35em")
+                    .attr("text-anchor", "middle")
+                    .attr("font-size", "10px").attr("font-weight", "600")
+                    .attr("fill", color)
+                    .text(axis.quaiSymbol ? axis.quaiSymbol[1] : axis.quai[1]);
+                g.append("text")
+                    .attr("x", ex2).attr("y", ey2 + 12)
+                    .attr("text-anchor", "middle")
+                    .attr("font-size", "8px")
+                    .attr("fill", "var(--text-secondary)")
+                    .text(axis.quai[1]);
+            }
+
+            // Number pairs along axis (if any)
+            if (axis.numbers && axis.numbers.length > 0) {
+                axis.numbers.forEach((pair, pi) => {
+                    const t = 0.45 + pi * 0.3;  // position along axis
+                    const nx = t * r * cos * (pi === 0 ? 1 : -1);
+                    const ny = -t * r * sin * (pi === 0 ? 1 : -1);
+                    g.append("text")
+                        .attr("x", nx + (sin > 0.5 ? 10 : -10) * (Math.abs(cos) < 0.5 ? 0 : 1))
+                        .attr("y", ny + (Math.abs(sin) < 0.5 ? -8 : 0))
+                        .attr("text-anchor", "middle")
+                        .attr("font-size", "9px").attr("font-weight", "600")
+                        .attr("fill", "#fff").attr("opacity", 0.7)
+                        .text(pair.join("-"));
+                });
+            }
+
+            // Axis label (small, near center)
+            const labelDist = 35;
+            const perpAngle = angle + Math.PI / 2;
+            const lx = labelDist * Math.cos(perpAngle) * 0.4;
+            const ly = -labelDist * Math.sin(perpAngle) * 0.4;
+            g.append("text")
+                .attr("x", lx).attr("y", ly)
+                .attr("text-anchor", "middle")
+                .attr("font-size", "7px")
+                .attr("fill", color).attr("opacity", 0.7)
+                .text(`${axis.name}(${axis.yinYang})`);
+        });
     }
 
     return { init, toggleMode, render };

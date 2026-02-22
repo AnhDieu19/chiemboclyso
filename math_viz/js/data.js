@@ -189,6 +189,184 @@ const HA_DO = {
     diaSum: 30,    // 2+4+6+8+10
 };
 
+/* ═══════════════ 1c. Công thức Hà Đồ → Lạc Thư (Viên Như) ═══════════════ */
+
+/**
+ * Công thức biến đổi Hà Đồ ↔ Lạc Thư — theo Viên Như
+ * =====================================================
+ * Nguồn: "Công thức tính Hà Đồ thành Lạc Thư" — Viên Như (2019)
+ * https://nghiencuulichsu.com/2019/02/13/cong-thuc-tinh-ha-do-thanh-lac-thu/
+ *
+ * Hà Đồ = Tiên Thiên Bát Quái, 4 trục tọa độ.
+ * Lạc Thư = Hậu Thiên Bát Quái, kết quả biến đổi 4 bước.
+ *
+ * Nguyên lý:
+ * - Ngoại tại (HĐ→LT): thuận kim đồng hồ, tương tác liền kề
+ * - Nội tại (LT→HĐ): ngược kim đồng hồ, hoàn nguyên
+ * - Số Dương (1,3,7,9) luôn trên Viên (tròn)
+ * - Số Âm (2,4,6,8) luôn trên Phương (vuông)
+ * - 5 cố định tại Trung; 10 ẩn trong tổng đối (cặp = 10)
+ */
+const HA_DO_LAC_THU_TRANSFORM = {
+    name: "Công thức Hà Đồ ↔ Lạc Thư",
+    author: "Viên Như",
+    year: 2019,
+    source: "nghiencuulichsu.com",
+
+    /* ── Hà Đồ: 4 trục Tiên Thiên ── */
+    haDo: {
+        label: "Hà Đồ — Tiên Thiên Bát Quái",
+        axes: [
+            {
+                id: 1, name: "Trục Tung", hanName: "縱軸",
+                direction: "Dọc (Vertical)", yinYang: "Dương",
+                quai: ["Càn", "Khôn"], quaiSymbol: ["☰", "☷"],
+                numbers: [[1, 6], [2, 7]],
+                numberDesc: "1-6 (Bắc, Âm), 2-7 (Nam, Dương)",
+                position: { from: "Bắc", to: "Nam" }
+            },
+            {
+                id: 2, name: "Trục Hoành", hanName: "橫軸",
+                direction: "Ngang (Horizontal)", yinYang: "Âm",
+                quai: ["Khảm", "Ly"], quaiSymbol: ["☵", "☲"],
+                numbers: [[3, 8], [4, 9]],
+                numberDesc: "3-8 (Đông, Dương), 4-9 (Tây, Âm)",
+                position: { from: "Đông", to: "Tây" }
+            },
+            {
+                id: 3, name: "Trục Tả", hanName: "左軸",
+                direction: "Chéo trái (Left diagonal)", yinYang: "Dương",
+                quai: ["Đoài", "Chấn"], quaiSymbol: ["☱", "☳"],
+                numbers: [],
+                numberDesc: "Không mang số",
+                position: { from: "Tây Nam", to: "Đông Bắc" }
+            },
+            {
+                id: 4, name: "Trục Hữu", hanName: "右軸",
+                direction: "Chéo phải (Right diagonal)", yinYang: "Âm",
+                quai: ["Tốn", "Cấn"], quaiSymbol: ["☴", "☶"],
+                numbers: [],
+                numberDesc: "Không mang số",
+                position: { from: "Đông Nam", to: "Tây Bắc" }
+            }
+        ],
+        the: { axis: 1, name: "Tung", quai: ["Càn", "Khôn"], desc: "Thể = Tung (Càn-Khôn)" },
+        dung: { axis: 2, name: "Hoành", quai: ["Khảm", "Ly"], desc: "Dụng = Hoành (Khảm-Ly)" }
+    },
+
+    /* ── Biến đổi: HĐ → LT (Ngoại tại, thuận KĐH) ── */
+    haDoToLacThu: {
+        label: "Hà Đồ → Lạc Thư (Ngoại tại)",
+        direction: "Thuận kim đồng hồ",
+        principle: "Trục trước tương tác trục sau → trục sau đổi quái, xoay góc",
+        steps: [
+            {
+                step: 1, formula: "1 → 4",
+                from: { axis: 1, name: "Tung", quai: ["Càn", "Khôn"] },
+                to:   { axis: 4, name: "Hữu", quai: ["Tốn", "Cấn"] },
+                result: { quai: ["Khôn", "Càn"], rotation: "180°" },
+                desc: "Tung(Càn-Khôn) + Hữu(Tốn-Cấn) → Hữu thành Khôn-Càn (xoay 180°)"
+            },
+            {
+                step: 2, formula: "4 → 3",
+                from: { axis: 4, name: "Hữu", quai: ["Tốn", "Cấn"] },
+                to:   { axis: 3, name: "Tả",  quai: ["Đoài", "Chấn"] },
+                result: { quai: ["Cấn", "Tốn"], rotation: "360°" },
+                desc: "Hữu(Tốn-Cấn) + Tả(Đoài-Chấn) → Tả thành Cấn-Tốn (xoay 360°)"
+            },
+            {
+                step: 3, formula: "3 → 2",
+                from: { axis: 3, name: "Tả",    quai: ["Đoài", "Chấn"] },
+                to:   { axis: 2, name: "Hoành", quai: ["Khảm", "Ly"] },
+                result: { quai: ["Chấn", "Đoài"], rotation: "90°" },
+                desc: "Tả(Đoài-Chấn) + Hoành(Khảm-Ly) → Hoành thành Chấn-Đoài (xoay 90°)"
+            },
+            {
+                step: 4, formula: "2 → 1",
+                from: { axis: 2, name: "Hoành", quai: ["Khảm", "Ly"] },
+                to:   { axis: 1, name: "Tung",  quai: ["Càn", "Khôn"] },
+                result: { quai: ["Khảm", "Ly"], rotation: "90°" },
+                desc: "Hoành(Khảm-Ly) + Tung(Càn-Khôn) → Tung thành Khảm-Ly (xoay 90°)"
+            }
+        ]
+    },
+
+    /* ── Kết quả: Lạc Thư 4 trục ── */
+    lacThu: {
+        label: "Lạc Thư — Hậu Thiên Bát Quái",
+        axes: [
+            {
+                id: 1, name: "Trục Tung", yinYang: "Dương",
+                quai: ["Khảm", "Ly"], quaiSymbol: ["☵", "☲"],
+                numbers: [[1, 9]],
+                numberDesc: "1-9",
+                position: { from: "Bắc", to: "Nam" }
+            },
+            {
+                id: 2, name: "Trục Hoành", yinYang: "Âm",
+                quai: ["Chấn", "Đoài"], quaiSymbol: ["☳", "☱"],
+                numbers: [[3, 7]],
+                numberDesc: "3-7",
+                position: { from: "Đông", to: "Tây" }
+            },
+            {
+                id: 3, name: "Trục Tả", yinYang: "Dương",
+                quai: ["Cấn", "Tốn"], quaiSymbol: ["☶", "☴"],
+                numbers: [[4, 8]],
+                numberDesc: "4-8",
+                position: { from: "Đông Bắc", to: "Tây Nam" }
+            },
+            {
+                id: 4, name: "Trục Hữu", yinYang: "Âm",
+                quai: ["Khôn", "Càn"], quaiSymbol: ["☷", "☰"],
+                numbers: [[2, 6]],
+                numberDesc: "2-6",
+                position: { from: "Tây Nam", to: "Tây Bắc" }
+            }
+        ],
+        the: { axis: 4, name: "Hữu", quai: ["Khôn", "Càn"], desc: "Thể = Hữu (Khôn-Càn)" },
+        dung: { axis: 1, name: "Tung", quai: ["Ly", "Khảm"], desc: "Dụng = Tung (Ly-Khảm)" }
+    },
+
+    /* ── Biến đổi ngược: LT → HĐ (Nội tại, ngược KĐH) ── */
+    lacThuToHaDo: {
+        label: "Lạc Thư → Hà Đồ (Nội tại)",
+        direction: "Ngược kim đồng hồ",
+        principle: "Hoàn nguyên: 4→1, 1→2, 2→3, 3→4",
+        steps: [
+            { step: 1, formula: "4 → 1", desc: "Hữu → Tung" },
+            { step: 2, formula: "1 → 2", desc: "Tung → Hoành" },
+            { step: 3, formula: "2 → 3", desc: "Hoành → Tả" },
+            { step: 4, formula: "3 → 4", desc: "Tả → Hữu" }
+        ]
+    },
+
+    /* ── Quy tắc di chuyển số ── */
+    numberRules: {
+        label: "Quy tắc di chuyển số",
+        carrier: [
+            { axis: "Tung", yinYang: "Dương", carries: "Số Dương (2-7)", reason: "Trục Dương mang số Dương" },
+            { axis: "Hoành", yinYang: "Âm", carries: "Số Âm (4-9)", reason: "Trục Âm mang số Âm" }
+        ],
+        placement: {
+            vien: { label: "Viên (tròn)", numbers: [1, 3, 7, 9], type: "Dương", desc: "Số Dương luôn trên Viên" },
+            phuong: { label: "Phương (vuông)", numbers: [2, 4, 6, 8], type: "Âm", desc: "Số Âm luôn trên Phương" }
+        },
+        center: {
+            five: "5 luôn cố định ở Trung tâm",
+            ten: "10 ẩn trong tổng đối xung (mỗi cặp đối = 10)"
+        },
+        opposingPairSum: 10
+    },
+
+    /** Utility: get axis info by id */
+    getHaDoAxis(id) { return this.haDo.axes.find(a => a.id === id); },
+    getLacThuAxis(id) { return this.lacThu.axes.find(a => a.id === id); },
+
+    /** Utility: get transformation step */
+    getStep(stepNum) { return this.haDoToLacThu.steps.find(s => s.step === stepNum); }
+};
+
 /* ═══════════════ 2. Ngũ Hành (5 Elements) ═══════════════ */
 
 /**
