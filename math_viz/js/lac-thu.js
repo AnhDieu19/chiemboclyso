@@ -176,7 +176,7 @@ const LacThuViz = (() => {
                     .attr("fill", "var(--text-muted)")
                     .text(hasCan ? palace.dir : `${palace.name} · ${palace.dir}`);
 
-                // Element badge (top-right)
+                // Element badge (top-right) — trigram element
                 cellG.append("rect")
                     .attr("x", CELL_SIZE - 32).attr("y", 4)
                     .attr("width", 28).attr("height", 16).attr("rx", 8)
@@ -187,6 +187,21 @@ const LacThuViz = (() => {
                     .attr("font-size", "8px").attr("font-weight", "600")
                     .attr("fill", hanhColor.fg)
                     .text(palace.element);
+
+                // Hà Đồ element annotation (bottom-left) — show when differs from trigram
+                if (palace.haDoElement && palace.haDoElement !== palace.element) {
+                    const hdColor = NGU_HANH.colors[palace.haDoElement];
+                    cellG.append("rect")
+                        .attr("x", 4).attr("y", CELL_SIZE - 18)
+                        .attr("width", 28).attr("height", 14).attr("rx", 6)
+                        .attr("fill", hdColor.bg).attr("fill-opacity", 0.35);
+                    cellG.append("text")
+                        .attr("x", 18).attr("y", CELL_SIZE - 8)
+                        .attr("text-anchor", "middle")
+                        .attr("font-size", "7px").attr("font-weight", "500")
+                        .attr("fill", hdColor.bg)
+                        .text(`H${palace.haDoElement}`);
+                }
             }
         }
     }
@@ -265,7 +280,22 @@ const LacThuViz = (() => {
             .attr("font-family", "var(--font-mono)")
             .text("∀ row,col,diag: Σ = 15");
 
-        infoG.append("text").attr("y", formulaY + 50)
+        // Hà Đồ Sinh-Thành section
+        const hdY = formulaY + 48;
+        infoG.append("text").attr("y", hdY)
+            .attr("font-size", "13px").attr("font-weight", "700")
+            .attr("fill", "var(--accent-red)")
+            .text("Hà Đồ — Sinh Thành");
+        HA_DO.pairs.forEach((pair, i) => {
+            const c = NGU_HANH.colors[pair.element];
+            infoG.append("text").attr("y", hdY + 18 + i * 16)
+                .attr("font-size", "10px")
+                .attr("fill", c.bg)
+                .text(`${pair.sinh}-${pair.thanh} ${pair.element} (${pair.dir}): ${pair.sinhType} ${pair.sinh} sinh, ${pair.thanhType} ${pair.thanh} thành`);
+        });
+
+        const tipY = hdY + 18 + 5 * 16 + 8;
+        infoG.append("text").attr("y", tipY)
             .attr("font-size", "10px").attr("fill", "var(--text-muted)")
             .text("Click ô → highlight các đường qua ô đó");
     }

@@ -36,15 +36,15 @@ const LAC_THU_TQ = {
     magicConstant: 15,
     palaces: [
         null,
-        { id: 1, name: "Khảm",  han: "坎", symbol: "☵", element: "Thủy", dir: "Bắc",     can: null,   row: 2, col: 1, color: "#1565C0" },
-        { id: 2, name: "Khôn",  han: "坤", symbol: "☷", element: "Thổ",  dir: "Tây Nam",  can: null,   row: 0, col: 2, color: "#8D6E63" },
-        { id: 3, name: "Chấn",  han: "震", symbol: "☳", element: "Mộc",  dir: "Đông",     can: null,   row: 1, col: 0, color: "#2E7D32" },
-        { id: 4, name: "Tốn",   han: "巽", symbol: "☴", element: "Mộc",  dir: "Đông Nam", can: null,   row: 0, col: 0, color: "#43A047" },
-        { id: 5, name: "Trung", han: "中", symbol: "◎", element: "Thổ",  dir: "Trung",    can: null,   row: 1, col: 1, color: "#FFB300" },
-        { id: 6, name: "Càn",   han: "乾", symbol: "☰", element: "Kim",  dir: "Tây Bắc",  can: null,   row: 2, col: 2, color: "#F9A825" },
-        { id: 7, name: "Đoài",  han: "兌", symbol: "☱", element: "Kim",  dir: "Tây",      can: null,   row: 1, col: 2, color: "#78909C" },
-        { id: 8, name: "Cấn",   han: "艮", symbol: "☶", element: "Thổ",  dir: "Đông Bắc", can: null,   row: 2, col: 0, color: "#795548" },
-        { id: 9, name: "Ly",    han: "離", symbol: "☲", element: "Hỏa",  dir: "Nam",      can: null,   row: 0, col: 1, color: "#D32F2F" },
+        { id: 1, name: "Khảm",  han: "坎", symbol: "☵", element: "Thủy", haDoElement: "Thủy", dir: "Bắc",     can: null,   row: 2, col: 1, color: "#1565C0" },
+        { id: 2, name: "Khôn",  han: "坤", symbol: "☷", element: "Thổ",  haDoElement: "Hỏa",  dir: "Tây Nam",  can: null,   row: 0, col: 2, color: "#8D6E63" },
+        { id: 3, name: "Chấn",  han: "震", symbol: "☳", element: "Mộc",  haDoElement: "Mộc",  dir: "Đông",     can: null,   row: 1, col: 0, color: "#2E7D32" },
+        { id: 4, name: "Tốn",   han: "巽", symbol: "☴", element: "Mộc",  haDoElement: "Kim",  dir: "Đông Nam", can: null,   row: 0, col: 0, color: "#43A047" },
+        { id: 5, name: "Trung", han: "中", symbol: "◎", element: "Thổ",  haDoElement: "Thổ",  dir: "Trung",    can: null,   row: 1, col: 1, color: "#FFB300" },
+        { id: 6, name: "Càn",   han: "乾", symbol: "☰", element: "Kim",  haDoElement: "Thủy", dir: "Tây Bắc",  can: null,   row: 2, col: 2, color: "#F9A825" },
+        { id: 7, name: "Đoài",  han: "兌", symbol: "☱", element: "Kim",  haDoElement: "Hỏa", dir: "Tây",      can: null,   row: 1, col: 2, color: "#78909C" },
+        { id: 8, name: "Cấn",   han: "艮", symbol: "☶", element: "Thổ",  haDoElement: "Mộc",  dir: "Đông Bắc", can: null,   row: 2, col: 0, color: "#795548" },
+        { id: 9, name: "Ly",    han: "離", symbol: "☲", element: "Hỏa",  haDoElement: "Kim",  dir: "Nam",      can: null,   row: 0, col: 1, color: "#D32F2F" },
     ],
     opposite(p) { return p === 5 ? 5 : 10 - p; },
     lines: [
@@ -75,15 +75,15 @@ const LAC_THU_DV = {
     magicConstant: 15,
     palaces: [
         null,
-        { id: 1, name: "Khảm",  han: "坎", symbol: "☵", element: "Thủy", dir: "Bắc",      can: "Quý",  row: 0, col: 1, color: "#1565C0" },
-        { id: 2, name: "Khôn",  han: "坤", symbol: "☷", element: "Thổ",  dir: "Đông Nam",  can: "Ất",   row: 2, col: 2, color: "#FFB300" },
-        { id: 3, name: "Chấn",  han: "震", symbol: "☳", element: "Mộc",  dir: "Đông",      can: "Bính", row: 1, col: 2, color: "#2E7D32" },
-        { id: 4, name: "Tốn",   han: "巽", symbol: "☴", element: "Mộc",  dir: "Tây Nam",   can: "Đinh", row: 2, col: 0, color: "#43A047" },
-        { id: 5, name: "Trung", han: "中", symbol: "◎", element: "Thổ",  dir: "Trung",     can: "Mậu/Quí", row: 1, col: 1, color: "#FFB300" },
-        { id: 6, name: "Càn",   han: "乾", symbol: "☰", element: "Kim",  dir: "Tây Bắc",   can: "Nhâm", row: 0, col: 0, color: "#E0E0E0" },
-        { id: 7, name: "Ly",    han: "離", symbol: "☲", element: "Hỏa",  dir: "Nam",       can: "Canh", row: 2, col: 1, color: "#D32F2F" },
-        { id: 8, name: "Cấn",   han: "艮", symbol: "☶", element: "Mộc",  dir: "Đông Bắc",  can: "Tân",  row: 0, col: 2, color: "#2E7D32" },
-        { id: 9, name: "Đoài",  han: "兌", symbol: "☱", element: "Kim",  dir: "Tây",       can: "Nhâm", row: 1, col: 0, color: "#E0E0E0" },
+        { id: 1, name: "Khảm",  han: "坎", symbol: "☵", element: "Thủy", haDoElement: "Thủy", dir: "Bắc",      can: "Quý",  row: 0, col: 1, color: "#1565C0" },
+        { id: 2, name: "Khôn",  han: "坤", symbol: "☷", element: "Thổ",  haDoElement: "Hỏa",  dir: "Đông Nam",  can: "Ất",   row: 2, col: 2, color: "#FFB300" },
+        { id: 3, name: "Chấn",  han: "震", symbol: "☳", element: "Mộc",  haDoElement: "Mộc",  dir: "Đông",      can: "Bính", row: 1, col: 2, color: "#2E7D32" },
+        { id: 4, name: "Tốn",   han: "巽", symbol: "☴", element: "Mộc",  haDoElement: "Kim",  dir: "Tây Nam",   can: "Đinh", row: 2, col: 0, color: "#43A047" },
+        { id: 5, name: "Trung", han: "中", symbol: "◎", element: "Thổ",  haDoElement: "Thổ",  dir: "Trung",     can: "Mậu/Quí", row: 1, col: 1, color: "#FFB300" },
+        { id: 6, name: "Càn",   han: "乾", symbol: "☰", element: "Kim",  haDoElement: "Thủy", dir: "Tây Bắc",   can: "Nhâm", row: 0, col: 0, color: "#E0E0E0" },
+        { id: 7, name: "Ly",    han: "離", symbol: "☲", element: "Hỏa",  haDoElement: "Hỏa",  dir: "Nam",       can: "Canh", row: 2, col: 1, color: "#D32F2F" },
+        { id: 8, name: "Cấn",   han: "艮", symbol: "☶", element: "Mộc",  haDoElement: "Mộc",  dir: "Đông Bắc",  can: "Tân",  row: 0, col: 2, color: "#2E7D32" },
+        { id: 9, name: "Đoài",  han: "兌", symbol: "☱", element: "Kim",  haDoElement: "Kim",  dir: "Tây",       can: "Nhâm", row: 1, col: 0, color: "#E0E0E0" },
     ],
     opposite(p) { return p === 5 ? 5 : 10 - p; },
     lines: [
@@ -105,6 +105,69 @@ const LAC_THU = new Proxy({}, {
         return undefined;
     }
 });
+
+/* ═══════════════ 1b. Hà Đồ (河圖) — Sinh Thành Ngũ Hành ═══════════════ */
+
+/**
+ * Hà Đồ — Thiên Sinh Địa Thành
+ * ==============================
+ * Thiên nhất sinh Thủy, Địa lục thành chi.    (1-6 → Thủy, Bắc)
+ * Địa nhị sinh Hỏa, Thiên thất thành chi.     (2-7 → Hỏa, Nam)
+ * Thiên tam sinh Mộc, Địa bát thành chi.      (3-8 → Mộc, Đông)
+ * Địa tứ sinh Kim, Thiên cửu thành chi.       (4-9 → Kim, Tây)
+ * Thiên ngũ sinh Thổ, Địa thập thành chi.     (5-10 → Thổ, Trung)
+ *
+ * Sinh số (1–5): số tạo thành, Thành số (6–10): số hoàn thành (= sinh + 5).
+ * Thiên (lẻ): 1, 3, 5, 7, 9.  Địa (chẵn): 2, 4, 6, 8, 10.
+ */
+const HA_DO = {
+    name: "Hà Đồ (河圖)",
+    desc: "Thiên Sinh Địa Thành — Ngũ Hành Sinh Thành Số",
+
+    /** Five Sinh-Thành pairs: each pair shares one element and one compass direction */
+    pairs: [
+        { sinh: 1, thanh: 6,  element: "Thủy", dir: "Bắc",   sinhType: "Thiên", thanhType: "Địa",
+          desc: "Thiên nhất sinh Thủy, Địa lục thành chi" },
+        { sinh: 2, thanh: 7,  element: "Hỏa",  dir: "Nam",   sinhType: "Địa",   thanhType: "Thiên",
+          desc: "Địa nhị sinh Hỏa, Thiên thất thành chi" },
+        { sinh: 3, thanh: 8,  element: "Mộc",  dir: "Đông",   sinhType: "Thiên", thanhType: "Địa",
+          desc: "Thiên tam sinh Mộc, Địa bát thành chi" },
+        { sinh: 4, thanh: 9,  element: "Kim",  dir: "Tây",    sinhType: "Địa",   thanhType: "Thiên",
+          desc: "Địa tứ sinh Kim, Thiên cửu thành chi" },
+        { sinh: 5, thanh: 10, element: "Thổ",  dir: "Trung",  sinhType: "Thiên", thanhType: "Địa",
+          desc: "Thiên ngũ sinh Thổ, Địa thập thành chi" },
+    ],
+
+    /** Map any number 1–10 to its Ngũ Hành element */
+    numberToElement(n) {
+        const elements = ["Thủy", "Hỏa", "Mộc", "Kim", "Thổ"];
+        return elements[((n - 1) % 5)];
+    },
+
+    /** Is this a Sinh number (1–5) or Thành number (6–10)? */
+    isSinh(n)  { return n >= 1 && n <= 5; },
+    isThanh(n) { return n >= 6 && n <= 10; },
+
+    /** Get the partner: sinh ↔ thành (add or subtract 5) */
+    partner(n) { return n <= 5 ? n + 5 : n - 5; },
+
+    /** Thiên (odd) or Địa (even) */
+    thienDia(n) { return n % 2 === 1 ? "Thiên" : "Địa"; },
+
+    /** Compass layout: direction → element + number pair */
+    directions: {
+        "Bắc":   { element: "Thủy", numbers: [1, 6] },
+        "Nam":   { element: "Hỏa",  numbers: [2, 7] },
+        "Đông":  { element: "Mộc",  numbers: [3, 8] },
+        "Tây":   { element: "Kim",  numbers: [4, 9] },
+        "Trung": { element: "Thổ",  numbers: [5, 10] }
+    },
+
+    /** Sum of all Hà Đồ numbers: 1+2+…+10 = 55 (Thiên=25, Địa=30) */
+    totalSum: 55,
+    thienSum: 25,  // 1+3+5+7+9
+    diaSum: 30,    // 2+4+6+8+10
+};
 
 /* ═══════════════ 2. Ngũ Hành (5 Elements) ═══════════════ */
 
@@ -430,5 +493,6 @@ const MATH_CONSTANTS = [
     { value: "288",        name: "Đại Du",         meaning: "8 × 36 = 8 cung × 36 năm" },
     { value: "18",         name: "Văn Xương eff.", meaning: "16 Thần + 2 lưu = hiệu dụng" },
     { value: "15",         name: "Magic Constant", meaning: "Hằng số Lạc Thư (mỗi dòng=15)" },
+    { value: "55",         name: "Hà Đồ tổng",    meaning: "1+2+…+10 = 55 (Thiên 25, Địa 30)" },
     { value: "15°",        name: "Tiết Khí khoảng", meaning: "360° ÷ 24 = 15° kinh độ Mặt Trời" },
 ];
