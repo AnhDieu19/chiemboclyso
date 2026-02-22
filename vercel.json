@@ -4,65 +4,9 @@
     {
       "src": "api/index.py",
       "use": "@vercel/python"
-    },
-    {
-      "src": "frontend/static/**",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "vi_dieu_phap/presentation/web/static/**",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "python/graph/static/**",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "hexagram_viz/**",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "acupoints_viz/**",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "math_viz/**",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "octonion_viz/**",
-      "use": "@vercel/static"
     }
   ],
   "routes": [
-    {
-      "src": "/static/(.*)",
-      "dest": "/frontend/static/$1"
-    },
-    {
-      "src": "/vdp/static/(.*)",
-      "dest": "/vi_dieu_phap/presentation/web/static/$1"
-    },
-    {
-      "src": "/graph/static/(.*)",
-      "dest": "/python/graph/static/$1"
-    },
-    {
-      "src": "/hexagram-viz/(.*)",
-      "dest": "/hexagram_viz/$1"
-    },
-    {
-      "src": "/acupoints-viz/(.*)",
-      "dest": "/acupoints_viz/$1"
-    },
-    {
-      "src": "/math-viz/(.*)",
-      "dest": "/math_viz/$1"
-    },
-    {
-      "src": "/octonion-viz/(.*)",
-      "dest": "/octonion_viz/$1"
-    },
     {
       "src": "/(.*)",
       "dest": "/api/index.py"

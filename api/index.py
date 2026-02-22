@@ -143,7 +143,7 @@ def finder_page():
         from data.finder_options import EVENTS, TRAITS, APPEARANCE, PROFESSION, MARITAL_STATUS
         from data.can_chi import DIA_CHI, GIO_SINH_RANGE
         formatted_hours = [
-            {'id': k, 'name': DIA_CHI.get(k, '?'), 'range': v}
+            {'id': k, 'name': DIA_CHI[k] if k < len(DIA_CHI) else '?', 'range': v}
             for k, v in GIO_SINH_RANGE.items()
         ]
         options = {
@@ -163,7 +163,10 @@ def analytics_beauty():
         gender = request.args.get('gender', 'all')
         if gender not in ('all', 'nam', 'nu', 'nữ'):
             gender = 'all'
-        data = get_visualization_data(gender_filter=gender)
+        try:
+            data = get_visualization_data(gender_filter=gender)
+        except Exception:
+            data = None
         if not data:
             data = {
                 'count': 0, 'total_scanned': 0, 'data_source': 'empty',

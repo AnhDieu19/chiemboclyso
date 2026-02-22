@@ -42,7 +42,7 @@
                 <div>
                     <h3>Tìm Thấy (Beauty Found)</h3>
                     <div style="font-size: 2em; font-weight: bold;">{{ "{:,.0f}".format(data.count) }}</div>
-                    <small>Lá số đạt chuẩn Hồng Nhan ({{ "{:.1f}".format(data.count / data.total_scanned * 100)
+                    <small>Lá số đạt chuẩn Hồng Nhan ({{ "{:.1f}".format(data.count / data.total_scanned * 100 if data.total_scanned else 0)
                         }}%)</small>
                 </div>
             </div>
