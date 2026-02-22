@@ -77,11 +77,11 @@ class GenerateChartUseCase:
                 tai_menh_result = analyzer.analyze()
                 
                 # Enrich with metadata
-                from presentation.api.v1.analytics_routes import CATEGORY_META, ADVICE
+                from presentation.api.v1.analytics_routes import CATEGORY_META, CATEGORY_ADVICE
                 
                 category = tai_menh_result.get('category', 'Tài Mệnh Cân Bằng')
                 meta = CATEGORY_META.get(category, {"icon": "❓", "color": "#7f8c8d"})
-                advice_list = ADVICE.get(category, [])
+                advice_list = CATEGORY_ADVICE.get(category, [])
                 
                 tai_menh_result['category_icon'] = meta['icon']
                 tai_menh_result['category_color'] = meta['color']
