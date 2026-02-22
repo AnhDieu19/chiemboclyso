@@ -88,6 +88,7 @@ function renderAll(data) {
     renderDirections(data);
     renderQuantumVedic(data.quantum_vedic);
     renderQuantumAnalysis(data.quantum_analysis, data.quantum_vedic);
+    if (data.knowledge_graph) renderKnowledgeGraph(data.knowledge_graph);
     renderDetailTable(data.ban_thuc);
 }
 
@@ -522,6 +523,180 @@ function renderDetailTable(banThuc) {
         `;
         tbody.appendChild(tr);
     });
+}
+
+// ═══════════════════════════════════════════════════════════════
+// KNOWLEDGE GRAPH RENDERER
+// ═══════════════════════════════════════════════════════════════
+
+function renderKnowledgeGraph(kg) {
+    // 1. Summary Stats
+    const summary = kg.graph_summary || {};
+    const el = (id, val) => { const e = document.getElementById(id); if (e) e.textContent = val; };
+    el('kgNodeCount', summary.total_nodes || 0);
+    el('kgEdgeCount', summary.total_edges || 0);
+    el('kgEntityTypes', Object.keys(summary.entity_types || {}).length);
+
+    // 2. Operational Strategy (CASE WHEN)
+    renderKgStrategy(kg.operational_strategy);
+
+    // 3. Vedic Force Routing
+    renderKgVedicRouting(kg.vedic_force_routing);
+
+    // 4. Interaction Events (RDF Reification)
+    renderKgInteractions(kg.interaction_events);
+
+    // 5. SiKe Anchors
+    renderKgSikeAnchors(kg.sike_anchors);
+}
+
+function renderKgStrategy(strategy) {
+    const container = document.getElementById('kgStrategyContent');
+    if (!container || !strategy) return;
+
+    const strengthClass = (s) => (s || '').toLowerCase();
+    const mucDoClass = (m) => {
+        if (!m) return '';
+        if (m.includes('Đại Cát')) return 'cat';
+        if (m.includes('Cát')) return 'cat';
+        if (m.includes('Hung')) return 'hung';
+        return 'trung';
+    };
+
+    container.innerHTML = `
+        <div class="kg-strategy-main">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+                <span style="font-size:1.5rem;">${strategy.icon || '⚡'}</span>
+                <span class="strategy-name">${strategy.strategy_vi || strategy.strategy}</span>
+                <span class="kg-badge">${strategy.muc_do || ''}</span>
+            </div>
+            <div class="strategy-desc">${strategy.description || ''}</div>
+            ${strategy.drift_note ? `<div style="margin-top:8px;font-size:0.85rem;color:#fdcb6e;">📌 ${strategy.drift_note}</div>` : ''}
+            ${strategy.persist_note ? `<div style="margin-top:4px;font-size:0.85rem;color:#81ecec;">📌 ${strategy.persist_note}</div>` : ''}
+        </div>
+        <div class="kg-strategy-strength">
+            <div class="kg-strength-item">
+                <div class="label">K1 Origin</div>
+                <div class="value ${strengthClass(strategy.origin_strength)}">${strategy.origin_strength || '—'}</div>
+            </div>
+            <div class="kg-strength-item">
+                <div class="label">K2 Persist</div>
+                <div class="value ${strengthClass(strategy.persist_strength)}">${strategy.persist_strength || '—'}</div>
+            </div>
+            <div class="kg-strength-item">
+                <div class="label">K3 Trigger</div>
+                <div class="value ${strengthClass(strategy.trigger_strength)}">${strategy.trigger_strength || '—'}</div>
+            </div>
+            <div class="kg-strength-item">
+                <div class="label">K4 Drift</div>
+                <div class="value ${strengthClass(strategy.drift_strength)}">${strategy.drift_strength || '—'}</div>
+            </div>
+        </div>
+    `;
+}
+
+function renderKgVedicRouting(routing) {
+    const phasesContainer = document.getElementById('kgVedicPhases');
+    const verdictEl = document.getElementById('kgVerdict');
+    if (!phasesContainer || !routing) return;
+
+    const phases = routing.phases || [];
+    let html = '';
+    phases.forEach((p, i) => {
+        const forceClass = p.force_type.includes('Samprasadagati') ? 'samprasadagati'
+                         : p.force_type.includes('Saparayanagati') ? 'saparayanagati'
+                         : 'nityagati';
+        const weightClass = p.net >= 0 ? 'positive' : 'negative';
+
+        html += `<div class="col-md-4">
+            <div class="kg-phase-card ${forceClass}">
+                <div class="phase-name">${p.vedic_deity} — ${p.phase}</div>
+                <div class="phase-force">${p.force_type}</div>
+                <div style="display:flex;justify-content:space-between;margin-top:8px;">
+                    <div>
+                        <small style="color:#b2bec3;">Base:</small>
+                        <span class="phase-weight ${p.weight >= 0 ? 'positive' : 'negative'}">${p.weight > 0 ? '+' : ''}${p.weight}</span>
+                    </div>
+                    <div>
+                        <small style="color:#b2bec3;">Rudra:</small>
+                        <span class="phase-weight ${p.rudra >= 0 ? 'positive' : 'negative'}">${p.rudra > 0 ? '+' : ''}${p.rudra}</span>
+                    </div>
+                    <div>
+                        <small style="color:#b2bec3;">Net:</small>
+                        <span class="phase-weight ${weightClass}">${p.net > 0 ? '+' : ''}${p.net}</span>
+                    </div>
+                </div>
+            </div>
+        </div>`;
+    });
+    phasesContainer.innerHTML = html;
+
+    // Verdict
+    if (verdictEl) {
+        const cf = routing.cumulative_force || 0;
+        const verdictClass = cf >= 0.5 ? 'cat' : (cf <= -0.5 ? 'hung' : 'trung');
+        verdictEl.className = `kg-verdict ${verdictClass}`;
+        verdictEl.innerHTML = `
+            <div>Tổng Lực Tích Lũy: <strong>${cf > 0 ? '+' : ''}${cf}</strong></div>
+            <div style="margin-top:4px;">${routing.verdict_vi || ''}</div>
+            <small style="opacity:0.8;">${routing.interpretation || ''}</small>
+        `;
+    }
+}
+
+function renderKgInteractions(events) {
+    const tbody = document.getElementById('kgInteractionTable');
+    if (!tbody || !events) return;
+    tbody.innerHTML = '';
+
+    events.forEach(ev => {
+        const tr = document.createElement('tr');
+        const stateMap = {
+            'Đại Cát': 'dai-cat',
+            'Cát': 'cat',
+            'Trung Tính': 'trung',
+            'Hung': 'hung',
+            'Đại Hung': 'dai-hung',
+        };
+        const catFactors = (ev.cat_factors || []).map(f => `<div class="cat-text">✦ ${f}</div>`).join('');
+        const hungFactors = (ev.hung_factors || []).map(f => `<div class="hung-text">✧ ${f}</div>`).join('');
+        const badgeClass = stateMap[ev.state_label] || 'trung';
+        const netP = ev.net_probability != null ? ev.net_probability.toFixed(2) : '—';
+        const cungName = ev.event_id ? ev.event_id.replace('cung_', '').replace(/_/g, ' ') : '';
+
+        tr.innerHTML = `
+            <td>${cungName}</td>
+            <td style="font-size:0.75rem;">${ev.source_node ? ev.source_node.split('_').pop() : ''} ↔ ${ev.target_node ? ev.target_node.split('_').pop() : ''}</td>
+            <td>${ev.than_tuong || ''}</td>
+            <td style="font-size:0.72rem;">${catFactors || '<span style="color:#636e72;">—</span>'}</td>
+            <td style="font-size:0.72rem;">${hungFactors || '<span style="color:#636e72;">—</span>'}</td>
+            <td style="font-family:monospace;text-align:center;">${netP}</td>
+            <td><span class="state-badge ${badgeClass}">${ev.state_label || ''}</span></td>
+        `;
+        tbody.appendChild(tr);
+    });
+}
+
+function renderKgSikeAnchors(anchors) {
+    const container = document.getElementById('kgSikeAnchors');
+    if (!container || !anchors) return;
+
+    let html = '';
+    anchors.forEach(a => {
+        const strengthClass = (a.strength || '').toLowerCase();
+        html += `<div class="col-md-3">
+            <div class="kg-sike-card">
+                <div class="sike-role">${a.role || ''}</div>
+                <div class="sike-name">K${a.khoa_num}: ${a.thuong_than} / ${a.ha_than}</div>
+                <div class="sike-detail">
+                    ${a.wu_xing_thuong} ${a.relation} ${a.wu_xing_ha}
+                    <span style="float:right;" class="${strengthClass}">${a.strength}</span>
+                </div>
+                <div style="margin-top:4px;font-size:0.75rem;color:#a29bfe;">${a.role_vi || ''}</div>
+            </div>
+        </div>`;
+    });
+    container.innerHTML = html;
 }
 
 // ═══════════════════════════════════════════════════════════════

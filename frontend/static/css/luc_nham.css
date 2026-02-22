@@ -745,3 +745,223 @@
         grid-template-columns: 1fr;
     }
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   KNOWLEDGE GRAPH — ONTOLOGY VISUALIZATION
+   ═══════════════════════════════════════════════════════════════ */
+
+.knowledge-graph-card {
+    border: 1px solid rgba(108, 92, 231, 0.3);
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    color: #ecf0f1;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.kg-header {
+    background: linear-gradient(90deg, rgba(108,92,231,0.3), rgba(0,210,255,0.2));
+    border-bottom: 1px solid rgba(108,92,231,0.3);
+    padding: 16px 20px;
+}
+.kg-header h5 { color: #a29bfe; }
+.kg-header small { color: #b2bec3; }
+
+.kg-stat {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #a29bfe;
+    font-family: 'Courier New', monospace;
+}
+
+.kg-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    border: 1px solid rgba(0,210,255,0.4);
+    color: #00d2ff;
+    font-size: 0.85rem;
+    background: rgba(0,210,255,0.1);
+}
+
+.kg-section {
+    border: 1px solid rgba(108,92,231,0.2);
+    border-radius: 8px;
+    padding: 16px;
+    background: rgba(0,0,0,0.15);
+}
+.kg-section h6 {
+    color: #a29bfe;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+}
+
+/* Strategy Box */
+.kg-strategy-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+}
+
+.kg-strategy-main {
+    flex: 1;
+    min-width: 250px;
+    padding: 16px;
+    border-radius: 8px;
+    background: rgba(108,92,231,0.15);
+    border: 1px solid rgba(108,92,231,0.3);
+}
+
+.kg-strategy-main .strategy-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #ffeaa7;
+}
+
+.kg-strategy-main .strategy-desc {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: #dfe6e9;
+    line-height: 1.5;
+}
+
+.kg-strategy-strength {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.kg-strength-item {
+    padding: 8px 14px;
+    border-radius: 6px;
+    background: rgba(0,0,0,0.2);
+    border: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+    min-width: 100px;
+}
+
+.kg-strength-item .label {
+    font-size: 0.7rem;
+    color: #b2bec3;
+    text-transform: uppercase;
+}
+
+.kg-strength-item .value {
+    font-size: 1rem;
+    font-weight: 600;
+}
+.kg-strength-item .value.strong { color: #00b894; }
+.kg-strength-item .value.weak { color: #e17055; }
+.kg-strength-item .value.neutral { color: #fdcb6e; }
+
+/* Vedic Force Phases */
+.kg-phase-card {
+    padding: 14px;
+    border-radius: 8px;
+    background: rgba(0,0,0,0.2);
+    border-left: 3px solid;
+    margin-bottom: 8px;
+}
+.kg-phase-card.samprasadagati { border-color: #00b894; }
+.kg-phase-card.saparayanagati { border-color: #e17055; }
+.kg-phase-card.nityagati { border-color: #fdcb6e; }
+
+.kg-phase-card .phase-name {
+    font-weight: 600;
+    color: #dfe6e9;
+    font-size: 0.95rem;
+}
+
+.kg-phase-card .phase-force {
+    font-size: 0.8rem;
+    color: #b2bec3;
+    margin-top: 4px;
+}
+
+.kg-phase-card .phase-weight {
+    font-family: 'Courier New', monospace;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+.kg-phase-card .phase-weight.positive { color: #00b894; }
+.kg-phase-card .phase-weight.negative { color: #e17055; }
+
+.kg-phase-arrow {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #636e72;
+    padding: 0 4px;
+}
+
+/* Verdict Box */
+.kg-verdict {
+    padding: 14px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+}
+.kg-verdict.cat { background: rgba(0,184,148,0.2); border: 1px solid rgba(0,184,148,0.4); color: #55efc4; }
+.kg-verdict.hung { background: rgba(225,112,85,0.2); border: 1px solid rgba(225,112,85,0.4); color: #fab1a0; }
+.kg-verdict.trung { background: rgba(253,203,110,0.2); border: 1px solid rgba(253,203,110,0.4); color: #ffeaa7; }
+
+/* Interaction Table */
+.kg-table {
+    font-size: 0.8rem;
+    color: #ecf0f1;
+    background: transparent;
+}
+.kg-table thead th {
+    background: rgba(108,92,231,0.25);
+    color: #a29bfe;
+    border-color: rgba(108,92,231,0.2);
+    font-size: 0.75rem;
+}
+.kg-table td {
+    border-color: rgba(108,92,231,0.15);
+    vertical-align: middle;
+}
+.kg-table .cat-text { color: #55efc4; }
+.kg-table .hung-text { color: #fab1a0; }
+.kg-table .state-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+.kg-table .state-badge.dai-cat { background: rgba(0,184,148,0.3); color: #55efc4; }
+.kg-table .state-badge.cat { background: rgba(0,184,148,0.2); color: #81ecec; }
+.kg-table .state-badge.trung { background: rgba(253,203,110,0.2); color: #ffeaa7; }
+.kg-table .state-badge.hung { background: rgba(225,112,85,0.2); color: #fab1a0; }
+.kg-table .state-badge.dai-hung { background: rgba(214,48,49,0.3); color: #ff7675; }
+
+/* SiKe Anchor Cards */
+.kg-sike-card {
+    padding: 12px;
+    border-radius: 8px;
+    background: rgba(0,0,0,0.2);
+    border: 1px solid rgba(108,92,231,0.2);
+    margin-bottom: 8px;
+}
+.kg-sike-card .sike-role {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #a29bfe;
+}
+.kg-sike-card .sike-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #dfe6e9;
+}
+.kg-sike-card .sike-detail {
+    font-size: 0.8rem;
+    color: #b2bec3;
+    margin-top: 4px;
+}
+
+@media (max-width: 768px) {
+    .kg-strategy-box { flex-direction: column; }
+    .kg-strength-item { min-width: 80px; }
+}

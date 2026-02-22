@@ -10,6 +10,7 @@
 ║  4. Chiết xuất Tam Truyền (Three Transmissions)                            ║
 ║  5. Xác định Khóa Thể (9 loại)                                            ║
 ║  6. Luận giải cát hung + quantum correlation                               ║
+║  7. Knowledge Graph (Ontology): RDF Reification + Vedic Force Routing      ║
 ║                                                                              ║
 ║  Toán học đẳng cấu:                                                         ║
 ║  12 Thần Tướng × 12 Địa Chi × 12 canh giờ = 1.440 cấu hình               ║
@@ -736,6 +737,35 @@ class LucNhamEngine:
         else:
             return 'Tứ Khóa ít tương quan — các yếu tố khá độc lập, dễ tách biệt xử lý'
 
+    @staticmethod
+    def _get_quantum_vedic_map(than_tuong_name: str) -> Dict:
+        """Lấy quantum-vedic mapping cho một Thần Tướng"""
+        return QUANTUM_VEDIC_ISOMORPHISM.get(
+            'than_tuong_quantum', {}
+        ).get(than_tuong_name, {})
+
+    # ═══════════════════════════════════════════════════════════════════════════
+    # KNOWLEDGE GRAPH — ONTOLOGY (RDF/OWL/LPG)
+    # ═══════════════════════════════════════════════════════════════════════════
+
+    def build_knowledge_graph(self) -> Dict:
+        """
+        Xây dựng Knowledge Graph theo thiết kế Bản Thể Luận (Ontology).
+
+        Tích hợp:
+        - Entity Classes: HeavenlyStem, EarthlyBranch, SiKe_Anchor,
+          SanChuan_Transmission, VedicDeva_Particle, etc.
+        - RDF Reification: Interaction_Event cho trạng thái song song Cát/Hung
+        - Algorithm 2: CASE WHEN operational_strategy (Tứ Khóa)
+        - Algorithm 3: Vedic Force Routing (Tam Truyền)
+
+        Returns:
+            Dict chứa toàn bộ Knowledge Graph data
+        """
+        from logic.luc_nham_ontology import KnowledgeGraphBuilder
+        builder = KnowledgeGraphBuilder(self)
+        return builder.build()
+
     # ═══════════════════════════════════════════════════════════════════════════
     # OUTPUT CHÍNH
     # ═══════════════════════════════════════════════════════════════════════════
@@ -757,6 +787,7 @@ class LucNhamEngine:
             - ban_thuc: Phân tích 12 cung
             - chien_luoc: Chiến lược hành động
             - quantum_vedic: Liên hệ Vật lý lượng tử & Vệ Đà
+            - knowledge_graph: Đồ Thị Tri Thức (Ontology)
             - luc_nham_info: 6 tổ hợp Nhâm
         """
         ban_thuc = self._analyze_ban_thuc()
@@ -881,4 +912,5 @@ class LucNhamEngine:
             'luc_nham_info': LUC_NHAM,
             'quantum_vedic': QUANTUM_VEDIC_ISOMORPHISM,
             'quantum_analysis': self._analyze_quantum_detail(),
+            'knowledge_graph': self.build_knowledge_graph(),
         }
