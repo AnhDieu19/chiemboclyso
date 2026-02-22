@@ -79,6 +79,8 @@ docs/
 !python/graph/templates/*.html
 !acupoints_viz/index.html
 !hexagram_viz/index.html
+!octonion_viz/index.html
+!math_viz/index.html
 !vi_dieu_phap/presentation/web/templates/*.html
 
 # Agent/IDE config

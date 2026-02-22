@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thái Ất · Kỳ Môn — Cấu Trúc Toán Học</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ════════════ Header ════════════ -->
+<header class="site-header">
+    <h1>Thái Ất · Kỳ Môn — Cấu Trúc Toán Học</h1>
+    <p class="subtitle">
+        Trực quan hoá các cấu trúc đại số (nhóm cyclic, số học module, ánh xạ toàn ánh)
+        ẩn bên trong hai hệ thống Thái Ất Thần Số và Kỳ Môn Độn Giáp
+    </p>
+</header>
+
+<!-- ════════════ Navigation ════════════ -->
+<nav class="nav-bar">
+    <a href="#sec-lacthu">① Lạc Thư</a>
+    <a href="#sec-cyclic">② Nhóm Cyclic</a>
+    <a href="#sec-phicung">③ Phi Cung ℤ₉</a>
+    <a href="#sec-modular">④ Module Lồng</a>
+    <a href="#sec-tamco">⑤ Tam Cơ</a>
+    <a href="#sec-kimon">⑥ Kỳ Môn 3 Lớp</a>
+    <a href="#sec-constants">⑦ Hằng Số</a>
+</nav>
+
+<main>
+
+    <!-- ═══ § 1: Lạc Thư Magic Square ═══ -->
+    <section id="sec-lacthu" class="viz-section">
+        <h2><span class="sec-num">①</span> Lạc Thư — Ma Phương 3 × 3</h2>
+        <p class="sec-desc">
+            Lạc Thư là ma trận 3 × 3 với mọi hàng, cột, đường chéo đều = 15.
+            Tính chất đối xứng: p + (10 − p) = 10. Nền tảng Cửu Cung cho cả Thái Ất và Kỳ Môn.
+        </p>
+        <div id="viz-lacthu"></div>
+    </section>
+
+    <!-- ═══ § 2: Cyclic Group Zoo ═══ -->
+    <section id="sec-cyclic" class="viz-section">
+        <h2><span class="sec-num">②</span> Bộ Sưu Tập Nhóm Cyclic</h2>
+        <p class="sec-desc">
+            Năm nhóm cyclic ℤ₉, ℤ₈, ℤ₁₂, ℤ₁₆, ℤ₆₀ xuất hiện tự nhiên trong tính toán.
+            Mỗi nhóm là vòng đóng — phép quay modulo trở về điểm xuất phát.
+        </p>
+        <div id="viz-cyclic"></div>
+    </section>
+
+    <!-- ═══ § 3: Phi Cung Animation ═══ -->
+    <section id="sec-phicung" class="viz-section">
+        <h2><span class="sec-num">③</span> Phi Cung — Phép Quay ℤ₉</h2>
+        <p class="sec-desc">
+            Phi Cung là phép quay trên ℤ₉ theo công thức ((s−1) ± n) mod 9 + 1.
+            Đây là cơ chế trung tâm quyết định ngôi sao, cung, môn nằm ở đâu.
+        </p>
+        <div id="viz-phicung"></div>
+    </section>
+
+    <!-- ═══ § 4: Nested Modular Chain ═══ -->
+    <section id="sec-modular" class="viz-section">
+        <h2><span class="sec-num">④</span> Chuỗi Module Lồng — Tích Niên Decomposition</h2>
+        <p class="sec-desc">
+            Từ Tích Niên (năm tính từ Epoch), rút gọn qua 3 tầng modulo:
+            ℤ₃₆₀₀ → ℤ₃₆₀ → ℤ₇₂. Kết quả cuối = <strong>Kỷ Dư</strong> — con số then chốt cho Thái Ất.
+        </p>
+        <div id="viz-modular"></div>
+    </section>
+
+    <!-- ═══ § 5: Tam Cơ Multi-Rate ═══ -->
+    <section id="sec-tamco" class="viz-section">
+        <h2><span class="sec-num">⑤</span> Tam Cơ — Hệ Đa Tốc Độ trên ℤ₁₂</h2>
+        <p class="sec-desc">
+            Ba "đồng hồ" ℤ₁₂ quay ở tốc độ khác nhau: Quân Cơ (30 năm/bước),
+            Thần Cơ (3), Dân Cơ (1). Chồng 3 nhịp → đánh giá tình thế quốc gia.
+        </p>
+        <div id="viz-tamco"></div>
+    </section>
+
+    <!-- ═══ § 6: Kỳ Môn 3-Layer ═══ -->
+    <section id="sec-kimon" class="viz-section">
+        <h2><span class="sec-num">⑥</span> Kỳ Môn Độn Giáp — 3 Lớp + Ánh Xạ Toàn Ánh</h2>
+        <p class="sec-desc">
+            Địa Bàn cố định → Thiên Bàn (Cửu Tinh) và Nhân Bàn (Bát Môn) xoay theo Phi Cung.
+            Ánh xạ 12→9 (Chi→Cung) và 16→9 (Thần→Cung) là toàn ánh (surjective), có các cặp chia sẻ.
+        </p>
+        <div id="viz-kimon"></div>
+    </section>
+
+    <!-- ═══ § 7: Constants Reference ═══ -->
+    <section id="sec-constants" class="viz-section">
+        <h2><span class="sec-num">⑦</span> Bảng Hằng Số Toán Học</h2>
+        <p class="sec-desc">Các hằng số cốt lõi xuất hiện trong mã nguồn Thái Ất & Kỳ Môn.</p>
+        <div id="viz-constants" class="const-grid"></div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    Thái Ất Thần Số · Kỳ Môn Độn Giáp — Phân Tích Cấu Trúc Toán Học
+</footer>
+
+<!-- ════════════ Scripts ════════════ -->
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/lac-thu.js"></script>
+<script src="js/cyclic.js"></script>
+<script src="js/phi-cung.js"></script>
+<script src="js/modular.js"></script>
+<script src="js/tam-co.js"></script>
+<script src="js/ki-mon-layers.js"></script>
+
+<script>
+// Boot all visualizations
+document.addEventListener("DOMContentLoaded", () => {
+    LacThuViz.init("#viz-lacthu");
+    CyclicViz.init("#viz-cyclic");
+    PhiCungViz.init("#viz-phicung");
+    ModularViz.init("#viz-modular");
+    TamCoViz.init("#viz-tamco");
+    KiMonViz.init("#viz-kimon");
+
+    // Constants cards
+    buildConstants();
+});
+
+function buildConstants() {
+    const grid = document.querySelector("#viz-constants");
+    const consts = [
+        { name: "EPOCH", val: "10,153,917", desc: "Thái Ất Epoch — năm gốc quy ước" },
+        { name: "KỶ CHU KỲ", val: "3,600", desc: "10 Kỷ × 360 = 1 Đại Kỷ" },
+        { name: "NGUYÊN CHU KỲ", val: "360", desc: "5 Nguyên × 72 = 1 Kỷ" },
+        { name: "HỘI CHU KỲ", val: "72", desc: "12 Hội × 6 = khoảng Kỷ Dư" },
+        { name: "CAN CHI", val: "60", desc: "ℤ₁₀ × ℤ₁₂ ≅ ℤ₆₀ — Lục Thập Hoa Giáp" },
+        { name: "NGŨ PHÚC", val: "225", desc: "5 cung × 45 năm/cung" },
+        { name: "ĐẠI DU", val: "288", desc: "8 cung × 36 năm/cung" },
+        { name: "VĂN XƯƠNG", val: "18", desc: "16 vị + 2 dwell = 18 bước hiệu dụng" },
+        { name: "MAGIC SUM", val: "15", desc: "Hằng số ma phương Lạc Thư 3×3" },
+        { name: "TAM CƠ RATIO", val: "30 : 3 : 1", desc: "Tỉ lệ tốc Quân : Thần : Dân" },
+    ];
+
+    consts.forEach(c => {
+        const card = document.createElement("div");
+        card.className = "const-card";
+        card.innerHTML = `
+            <div class="const-name">${c.name}</div>
+            <div class="const-val">${c.val}</div>
+            <div class="const-desc">${c.desc}</div>
+        `;
+        grid.appendChild(card);
+    });
+}
+</script>
+
+</body>
+</html>

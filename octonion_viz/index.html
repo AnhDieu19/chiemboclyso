@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Octonion ↔ Bát Quái — Cấu Trúc Đại Số và Dịch Học</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- D3.js -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ═══════════════ HEADER ═══════════════ -->
+    <header class="site-header">
+        <h1>☰ Octonion ↔ Bát Quái ☷</h1>
+        <p class="subtitle">Cấu Trúc Đại Số Cayley-Dickson và Hệ Thống Dịch Học</p>
+        <p class="formula">R(1) → C(2) → H(4) → <strong>O(8)</strong> ≡ Thái Cực → Lưỡng Nghi → Tứ Tượng → <strong>Bát Quái</strong></p>
+    </header>
+
+    <!-- ═══════════════ NAV ═══════════════ -->
+    <nav class="section-nav">
+        <a href="#sec-viendo" class="active">Viên Đồ 64 Quẻ</a>
+        <a href="#sec-fano">Mặt Phẳng Fano</a>
+        <a href="#sec-mult">Bảng Nhân 8×8</a>
+        <a href="#sec-cayley">Cayley-Dickson</a>
+        <a href="#sec-props">Tính Chất</a>
+        <a href="#sec-ref">Bảng Tra Cứu</a>
+    </nav>
+
+    <!-- ═══════════════ 0. VIÊN ĐỒ ═══════════════ -->
+    <section id="sec-viendo" class="viz-section">
+        <h2>0. Viên Đồ Bát Quái — 64 Quẻ <span class="han">圓圖八卦</span></h2>
+        <p style="color: var(--text-secondary); margin-bottom: 1rem; font-size: 0.9rem;">
+            Sơ đồ tròn phân cấp từ Thái Cực → Lưỡng Nghi (2) → Tứ Tượng (4) → <strong>Bát Quái (8)</strong> → 64 Quẻ.
+            Mỗi vòng ngoài tương ứng một bước nhân đôi Cayley-Dickson.
+            Click vào quái để lọc 8 quẻ thuộc nhóm. Hover quẻ để xem phép nhân Octonion.
+        </p>
+        <div class="vd-container">
+            <div id="viendo-svg-container"></div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ 1. FANO PLANE ═══════════════ -->
+    <section id="sec-fano" class="viz-section">
+        <h2>1. Mặt Phẳng Fano <span class="han">法諾平面</span></h2>
+        <p style="color: var(--text-secondary); margin-bottom: 1rem; font-size: 0.9rem;">
+            Mặt phẳng xạ ảnh 7 điểm — mỗi điểm là một đơn vị ảo Octonion (e₁…e₇) ↔ 7 quẻ đơn (trừ Khôn = đơn vị thực e₀).
+            7 đường thẳng (3 cạnh + 3 median + 1 vòng nội tiếp) xác định 7 bộ ba phép nhân.
+            Click vào quái để xem quan hệ Sinh/Khắc.
+        </p>
+        <div class="fano-container">
+            <div id="fano-svg-container"></div>
+            <div id="fano-info">
+                <p class="hint">Click vào một quái trên mặt phẳng Fano để xem quan hệ nhân.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ 2. MULTIPLICATION TABLE ═══════════════ -->
+    <section id="sec-mult" class="viz-section">
+        <h2>2. Bảng Nhân Octonion 8×8 <span class="han">八卦乘法表</span></h2>
+        <p style="color: var(--text-secondary); margin-bottom: 1rem; font-size: 0.9rem;">
+            Mỗi ô hiện kết quả eᵢ × eⱼ dưới dạng trigram. Dấu + (Sinh, xanh) hoặc − (Khắc, đỏ). 
+            Bảng bất đối xứng qua đường chéo → thể hiện tính <strong>không giao hoán</strong>.
+        </p>
+        <div class="mult-table-wrapper" id="mult-table-container"></div>
+    </section>
+
+    <!-- ═══════════════ 3. CAYLEY-DICKSON ═══════════════ -->
+    <section id="sec-cayley" class="viz-section">
+        <h2>3. Chuỗi Cayley-Dickson <span class="han">凱利-迪克森構造</span></h2>
+        <p style="color: var(--text-secondary); margin-bottom: 1rem; font-size: 0.9rem;">
+            Mỗi bước nhân đôi chiều, mất thêm một tính chất đại số — tương ứng chính xác với 
+            tiến trình Thái Cực → Lưỡng Nghi → Tứ Tượng → Bát Quái.
+        </p>
+        <div id="cayley-container"></div>
+    </section>
+
+    <!-- ═══════════════ 4. PROPERTIES ═══════════════ -->
+    <section id="sec-props" class="viz-section">
+        <h2>4. Tính Chất Đặc Biệt <span class="han">特殊性質</span></h2>
+        <div id="props-container"></div>
+    </section>
+
+    <!-- ═══════════════ 5. REFERENCE TABLE ═══════════════ -->
+    <section id="sec-ref" class="viz-section">
+        <h2>5. Bảng Tra Cứu Bát Quái ↔ Octonion <span class="han">八卦對照表</span></h2>
+        <div class="trigram-ref" id="ref-table-container"></div>
+    </section>
+
+    <!-- ═══════════════ FOOTER ═══════════════ -->
+    <footer class="site-footer">
+        <p>Octonion–Bát Quái Visualization | Tử Vi App Research</p>
+        <p>Dựa trên nghiên cứu nhị phân Đôn Hoàng và Đại số Cayley-Dickson</p>
+    </footer>
+
+    <!-- ═══════════════ SCRIPTS ═══════════════ -->
+    <script src="js/data.js"></script>
+    <script src="js/viendo.js"></script>
+    <script src="js/fano.js"></script>
+    <script src="js/table.js"></script>
+    <script src="js/cayley.js"></script>
+    <script>
+        // ── Initialize all components ──
+        document.addEventListener("DOMContentLoaded", () => {
+            // 0. Viên Đồ Bát Quái
+            VienDo.init("#viendo-svg-container");
+
+            // 1. Fano Plane
+            FanoPlane.init("#fano-svg-container");
+
+            // 2. Multiplication Table
+            MultTable.init("mult-table-container");
+
+            // 3. Cayley-Dickson Chain
+            CayleyDickson.init("cayley-container");
+
+            // 4. Properties Panel
+            PropertiesPanel.init("props-container");
+
+            // 5. Reference Table
+            buildRefTable();
+
+            // Smooth scroll for nav links
+            document.querySelectorAll(".section-nav a").forEach(link => {
+                link.addEventListener("click", e => {
+                    e.preventDefault();
+                    const target = document.querySelector(link.getAttribute("href"));
+                    if (target) {
+                        target.scrollIntoView({ behavior: "smooth", block: "start" });
+                    }
+                    // Update active
+                    document.querySelectorAll(".section-nav a").forEach(a => a.classList.remove("active"));
+                    link.classList.add("active");
+                });
+            });
+
+            // Update nav on scroll
+            const sections = document.querySelectorAll(".viz-section");
+            const navLinks = document.querySelectorAll(".section-nav a");
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        navLinks.forEach(a => {
+                            a.classList.toggle("active", a.getAttribute("href") === "#" + entry.target.id);
+                        });
+                    }
+                });
+            }, { rootMargin: "-40% 0px -40% 0px" });
+            sections.forEach(s => observer.observe(s));
+        });
+
+        // ── Reference Table Builder ──
+        function buildRefTable() {
+            const container = document.getElementById("ref-table-container");
+            if (!container) return;
+
+            let html = `<table>
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Quái</th>
+                        <th>Hán Tự</th>
+                        <th>Tượng</th>
+                        <th>Nhị Phân</th>
+                        <th>Ngũ Hành</th>
+                        <th>Tự Nhiên</th>
+                        <th>Octonion</th>
+                        <th>Ý Nghĩa</th>
+                    </tr>
+                </thead>
+                <tbody>`;
+
+            TRIGRAMS.forEach(tri => {
+                const hanhColor = NGU_HANH_COLORS[tri.element] || { bg: "#555", fg: "#fff" };
+                html += `<tr>
+                    <td>${tri.id}</td>
+                    <td><span class="tri-symbol-large">${tri.symbol}</span> <strong style="color:${tri.color}">${tri.name}</strong></td>
+                    <td style="font-size:1.2rem">${tri.han}</td>
+                    <td>${tri.nature}</td>
+                    <td><span class="binary-code">${tri.binary}</span></td>
+                    <td><span class="element-badge" style="background:${hanhColor.bg};color:${hanhColor.fg}">${tri.element}</span></td>
+                    <td>${tri.nature}</td>
+                    <td style="font-family:var(--font-mono);color:var(--accent-purple)">${tri.octonion}</td>
+                    <td style="color:var(--text-secondary);font-size:0.82rem">${tri.desc}</td>
+                </tr>`;
+            });
+
+            html += `</tbody></table>`;
+            container.innerHTML = html;
+        }
+    </script>
+
+</body>
+</html>
