@@ -13,7 +13,7 @@ const LacThuViz = (() => {
     const GAP = 6;
     const GRID_W = CELL_SIZE * 3 + GAP * 4;
     const GRID_H = CELL_SIZE * 3 + GAP * 4;
-    const MARGIN = { top: 55, right: 240, bottom: 55, left: 55 };
+    const MARGIN = { top: 55, right: 260, bottom: 55, left: 55 };
 
     let containerId, svg, activeCell = null;
 
@@ -37,7 +37,7 @@ const LacThuViz = (() => {
             .attr("viewBox", `0 0 ${totalW} ${totalH}`)
             .attr("preserveAspectRatio", "xMidYMid meet")
             .style("width", "100%")
-            .style("max-height", "560px");
+            .style("max-height", "680px");
 
         const g = svg.append("g")
             .attr("transform", `translate(${MARGIN.left}, ${MARGIN.top})`);
@@ -196,31 +196,33 @@ const LacThuViz = (() => {
                     .attr("fill", "var(--text-muted)")
                     .text(palace.dir);
 
-                // Element badge (top-right) — trigram element
+                // Element badge (top-right) — Hậu Thiên trigram element
                 cellG.append("rect")
-                    .attr("x", CELL_SIZE - 32).attr("y", 4)
-                    .attr("width", 28).attr("height", 16).attr("rx", 8)
+                    .attr("x", CELL_SIZE - 36).attr("y", 4)
+                    .attr("width", 32).attr("height", 16).attr("rx", 8)
                     .attr("fill", hanhColor.bg).attr("fill-opacity", 0.6);
                 cellG.append("text")
-                    .attr("x", CELL_SIZE - 18).attr("y", 15)
+                    .attr("x", CELL_SIZE - 20).attr("y", 15)
                     .attr("text-anchor", "middle")
                     .attr("font-size", "8px").attr("font-weight", "600")
                     .attr("fill", hanhColor.fg)
                     .text(palace.element);
 
-                // Hà Đồ element annotation (bottom-left) — show when differs from trigram
-                if (palace.haDoElement && palace.haDoElement !== palace.element) {
+                // Hà Đồ element badge (bottom-left) — always show
+                if (palace.haDoElement) {
                     const hdColor = NGU_HANH.colors[palace.haDoElement];
+                    const isSame = palace.haDoElement === palace.element;
+                    const badgeW = isSame ? 28 : 42;
                     cellG.append("rect")
-                        .attr("x", 4).attr("y", CELL_SIZE - 18)
-                        .attr("width", 28).attr("height", 14).attr("rx", 6)
-                        .attr("fill", hdColor.bg).attr("fill-opacity", 0.35);
+                        .attr("x", 3).attr("y", CELL_SIZE - 20)
+                        .attr("width", badgeW).attr("height", 16).attr("rx", 6)
+                        .attr("fill", hdColor.bg).attr("fill-opacity", isSame ? 0.25 : 0.5);
                     cellG.append("text")
-                        .attr("x", 18).attr("y", CELL_SIZE - 8)
+                        .attr("x", 3 + badgeW / 2).attr("y", CELL_SIZE - 9)
                         .attr("text-anchor", "middle")
-                        .attr("font-size", "7px").attr("font-weight", "500")
-                        .attr("fill", hdColor.bg)
-                        .text(`H${palace.haDoElement}`);
+                        .attr("font-size", "7px").attr("font-weight", "600")
+                        .attr("fill", isSame ? hdColor.bg : "#fff")
+                        .text(isSame ? `HĐ` : `HĐ ${palace.haDoElement}`);
                 }
             }
         }
@@ -318,10 +320,48 @@ const LacThuViz = (() => {
                     .attr("fill", "var(--text-secondary)")
                     .text(`${st.hanStar} ${st.star} — ${st.fullName}`);
             }
+
+            // Element comparison table: Hậu Thiên vs Hà Đồ
+            const cmpY = csY + 10 * 14 + 10;
+            infoG.append("text").attr("y", cmpY)
+                .attr("font-size", "11px").attr("font-weight", "700")
+                .attr("fill", "var(--accent-blue)")
+                .text("Ngũ Hành: Hậu Thiên ↔ Hà Đồ");
+            infoG.append("text").attr("y", cmpY + 14)
+                .attr("font-size", "8px")
+                .attr("fill", "var(--text-muted)")
+                .text("Số  Hậu Thiên  Hà Đồ");
+            for (let i = 1; i <= 9; i++) {
+                const p = cfg.palaces[i];
+                const htC = NGU_HANH.colors[p.element];
+                const hdC = NGU_HANH.colors[p.haDoElement];
+                const isSame = p.element === p.haDoElement;
+                const y = cmpY + 26 + (i - 1) * 13;
+                // number
+                infoG.append("text").attr("x", 0).attr("y", y)
+                    .attr("font-size", "9px").attr("font-weight", "600")
+                    .attr("fill", "#fff")
+                    .text(i);
+                // Hậu Thiên element
+                infoG.append("text").attr("x", 20).attr("y", y)
+                    .attr("font-size", "9px").attr("font-weight", "500")
+                    .attr("fill", htC.bg)
+                    .text(p.element);
+                // arrow
+                infoG.append("text").attr("x", 55).attr("y", y)
+                    .attr("font-size", "8px")
+                    .attr("fill", isSame ? "var(--text-muted)" : "var(--accent-gold)")
+                    .text(isSame ? "=" : "≠");
+                // Hà Đồ element
+                infoG.append("text").attr("x", 68).attr("y", y)
+                    .attr("font-size", "9px").attr("font-weight", "500")
+                    .attr("fill", hdC.bg)
+                    .text(p.haDoElement);
+            }
         }
 
         // Hà Đồ Sinh-Thành section
-        const hdY = cfg.mode === 'TQ' ? (formulaY + 44 + 10 * 14 + 20) : (formulaY + 48);
+        const hdY = cfg.mode === 'TQ' ? (formulaY + 44 + 10 * 14 + 10 + 9 * 13 + 40) : (formulaY + 48);
         infoG.append("text").attr("y", hdY)
             .attr("font-size", "13px").attr("font-weight", "700")
             .attr("fill", "var(--accent-red)")
