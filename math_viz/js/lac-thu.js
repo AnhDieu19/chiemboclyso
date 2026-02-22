@@ -195,14 +195,6 @@ const LacThuViz = (() => {
                         .text(palace.symbol);
                 }
 
-                // Direction label
-                cellG.append("text")
-                    .attr("x", CELL_SIZE / 2).attr("y", hasCan ? 102 : 100)
-                    .attr("text-anchor", "middle")
-                    .attr("font-size", "9px")
-                    .attr("fill", "var(--text-muted)")
-                    .text(palace.dir);
-
                 // Element badge (top-right) — Hậu Thiên trigram element
                 cellG.append("rect")
                     .attr("x", CELL_SIZE - 36).attr("y", 4)
@@ -231,6 +223,14 @@ const LacThuViz = (() => {
                         .attr("fill", isSame ? hdColor.bg : "#fff")
                         .text(isSame ? `HĐ` : `HĐ ${palace.haDoElement}`);
                 }
+
+                // Direction label — drawn after badges so text is on top
+                cellG.append("text")
+                    .attr("x", CELL_SIZE / 2).attr("y", hasCan ? 102 : 100)
+                    .attr("text-anchor", "middle")
+                    .attr("font-size", "9px")
+                    .attr("fill", "var(--text-muted)")
+                    .text(palace.dir);
             }
         }
     }
