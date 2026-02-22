@@ -22,7 +22,27 @@ const LacThuMode = {
 };
 
 /**
+ * Cửu Tinh (九星) — Nine Flying Stars
+ * Phi Tinh traditional star names and colors, shared by both TQ and DV.
+ * Each number 1–9 has a fixed star name and traditional color.
+ */
+const CUU_TINH = [
+    null,
+    { id: 1, star: "Nhất Bạch",  hanStar: "一白", fullName: "Tham Lang",   starColor: "#B3D4FC", starColorName: "Bạch (Trắng)" },
+    { id: 2, star: "Nhị Hắc",    hanStar: "二黑", fullName: "Cự Môn",     starColor: "#424242", starColorName: "Hắc (Đen)" },
+    { id: 3, star: "Tam Bích",   hanStar: "三碧", fullName: "Lộc Tồn",    starColor: "#00897B", starColorName: "Bích (Ngọc)" },
+    { id: 4, star: "Tứ Lục",     hanStar: "四綠", fullName: "Văn Xương",   starColor: "#43A047", starColorName: "Lục (Xanh lá)" },
+    { id: 5, star: "Ngũ Hoàng",  hanStar: "五黃", fullName: "Liêm Trinh",  starColor: "#FFB300", starColorName: "Hoàng (Vàng)" },
+    { id: 6, star: "Lục Bạch",   hanStar: "六白", fullName: "Vũ Khúc",    starColor: "#B0BEC5", starColorName: "Bạch (Trắng)" },
+    { id: 7, star: "Thất Xích",  hanStar: "七赤", fullName: "Phá Quân",    starColor: "#E53935", starColorName: "Xích (Đỏ)" },
+    { id: 8, star: "Bát Bạch",   hanStar: "八白", fullName: "Tả Phụ",     starColor: "#ECEFF1", starColorName: "Bạch (Trắng)" },
+    { id: 9, star: "Cửu Tử",     hanStar: "九紫", fullName: "Hữu Bật",    starColor: "#8E24AA", starColorName: "Tử (Tím)" },
+];
+
+/**
  * Trung Quốc standard: Nam on top, Ly=9, Đoài=7, Tốn=SE, Khôn=SW
+ * Elements: Hậu Thiên Bát Quái (trigram-based)
+ * Colors: Phi Tinh traditional colors (Bạch/Hắc/Bích/Lục/Hoàng/Xích/Tử)
  */
 const LAC_THU_TQ = {
     mode: 'TQ',
@@ -36,15 +56,15 @@ const LAC_THU_TQ = {
     magicConstant: 15,
     palaces: [
         null,
-        { id: 1, name: "Khảm",  han: "坎", symbol: "☵", element: "Thủy", haDoElement: "Thủy", dir: "Bắc",     can: null,   row: 2, col: 1, color: "#1565C0" },
-        { id: 2, name: "Khôn",  han: "坤", symbol: "☷", element: "Thổ",  haDoElement: "Hỏa",  dir: "Tây Nam",  can: null,   row: 0, col: 2, color: "#8D6E63" },
-        { id: 3, name: "Chấn",  han: "震", symbol: "☳", element: "Mộc",  haDoElement: "Mộc",  dir: "Đông",     can: null,   row: 1, col: 0, color: "#2E7D32" },
-        { id: 4, name: "Tốn",   han: "巽", symbol: "☴", element: "Mộc",  haDoElement: "Kim",  dir: "Đông Nam", can: null,   row: 0, col: 0, color: "#43A047" },
-        { id: 5, name: "Trung", han: "中", symbol: "◎", element: "Thổ",  haDoElement: "Thổ",  dir: "Trung",    can: null,   row: 1, col: 1, color: "#FFB300" },
-        { id: 6, name: "Càn",   han: "乾", symbol: "☰", element: "Kim",  haDoElement: "Thủy", dir: "Tây Bắc",  can: null,   row: 2, col: 2, color: "#F9A825" },
-        { id: 7, name: "Đoài",  han: "兌", symbol: "☱", element: "Kim",  haDoElement: "Hỏa", dir: "Tây",      can: null,   row: 1, col: 2, color: "#78909C" },
-        { id: 8, name: "Cấn",   han: "艮", symbol: "☶", element: "Thổ",  haDoElement: "Mộc",  dir: "Đông Bắc", can: null,   row: 2, col: 0, color: "#795548" },
-        { id: 9, name: "Ly",    han: "離", symbol: "☲", element: "Hỏa",  haDoElement: "Kim",  dir: "Nam",      can: null,   row: 0, col: 1, color: "#D32F2F" },
+        { id: 1, name: "Khảm",  han: "坎", symbol: "☵", element: "Thủy", haDoElement: "Thủy", star: "Nhất Bạch",  dir: "Bắc",     can: null,   row: 2, col: 1, color: "#1976D2" },
+        { id: 2, name: "Khôn",  han: "坤", symbol: "☷", element: "Thổ",  haDoElement: "Hỏa",  star: "Nhị Hắc",    dir: "Tây Nam",  can: null,   row: 0, col: 2, color: "#424242" },
+        { id: 3, name: "Chấn",  han: "震", symbol: "☳", element: "Mộc",  haDoElement: "Mộc",  star: "Tam Bích",   dir: "Đông",     can: null,   row: 1, col: 0, color: "#00897B" },
+        { id: 4, name: "Tốn",   han: "巽", symbol: "☴", element: "Mộc",  haDoElement: "Kim",  star: "Tứ Lục",     dir: "Đông Nam", can: null,   row: 0, col: 0, color: "#43A047" },
+        { id: 5, name: "Trung", han: "中", symbol: "◎", element: "Thổ",  haDoElement: "Thổ",  star: "Ngũ Hoàng",  dir: "Trung",    can: null,   row: 1, col: 1, color: "#FFB300" },
+        { id: 6, name: "Càn",   han: "乾", symbol: "☰", element: "Kim",  haDoElement: "Thủy", star: "Lục Bạch",   dir: "Tây Bắc",  can: null,   row: 2, col: 2, color: "#B0BEC5" },
+        { id: 7, name: "Đoài",  han: "兌", symbol: "☱", element: "Kim",  haDoElement: "Hỏa",  star: "Thất Xích",  dir: "Tây",      can: null,   row: 1, col: 2, color: "#E53935" },
+        { id: 8, name: "Cấn",   han: "艮", symbol: "☶", element: "Thổ",  haDoElement: "Mộc",  star: "Bát Bạch",   dir: "Đông Bắc", can: null,   row: 2, col: 0, color: "#CFD8DC" },
+        { id: 9, name: "Ly",    han: "離", symbol: "☲", element: "Hỏa",  haDoElement: "Kim",  star: "Cửu Tử",     dir: "Nam",      can: null,   row: 0, col: 1, color: "#8E24AA" },
     ],
     opposite(p) { return p === 5 ? 5 : 10 - p; },
     lines: [
@@ -75,15 +95,15 @@ const LAC_THU_DV = {
     magicConstant: 15,
     palaces: [
         null,
-        { id: 1, name: "Khảm",  han: "坎", symbol: "☵", element: "Thủy", haDoElement: "Thủy", dir: "Bắc",      can: "Quý",  row: 0, col: 1, color: "#1565C0" },
-        { id: 2, name: "Khôn",  han: "坤", symbol: "☷", element: "Hỏa",  haDoElement: "Hỏa",  dir: "Đông Nam",  can: "Ất",   row: 2, col: 2, color: "#D32F2F" },
-        { id: 3, name: "Chấn",  han: "震", symbol: "☳", element: "Mộc",  haDoElement: "Mộc",  dir: "Đông",      can: "Bính", row: 1, col: 2, color: "#2E7D32" },
-        { id: 4, name: "Tốn",   han: "巽", symbol: "☴", element: "Kim",  haDoElement: "Kim",  dir: "Tây Nam",   can: "Đinh", row: 2, col: 0, color: "#E0E0E0" },
-        { id: 5, name: "Trung", han: "中", symbol: "◎", element: "Thổ",  haDoElement: "Thổ",  dir: "Trung",     can: "Mậu/Quí", row: 1, col: 1, color: "#FFB300" },
-        { id: 6, name: "Càn",   han: "乾", symbol: "☰", element: "Thủy", haDoElement: "Thủy", dir: "Tây Bắc",   can: "Nhâm", row: 0, col: 0, color: "#1565C0" },
-        { id: 7, name: "Ly",    han: "離", symbol: "☲", element: "Hỏa",  haDoElement: "Hỏa",  dir: "Nam",       can: "Canh", row: 2, col: 1, color: "#D32F2F" },
-        { id: 8, name: "Cấn",   han: "艮", symbol: "☶", element: "Mộc",  haDoElement: "Mộc",  dir: "Đông Bắc",  can: "Tân",  row: 0, col: 2, color: "#2E7D32" },
-        { id: 9, name: "Đoài",  han: "兌", symbol: "☱", element: "Kim",  haDoElement: "Kim",  dir: "Tây",       can: "Nhâm", row: 1, col: 0, color: "#E0E0E0" },
+        { id: 1, name: "Khảm",  han: "坎", symbol: "☵", element: "Thủy", haDoElement: "Thủy", star: "Nhất Bạch",  dir: "Bắc",      can: "Quý",  row: 0, col: 1, color: "#1565C0" },
+        { id: 2, name: "Khôn",  han: "坤", symbol: "☷", element: "Hỏa",  haDoElement: "Hỏa",  star: "Nhị Hắc",    dir: "Đông Nam",  can: "Ất",   row: 2, col: 2, color: "#D32F2F" },
+        { id: 3, name: "Chấn",  han: "震", symbol: "☳", element: "Mộc",  haDoElement: "Mộc",  star: "Tam Bích",   dir: "Đông",      can: "Bính", row: 1, col: 2, color: "#2E7D32" },
+        { id: 4, name: "Tốn",   han: "巽", symbol: "☴", element: "Kim",  haDoElement: "Kim",  star: "Tứ Lục",     dir: "Tây Nam",   can: "Đinh", row: 2, col: 0, color: "#E0E0E0" },
+        { id: 5, name: "Trung", han: "中", symbol: "◎", element: "Thổ",  haDoElement: "Thổ",  star: "Ngũ Hoàng",  dir: "Trung",     can: "Mậu/Quí", row: 1, col: 1, color: "#FFB300" },
+        { id: 6, name: "Càn",   han: "乾", symbol: "☰", element: "Thủy", haDoElement: "Thủy", star: "Lục Bạch",   dir: "Tây Bắc",   can: "Nhâm", row: 0, col: 0, color: "#1565C0" },
+        { id: 7, name: "Ly",    han: "離", symbol: "☲", element: "Hỏa",  haDoElement: "Hỏa",  star: "Thất Xích",  dir: "Nam",       can: "Canh", row: 2, col: 1, color: "#D32F2F" },
+        { id: 8, name: "Cấn",   han: "艮", symbol: "☶", element: "Mộc",  haDoElement: "Mộc",  star: "Bát Bạch",   dir: "Đông Bắc",  can: "Tân",  row: 0, col: 2, color: "#2E7D32" },
+        { id: 9, name: "Đoài",  han: "兌", symbol: "☱", element: "Kim",  haDoElement: "Kim",  star: "Cửu Tử",     dir: "Tây",       can: "Nhâm", row: 1, col: 0, color: "#E0E0E0" },
     ],
     opposite(p) { return p === 5 ? 5 : 10 - p; },
     lines: [

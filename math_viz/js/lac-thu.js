@@ -115,31 +115,46 @@ const LacThuViz = (() => {
                     });
 
                 const hanhColor = NGU_HANH.colors[palace.element];
+                // TQ mode: use Phi Tinh star color for background
+                const bgFill = hasCan ? hanhColor.bg : (palace.color || hanhColor.bg);
+                const bgOpacity = hasCan ? 0.25 : 0.35;
 
                 // Background
                 cellG.append("rect").attr("class", "lt-bg")
                     .attr("width", CELL_SIZE).attr("height", CELL_SIZE)
                     .attr("rx", 8)
-                    .attr("fill", hanhColor.bg).attr("fill-opacity", 0.25)
+                    .attr("fill", bgFill).attr("fill-opacity", bgOpacity)
                     .attr("stroke", "rgba(255,255,255,0.2)").attr("stroke-width", 1.5);
 
                 // Number
                 const displayNum = (val === 5 && hasCan) ? "5·10" : String(val);
                 cellG.append("text")
                     .attr("x", CELL_SIZE / 2)
-                    .attr("y", hasCan ? 22 : (CELL_SIZE / 2 - 12))
+                    .attr("y", hasCan ? 20 : 26)
                     .attr("text-anchor", "middle")
-                    .attr("font-size", hasCan ? "24px" : "32px")
+                    .attr("font-size", hasCan ? "22px" : "28px")
                     .attr("font-weight", "700")
-                    .attr("fill", hanhColor.bg)
+                    .attr("fill", hasCan ? hanhColor.bg : (palace.color || hanhColor.bg))
                     .text(displayNum);
+
+                // Star name — Cửu Tinh (e.g. "Nhất Bạch")
+                if (palace.star) {
+                    cellG.append("text")
+                        .attr("x", CELL_SIZE / 2)
+                        .attr("y", hasCan ? 38 : 46)
+                        .attr("text-anchor", "middle")
+                        .attr("font-size", hasCan ? "11px" : "14px")
+                        .attr("font-weight", "600")
+                        .attr("fill", hasCan ? "rgba(255,255,255,0.7)" : "#fff")
+                        .text(palace.star);
+                }
 
                 // Thiên Can (Đại Việt only)
                 if (hasCan && palace.can) {
                     cellG.append("text")
-                        .attr("x", CELL_SIZE / 2).attr("y", 42)
+                        .attr("x", CELL_SIZE / 2).attr("y", 54)
                         .attr("text-anchor", "middle")
-                        .attr("font-size", "15px").attr("font-weight", "700")
+                        .attr("font-size", "14px").attr("font-weight", "700")
                         .attr("fill", "#fff")
                         .text(palace.can);
                 }
@@ -147,34 +162,39 @@ const LacThuViz = (() => {
                 // Trigram name / symbol
                 if (hasCan) {
                     cellG.append("text")
-                        .attr("x", CELL_SIZE / 2).attr("y", 60)
+                        .attr("x", CELL_SIZE / 2).attr("y", 70)
                         .attr("text-anchor", "middle")
-                        .attr("font-size", "13px")
+                        .attr("font-size", "12px")
                         .attr("fill", "rgba(255,255,255,0.85)")
                         .text(palace.name);
                     cellG.append("text")
-                        .attr("x", CELL_SIZE / 2).attr("y", 78)
+                        .attr("x", CELL_SIZE / 2).attr("y", 86)
                         .attr("text-anchor", "middle")
-                        .attr("font-size", "18px")
+                        .attr("font-size", "16px")
                         .attr("fill", "rgba(255,255,255,0.5)")
                         .text(palace.symbol);
                 } else {
                     cellG.append("text")
-                        .attr("x", CELL_SIZE / 2).attr("y", CELL_SIZE / 2 + 14)
+                        .attr("x", CELL_SIZE / 2).attr("y", 66)
                         .attr("text-anchor", "middle")
-                        .attr("font-size", "20px")
-                        .attr("fill", "rgba(255,255,255,0.8)")
+                        .attr("font-size", "12px")
+                        .attr("fill", "rgba(255,255,255,0.85)")
+                        .text(palace.name);
+                    cellG.append("text")
+                        .attr("x", CELL_SIZE / 2).attr("y", 84)
+                        .attr("text-anchor", "middle")
+                        .attr("font-size", "18px")
+                        .attr("fill", "rgba(255,255,255,0.5)")
                         .text(palace.symbol);
                 }
 
                 // Direction label
-                const dirY = hasCan ? 96 : (CELL_SIZE / 2 + 35);
                 cellG.append("text")
-                    .attr("x", CELL_SIZE / 2).attr("y", dirY)
+                    .attr("x", CELL_SIZE / 2).attr("y", hasCan ? 102 : 100)
                     .attr("text-anchor", "middle")
-                    .attr("font-size", "10px")
+                    .attr("font-size", "9px")
                     .attr("fill", "var(--text-muted)")
-                    .text(hasCan ? palace.dir : `${palace.name} · ${palace.dir}`);
+                    .text(palace.dir);
 
                 // Element badge (top-right) — trigram element
                 cellG.append("rect")
@@ -280,8 +300,28 @@ const LacThuViz = (() => {
             .attr("font-family", "var(--font-mono)")
             .text("∀ row,col,diag: Σ = 15");
 
+        // Cửu Tinh (Nine Stars) section — TQ mode emphasis
+        if (cfg.mode === 'TQ') {
+            const csY = formulaY + 44;
+            infoG.append("text").attr("y", csY)
+                .attr("font-size", "13px").attr("font-weight", "700")
+                .attr("fill", "var(--accent-gold)")
+                .text("Cửu Tinh — 九星 Phi Tinh");
+            for (let i = 1; i <= 9; i++) {
+                const st = CUU_TINH[i];
+                infoG.append("circle")
+                    .attr("cx", 4).attr("cy", csY + 10 + i * 14)
+                    .attr("r", 4)
+                    .attr("fill", st.starColor).attr("fill-opacity", 0.8);
+                infoG.append("text").attr("x", 14).attr("y", csY + 14 + i * 14)
+                    .attr("font-size", "9px")
+                    .attr("fill", "var(--text-secondary)")
+                    .text(`${st.hanStar} ${st.star} — ${st.fullName}`);
+            }
+        }
+
         // Hà Đồ Sinh-Thành section
-        const hdY = formulaY + 48;
+        const hdY = cfg.mode === 'TQ' ? (formulaY + 44 + 10 * 14 + 20) : (formulaY + 48);
         infoG.append("text").attr("y", hdY)
             .attr("font-size", "13px").attr("font-weight", "700")
             .attr("fill", "var(--accent-red)")
@@ -376,10 +416,11 @@ const LacThuViz = (() => {
     }
 
     function resetHighlight(g) {
+        const defaultOpacity = LacThuMode.isTQ() ? 0.35 : 0.25;
         for (let v = 1; v <= 9; v++) {
             const cell = g.select(`.lt-cell-${v}`);
             cell.select("rect.lt-bg")
-                .attr("fill-opacity", 0.25)
+                .attr("fill-opacity", defaultOpacity)
                 .attr("stroke", "rgba(255,255,255,0.2)")
                 .attr("stroke-width", 1.5);
             cell.selectAll("text").attr("opacity", 1);
